@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>MHWilds 装備シミュレーター</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=12">
 </head>
 <body>
 
@@ -186,8 +186,12 @@
 
     <!-- 斬れ味 -->
     <div style="padding:8px 12px">
-      <div class="stat-label">斬れ味</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
+        <div class="stat-label" style="margin:0">斬れ味</div>
+        <div class="tabs" id="sharpnessTabs" style="padding:0;gap:1px"></div>
+      </div>
       <div class="sharpness-gauge" id="sharpnessGauge"></div>
+      <div id="sharpnessCompare" style="margin-top:6px"></div>
     </div>
 
     <!-- 攻撃期待値 -->
@@ -266,8 +270,8 @@
   </div>
 </div>
 
-<script src="js/calculator.js"></script>
-<script src="js/data-loader.js"></script>
-<script src="js/app.js"></script>
+<script src="js/calculator.js?v=12"></script>
+<script src="js/data-loader.js?v=12"></script>
+<script src="js/app.js?v=12"></script>
 </body>
 </html>

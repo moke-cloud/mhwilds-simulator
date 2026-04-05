@@ -12,8 +12,8 @@ const App = (() => {
     activeWeaponType: null,
     activeArmorPart: 'head',
     conditions: {},
-    // 装飾品モーダル用
-    decoModalTarget: null // {owner, slotIndex, slotSize, kind}
+    sharpnessOverride: null, // null=auto, 0-6=forced color index
+    decoModalTarget: null
   };
 
   const $ = id => document.getElementById(id);
@@ -489,6 +489,21 @@ const App = (() => {
       useMaxDefense: false
     });
 
+    // 斬れ味オーバーライド: ユーザーが色を手動選択した場合
+    if (state.sharpnessOverride !== null && result.sharpness.colorIndex >= 0) {
+      const idx = state.sharpnessOverride;
+      result.sharpness.colorIndex = idx;
+      result.sharpness.colorName = MHCalc.SHARPNESS_COLORS[idx];
+      result.sharpness.physical = MHCalc.SHARPNESS_PHYS[idx];
+      result.sharpness.elemental = MHCalc.SHARPNESS_ELEM[idx];
+      // Recalc effective range with overridden sharpness
+      result.effectiveRange = {
+        min: Math.floor(result.range.min * result.sharpness.physical),
+        expected: Math.round(result.range.expected * result.sharpness.physical * 10) / 10,
+        max: Math.floor(result.range.max * result.sharpness.physical)
+      };
+    }
+
     // 基礎ステータス
     $('statBaseAttack').textContent = result.weaponAttack || '-';
     $('statBaseAffinity').textContent = result.baseAffinity ? `${result.baseAffinity > 0 ? '+' : ''}${result.baseAffinity}%` : '0%';
@@ -526,6 +541,7 @@ const App = (() => {
       : '-';
 
     renderSharpness(result.sharpness);
+    renderSharpnessCompare(result);
 
     // DPS Panel
     const r = result.effectiveRange;
@@ -593,6 +609,64 @@ const App = (() => {
     gauge.innerHTML = g.map((v, i) =>
       v > 0 ? `<div class="seg" style="width:${(v/total)*100}%;background:${colors[i]}"></div>` : ''
     ).join('');
+  }
+
+  function renderSharpnessCompare(result) {
+    const tabs = $('sharpnessTabs');
+    const compare = $('sharpnessCompare');
+
+    if (!state.selectedWeapon || !state.selectedWeapon.sharpness) {
+      tabs.innerHTML = '';
+      compare.innerHTML = '';
+      return;
+    }
+
+    // Determine which colors exist in the weapon's gauge
+    const gauge = result.sharpness.gauge || state.selectedWeapon.sharpness;
+    const colorNames = MHCalc.SHARPNESS_COLORS;
+    const colorCSS = ['var(--sharp-red)', 'var(--sharp-orange)', 'var(--sharp-yellow)', 'var(--sharp-green)', 'var(--sharp-blue)', 'var(--sharp-white)', 'var(--sharp-purple)'];
+    const availableColors = [];
+    for (let i = 0; i < gauge.length; i++) {
+      if (gauge[i] > 0) availableColors.push(i);
+    }
+
+    // Render tabs
+    const activeIdx = state.sharpnessOverride !== null ? state.sharpnessOverride : result.sharpness.colorIndex;
+    tabs.innerHTML = '<button class="tab' + (state.sharpnessOverride === null ? ' active' : '') + '" data-sharp="-1" style="font-size:0.65rem;padding:3px 6px">自動</button>';
+    for (const i of availableColors) {
+      const isActive = state.sharpnessOverride === i;
+      tabs.innerHTML += `<button class="tab${isActive ? ' active' : ''}" data-sharp="${i}" style="font-size:0.65rem;padding:3px 6px"><span class="sharp-color-dot" style="background:${colorCSS[i]}"></span>${colorNames[i]}</button>`;
+    }
+
+    // Tab click handlers
+    tabs.querySelectorAll('.tab').forEach(btn => {
+      btn.onclick = () => {
+        const val = parseInt(btn.dataset.sharp);
+        state.sharpnessOverride = val === -1 ? null : val;
+        recalculate();
+      };
+    });
+
+    // Compare table: show expected DPS at each sharpness level
+    let html = '<table class="sharp-compare"><thead><tr><th>斬れ味</th><th>物理補正</th><th>属性補正</th><th>通常ヒット</th><th>期待値</th><th>会心ヒット</th></tr></thead><tbody>';
+    for (const i of availableColors) {
+      const phys = MHCalc.SHARPNESS_PHYS[i];
+      const elem = MHCalc.SHARPNESS_ELEM[i];
+      const min = Math.floor(result.range.min * phys);
+      const exp = Math.round(result.range.expected * phys * 10) / 10;
+      const max = Math.floor(result.range.max * phys);
+      const isActive = i === activeIdx;
+      html += `<tr class="${isActive ? 'active' : ''}">
+        <td style="text-align:left"><span class="sharp-color-dot" style="background:${colorCSS[i]}"></span>${colorNames[i]}</td>
+        <td>x${phys.toFixed(2)}</td>
+        <td>x${elem.toFixed(2)}</td>
+        <td>${min}</td>
+        <td>${exp}</td>
+        <td>${max}</td>
+      </tr>`;
+    }
+    html += '</tbody></table>';
+    compare.innerHTML = html;
   }
 
   function renderConditionToggles(skillLevels) {
