@@ -1,21 +1,5030 @@
 {
-  "version": "1.0.0",
-  "lastUpdated": "2026-04-05",
+  "version": "2.0.0",
+  "source": "MHDB Wilds API",
   "decorations": [
-    { "id": "deco_attack_1", "name": "攻撃珠", "slotSize": 1, "skills": [{ "name": "攻撃", "level": 1 }] },
-    { "id": "deco_attack_4", "name": "攻撃珠+", "slotSize": 4, "skills": [{ "name": "攻撃", "level": 2 }] },
-    { "id": "deco_expert_1", "name": "達人珠", "slotSize": 1, "skills": [{ "name": "見切り", "level": 1 }] },
-    { "id": "deco_expert_4", "name": "達人珠+", "slotSize": 4, "skills": [{ "name": "見切り", "level": 2 }] },
-    { "id": "deco_critical_2", "name": "超心珠", "slotSize": 2, "skills": [{ "name": "超会心", "level": 1 }] },
-    { "id": "deco_tenderizer_2", "name": "痛撃珠", "slotSize": 2, "skills": [{ "name": "弱点特効", "level": 1 }] },
-    { "id": "deco_handicraft_3", "name": "匠珠", "slotSize": 3, "skills": [{ "name": "匠", "level": 1 }] },
-    { "id": "deco_fire_1", "name": "火炎珠", "slotSize": 1, "skills": [{ "name": "火属性攻撃強化", "level": 1 }] },
-    { "id": "deco_water_1", "name": "流水珠", "slotSize": 1, "skills": [{ "name": "水属性攻撃強化", "level": 1 }] },
-    { "id": "deco_thunder_1", "name": "雷光珠", "slotSize": 1, "skills": [{ "name": "雷属性攻撃強化", "level": 1 }] },
-    { "id": "deco_ice_1", "name": "氷結珠", "slotSize": 1, "skills": [{ "name": "氷属性攻撃強化", "level": 1 }] },
-    { "id": "deco_dragon_1", "name": "破龍珠", "slotSize": 1, "skills": [{ "name": "龍属性攻撃強化", "level": 1 }] },
-    { "id": "deco_defense_1", "name": "防御珠", "slotSize": 1, "skills": [{ "name": "防御", "level": 1 }] },
-    { "id": "deco_peak_2", "name": "体力珠", "slotSize": 2, "skills": [{ "name": "フルチャージ", "level": 1 }] },
-    { "id": "deco_agitator_2", "name": "挑戦珠", "slotSize": 2, "skills": [{ "name": "挑戦者", "level": 1 }] }
+    {
+      "id": "d_1",
+      "name": "毒珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "毒属性強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_2",
+      "name": "匠珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "匠",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_3",
+      "name": "刺撃珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "鎖刃刺撃",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_4",
+      "name": "特会・匠珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "会心撃【特殊】",
+          "level": 3
+        },
+        {
+          "name": "匠",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_5",
+      "name": "睡眠珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "睡眠属性強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_6",
+      "name": "射法珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "弾導強化",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_7",
+      "name": "雷光・射法珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "弾導強化",
+          "level": 1
+        },
+        {
+          "name": "雷属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_8",
+      "name": "耐水珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "水耐性",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_9",
+      "name": "睡眠珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "睡眠属性強化",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_10",
+      "name": "奪気珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "スタミナ奪取",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_11",
+      "name": "重撃珠【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "破壊王",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_12",
+      "name": "積弾珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "フォースショット",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_13",
+      "name": "耐拘珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "拘束耐性",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_14",
+      "name": "溜幅珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "チャージマスター",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_15",
+      "name": "攻撃珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "攻撃",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_16",
+      "name": "積弾・鉄壁珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "ガード性能",
+          "level": 1
+        },
+        {
+          "name": "フォースショット",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_17",
+      "name": "火炎・射法珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "火属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "弾導強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_18",
+      "name": "雷光珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "雷属性攻撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_19",
+      "name": "耐裂珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "裂傷耐性",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_20",
+      "name": "耐火珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "火耐性",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_21",
+      "name": "研磨・匠珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "匠",
+          "level": 1
+        },
+        {
+          "name": "砥石使用高速化",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_22",
+      "name": "強毒珠【２】",
+      "slotSize": 2,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "毒ダメージ強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_23",
+      "name": "無食珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "腹減り耐性",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_24",
+      "name": "昂揚珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "強化持続",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_25",
+      "name": "雷光・匠珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "匠",
+          "level": 1
+        },
+        {
+          "name": "雷属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_26",
+      "name": "標本珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "昆虫標本の達人",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_27",
+      "name": "速射珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "速射強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_28",
+      "name": "沼渡珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "水場・油泥適応",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_29",
+      "name": "増弾珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "砲弾装填",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_30",
+      "name": "業物珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "業物",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_31",
+      "name": "睡眠珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "睡眠属性強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_32",
+      "name": "破龍珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "龍属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_33",
+      "name": "鼓笛・攻撃珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "笛吹き名人",
+          "level": 2
+        },
+        {
+          "name": "攻撃",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_34",
+      "name": "特会珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "会心撃【特殊】",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_35",
+      "name": "雷光珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "雷属性攻撃強化",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_36",
+      "name": "火炎・守勢珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "火属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "攻めの守勢",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_37",
+      "name": "毒珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "毒属性強化",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_38",
+      "name": "奪気珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "スタミナ奪取",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_39",
+      "name": "攻勢珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "攻勢",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_40",
+      "name": "研磨・鉄壁珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "ガード性能",
+          "level": 1
+        },
+        {
+          "name": "砥石使用高速化",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_41",
+      "name": "耐防珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "防御力ＤＯＷＮ耐性",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_42",
+      "name": "破龍・ＫＯ珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "ＫＯ術",
+          "level": 1
+        },
+        {
+          "name": "龍属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_43",
+      "name": "研磨・抜刀珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "抜刀術【技】",
+          "level": 1
+        },
+        {
+          "name": "砥石使用高速化",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_44",
+      "name": "初弾珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "ファーストショット",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_45",
+      "name": "溜打・攻撃珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "攻撃",
+          "level": 1
+        },
+        {
+          "name": "溜打強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_46",
+      "name": "速変珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "高速変形",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_47",
+      "name": "渾身珠【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "渾身",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_48",
+      "name": "守勢珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "攻めの守勢",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_49",
+      "name": "剛刃珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "剛刃研磨",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_50",
+      "name": "雷光珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "雷属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_51",
+      "name": "守勢・鉄壁珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "ガード性能",
+          "level": 1
+        },
+        {
+          "name": "攻めの守勢",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_52",
+      "name": "跳躍珠【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "回避距離ＵＰ",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_53",
+      "name": "雷光・ＫＯ珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "ＫＯ術",
+          "level": 1
+        },
+        {
+          "name": "雷属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_54",
+      "name": "心眼珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "心眼",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_55",
+      "name": "業物・鉄壁珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "ガード性能",
+          "level": 1
+        },
+        {
+          "name": "業物",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_56",
+      "name": "早復珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "回復速度",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_57",
+      "name": "耐眠珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "睡眠耐性",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_58",
+      "name": "耐龍珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "龍耐性",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_59",
+      "name": "抗狂珠【１】",
+      "slotSize": 1,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "無我の境地",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_60",
+      "name": "特射珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "特殊射撃強化",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_61",
+      "name": "流水珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "水属性攻撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_62",
+      "name": "防音珠【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "耳栓",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_63",
+      "name": "体術珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "体術",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_64",
+      "name": "初弾珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "ファーストショット",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_65",
+      "name": "火炎・鉄壁珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "火属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "ガード性能",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_66",
+      "name": "達芸珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "達人芸",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_67",
+      "name": "抜打・ＫＯ珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "抜刀術【力】",
+          "level": 3
+        },
+        {
+          "name": "ＫＯ術",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_68",
+      "name": "環境珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "環境利用の知識",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_69",
+      "name": "耐雷珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "雷耐性",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_70",
+      "name": "抜刀珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "抜刀術【技】",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_71",
+      "name": "守勢珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "攻めの守勢",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_72",
+      "name": "速変・匠珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "高速変形",
+          "level": 3
+        },
+        {
+          "name": "匠",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_73",
+      "name": "流水珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "水属性攻撃強化",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_74",
+      "name": "飛燕珠【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "飛燕",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_75",
+      "name": "射法珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "弾導強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_76",
+      "name": "鈍器珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "鈍器使い",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_77",
+      "name": "毒瓶珠【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "毒ビン追加",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_78",
+      "name": "眠瓶珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "睡眠ビン追加",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_79",
+      "name": "属会・匠珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "会心撃【属性】",
+          "level": 3
+        },
+        {
+          "name": "匠",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_80",
+      "name": "強跳珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "ジャンプ鉄人",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_81",
+      "name": "毒珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "毒属性強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_82",
+      "name": "適応珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "環境適応",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_83",
+      "name": "特会・鉄壁珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "ガード性能",
+          "level": 1
+        },
+        {
+          "name": "会心撃【特殊】",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_84",
+      "name": "増弾・達人珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "見切り",
+          "level": 1
+        },
+        {
+          "name": "砲弾装填",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_85",
+      "name": "達人珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "見切り",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_86",
+      "name": "耐氷珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "氷耐性",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_87",
+      "name": "抜打・匠珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "抜刀術【力】",
+          "level": 3
+        },
+        {
+          "name": "匠",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_88",
+      "name": "属会・ＫＯ珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "ＫＯ術",
+          "level": 1
+        },
+        {
+          "name": "会心撃【属性】",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_89",
+      "name": "抜打珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "抜刀術【力】",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_90",
+      "name": "耐麻珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "麻痺耐性",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_91",
+      "name": "爆破珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "爆破属性強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_92",
+      "name": "痺瓶珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "麻痺ビン追加",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_93",
+      "name": "ＫＯ珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "ＫＯ術",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_94",
+      "name": "火炎・昂揚珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "火属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "強化持続",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_95",
+      "name": "抜打・鉄壁珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "抜刀術【力】",
+          "level": 3
+        },
+        {
+          "name": "ガード性能",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_96",
+      "name": "飛燕・抜刀珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "飛燕",
+          "level": 1
+        },
+        {
+          "name": "抜刀術【技】",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_97",
+      "name": "爆破珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "爆破属性強化",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_98",
+      "name": "超心珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "超会心",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_99",
+      "name": "雷光・鉄壁珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "ガード性能",
+          "level": 1
+        },
+        {
+          "name": "雷属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_100",
+      "name": "火炎・匠珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "火属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "匠",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_101",
+      "name": "溜幅・ＫＯ珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "チャージマスター",
+          "level": 3
+        },
+        {
+          "name": "ＫＯ術",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_102",
+      "name": "守勢珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "攻めの守勢",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_103",
+      "name": "属会珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "会心撃【属性】",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_104",
+      "name": "防風珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "風圧耐性",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_105",
+      "name": "麻痺珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "麻痺属性強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_106",
+      "name": "集中珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "集中",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_107",
+      "name": "強毒・ＫＯ珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "毒ダメージ強化",
+          "level": 1
+        },
+        {
+          "name": "ＫＯ術",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_108",
+      "name": "飛燕・攻撃珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "攻撃",
+          "level": 1
+        },
+        {
+          "name": "飛燕",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_109",
+      "name": "爆瓶珠【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "爆破ビン追加",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_110",
+      "name": "研磨・達人珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "見切り",
+          "level": 1
+        },
+        {
+          "name": "砥石使用高速化",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_111",
+      "name": "増弾・抜刀珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "抜刀術【技】",
+          "level": 1
+        },
+        {
+          "name": "砲弾装填",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_112",
+      "name": "早気珠【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "スタミナ急速回復",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_113",
+      "name": "火炎・集中珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "火属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "集中",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_114",
+      "name": "溜打・ＫＯ珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "ＫＯ術",
+          "level": 1
+        },
+        {
+          "name": "溜打強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_115",
+      "name": "集中・匠珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "集中",
+          "level": 3
+        },
+        {
+          "name": "匠",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_116",
+      "name": "鼓笛・ＫＯ珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "笛吹き名人",
+          "level": 2
+        },
+        {
+          "name": "ＫＯ術",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_117",
+      "name": "研鑽珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "研鑽",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_118",
+      "name": "積弾珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "フォースショット",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_119",
+      "name": "強壁・匠珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "ガード強化",
+          "level": 3
+        },
+        {
+          "name": "匠",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_120",
+      "name": "加護珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "精霊の加護",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_121",
+      "name": "麻痺珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "麻痺属性強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_122",
+      "name": "流水・ＫＯ珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "ＫＯ術",
+          "level": 1
+        },
+        {
+          "name": "水属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_123",
+      "name": "鼓笛珠【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "笛吹き名人",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_124",
+      "name": "業物珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "業物",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_125",
+      "name": "速変・鉄壁珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "高速変形",
+          "level": 3
+        },
+        {
+          "name": "ガード性能",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_126",
+      "name": "破龍・鉄壁珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "龍属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "ガード性能",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_127",
+      "name": "守勢・匠珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "攻めの守勢",
+          "level": 3
+        },
+        {
+          "name": "匠",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_128",
+      "name": "達人珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "見切り",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_129",
+      "name": "連撃珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "連撃",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_130",
+      "name": "増弾・匠珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "砲弾装填",
+          "level": 2
+        },
+        {
+          "name": "匠",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_131",
+      "name": "耐衝珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "ひるみ軽減",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_132",
+      "name": "飛込珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "飛び込み",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_133",
+      "name": "強毒・鉄壁珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "毒ダメージ強化",
+          "level": 1
+        },
+        {
+          "name": "ガード性能",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_134",
+      "name": "耐毒珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "毒耐性",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_135",
+      "name": "爆師珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "ボマー",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_136",
+      "name": "地学珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "地質学",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_137",
+      "name": "昂揚珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "強化持続",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_138",
+      "name": "火炎・ＫＯ珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "ＫＯ術",
+          "level": 1
+        },
+        {
+          "name": "火属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_139",
+      "name": "抜刀珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "抜刀術【技】",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_140",
+      "name": "溜幅珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "チャージマスター",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_141",
+      "name": "速納珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "納刀術",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_142",
+      "name": "強壁珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "ガード強化",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_143",
+      "name": "節食珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "満足感",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_144",
+      "name": "破龍珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "龍属性攻撃強化",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_145",
+      "name": "業物珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "業物",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_146",
+      "name": "鼓笛・達人珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "見切り",
+          "level": 1
+        },
+        {
+          "name": "笛吹き名人",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_147",
+      "name": "強毒・抜刀珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "毒ダメージ強化",
+          "level": 1
+        },
+        {
+          "name": "抜刀術【技】",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_148",
+      "name": "研磨・ＫＯ珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "ＫＯ術",
+          "level": 1
+        },
+        {
+          "name": "砥石使用高速化",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_149",
+      "name": "鉄壁珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "ガード性能",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_150",
+      "name": "火炎・強壁珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "ガード強化",
+          "level": 1
+        },
+        {
+          "name": "火属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_151",
+      "name": "砲術珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "砲術",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_152",
+      "name": "茸好珠【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "キノコ大好き",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_153",
+      "name": "初弾・射法珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "弾導強化",
+          "level": 1
+        },
+        {
+          "name": "ファーストショット",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_154",
+      "name": "火炎珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "火属性攻撃強化",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_155",
+      "name": "火炎珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "火属性攻撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_156",
+      "name": "強壁・流水珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "ガード強化",
+          "level": 3
+        },
+        {
+          "name": "水属性攻撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_157",
+      "name": "雷光・初弾珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "雷属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "ファーストショット",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_158",
+      "name": "破龍・守勢珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "龍属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "攻めの守勢",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_159",
+      "name": "破龍・集中珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "龍属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "集中",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_160",
+      "name": "属会・火炎珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "火属性攻撃強化",
+          "level": 1
+        },
+        {
+          "name": "会心撃【属性】",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_161",
+      "name": "氷結・業物珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "業物",
+          "level": 1
+        },
+        {
+          "name": "氷属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_162",
+      "name": "集中・氷結珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "集中",
+          "level": 3
+        },
+        {
+          "name": "氷属性攻撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_163",
+      "name": "業物・氷結珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "業物",
+          "level": 3
+        },
+        {
+          "name": "氷属性攻撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_164",
+      "name": "破龍・初弾珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "龍属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "ファーストショット",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_165",
+      "name": "集中・流水珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "集中",
+          "level": 3
+        },
+        {
+          "name": "水属性攻撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_166",
+      "name": "速変・破龍珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "高速変形",
+          "level": 3
+        },
+        {
+          "name": "龍属性攻撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_167",
+      "name": "積弾・火炎珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "火属性攻撃強化",
+          "level": 1
+        },
+        {
+          "name": "フォースショット",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_168",
+      "name": "業物・流水珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "水属性攻撃強化",
+          "level": 1
+        },
+        {
+          "name": "業物",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_169",
+      "name": "火炎・初弾珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "火属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "ファーストショット",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_170",
+      "name": "雷光・集中珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "集中",
+          "level": 1
+        },
+        {
+          "name": "雷属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_171",
+      "name": "昂揚・火炎珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "火属性攻撃強化",
+          "level": 1
+        },
+        {
+          "name": "強化持続",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_172",
+      "name": "属会・流水珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "会心撃【属性】",
+          "level": 3
+        },
+        {
+          "name": "水属性攻撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_173",
+      "name": "雷光・業物珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "業物",
+          "level": 1
+        },
+        {
+          "name": "雷属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_174",
+      "name": "昂揚・氷結珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "強化持続",
+          "level": 3
+        },
+        {
+          "name": "氷属性攻撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_175",
+      "name": "属会・雷光珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "会心撃【属性】",
+          "level": 3
+        },
+        {
+          "name": "雷属性攻撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_176",
+      "name": "破龍・属会珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "龍属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "会心撃【属性】",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_177",
+      "name": "氷結・積弾珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "氷属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "フォースショット",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_178",
+      "name": "破龍・強壁珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "ガード強化",
+          "level": 1
+        },
+        {
+          "name": "龍属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_179",
+      "name": "速変・火炎珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "高速変形",
+          "level": 3
+        },
+        {
+          "name": "火属性攻撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_180",
+      "name": "強壁・氷結珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "ガード強化",
+          "level": 3
+        },
+        {
+          "name": "氷属性攻撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_181",
+      "name": "雷光・速変珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "高速変形",
+          "level": 1
+        },
+        {
+          "name": "雷属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_182",
+      "name": "属会・氷結珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "会心撃【属性】",
+          "level": 3
+        },
+        {
+          "name": "氷属性攻撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_183",
+      "name": "強壁・雷光珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "ガード強化",
+          "level": 3
+        },
+        {
+          "name": "雷属性攻撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_184",
+      "name": "流水・業物珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "水属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "業物",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_185",
+      "name": "流水・強壁珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "ガード強化",
+          "level": 1
+        },
+        {
+          "name": "水属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_186",
+      "name": "氷結・集中珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "集中",
+          "level": 1
+        },
+        {
+          "name": "氷属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_187",
+      "name": "流水・属会珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "会心撃【属性】",
+          "level": 1
+        },
+        {
+          "name": "水属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_188",
+      "name": "初弾・雷光珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "雷属性攻撃強化",
+          "level": 1
+        },
+        {
+          "name": "ファーストショット",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_189",
+      "name": "破龍・昂揚珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "龍属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "強化持続",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_190",
+      "name": "業物・火炎珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "火属性攻撃強化",
+          "level": 1
+        },
+        {
+          "name": "業物",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_191",
+      "name": "初弾・流水珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "水属性攻撃強化",
+          "level": 1
+        },
+        {
+          "name": "ファーストショット",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_192",
+      "name": "守勢・火炎珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "火属性攻撃強化",
+          "level": 1
+        },
+        {
+          "name": "攻めの守勢",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_193",
+      "name": "集中・雷光珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "集中",
+          "level": 3
+        },
+        {
+          "name": "雷属性攻撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_194",
+      "name": "氷結・昂揚珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "強化持続",
+          "level": 1
+        },
+        {
+          "name": "氷属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_195",
+      "name": "集中・破龍珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "龍属性攻撃強化",
+          "level": 1
+        },
+        {
+          "name": "集中",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_196",
+      "name": "雷光・強壁珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "ガード強化",
+          "level": 1
+        },
+        {
+          "name": "雷属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_197",
+      "name": "積弾・流水珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "水属性攻撃強化",
+          "level": 1
+        },
+        {
+          "name": "フォースショット",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_198",
+      "name": "積弾・氷結珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "氷属性攻撃強化",
+          "level": 1
+        },
+        {
+          "name": "フォースショット",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_199",
+      "name": "速変・氷結珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "高速変形",
+          "level": 3
+        },
+        {
+          "name": "氷属性攻撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_200",
+      "name": "雷光・属会珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "会心撃【属性】",
+          "level": 1
+        },
+        {
+          "name": "雷属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_201",
+      "name": "破龍・速変珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "高速変形",
+          "level": 1
+        },
+        {
+          "name": "龍属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_202",
+      "name": "強壁・破龍珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "ガード強化",
+          "level": 3
+        },
+        {
+          "name": "龍属性攻撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_203",
+      "name": "氷結・守勢珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "攻めの守勢",
+          "level": 1
+        },
+        {
+          "name": "氷属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_204",
+      "name": "火炎・属会珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "火属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "会心撃【属性】",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_205",
+      "name": "氷結・属会珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "会心撃【属性】",
+          "level": 1
+        },
+        {
+          "name": "氷属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_206",
+      "name": "守勢・破龍珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "龍属性攻撃強化",
+          "level": 1
+        },
+        {
+          "name": "攻めの守勢",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_207",
+      "name": "破龍・積弾珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "龍属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "フォースショット",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_208",
+      "name": "雷光・守勢珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "攻めの守勢",
+          "level": 1
+        },
+        {
+          "name": "雷属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_209",
+      "name": "流水・昂揚珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "水属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "強化持続",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_210",
+      "name": "流水・守勢珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "攻めの守勢",
+          "level": 1
+        },
+        {
+          "name": "水属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_211",
+      "name": "積弾・雷光珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "雷属性攻撃強化",
+          "level": 1
+        },
+        {
+          "name": "フォースショット",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_212",
+      "name": "守勢・流水珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "攻めの守勢",
+          "level": 3
+        },
+        {
+          "name": "水属性攻撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_213",
+      "name": "昂揚・流水珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "水属性攻撃強化",
+          "level": 1
+        },
+        {
+          "name": "強化持続",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_214",
+      "name": "雷光・積弾珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "雷属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "フォースショット",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_215",
+      "name": "破龍・業物珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "龍属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "業物",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_216",
+      "name": "集中・火炎珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "火属性攻撃強化",
+          "level": 1
+        },
+        {
+          "name": "集中",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_217",
+      "name": "守勢・雷光珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "攻めの守勢",
+          "level": 3
+        },
+        {
+          "name": "雷属性攻撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_218",
+      "name": "速変・雷光珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "高速変形",
+          "level": 3
+        },
+        {
+          "name": "雷属性攻撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_219",
+      "name": "氷結・速変珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "高速変形",
+          "level": 1
+        },
+        {
+          "name": "氷属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_220",
+      "name": "守勢・氷結珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "攻めの守勢",
+          "level": 3
+        },
+        {
+          "name": "氷属性攻撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_221",
+      "name": "初弾・氷結珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "氷属性攻撃強化",
+          "level": 1
+        },
+        {
+          "name": "ファーストショット",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_222",
+      "name": "流水・積弾珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "水属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "フォースショット",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_223",
+      "name": "業物・破龍珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "龍属性攻撃強化",
+          "level": 1
+        },
+        {
+          "name": "業物",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_224",
+      "name": "初弾・火炎珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "火属性攻撃強化",
+          "level": 1
+        },
+        {
+          "name": "ファーストショット",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_225",
+      "name": "火炎・積弾珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "火属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "フォースショット",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_226",
+      "name": "昂揚・雷光珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "強化持続",
+          "level": 3
+        },
+        {
+          "name": "雷属性攻撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_227",
+      "name": "強壁・火炎珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "ガード強化",
+          "level": 3
+        },
+        {
+          "name": "火属性攻撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_228",
+      "name": "昂揚・破龍珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "龍属性攻撃強化",
+          "level": 1
+        },
+        {
+          "name": "強化持続",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_229",
+      "name": "速変・流水珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "高速変形",
+          "level": 3
+        },
+        {
+          "name": "水属性攻撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_230",
+      "name": "積弾・破龍珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "龍属性攻撃強化",
+          "level": 1
+        },
+        {
+          "name": "フォースショット",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_231",
+      "name": "初弾・破龍珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "龍属性攻撃強化",
+          "level": 1
+        },
+        {
+          "name": "ファーストショット",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_232",
+      "name": "属会・破龍珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "龍属性攻撃強化",
+          "level": 1
+        },
+        {
+          "name": "会心撃【属性】",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_233",
+      "name": "氷結・初弾珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "氷属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "ファーストショット",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_234",
+      "name": "業物・雷光珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "業物",
+          "level": 3
+        },
+        {
+          "name": "雷属性攻撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_235",
+      "name": "流水・速変珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "高速変形",
+          "level": 1
+        },
+        {
+          "name": "水属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_236",
+      "name": "氷結・強壁珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "ガード強化",
+          "level": 1
+        },
+        {
+          "name": "氷属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_237",
+      "name": "雷光・昂揚珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "強化持続",
+          "level": 1
+        },
+        {
+          "name": "雷属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_238",
+      "name": "流水・集中珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "集中",
+          "level": 1
+        },
+        {
+          "name": "水属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_239",
+      "name": "流水・初弾珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "水属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "ファーストショット",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_240",
+      "name": "研磨珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "砥石使用高速化",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_241",
+      "name": "防御珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "防御",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_242",
+      "name": "研磨珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "砥石使用高速化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_243",
+      "name": "強毒・射法珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "毒ダメージ強化",
+          "level": 1
+        },
+        {
+          "name": "弾導強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_244",
+      "name": "抜打珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "抜刀術【力】",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_245",
+      "name": "業物・ＫＯ珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "ＫＯ術",
+          "level": 1
+        },
+        {
+          "name": "業物",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_246",
+      "name": "散弾珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "散弾・剛射強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_247",
+      "name": "ＫＯ珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "ＫＯ術",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_248",
+      "name": "集中・ＫＯ珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "ＫＯ術",
+          "level": 1
+        },
+        {
+          "name": "集中",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_249",
+      "name": "剛刃珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "剛刃研磨",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_250",
+      "name": "狩人珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "ハンター生活",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_251",
+      "name": "砲術珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "砲術",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_252",
+      "name": "積弾・射法珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "弾導強化",
+          "level": 1
+        },
+        {
+          "name": "フォースショット",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_253",
+      "name": "溜幅・匠珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "チャージマスター",
+          "level": 3
+        },
+        {
+          "name": "匠",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_254",
+      "name": "特会珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "会心撃【特殊】",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_255",
+      "name": "攻撃珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "攻撃",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_256",
+      "name": "匠珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "匠",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_257",
+      "name": "初弾・鉄壁珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "ガード性能",
+          "level": 1
+        },
+        {
+          "name": "ファーストショット",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_258",
+      "name": "速変珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "高速変形",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_259",
+      "name": "氷結珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "氷属性攻撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_260",
+      "name": "無傷珠【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "フルチャージ",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_261",
+      "name": "破龍・射法珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "龍属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "弾導強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_262",
+      "name": "達人珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "見切り",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_263",
+      "name": "攻撃珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "攻撃",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_264",
+      "name": "増弾珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "砲弾装填",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_265",
+      "name": "強毒・達人珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "見切り",
+          "level": 1
+        },
+        {
+          "name": "毒ダメージ強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_266",
+      "name": "氷結珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "氷属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_267",
+      "name": "強毒・匠珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "毒ダメージ強化",
+          "level": 1
+        },
+        {
+          "name": "匠",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_268",
+      "name": "匠珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "匠",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_269",
+      "name": "昂揚珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "強化持続",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_270",
+      "name": "治癒珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "体力回復量ＵＰ",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_271",
+      "name": "溜幅珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "チャージマスター",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_272",
+      "name": "飛燕・達人珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "見切り",
+          "level": 1
+        },
+        {
+          "name": "飛燕",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_273",
+      "name": "鼓笛・抜刀珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "笛吹き名人",
+          "level": 2
+        },
+        {
+          "name": "抜刀術【技】",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_274",
+      "name": "逆上珠【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "逆恨み",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_275",
+      "name": "特会・射法珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "弾導強化",
+          "level": 1
+        },
+        {
+          "name": "会心撃【特殊】",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_276",
+      "name": "心眼珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "心眼",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_277",
+      "name": "ＫＯ珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "ＫＯ術",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_278",
+      "name": "増弾・鉄壁珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "ガード性能",
+          "level": 1
+        },
+        {
+          "name": "砲弾装填",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_279",
+      "name": "麻痺珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "麻痺属性強化",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_280",
+      "name": "早食珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "早食い",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_281",
+      "name": "流水・鉄壁珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "ガード性能",
+          "level": 1
+        },
+        {
+          "name": "水属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_282",
+      "name": "急襲珠【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "急襲",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_283",
+      "name": "転福珠【２】",
+      "slotSize": 2,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "災禍転福",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_284",
+      "name": "耐絶珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "気絶耐性",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_285",
+      "name": "耐爆珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "爆破やられ耐性",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_286",
+      "name": "奪気珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "スタミナ奪取",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_287",
+      "name": "心眼珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "心眼",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_288",
+      "name": "痛撃珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "弱点特効",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_289",
+      "name": "砲術珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "砲術",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_290",
+      "name": "溜打珠【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "溜打強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_291",
+      "name": "集中珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "集中",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_292",
+      "name": "溜打・匠珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "溜打強化",
+          "level": 1
+        },
+        {
+          "name": "匠",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_293",
+      "name": "緩衝珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "緩衝",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_294",
+      "name": "火炎珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "火属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_295",
+      "name": "氷結珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "氷属性攻撃強化",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_296",
+      "name": "破龍・匠珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "龍属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "匠",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_297",
+      "name": "属会・鉄壁珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "ガード性能",
+          "level": 1
+        },
+        {
+          "name": "会心撃【属性】",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_298",
+      "name": "火炎・速変珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "高速変形",
+          "level": 1
+        },
+        {
+          "name": "火属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_299",
+      "name": "流水・匠珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "水属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "匠",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_300",
+      "name": "溜打・達人珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "見切り",
+          "level": 1
+        },
+        {
+          "name": "溜打強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_301",
+      "name": "属会・射法珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "弾導強化",
+          "level": 1
+        },
+        {
+          "name": "会心撃【属性】",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_302",
+      "name": "全開珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "力の解放",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_303",
+      "name": "耐臭珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "悪臭耐性",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_304",
+      "name": "整備珠【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "整備",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_305",
+      "name": "超心珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "超会心",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_306",
+      "name": "氷結・射法珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "弾導強化",
+          "level": 1
+        },
+        {
+          "name": "氷属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_307",
+      "name": "火炎・業物珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "火属性攻撃強化",
+          "level": 3
+        },
+        {
+          "name": "業物",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_308",
+      "name": "疲瓶珠【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "減気ビン追加",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_309",
+      "name": "強壁珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "ガード強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_310",
+      "name": "研磨・攻撃珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "攻撃",
+          "level": 1
+        },
+        {
+          "name": "砥石使用高速化",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_311",
+      "name": "鈍器珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "鈍器使い",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_312",
+      "name": "超心珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "超会心",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_313",
+      "name": "剛刃珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "剛刃研磨",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_314",
+      "name": "集中・射法珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "弾導強化",
+          "level": 1
+        },
+        {
+          "name": "集中",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_315",
+      "name": "抜打珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "抜刀術【力】",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_316",
+      "name": "積弾珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "フォースショット",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_317",
+      "name": "鈍器珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "鈍器使い",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_318",
+      "name": "強弾珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "通常弾・通常矢強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_319",
+      "name": "速変珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "高速変形",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_320",
+      "name": "属会珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "会心撃【属性】",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_321",
+      "name": "閃光珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "閃光強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_322",
+      "name": "飛燕・匠珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "飛燕",
+          "level": 1
+        },
+        {
+          "name": "匠",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_323",
+      "name": "逆襲珠【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "逆襲",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_324",
+      "name": "射法珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "弾導強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_325",
+      "name": "特射珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "特殊射撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_326",
+      "name": "氷結・ＫＯ珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "ＫＯ術",
+          "level": 1
+        },
+        {
+          "name": "氷属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_327",
+      "name": "特会・ＫＯ珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "ＫＯ術",
+          "level": 1
+        },
+        {
+          "name": "会心撃【特殊】",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_328",
+      "name": "底力珠【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "火事場力",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_329",
+      "name": "特会珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "会心撃【特殊】",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_330",
+      "name": "強壁・鉄壁珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "ガード強化",
+          "level": 3
+        },
+        {
+          "name": "ガード性能",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_331",
+      "name": "強壁珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "ガード強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_332",
+      "name": "回避珠【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "回避性能",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_333",
+      "name": "氷結・匠珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "匠",
+          "level": 1
+        },
+        {
+          "name": "氷属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_334",
+      "name": "流水珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "水属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_335",
+      "name": "氷結・鉄壁珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "ガード性能",
+          "level": 1
+        },
+        {
+          "name": "氷属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_336",
+      "name": "抜刀珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "抜刀術【技】",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_337",
+      "name": "反攻珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "巧撃",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_338",
+      "name": "速変・ＫＯ珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "高速変形",
+          "level": 3
+        },
+        {
+          "name": "ＫＯ術",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_339",
+      "name": "業物・匠珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "業物",
+          "level": 3
+        },
+        {
+          "name": "匠",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_340",
+      "name": "貫通珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "貫通弾・竜の矢強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_341",
+      "name": "友愛珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "広域化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_342",
+      "name": "強走珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "ランナー",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_343",
+      "name": "属会珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "会心撃【属性】",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_344",
+      "name": "爆破珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "爆破属性強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_345",
+      "name": "流水・射法珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "弾導強化",
+          "level": 1
+        },
+        {
+          "name": "水属性攻撃強化",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_346",
+      "name": "昂揚・匠珠【３】",
+      "slotSize": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "強化持続",
+          "level": 3
+        },
+        {
+          "name": "匠",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_347",
+      "name": "集中珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "集中",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_348",
+      "name": "溜打・抜刀珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "溜打強化",
+          "level": 1
+        },
+        {
+          "name": "抜刀術【技】",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_349",
+      "name": "登壁珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "クライマー",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_350",
+      "name": "鉄壁珠Ⅱ【２】",
+      "slotSize": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "ガード性能",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_351",
+      "name": "植学珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "植生学",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_352",
+      "name": "挑戦珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "挑戦者",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_353",
+      "name": "増弾・攻撃珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "攻撃",
+          "level": 1
+        },
+        {
+          "name": "砲弾装填",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "d_354",
+      "name": "鉄壁珠Ⅲ【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "ガード性能",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "d_355",
+      "name": "鼓笛・匠珠【３】",
+      "slotSize": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "笛吹き名人",
+          "level": 2
+        },
+        {
+          "name": "匠",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_356",
+      "name": "持続珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "アイテム使用強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_357",
+      "name": "破龍珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "龍属性攻撃強化",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_358",
+      "name": "初弾珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "ファーストショット",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_359",
+      "name": "耐震珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "耐震",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_360",
+      "name": "強毒・攻撃珠【３】",
+      "slotSize": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "毒ダメージ強化",
+          "level": 1
+        },
+        {
+          "name": "攻撃",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "d_361",
+      "name": "威嚇珠【１】",
+      "slotSize": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "威嚇",
+          "level": 1
+        }
+      ]
+    }
   ]
 }

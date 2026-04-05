@@ -47,6 +47,9 @@
     <!-- 護石 -->
     <div class="card-header" style="margin-top:4px">
       <span>護石</span>
+      <select id="charmPreset" style="background:var(--bg-input);border:1px solid var(--border);color:var(--text-primary);padding:2px 6px;border-radius:4px;font-size:0.7rem;max-width:180px">
+        <option value="">プリセットから選択...</option>
+      </select>
     </div>
     <div class="charm-editor" id="charmEditor">
       <div class="charm-row">
@@ -58,6 +61,11 @@
         <label>スキル2</label>
         <select id="charmSkill2"><option value="">なし</option></select>
         <select id="charmSkill2Lv"><option value="0">-</option></select>
+      </div>
+      <div class="charm-row">
+        <label>スキル3</label>
+        <select id="charmSkill3"><option value="">なし</option></select>
+        <select id="charmSkill3Lv"><option value="0">-</option></select>
       </div>
       <div class="charm-row">
         <label>スロット</label>
@@ -121,6 +129,10 @@
 
     <!-- 条件付きスキル -->
     <div class="cond-toggles" id="condToggles"></div>
+
+    <!-- セットスキル -->
+    <div class="card-header" style="border-top:1px solid var(--border)"><span>シリーズスキル</span></div>
+    <div class="skill-list" id="setSkillList"><p style="color:var(--text-muted);font-size:0.8rem;padding:8px">-</p></div>
 
     <!-- 発動スキル -->
     <div class="card-header" style="border-top:1px solid var(--border)"><span>発動スキル</span></div>

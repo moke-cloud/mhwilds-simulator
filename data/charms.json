@@ -1,0 +1,2421 @@
+{
+  "version": "2.0.0",
+  "source": "MHDB Wilds API",
+  "charms": [
+    {
+      "id": "c_1_1",
+      "name": "防風の護石Ⅰ",
+      "level": 1,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "風圧耐性",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_1_2",
+      "name": "防風の護石Ⅱ",
+      "level": 2,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "風圧耐性",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_1_3",
+      "name": "防風の護石Ⅲ",
+      "level": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "風圧耐性",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_2_1",
+      "name": "整備の護石Ⅰ",
+      "level": 1,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "整備",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_2_2",
+      "name": "整備の護石Ⅱ",
+      "level": 2,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "整備",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_2_3",
+      "name": "整備の護石Ⅲ",
+      "level": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "整備",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_2_4",
+      "name": "整備の護石Ⅳ",
+      "level": 4,
+      "rarity": 8,
+      "skills": [
+        {
+          "name": "整備",
+          "level": 4
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_3_1",
+      "name": "耐火の護石Ⅰ",
+      "level": 1,
+      "rarity": 2,
+      "skills": [
+        {
+          "name": "火耐性",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_3_2",
+      "name": "耐火の護石Ⅱ",
+      "level": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "火耐性",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_3_3",
+      "name": "耐火の護石Ⅲ",
+      "level": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "火耐性",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_4_1",
+      "name": "無食の護石Ⅰ",
+      "level": 1,
+      "rarity": 2,
+      "skills": [
+        {
+          "name": "腹減り耐性",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_4_2",
+      "name": "無食の護石Ⅱ",
+      "level": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "腹減り耐性",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_4_3",
+      "name": "無食の護石Ⅲ",
+      "level": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "腹減り耐性",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_5_1",
+      "name": "底力の護石Ⅰ",
+      "level": 1,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "火事場力",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_5_2",
+      "name": "底力の護石Ⅱ",
+      "level": 2,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "火事場力",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_5_3",
+      "name": "底力の護石Ⅲ",
+      "level": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "火事場力",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_5_4",
+      "name": "底力の護石Ⅳ",
+      "level": 4,
+      "rarity": 8,
+      "skills": [
+        {
+          "name": "火事場力",
+          "level": 4
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_6_1",
+      "name": "小食の護石Ⅰ",
+      "level": 1,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "満足感",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_6_2",
+      "name": "小食の護石Ⅱ",
+      "level": 2,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "満足感",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_6_3",
+      "name": "小食の護石Ⅲ",
+      "level": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "満足感",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_7_1",
+      "name": "跳躍の護石Ⅰ",
+      "level": 1,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "回避距離ＵＰ",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_7_2",
+      "name": "跳躍の護石Ⅱ",
+      "level": 2,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "回避距離ＵＰ",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_7_3",
+      "name": "跳躍の護石Ⅲ",
+      "level": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "回避距離ＵＰ",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_8_1",
+      "name": "無傷の護石Ⅰ",
+      "level": 1,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "フルチャージ",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_8_2",
+      "name": "無傷の護石Ⅱ",
+      "level": 2,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "フルチャージ",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_8_3",
+      "name": "無傷の護石Ⅲ",
+      "level": 3,
+      "rarity": 8,
+      "skills": [
+        {
+          "name": "フルチャージ",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_9_1",
+      "name": "耐眠の護石Ⅰ",
+      "level": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "睡眠耐性",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_9_2",
+      "name": "耐眠の護石Ⅱ",
+      "level": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "睡眠耐性",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_9_3",
+      "name": "耐眠の護石Ⅲ",
+      "level": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "睡眠耐性",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_10_1",
+      "name": "早食の護石Ⅰ",
+      "level": 1,
+      "rarity": 2,
+      "skills": [
+        {
+          "name": "早食い",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_10_2",
+      "name": "早食の護石Ⅱ",
+      "level": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "早食い",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_10_3",
+      "name": "早食の護石Ⅲ",
+      "level": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "早食い",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_11_1",
+      "name": "挑戦の護石Ⅰ",
+      "level": 1,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "挑戦者",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_11_2",
+      "name": "挑戦の護石Ⅱ",
+      "level": 2,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "挑戦者",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_11_3",
+      "name": "挑戦の護石Ⅲ",
+      "level": 3,
+      "rarity": 8,
+      "skills": [
+        {
+          "name": "挑戦者",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_12_1",
+      "name": "回避の護石Ⅰ",
+      "level": 1,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "回避性能",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_12_2",
+      "name": "回避の護石Ⅱ",
+      "level": 2,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "回避性能",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_12_3",
+      "name": "回避の護石Ⅲ",
+      "level": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "回避性能",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_12_4",
+      "name": "回避の護石Ⅳ",
+      "level": 4,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "回避性能",
+          "level": 4
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_13_1",
+      "name": "耐爆の護石Ⅰ",
+      "level": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "爆破やられ耐性",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_13_2",
+      "name": "耐爆の護石Ⅱ",
+      "level": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "爆破やられ耐性",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_13_3",
+      "name": "耐爆の護石Ⅲ",
+      "level": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "爆破やられ耐性",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_14_1",
+      "name": "渾身の護石Ⅰ",
+      "level": 1,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "渾身",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_14_2",
+      "name": "渾身の護石Ⅱ",
+      "level": 2,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "渾身",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_14_3",
+      "name": "渾身の護石Ⅲ",
+      "level": 3,
+      "rarity": 8,
+      "skills": [
+        {
+          "name": "渾身",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_15_1",
+      "name": "耐絶の護石Ⅰ",
+      "level": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "気絶耐性",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_15_2",
+      "name": "耐絶の護石Ⅱ",
+      "level": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "気絶耐性",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_15_3",
+      "name": "耐絶の護石Ⅲ",
+      "level": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "気絶耐性",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_16_1",
+      "name": "希望の護石",
+      "level": 1,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "体力回復量ＵＰ",
+          "level": 1
+        },
+        {
+          "name": "研鑽",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_17_1",
+      "name": "耐麻の護石Ⅰ",
+      "level": 1,
+      "rarity": 2,
+      "skills": [
+        {
+          "name": "麻痺耐性",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_17_2",
+      "name": "耐麻の護石Ⅱ",
+      "level": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "麻痺耐性",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_17_3",
+      "name": "耐麻の護石Ⅲ",
+      "level": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "麻痺耐性",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_18_1",
+      "name": "環境の護石Ⅰ",
+      "level": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "環境利用の知識",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_18_2",
+      "name": "環境の護石Ⅱ",
+      "level": 2,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "環境利用の知識",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_18_3",
+      "name": "環境の護石Ⅲ",
+      "level": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "環境利用の知識",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_19_1",
+      "name": "耳栓の護石Ⅰ",
+      "level": 1,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "耳栓",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_19_2",
+      "name": "耳栓の護石Ⅱ",
+      "level": 2,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "耳栓",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_20_1",
+      "name": "耐雷の護石Ⅰ",
+      "level": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "雷耐性",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_20_2",
+      "name": "耐雷の護石Ⅱ",
+      "level": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "雷耐性",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_20_3",
+      "name": "耐雷の護石Ⅲ",
+      "level": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "雷耐性",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_21_1",
+      "name": "早気の護石Ⅰ",
+      "level": 1,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "スタミナ急速回復",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_21_2",
+      "name": "早気の護石Ⅱ",
+      "level": 2,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "スタミナ急速回復",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_21_3",
+      "name": "早気の護石Ⅲ",
+      "level": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "スタミナ急速回復",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_22_1",
+      "name": "全開の護石Ⅰ",
+      "level": 1,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "力の解放",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_22_2",
+      "name": "全開の護石Ⅱ",
+      "level": 2,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "力の解放",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_22_3",
+      "name": "全開の護石Ⅲ",
+      "level": 3,
+      "rarity": 8,
+      "skills": [
+        {
+          "name": "力の解放",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_23_1",
+      "name": "防御の護石Ⅰ",
+      "level": 1,
+      "rarity": 2,
+      "skills": [
+        {
+          "name": "防御",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_23_2",
+      "name": "防御の護石Ⅱ",
+      "level": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "防御",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_23_3",
+      "name": "防御の護石Ⅲ",
+      "level": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "防御",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_23_4",
+      "name": "防御の護石Ⅳ",
+      "level": 4,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "防御",
+          "level": 4
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_23_5",
+      "name": "防御の護石Ⅴ",
+      "level": 5,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "防御",
+          "level": 5
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_24_1",
+      "name": "耐毒の護石Ⅰ",
+      "level": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "毒耐性",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_24_2",
+      "name": "耐毒の護石Ⅱ",
+      "level": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "毒耐性",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_24_3",
+      "name": "耐毒の護石Ⅲ",
+      "level": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "毒耐性",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_25_1",
+      "name": "逆襲の護石Ⅰ",
+      "level": 1,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "逆襲",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_25_2",
+      "name": "逆襲の護石Ⅱ",
+      "level": 2,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "逆襲",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_25_3",
+      "name": "逆襲の護石Ⅲ",
+      "level": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "逆襲",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_26_1",
+      "name": "納刀の護石Ⅰ",
+      "level": 1,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "納刀術",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_26_2",
+      "name": "納刀の護石Ⅱ",
+      "level": 2,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "納刀術",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_26_3",
+      "name": "納刀の護石Ⅲ",
+      "level": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "納刀術",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_27_1",
+      "name": "耐水の護石Ⅰ",
+      "level": 1,
+      "rarity": 2,
+      "skills": [
+        {
+          "name": "水耐性",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_27_2",
+      "name": "耐水の護石Ⅱ",
+      "level": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "水耐性",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_27_3",
+      "name": "耐水の護石Ⅲ",
+      "level": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "水耐性",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_28_1",
+      "name": "友愛の護石Ⅰ",
+      "level": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "広域化",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_28_2",
+      "name": "友愛の護石Ⅱ",
+      "level": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "広域化",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_28_3",
+      "name": "友愛の護石Ⅲ",
+      "level": 3,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "広域化",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_28_4",
+      "name": "友愛の護石Ⅳ",
+      "level": 4,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "広域化",
+          "level": 4
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_28_5",
+      "name": "友愛の護石Ⅴ",
+      "level": 5,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "広域化",
+          "level": 5
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_29_1",
+      "name": "耐属の護石Ⅰ",
+      "level": 1,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "属性やられ耐性",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_29_2",
+      "name": "耐属の護石Ⅱ",
+      "level": 2,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "属性やられ耐性",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_29_3",
+      "name": "耐属の護石Ⅲ",
+      "level": 3,
+      "rarity": 8,
+      "skills": [
+        {
+          "name": "属性やられ耐性",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_30_1",
+      "name": "持続の護石Ⅰ",
+      "level": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "アイテム使用強化",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_30_2",
+      "name": "持続の護石Ⅱ",
+      "level": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "アイテム使用強化",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_30_3",
+      "name": "持続の護石Ⅲ",
+      "level": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "アイテム使用強化",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_31_1",
+      "name": "耐氷の護石Ⅰ",
+      "level": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "氷耐性",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_31_2",
+      "name": "耐氷の護石Ⅱ",
+      "level": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "氷耐性",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_31_3",
+      "name": "耐氷の護石Ⅲ",
+      "level": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "氷耐性",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_32_1",
+      "name": "重撃の護石Ⅰ",
+      "level": 1,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "破壊王",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_32_2",
+      "name": "重撃の護石Ⅱ",
+      "level": 2,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "破壊王",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_32_3",
+      "name": "重撃の護石Ⅲ",
+      "level": 3,
+      "rarity": 8,
+      "skills": [
+        {
+          "name": "破壊王",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_33_1",
+      "name": "抗狂の護石Ⅰ",
+      "level": 1,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "無我の境地",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_33_2",
+      "name": "抗狂の護石Ⅱ",
+      "level": 2,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "無我の境地",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_33_3",
+      "name": "抗狂の護石Ⅲ",
+      "level": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "無我の境地",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_34_1",
+      "name": "威嚇の護石Ⅰ",
+      "level": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "威嚇",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_34_2",
+      "name": "威嚇の護石Ⅱ",
+      "level": 2,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "威嚇",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_34_3",
+      "name": "威嚇の護石Ⅲ",
+      "level": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "威嚇",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_35_1",
+      "name": "耐衝の護石Ⅰ",
+      "level": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "ひるみ軽減",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_35_2",
+      "name": "耐衝の護石Ⅱ",
+      "level": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "ひるみ軽減",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_35_3",
+      "name": "耐衝の護石Ⅲ",
+      "level": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "ひるみ軽減",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_36_1",
+      "name": "茸好の護石Ⅰ",
+      "level": 1,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "キノコ大好き",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_36_2",
+      "name": "茸好の護石Ⅱ",
+      "level": 2,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "キノコ大好き",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_36_3",
+      "name": "茸好の護石Ⅲ",
+      "level": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "キノコ大好き",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_37_1",
+      "name": "反攻の護石Ⅰ",
+      "level": 1,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "巧撃",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_37_2",
+      "name": "反攻の護石Ⅱ",
+      "level": 2,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "巧撃",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_37_3",
+      "name": "反攻の護石Ⅲ",
+      "level": 3,
+      "rarity": 8,
+      "skills": [
+        {
+          "name": "巧撃",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_38_1",
+      "name": "強走の護石Ⅰ",
+      "level": 1,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "ランナー",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_38_2",
+      "name": "強走の護石Ⅱ",
+      "level": 2,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "ランナー",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_38_3",
+      "name": "強走の護石Ⅲ",
+      "level": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "ランナー",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_39_1",
+      "name": "耐震の護石Ⅰ",
+      "level": 1,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "耐震",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_39_2",
+      "name": "耐震の護石Ⅱ",
+      "level": 2,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "耐震",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_39_3",
+      "name": "耐震の護石Ⅲ",
+      "level": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "耐震",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_40_1",
+      "name": "鎖刃の護石Ⅰ",
+      "level": 1,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "鎖刃刺撃",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_40_2",
+      "name": "鎖刃の護石Ⅱ",
+      "level": 2,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "鎖刃刺撃",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_40_3",
+      "name": "鎖刃の護石Ⅲ",
+      "level": 3,
+      "rarity": 8,
+      "skills": [
+        {
+          "name": "鎖刃刺撃",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_41_1",
+      "name": "転福の護石Ⅰ",
+      "level": 1,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "災禍転福",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_41_2",
+      "name": "転福の護石Ⅱ",
+      "level": 2,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "災禍転福",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_41_3",
+      "name": "転福の護石Ⅲ",
+      "level": 3,
+      "rarity": 8,
+      "skills": [
+        {
+          "name": "災禍転福",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_42_1",
+      "name": "爆師の護石Ⅰ",
+      "level": 1,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "ボマー",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_42_2",
+      "name": "爆師の護石Ⅱ",
+      "level": 2,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "ボマー",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_42_3",
+      "name": "爆師の護石Ⅲ",
+      "level": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "ボマー",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_43_1",
+      "name": "耐裂の護石Ⅰ",
+      "level": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "裂傷耐性",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_43_2",
+      "name": "耐裂の護石Ⅱ",
+      "level": 2,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "裂傷耐性",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_43_3",
+      "name": "耐裂の護石Ⅲ",
+      "level": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "裂傷耐性",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_44_1",
+      "name": "属変の護石Ⅰ",
+      "level": 1,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "属性変換",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_44_2",
+      "name": "属変の護石Ⅱ",
+      "level": 2,
+      "rarity": 8,
+      "skills": [
+        {
+          "name": "属性変換",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_45_1",
+      "name": "加護の護石Ⅰ",
+      "level": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "精霊の加護",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_45_2",
+      "name": "加護の護石Ⅱ",
+      "level": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "精霊の加護",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_45_3",
+      "name": "加護の護石Ⅲ",
+      "level": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "精霊の加護",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_46_1",
+      "name": "耐防の護石Ⅰ",
+      "level": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "防御力ＤＯＷＮ耐性",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_46_2",
+      "name": "耐防の護石Ⅱ",
+      "level": 2,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "防御力ＤＯＷＮ耐性",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_46_3",
+      "name": "耐防の護石Ⅲ",
+      "level": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "防御力ＤＯＷＮ耐性",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_47_1",
+      "name": "急襲の護石Ⅰ",
+      "level": 1,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "急襲",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_47_2",
+      "name": "急襲の護石Ⅱ",
+      "level": 2,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "急襲",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_47_3",
+      "name": "急襲の護石Ⅲ",
+      "level": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "急襲",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_48_1",
+      "name": "属吸の護石Ⅰ",
+      "level": 1,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "属性吸収",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_48_2",
+      "name": "属吸の護石Ⅱ",
+      "level": 2,
+      "rarity": 8,
+      "skills": [
+        {
+          "name": "属性吸収",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_49_1",
+      "name": "耐拘の護石Ⅰ",
+      "level": 1,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "拘束耐性",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_49_2",
+      "name": "耐拘の護石Ⅱ",
+      "level": 2,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "拘束耐性",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_49_3",
+      "name": "耐拘の護石Ⅲ",
+      "level": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "拘束耐性",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_50_1",
+      "name": "早復の護石Ⅰ",
+      "level": 1,
+      "rarity": 2,
+      "skills": [
+        {
+          "name": "回復速度",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_50_2",
+      "name": "早復の護石Ⅱ",
+      "level": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "回復速度",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_50_3",
+      "name": "早復の護石Ⅲ",
+      "level": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "回復速度",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_51_1",
+      "name": "治癒の護石Ⅰ",
+      "level": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "体力回復量ＵＰ",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_51_2",
+      "name": "治癒の護石Ⅱ",
+      "level": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "体力回復量ＵＰ",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_51_3",
+      "name": "治癒の護石Ⅲ",
+      "level": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "体力回復量ＵＰ",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_52_1",
+      "name": "体術の護石Ⅰ",
+      "level": 1,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "体術",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_52_2",
+      "name": "体術の護石Ⅱ",
+      "level": 2,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "体術",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_52_3",
+      "name": "体術の護石Ⅲ",
+      "level": 3,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "体術",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_52_4",
+      "name": "体術の護石Ⅳ",
+      "level": 4,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "体術",
+          "level": 4
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_52_5",
+      "name": "体術の護石Ⅴ",
+      "level": 5,
+      "rarity": 8,
+      "skills": [
+        {
+          "name": "体術",
+          "level": 5
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_53_1",
+      "name": "逆上の護石Ⅰ",
+      "level": 1,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "逆恨み",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_53_2",
+      "name": "逆上の護石Ⅱ",
+      "level": 2,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "逆恨み",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_53_3",
+      "name": "逆上の護石Ⅲ",
+      "level": 3,
+      "rarity": 8,
+      "skills": [
+        {
+          "name": "逆恨み",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_54_1",
+      "name": "地学の護石Ⅰ",
+      "level": 1,
+      "rarity": 2,
+      "skills": [
+        {
+          "name": "地質学",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_54_2",
+      "name": "地学の護石Ⅱ",
+      "level": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "地質学",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_54_3",
+      "name": "地学の護石Ⅲ",
+      "level": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "地質学",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_55_1",
+      "name": "植学の護石Ⅰ",
+      "level": 1,
+      "rarity": 2,
+      "skills": [
+        {
+          "name": "植生学",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_55_2",
+      "name": "植学の護石Ⅱ",
+      "level": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "植生学",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_55_3",
+      "name": "植学の護石Ⅲ",
+      "level": 3,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "植生学",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_55_4",
+      "name": "植学の護石Ⅳ",
+      "level": 4,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "植生学",
+          "level": 4
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_56_1",
+      "name": "耐龍の護石Ⅰ",
+      "level": 1,
+      "rarity": 3,
+      "skills": [
+        {
+          "name": "龍耐性",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_56_2",
+      "name": "耐龍の護石Ⅱ",
+      "level": 2,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "龍耐性",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_56_3",
+      "name": "耐龍の護石Ⅲ",
+      "level": 3,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "龍耐性",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_57_1",
+      "name": "痛撃の護石Ⅰ",
+      "level": 1,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "弱点特効",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_57_2",
+      "name": "痛撃の護石Ⅱ",
+      "level": 2,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "弱点特効",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_57_3",
+      "name": "痛撃の護石Ⅲ",
+      "level": 3,
+      "rarity": 8,
+      "skills": [
+        {
+          "name": "弱点特効",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_58_1",
+      "name": "攻勢の護石Ⅰ",
+      "level": 1,
+      "rarity": 4,
+      "skills": [
+        {
+          "name": "攻勢",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_58_2",
+      "name": "攻勢の護石Ⅱ",
+      "level": 2,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "攻勢",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_58_3",
+      "name": "攻勢の護石Ⅲ",
+      "level": 3,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "攻勢",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_59_1",
+      "name": "連撃の護石Ⅰ",
+      "level": 1,
+      "rarity": 5,
+      "skills": [
+        {
+          "name": "連撃",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_59_2",
+      "name": "連撃の護石Ⅱ",
+      "level": 2,
+      "rarity": 7,
+      "skills": [
+        {
+          "name": "連撃",
+          "level": 2
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_59_3",
+      "name": "連撃の護石Ⅲ",
+      "level": 3,
+      "rarity": 8,
+      "skills": [
+        {
+          "name": "連撃",
+          "level": 3
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_60_1",
+      "name": "にぎりめしの護石",
+      "level": 1,
+      "rarity": 6,
+      "skills": [
+        {
+          "name": "にぎりめし",
+          "level": 1
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "c_61_1",
+      "name": "未解の護石",
+      "level": 1,
+      "rarity": 5,
+      "skills": [],
+      "slots": []
+    },
+    {
+      "id": "c_62_1",
+      "name": "秘歴の護石",
+      "level": 1,
+      "rarity": 7,
+      "skills": [],
+      "slots": []
+    },
+    {
+      "id": "c_63_1",
+      "name": "栄世の護石",
+      "level": 1,
+      "rarity": 8,
+      "skills": [],
+      "slots": []
+    },
+    {
+      "id": "c_64_1",
+      "name": "史伝の護石",
+      "level": 1,
+      "rarity": 6,
+      "skills": [],
+      "slots": []
+    }
+  ]
+}

@@ -1,30 +1,32 @@
 /**
- * MHWilds Simulator - Main Application
+ * MHWilds Simulator - Main Application v2
+ * 護石3スキル、セットスキル、護石プリセット対応
  */
 const App = (() => {
-  // State
   const state = {
     selectedWeapon: null,
     selectedArmors: { head: null, chest: null, arms: null, waist: null, legs: null },
-    equippedDecos: [], // [{slotOwner, slotIndex, decoration}]
+    equippedDecos: [],
     charm: null,
     activeWeaponType: null,
     activeArmorPart: 'head',
     conditions: {}
   };
 
-  // DOM cache
   const $ = id => document.getElementById(id);
 
-  // === Init ===
   async function init() {
     try {
       await DataLoader.loadAll();
-      $('loadStatus').textContent = `${DataLoader.getWeapons().length}武器 / ${DataLoader.getArmors().length}防具`;
+      const w = DataLoader.getWeapons().length;
+      const a = DataLoader.getArmors().length;
+      const d = DataLoader.getDecorations().length;
+      $('loadStatus').textContent = `${w}武器 / ${a}防具 / ${d}装飾品`;
 
       renderWeaponTabs();
       renderArmorList();
       populateCharmSelects();
+      populateCharmPresets();
       bindEvents();
       recalculate();
     } catch (e) {
@@ -50,36 +52,30 @@ const App = (() => {
   function renderWeaponList() {
     const list = $('weaponList');
     const query = ($('weaponSearch').value || '').toLowerCase();
-    let weapons = state.activeWeaponType
-      ? DataLoader.filterWeapons(state.activeWeaponType)
-      : DataLoader.getWeapons();
-
-    if (query) weapons = weapons.filter(w => w.name.toLowerCase().includes(query));
+    let weapons = DataLoader.searchWeapons(query, state.activeWeaponType);
 
     list.innerHTML = '';
     for (const w of weapons) {
       const div = document.createElement('div');
       div.className = 'item' + (state.selectedWeapon?.id === w.id ? ' selected' : '');
+
+      const slotsHtml = renderSlotsText(w.slots);
       div.innerHTML = `
         <div class="item-name">
           ${w.name}
-          <span class="sub">${w.weaponType} | R${w.rarity}</span>
+          <span class="sub">R${w.rarity} ${slotsHtml ? '| ' + slotsHtml : ''}</span>
         </div>
         <div class="item-stats">
           <span class="atk">${w.attack}</span>
           ${w.affinity ? `<span class="aff"> ${w.affinity > 0 ? '+' : ''}${w.affinity}%</span>` : ''}
           ${w.element ? `<br><span class="text-${elemClass(w.element.type)}">${w.element.type}${w.element.value}</span>` : ''}
         </div>`;
-      div.onclick = () => selectWeapon(w);
+      div.onclick = () => { state.selectedWeapon = w; $('selectedWeaponName').textContent = w.name; renderWeaponList(); recalculate(); };
       list.appendChild(div);
     }
-  }
-
-  function selectWeapon(w) {
-    state.selectedWeapon = w;
-    $('selectedWeaponName').textContent = w.name;
-    renderWeaponList();
-    recalculate();
+    if (weapons.length === 0) {
+      list.innerHTML = '<div style="padding:16px;color:var(--text-muted);text-align:center">該当する武器がありません</div>';
+    }
   }
 
   // === Armor ===
@@ -87,20 +83,14 @@ const App = (() => {
     const list = $('armorList');
     const part = state.activeArmorPart;
     const query = ($('armorSearch').value || '').toLowerCase();
+    let armors = DataLoader.searchArmors(query, part);
 
-    let armors = DataLoader.filterArmors(part);
-    if (query) {
-      armors = armors.filter(a =>
-        a.name.toLowerCase().includes(query) ||
-        a.setName.toLowerCase().includes(query) ||
-        a.skills.some(s => s.name.toLowerCase().includes(query))
-      );
-    }
+    // Sort by rarity descending
+    armors.sort((a, b) => b.rarity - a.rarity);
 
     list.innerHTML = '';
     const selected = state.selectedArmors[part];
 
-    // 「なし」オプション
     const none = document.createElement('div');
     none.className = 'item' + (!selected ? ' selected' : '');
     none.innerHTML = `<div class="item-name" style="color:var(--text-muted)">装備なし</div>`;
@@ -113,29 +103,69 @@ const App = (() => {
       div.innerHTML = `
         <div class="item-name">
           ${a.name}
-          <span class="sub">${a.setName}</span>
+          <span class="sub">${a.setName || ''} | R${a.rarity}</span>
           <div class="skill-badges">
             ${a.skills.map(s => `<span class="skill-badge">${s.name} Lv${s.level}</span>`).join('')}
           </div>
         </div>
         <div class="item-stats">
           <span>防${a.defense.base}</span>
-          <br><span class="slots-text">${renderSlotsText(a.slots)}</span>
+          <br><span style="font-size:0.65rem">${renderSlotsText(a.slots)}</span>
         </div>`;
       div.onclick = () => { state.selectedArmors[part] = a; renderArmorList(); recalculate(); };
       list.appendChild(div);
     }
   }
 
-  // === Charm ===
+  // === Charm (護石) ===
   function populateCharmSelects() {
     const skills = DataLoader.getSkillDefs();
-    for (const sel of [$('charmSkill1'), $('charmSkill2')]) {
+    for (const selId of ['charmSkill1', 'charmSkill2', 'charmSkill3']) {
+      const sel = $(selId);
       sel.innerHTML = '<option value="">なし</option>';
       for (const s of skills) {
         sel.innerHTML += `<option value="${s.name}">${s.name}</option>`;
       }
     }
+  }
+
+  function populateCharmPresets() {
+    const sel = $('charmPreset');
+    sel.innerHTML = '<option value="">プリセットから選択...</option>';
+    const charms = DataLoader.getCharms();
+    for (const c of charms) {
+      const skillText = c.skills.map(s => `${s.name}Lv${s.level}`).join(' / ');
+      const slotText = c.slots && c.slots.length > 0 ? ` [${c.slots.join('-')}]` : '';
+      sel.innerHTML += `<option value="${c.id}">${c.name} (${skillText}${slotText})</option>`;
+    }
+  }
+
+  function applyCharmPreset(charmId) {
+    const charm = DataLoader.getCharms().find(c => c.id === charmId);
+    if (!charm) return;
+
+    // Fill in skill selects
+    const skillSelects = ['charmSkill1', 'charmSkill2', 'charmSkill3'];
+    const lvSelects = ['charmSkill1Lv', 'charmSkill2Lv', 'charmSkill3Lv'];
+
+    for (let i = 0; i < 3; i++) {
+      if (charm.skills[i]) {
+        $(skillSelects[i]).value = charm.skills[i].name;
+        updateCharmLevelOptions(skillSelects[i], lvSelects[i]);
+        $(lvSelects[i]).value = charm.skills[i].level;
+      } else {
+        $(skillSelects[i]).value = '';
+        $(lvSelects[i]).innerHTML = '<option value="0">-</option>';
+      }
+    }
+
+    // Fill in slots
+    const slotSelects = ['charmSlot1', 'charmSlot2', 'charmSlot3'];
+    for (let i = 0; i < 3; i++) {
+      $(slotSelects[i]).value = charm.slots && charm.slots[i] ? charm.slots[i] : '0';
+    }
+
+    readCharm();
   }
 
   function updateCharmLevelOptions(skillSelectId, lvSelectId) {
@@ -151,26 +181,71 @@ const App = (() => {
   }
 
   function readCharm() {
-    const s1 = $('charmSkill1').value;
-    const l1 = parseInt($('charmSkill1Lv').value) || 0;
-    const s2 = $('charmSkill2').value;
-    const l2 = parseInt($('charmSkill2Lv').value) || 0;
+    const skills = [];
+    for (const [sId, lId] of [['charmSkill1','charmSkill1Lv'], ['charmSkill2','charmSkill2Lv'], ['charmSkill3','charmSkill3Lv']]) {
+      const name = $(sId).value;
+      const lv = parseInt($(lId).value) || 0;
+      if (name && lv > 0) skills.push({ name, level: lv });
+    }
+
     const slots = [
       parseInt($('charmSlot1').value) || 0,
       parseInt($('charmSlot2').value) || 0,
       parseInt($('charmSlot3').value) || 0
     ];
 
-    const skills = [];
-    if (s1 && l1 > 0) skills.push({ name: s1, level: l1 });
-    if (s2 && l2 > 0) skills.push({ name: s2, level: l2 });
-
-    if (skills.length === 0 && slots.every(s => s === 0)) {
-      state.charm = null;
-    } else {
-      state.charm = { skills, slots };
-    }
+    state.charm = (skills.length > 0 || slots.some(s => s > 0))
+      ? { skills, slots }
+      : null;
     recalculate();
+  }
+
+  // === Set Skills (シリーズスキル) ===
+  function calcSetSkills(armors) {
+    // Count pieces per set
+    const setCounts = {};
+    for (const a of armors) {
+      if (!a || !a.setId) continue;
+      setCounts[a.setId] = (setCounts[a.setId] || 0) + 1;
+    }
+
+    const activeSetSkills = [];
+    for (const [setId, count] of Object.entries(setCounts)) {
+      const setDef = DataLoader.findArmorSet(parseInt(setId));
+      if (!setDef || !setDef.bonuses) continue;
+
+      for (const bonus of setDef.bonuses) {
+        activeSetSkills.push({
+          setName: setDef.name,
+          skill: bonus.skill,
+          description: bonus.description,
+          required: bonus.pieces,
+          current: count,
+          active: count >= bonus.pieces
+        });
+      }
+    }
+    return activeSetSkills;
+  }
+
+  function renderSetSkills(setSkills) {
+    const list = $('setSkillList');
+    if (setSkills.length === 0) {
+      list.innerHTML = '<p style="color:var(--text-muted);font-size:0.8rem;padding:8px">-</p>';
+      return;
+    }
+
+    list.innerHTML = '';
+    for (const ss of setSkills) {
+      const row = document.createElement('div');
+      row.className = 'skill-row';
+      row.style.opacity = ss.active ? '1' : '0.4';
+      row.innerHTML = `
+        <span class="skill-name">${ss.setName}</span>
+        <span class="skill-level" style="color:${ss.active ? 'var(--green)' : 'var(--text-muted)'}">${ss.current}/${ss.required}</span>
+        <span style="font-size:0.7rem;color:var(--text-secondary);flex:2">${ss.skill || ''}</span>`;
+      list.appendChild(row);
+    }
   }
 
   // === Recalculate ===
@@ -186,57 +261,47 @@ const App = (() => {
       useMaxDefense: false
     });
 
-    // 攻撃力・会心率
+    // Stats
     $('statAttack').textContent = result.finalAttack || '-';
-    const affText = result.finalAffinity !== 0 ? `${result.finalAffinity > 0 ? '+' : ''}${result.finalAffinity}%` : '0%';
+    const affText = result.finalAffinity !== undefined ? `${result.finalAffinity > 0 ? '+' : ''}${result.finalAffinity}%` : '0%';
     $('statAffinity').textContent = affText;
     $('statAffinity').className = 'stat-value' + (result.finalAffinity > 0 ? ' positive' : result.finalAffinity < 0 ? ' negative' : '');
-
-    // 防御力
     $('statDefense').textContent = result.totalDefense || '-';
 
-    // 属性
     if (result.element) {
       $('statElement').innerHTML = `<span class="text-${elemClass(result.element.type)}">${result.element.type} ${result.element.value}</span>`;
     } else {
       $('statElement').textContent = '-';
     }
 
-    // 斬れ味ゲージ
-    renderSharpness(result.sharpness, state.selectedWeapon);
+    renderSharpness(state.selectedWeapon);
 
-    // 期待値レンジ
     const r = result.effectiveRange;
     $('rangeMin').textContent = r.min || '-';
     $('rangeExpected').textContent = r.expected || '-';
     $('rangeMax').textContent = r.max || '-';
     if (r.max > 0) {
-      const pct = Math.min(100, (r.expected / r.max) * 100);
-      $('rangeFill').style.width = pct + '%';
+      $('rangeFill').style.width = Math.min(100, (r.expected / r.max) * 100) + '%';
     }
 
-    // 耐性
-    const res = result.resistance;
-    setRes('resFire', res.fire);
-    setRes('resWater', res.water);
-    setRes('resThunder', res.thunder);
-    setRes('resIce', res.ice);
-    setRes('resDragon', res.dragon);
+    setRes('resFire', result.resistance.fire);
+    setRes('resWater', result.resistance.water);
+    setRes('resThunder', result.resistance.thunder);
+    setRes('resIce', result.resistance.ice);
+    setRes('resDragon', result.resistance.dragon);
 
-    // 条件付きスキルトグル
     renderConditionToggles(result.skillLevels);
-
-    // スキル一覧
     renderSkillList(result.skillLevels);
+    renderSetSkills(calcSetSkills(armors));
 
-    // モバイルステータス
+    // Mobile
     $('mAtk').textContent = result.finalAttack || '-';
     $('mAff').textContent = affText;
     $('mExp').textContent = r.expected || '-';
     $('mDef').textContent = result.totalDefense || '-';
   }
 
-  function renderSharpness(sharp, weapon) {
+  function renderSharpness(weapon) {
     const gauge = $('sharpnessGauge');
     if (!weapon || !weapon.sharpness) {
       gauge.innerHTML = '<div style="width:100%;background:var(--text-muted);height:100%;border-radius:4px;opacity:0.3"></div>';
@@ -253,13 +318,21 @@ const App = (() => {
     const container = $('condToggles');
     container.innerHTML = '';
     for (const def of DataLoader.getSkillDefs()) {
-      if (!def.conditional || !skillLevels[def.name]) continue;
+      if (!def.conditional && !def.effects?.some(e => e.name)) continue;
+      if (!skillLevels[def.name]) continue;
+
+      // Check if skill has conditional effects in its description
+      const desc = def.effects?.map(e => e.description).join(' ') || '';
+      const isConditional = /怒り|体力|弱点|肉質|部位/.test(desc) || def.conditional;
+      if (!isConditional) continue;
+
+      const condKey = def.condition || def.name;
       const label = document.createElement('label');
       label.className = 'cond-toggle';
-      const checked = state.conditions[def.condition] ? 'checked' : '';
-      label.innerHTML = `<input type="checkbox" ${checked}><span>${def.condition}</span>`;
+      const checked = state.conditions[condKey] ? 'checked' : '';
+      label.innerHTML = `<input type="checkbox" ${checked}><span>${condKey}（${def.name} Lv${skillLevels[def.name]}）</span>`;
       label.querySelector('input').onchange = (e) => {
-        state.conditions[def.condition] = e.target.checked;
+        state.conditions[condKey] = e.target.checked;
         recalculate();
       };
       container.appendChild(label);
@@ -304,16 +377,17 @@ const App = (() => {
   }
 
   function renderSlotsText(slots) {
-    if (!slots) return '';
-    return slots.filter(s => s > 0).map(s => `[${'●'.repeat(s)}]`).join('') || '-';
+    if (!slots || !Array.isArray(slots)) return '';
+    const filled = slots.filter(s => s > 0);
+    if (filled.length === 0) return '-';
+    return filled.map(s => `[${s}]`).join('');
   }
 
-  // === Event Binding ===
+  // === Events ===
   function bindEvents() {
-    // Weapon search
     $('weaponSearch').addEventListener('input', debounce(renderWeaponList, 200));
+    $('armorSearch').addEventListener('input', debounce(renderArmorList, 200));
 
-    // Armor part tabs
     for (const btn of $('armorPartTabs').querySelectorAll('.tab')) {
       btn.addEventListener('click', () => {
         state.activeArmorPart = btn.dataset.part;
@@ -324,10 +398,6 @@ const App = (() => {
       });
     }
 
-    // Armor search
-    $('armorSearch').addEventListener('input', debounce(renderArmorList, 200));
-
-    // Clear armors
     $('clearArmorsBtn').addEventListener('click', () => {
       state.selectedArmors = { head: null, chest: null, arms: null, waist: null, legs: null };
       state.equippedDecos = [];
@@ -335,16 +405,21 @@ const App = (() => {
       recalculate();
     });
 
-    // Charm
-    $('charmSkill1').addEventListener('change', () => { updateCharmLevelOptions('charmSkill1', 'charmSkill1Lv'); readCharm(); });
-    $('charmSkill2').addEventListener('change', () => { updateCharmLevelOptions('charmSkill2', 'charmSkill2Lv'); readCharm(); });
-    $('charmSkill1Lv').addEventListener('change', readCharm);
-    $('charmSkill2Lv').addEventListener('change', readCharm);
+    // Charm skill selects
+    for (const [sId, lId] of [['charmSkill1','charmSkill1Lv'], ['charmSkill2','charmSkill2Lv'], ['charmSkill3','charmSkill3Lv']]) {
+      $(sId).addEventListener('change', () => { updateCharmLevelOptions(sId, lId); readCharm(); });
+      $(lId).addEventListener('change', readCharm);
+    }
     $('charmSlot1').addEventListener('change', readCharm);
     $('charmSlot2').addEventListener('change', readCharm);
     $('charmSlot3').addEventListener('change', readCharm);
 
-    // Deco modal close
+    // Charm preset
+    $('charmPreset').addEventListener('change', (e) => {
+      if (e.target.value) applyCharmPreset(e.target.value);
+    });
+
+    // Deco modal
     $('decoModalClose').addEventListener('click', () => $('decoModal').classList.remove('open'));
     $('decoModal').addEventListener('click', (e) => {
       if (e.target === $('decoModal')) $('decoModal').classList.remove('open');
@@ -356,8 +431,6 @@ const App = (() => {
     return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); };
   }
 
-  // === Start ===
   document.addEventListener('DOMContentLoaded', init);
-
   return { state, recalculate };
 })();

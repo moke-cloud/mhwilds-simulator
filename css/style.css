@@ -92,11 +92,16 @@ body {
 
 /* === Tabs === */
 .tabs {
-  display: flex; gap: 2px; padding: 6px;
-  overflow-x: auto; -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+  display: flex; flex-wrap: wrap; gap: 2px; padding: 6px;
 }
-.tabs::-webkit-scrollbar { display: none; }
+@media (max-width: 767px) {
+  .tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+}
 .tab {
   flex-shrink: 0;
   padding: 6px 12px; border-radius: var(--radius-sm);
