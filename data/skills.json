@@ -1,0 +1,199 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-04-05",
+  "skills": [
+    {
+      "id": "attack_boost",
+      "name": "攻撃",
+      "maxLevel": 7,
+      "category": "attack",
+      "description": "攻撃力を上げる",
+      "effects": [
+        { "level": 1, "description": "攻撃力+3", "attack_flat": 3, "attack_mult": 1.0, "affinity": 0 },
+        { "level": 2, "description": "攻撃力+6", "attack_flat": 6, "attack_mult": 1.0, "affinity": 0 },
+        { "level": 3, "description": "攻撃力+9", "attack_flat": 9, "attack_mult": 1.0, "affinity": 0 },
+        { "level": 4, "description": "攻撃力+7, 会心率+5%", "attack_flat": 7, "attack_mult": 1.05, "affinity": 5 },
+        { "level": 5, "description": "攻撃力+8, 会心率+5%", "attack_flat": 8, "attack_mult": 1.05, "affinity": 5 },
+        { "level": 6, "description": "攻撃力+9, 会心率+5%", "attack_flat": 9, "attack_mult": 1.05, "affinity": 5 },
+        { "level": 7, "description": "攻撃力+10, 会心率+5%", "attack_flat": 10, "attack_mult": 1.10, "affinity": 5 }
+      ]
+    },
+    {
+      "id": "critical_eye",
+      "name": "見切り",
+      "maxLevel": 7,
+      "category": "affinity",
+      "description": "会心率を上げる",
+      "effects": [
+        { "level": 1, "description": "会心率+5%", "affinity": 5 },
+        { "level": 2, "description": "会心率+10%", "affinity": 10 },
+        { "level": 3, "description": "会心率+15%", "affinity": 15 },
+        { "level": 4, "description": "会心率+20%", "affinity": 20 },
+        { "level": 5, "description": "会心率+25%", "affinity": 25 },
+        { "level": 6, "description": "会心率+30%", "affinity": 30 },
+        { "level": 7, "description": "会心率+40%", "affinity": 40 }
+      ]
+    },
+    {
+      "id": "critical_boost",
+      "name": "超会心",
+      "maxLevel": 3,
+      "category": "affinity",
+      "description": "会心時のダメージ倍率を上げる",
+      "effects": [
+        { "level": 1, "description": "会心ダメージ倍率 1.30倍", "crit_multiplier": 1.30 },
+        { "level": 2, "description": "会心ダメージ倍率 1.35倍", "crit_multiplier": 1.35 },
+        { "level": 3, "description": "会心ダメージ倍率 1.40倍", "crit_multiplier": 1.40 }
+      ]
+    },
+    {
+      "id": "weakness_exploit",
+      "name": "弱点特効",
+      "maxLevel": 3,
+      "category": "affinity",
+      "description": "肉質45以上の部位を攻撃時、会心率が上がる",
+      "conditional": true,
+      "condition": "肉質45以上の部位攻撃時",
+      "effects": [
+        { "level": 1, "description": "弱点攻撃時 会心率+15%", "affinity_conditional": 15 },
+        { "level": 2, "description": "弱点攻撃時 会心率+30%", "affinity_conditional": 30 },
+        { "level": 3, "description": "弱点攻撃時 会心率+50%", "affinity_conditional": 50 }
+      ]
+    },
+    {
+      "id": "handicraft",
+      "name": "匠",
+      "maxLevel": 5,
+      "category": "sharpness",
+      "description": "斬れ味ゲージを延長する",
+      "effects": [
+        { "level": 1, "description": "斬れ味ゲージ+10", "sharpness_add": 10 },
+        { "level": 2, "description": "斬れ味ゲージ+20", "sharpness_add": 20 },
+        { "level": 3, "description": "斬れ味ゲージ+30", "sharpness_add": 30 },
+        { "level": 4, "description": "斬れ味ゲージ+40", "sharpness_add": 40 },
+        { "level": 5, "description": "斬れ味ゲージ+50", "sharpness_add": 50 }
+      ]
+    },
+    {
+      "id": "fire_attack",
+      "name": "火属性攻撃強化",
+      "maxLevel": 5,
+      "category": "element",
+      "elementType": "fire",
+      "description": "火属性の攻撃力を上げる",
+      "effects": [
+        { "level": 1, "description": "火属性攻撃値+2", "element_flat": 2, "element_mult": 1.0 },
+        { "level": 2, "description": "火属性攻撃値+4", "element_flat": 4, "element_mult": 1.0 },
+        { "level": 3, "description": "火属性攻撃値+6, 火属性攻撃値1.05倍", "element_flat": 6, "element_mult": 1.05 },
+        { "level": 4, "description": "火属性攻撃値+8, 火属性攻撃値1.10倍", "element_flat": 8, "element_mult": 1.10 },
+        { "level": 5, "description": "火属性攻撃値+10, 火属性攻撃値1.20倍", "element_flat": 10, "element_mult": 1.20 }
+      ]
+    },
+    {
+      "id": "water_attack",
+      "name": "水属性攻撃強化",
+      "maxLevel": 5,
+      "category": "element",
+      "elementType": "water",
+      "description": "水属性の攻撃力を上げる",
+      "effects": [
+        { "level": 1, "element_flat": 2, "element_mult": 1.0 },
+        { "level": 2, "element_flat": 4, "element_mult": 1.0 },
+        { "level": 3, "element_flat": 6, "element_mult": 1.05 },
+        { "level": 4, "element_flat": 8, "element_mult": 1.10 },
+        { "level": 5, "element_flat": 10, "element_mult": 1.20 }
+      ]
+    },
+    {
+      "id": "thunder_attack",
+      "name": "雷属性攻撃強化",
+      "maxLevel": 5,
+      "category": "element",
+      "elementType": "thunder",
+      "description": "雷属性の攻撃力を上げる",
+      "effects": [
+        { "level": 1, "element_flat": 2, "element_mult": 1.0 },
+        { "level": 2, "element_flat": 4, "element_mult": 1.0 },
+        { "level": 3, "element_flat": 6, "element_mult": 1.05 },
+        { "level": 4, "element_flat": 8, "element_mult": 1.10 },
+        { "level": 5, "element_flat": 10, "element_mult": 1.20 }
+      ]
+    },
+    {
+      "id": "ice_attack",
+      "name": "氷属性攻撃強化",
+      "maxLevel": 5,
+      "category": "element",
+      "elementType": "ice",
+      "description": "氷属性の攻撃力を上げる",
+      "effects": [
+        { "level": 1, "element_flat": 2, "element_mult": 1.0 },
+        { "level": 2, "element_flat": 4, "element_mult": 1.0 },
+        { "level": 3, "element_flat": 6, "element_mult": 1.05 },
+        { "level": 4, "element_flat": 8, "element_mult": 1.10 },
+        { "level": 5, "element_flat": 10, "element_mult": 1.20 }
+      ]
+    },
+    {
+      "id": "dragon_attack",
+      "name": "龍属性攻撃強化",
+      "maxLevel": 5,
+      "category": "element",
+      "elementType": "dragon",
+      "description": "龍属性の攻撃力を上げる",
+      "effects": [
+        { "level": 1, "element_flat": 2, "element_mult": 1.0 },
+        { "level": 2, "element_flat": 4, "element_mult": 1.0 },
+        { "level": 3, "element_flat": 6, "element_mult": 1.05 },
+        { "level": 4, "element_flat": 8, "element_mult": 1.10 },
+        { "level": 5, "element_flat": 10, "element_mult": 1.20 }
+      ]
+    },
+    {
+      "id": "defense_boost",
+      "name": "防御",
+      "maxLevel": 7,
+      "category": "defense",
+      "description": "防御力を上げる",
+      "effects": [
+        { "level": 1, "description": "防御力+5", "defense_flat": 5, "defense_mult": 1.0, "all_res": 0 },
+        { "level": 2, "description": "防御力+10", "defense_flat": 10, "defense_mult": 1.0, "all_res": 0 },
+        { "level": 3, "description": "防御力+10, 全耐性+3", "defense_flat": 10, "defense_mult": 1.05, "all_res": 3 },
+        { "level": 4, "description": "防御力+20, 全耐性+3", "defense_flat": 20, "defense_mult": 1.05, "all_res": 3 },
+        { "level": 5, "description": "防御力+20, 全耐性+5", "defense_flat": 20, "defense_mult": 1.08, "all_res": 5 },
+        { "level": 6, "description": "防御力+35, 全耐性+5", "defense_flat": 35, "defense_mult": 1.08, "all_res": 5 },
+        { "level": 7, "description": "防御力+35, 全耐性+5", "defense_flat": 35, "defense_mult": 1.10, "all_res": 5 }
+      ]
+    },
+    {
+      "id": "peak_performance",
+      "name": "フルチャージ",
+      "maxLevel": 3,
+      "category": "attack",
+      "conditional": true,
+      "condition": "体力最大時",
+      "description": "体力が最大の時、攻撃力が上がる",
+      "effects": [
+        { "level": 1, "description": "攻撃力+5", "attack_flat_conditional": 5 },
+        { "level": 2, "description": "攻撃力+10", "attack_flat_conditional": 10 },
+        { "level": 3, "description": "攻撃力+20", "attack_flat_conditional": 20 }
+      ]
+    },
+    {
+      "id": "agitator",
+      "name": "挑戦者",
+      "maxLevel": 5,
+      "category": "attack",
+      "conditional": true,
+      "condition": "モンスター怒り時",
+      "description": "モンスターが怒り状態の時、攻撃力と会心率が上がる",
+      "effects": [
+        { "level": 1, "attack_flat_conditional": 4, "affinity_conditional": 3 },
+        { "level": 2, "attack_flat_conditional": 8, "affinity_conditional": 5 },
+        { "level": 3, "attack_flat_conditional": 12, "affinity_conditional": 7 },
+        { "level": 4, "attack_flat_conditional": 16, "affinity_conditional": 10 },
+        { "level": 5, "attack_flat_conditional": 20, "affinity_conditional": 15 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-04-05",
+  "decorations": [
+    { "id": "deco_attack_1", "name": "攻撃珠", "slotSize": 1, "skills": [{ "name": "攻撃", "level": 1 }] },
+    { "id": "deco_attack_4", "name": "攻撃珠+", "slotSize": 4, "skills": [{ "name": "攻撃", "level": 2 }] },
+    { "id": "deco_expert_1", "name": "達人珠", "slotSize": 1, "skills": [{ "name": "見切り", "level": 1 }] },
+    { "id": "deco_expert_4", "name": "達人珠+", "slotSize": 4, "skills": [{ "name": "見切り", "level": 2 }] },
+    { "id": "deco_critical_2", "name": "超心珠", "slotSize": 2, "skills": [{ "name": "超会心", "level": 1 }] },
+    { "id": "deco_tenderizer_2", "name": "痛撃珠", "slotSize": 2, "skills": [{ "name": "弱点特効", "level": 1 }] },
+    { "id": "deco_handicraft_3", "name": "匠珠", "slotSize": 3, "skills": [{ "name": "匠", "level": 1 }] },
+    { "id": "deco_fire_1", "name": "火炎珠", "slotSize": 1, "skills": [{ "name": "火属性攻撃強化", "level": 1 }] },
+    { "id": "deco_water_1", "name": "流水珠", "slotSize": 1, "skills": [{ "name": "水属性攻撃強化", "level": 1 }] },
+    { "id": "deco_thunder_1", "name": "雷光珠", "slotSize": 1, "skills": [{ "name": "雷属性攻撃強化", "level": 1 }] },
+    { "id": "deco_ice_1", "name": "氷結珠", "slotSize": 1, "skills": [{ "name": "氷属性攻撃強化", "level": 1 }] },
+    { "id": "deco_dragon_1", "name": "破龍珠", "slotSize": 1, "skills": [{ "name": "龍属性攻撃強化", "level": 1 }] },
+    { "id": "deco_defense_1", "name": "防御珠", "slotSize": 1, "skills": [{ "name": "防御", "level": 1 }] },
+    { "id": "deco_peak_2", "name": "体力珠", "slotSize": 2, "skills": [{ "name": "フルチャージ", "level": 1 }] },
+    { "id": "deco_agitator_2", "name": "挑戦珠", "slotSize": 2, "skills": [{ "name": "挑戦者", "level": 1 }] }
+  ]
+}

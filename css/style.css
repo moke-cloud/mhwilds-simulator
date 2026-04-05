@@ -1,0 +1,285 @@
+/* MHWilds Simulator - Dark Theme */
+:root {
+  --bg-primary: #0f1117;
+  --bg-card: #1a1d28;
+  --bg-card-hover: #22263a;
+  --bg-input: #13151f;
+  --bg-selected: #1e3a5f;
+  --border: #2a2e3e;
+  --border-active: #4a7dff;
+  --text-primary: #e8eaf0;
+  --text-secondary: #8b90a0;
+  --text-muted: #555a6e;
+  --accent: #f0a030;
+  --accent-dim: #805820;
+  --red: #f87171;
+  --green: #4ade80;
+  --blue: #60a5fa;
+  --yellow: #fbbf24;
+  --purple: #a78bfa;
+  /* 斬れ味カラー */
+  --sharp-red: #dc2626;
+  --sharp-orange: #f97316;
+  --sharp-yellow: #eab308;
+  --sharp-green: #22c55e;
+  --sharp-blue: #3b82f6;
+  --sharp-white: #e2e8f0;
+  --sharp-purple: #a855f7;
+  /* 属性カラー */
+  --elem-fire: #ef4444;
+  --elem-water: #3b82f6;
+  --elem-thunder: #eab308;
+  --elem-ice: #67e8f9;
+  --elem-dragon: #a855f7;
+  /* レイアウト */
+  --sidebar-w: 320px;
+  --header-h: 56px;
+  --radius: 8px;
+  --radius-sm: 4px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* === Header === */
+.header {
+  position: sticky; top: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  height: var(--header-h); padding: 0 16px;
+  background: var(--bg-card); border-bottom: 1px solid var(--border);
+}
+.header h1 { font-size: 1.1rem; font-weight: 700; color: var(--accent); }
+.header-status { font-size: 0.75rem; color: var(--text-secondary); }
+
+/* === Layout === */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  padding: 12px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .layout { grid-template-columns: 1fr 1fr; gap: 16px; padding: 16px; }
+}
+@media (min-width: 1200px) {
+  .layout { grid-template-columns: var(--sidebar-w) 1fr var(--sidebar-w); }
+}
+
+/* === Cards === */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.card-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.85rem; font-weight: 600; color: var(--accent);
+}
+
+/* === Tabs === */
+.tabs {
+  display: flex; gap: 2px; padding: 6px;
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.tabs::-webkit-scrollbar { display: none; }
+.tab {
+  flex-shrink: 0;
+  padding: 6px 12px; border-radius: var(--radius-sm);
+  font-size: 0.75rem; font-weight: 500;
+  background: transparent; color: var(--text-secondary);
+  border: 1px solid transparent; cursor: pointer;
+  white-space: nowrap; transition: all 0.15s;
+}
+.tab:hover { background: var(--bg-card-hover); color: var(--text-primary); }
+.tab.active { background: var(--bg-selected); color: var(--blue); border-color: var(--border-active); }
+
+/* === Item list === */
+.item-list {
+  max-height: 360px; overflow-y: auto;
+  scrollbar-width: thin; scrollbar-color: var(--border) transparent;
+}
+.item-list::-webkit-scrollbar { width: 6px; }
+.item-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+.item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 14px; cursor: pointer;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.1s;
+}
+.item:hover { background: var(--bg-card-hover); }
+.item.selected { background: var(--bg-selected); border-left: 3px solid var(--border-active); }
+.item-name { font-size: 0.85rem; font-weight: 500; flex: 1; min-width: 0; }
+.item-name .sub { font-size: 0.7rem; color: var(--text-secondary); display: block; }
+.item-stats { font-size: 0.7rem; color: var(--text-secondary); text-align: right; white-space: nowrap; }
+.item-stats .atk { color: var(--red); font-weight: 600; }
+.item-stats .aff { color: var(--blue); }
+
+/* === Skill badges === */
+.skill-badges { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 3px; }
+.skill-badge {
+  font-size: 0.65rem; padding: 1px 6px; border-radius: 10px;
+  background: var(--bg-input); color: var(--text-secondary); border: 1px solid var(--border);
+}
+
+/* === Slots === */
+.slots { display: flex; gap: 3px; }
+.slot {
+  width: 18px; height: 18px; border-radius: 50%;
+  border: 1.5px solid var(--text-muted);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.6rem; color: var(--text-muted); cursor: pointer;
+  transition: all 0.15s;
+}
+.slot[data-size="1"] { width: 14px; height: 14px; }
+.slot[data-size="2"] { width: 16px; height: 16px; }
+.slot[data-size="3"] { width: 18px; height: 18px; }
+.slot[data-size="4"] { width: 20px; height: 20px; border-color: var(--accent); }
+.slot.filled { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
+
+/* === Sharpness gauge === */
+.sharpness-gauge {
+  display: flex; height: 8px; border-radius: 4px; overflow: hidden;
+  background: var(--bg-input); border: 1px solid var(--border);
+}
+.sharpness-gauge .seg { height: 100%; min-width: 1px; }
+
+/* === Status panel === */
+.stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 12px; }
+.stat-item { padding: 8px; background: var(--bg-input); border-radius: var(--radius-sm); }
+.stat-label { font-size: 0.7rem; color: var(--text-secondary); margin-bottom: 2px; }
+.stat-value { font-size: 1.1rem; font-weight: 700; }
+.stat-value.positive { color: var(--green); }
+.stat-value.negative { color: var(--red); }
+
+/* === Range bar === */
+.range-bar {
+  height: 24px; border-radius: 12px; background: var(--bg-input);
+  position: relative; overflow: hidden; margin: 4px 0;
+}
+.range-bar .fill {
+  height: 100%; border-radius: 12px;
+  background: linear-gradient(90deg, var(--blue), var(--accent));
+  transition: width 0.3s;
+}
+.range-labels {
+  display: flex; justify-content: space-between;
+  font-size: 0.7rem; color: var(--text-secondary);
+}
+.range-labels .expected { color: var(--accent); font-weight: 700; font-size: 0.85rem; }
+
+/* === Resistance row === */
+.res-row { display: flex; gap: 6px; padding: 8px 12px; }
+.res-item {
+  flex: 1; text-align: center; padding: 4px; border-radius: var(--radius-sm);
+  background: var(--bg-input); font-size: 0.75rem;
+}
+.res-item .label { font-size: 0.6rem; display: block; }
+.res-item.positive { color: var(--green); }
+.res-item.negative { color: var(--red); }
+
+/* === Skills panel === */
+.skill-list { padding: 8px 12px; }
+.skill-row {
+  display: flex; align-items: center; gap: 8px;
+  padding: 4px 0; font-size: 0.8rem;
+}
+.skill-name { flex: 1; }
+.skill-level { color: var(--accent); font-weight: 600; }
+.skill-bar {
+  width: 60px; height: 4px; background: var(--bg-input);
+  border-radius: 2px; overflow: hidden;
+}
+.skill-bar .fill { height: 100%; background: var(--accent); border-radius: 2px; transition: width 0.2s; }
+.skill-bar .fill.maxed { background: var(--green); }
+
+/* === Equipment summary (mobile sticky) === */
+.equip-summary {
+  display: none;
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: var(--bg-card); border-top: 1px solid var(--border);
+  padding: 8px 12px; z-index: 100;
+}
+@media (max-width: 767px) {
+  .equip-summary { display: flex; gap: 12px; align-items: center; justify-content: space-around; }
+  body { padding-bottom: 60px; }
+}
+.equip-summary .mini-stat { text-align: center; }
+.equip-summary .mini-stat .val { font-size: 1rem; font-weight: 700; color: var(--accent); }
+.equip-summary .mini-stat .lbl { font-size: 0.6rem; color: var(--text-secondary); display: block; }
+
+/* === Modal === */
+.modal-overlay {
+  display: none; position: fixed; inset: 0; z-index: 200;
+  background: rgba(0,0,0,0.7); backdrop-filter: blur(4px);
+  align-items: flex-end; justify-content: center;
+}
+.modal-overlay.open { display: flex; }
+@media (min-width: 768px) { .modal-overlay.open { align-items: center; } }
+.modal {
+  background: var(--bg-card); border-radius: var(--radius) var(--radius) 0 0;
+  width: 100%; max-width: 480px; max-height: 80vh;
+  overflow-y: auto; border: 1px solid var(--border);
+}
+@media (min-width: 768px) { .modal { border-radius: var(--radius); } }
+.modal-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 16px; border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; background: var(--bg-card); z-index: 1;
+}
+.modal-close {
+  background: none; border: none; color: var(--text-secondary);
+  font-size: 1.2rem; cursor: pointer; padding: 4px 8px;
+}
+.modal-close:hover { color: var(--text-primary); }
+
+/* === Search === */
+.search-box {
+  width: 100%; padding: 8px 12px; margin: 0;
+  background: var(--bg-input); border: 1px solid var(--border);
+  border-radius: 0; color: var(--text-primary);
+  font-size: 0.85rem; outline: none;
+}
+.search-box:focus { border-color: var(--border-active); }
+.search-box::placeholder { color: var(--text-muted); }
+
+/* === Charm editor === */
+.charm-editor { padding: 12px; }
+.charm-row { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
+.charm-row label { font-size: 0.8rem; color: var(--text-secondary); min-width: 60px; }
+.charm-row select, .charm-row input {
+  flex: 1; padding: 6px 8px; background: var(--bg-input);
+  border: 1px solid var(--border); border-radius: var(--radius-sm);
+  color: var(--text-primary); font-size: 0.8rem;
+}
+
+/* === Conditional toggles === */
+.cond-toggles { padding: 8px 12px; }
+.cond-toggle {
+  display: flex; align-items: center; gap: 8px;
+  padding: 4px 0; font-size: 0.8rem;
+}
+.cond-toggle input[type="checkbox"] { accent-color: var(--accent); }
+
+/* === Utils === */
+.hidden { display: none !important; }
+.text-fire { color: var(--elem-fire); }
+.text-water { color: var(--elem-water); }
+.text-thunder { color: var(--elem-thunder); }
+.text-ice { color: var(--elem-ice); }
+.text-dragon { color: var(--elem-dragon); }

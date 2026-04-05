@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>MHWilds Calculator Tests</title>
+<style>
+  body { font-family: monospace; background: #1a1a2e; color: #eee; padding: 20px; }
+  .pass { color: #4ade80; } .fail { color: #f87171; }
+  .suite { margin: 16px 0; padding: 8px; border-left: 3px solid #444; }
+  h2 { color: #60a5fa; margin: 4px 0; }
+  #summary { font-size: 1.2em; margin-top: 24px; padding: 12px; border-radius: 8px; }
+</style>
+</head>
+<body>
+<h1>MHWilds Calculator - テスト</h1>
+<div id="results"></div>
+<div id="summary"></div>
+
+<script src="../js/calculator.js"></script>
+<script>
+const results = document.getElementById('results');
+const summary = document.getElementById('summary');
+let pass = 0, fail = 0;
+
+// Mini test framework
+function suite(name, fn) {
+  const div = document.createElement('div');
+  div.className = 'suite';
+  div.innerHTML = `<h2>${name}</h2>`;
+  results.appendChild(div);
+  fn((testName, actual, expected) => {
+    const ok = Math.abs(actual - expected) < 0.01 ||
+               (typeof actual === 'string' && actual === expected) ||
+               (typeof actual === 'object' && JSON.stringify(actual) === JSON.stringify(expected));
+    if (ok) { pass++; } else { fail++; }
+    div.innerHTML += `<div class="${ok ? 'pass' : 'fail'}">
+      ${ok ? '✓' : '✗'} ${testName}: got ${JSON.stringify(actual)}, expected ${JSON.stringify(expected)}
+    </div>`;
+  });
+}
+
+// テストデータ
+const skillDefs = [
+  {
+    id: 'attack_boost', name: '攻撃', maxLevel: 7, category: 'attack',
+    effects: [
+      { level: 1, attack_flat: 3, attack_mult: 1.0, affinity: 0 },
+      { level: 2, attack_flat: 6, attack_mult: 1.0, affinity: 0 },
+      { level: 3, attack_flat: 9, attack_mult: 1.0, affinity: 0 },
+      { level: 4, attack_flat: 7, attack_mult: 1.05, affinity: 5 },
+      { level: 5, attack_flat: 8, attack_mult: 1.05, affinity: 5 },
+      { level: 6, attack_flat: 9, attack_mult: 1.05, affinity: 5 },
+      { level: 7, attack_flat: 10, attack_mult: 1.10, affinity: 5 }
+    ]
+  },
+  {
+    id: 'critical_eye', name: '見切り', maxLevel: 7, category: 'affinity',
+    effects: [
+      { level: 1, affinity: 5 }, { level: 2, affinity: 10 }, { level: 3, affinity: 15 },
+      { level: 4, affinity: 20 }, { level: 5, affinity: 25 }, { level: 6, affinity: 30 },
+      { level: 7, affinity: 40 }
+    ]
+  },
+  {
+    id: 'critical_boost', name: '超会心', maxLevel: 3, category: 'affinity',
+    effects: [
+      { level: 1, crit_multiplier: 1.30 },
+      { level: 2, crit_multiplier: 1.35 },
+      { level: 3, crit_multiplier: 1.40 }
+    ]
+  },
+  {
+    id: 'weakness_exploit', name: '弱点特効', maxLevel: 3, category: 'affinity',
+    conditional: true, condition: '肉質45以上の部位攻撃時',
+    effects: [
+      { level: 1, affinity_conditional: 15 },
+      { level: 2, affinity_conditional: 30 },
+      { level: 3, affinity_conditional: 50 }
+    ]
+  },
+  {
+    id: 'defense_boost', name: '防御', maxLevel: 7, category: 'defense',
+    effects: [
+      { level: 1, defense_flat: 5, defense_mult: 1.0, all_res: 0 },
+      { level: 3, defense_flat: 10, defense_mult: 1.05, all_res: 3 },
+      { level: 7, defense_flat: 35, defense_mult: 1.10, all_res: 5 }
+    ]
+  },
+  {
+    id: 'fire_attack', name: '火属性攻撃強化', maxLevel: 5, category: 'element', elementType: 'fire',
+    effects: [
+      { level: 1, element_flat: 2, element_mult: 1.0 },
+      { level: 5, element_flat: 10, element_mult: 1.20 }
+    ]
+  },
+  {
+    id: 'handicraft', name: '匠', maxLevel: 5, category: 'sharpness',
+    effects: [
+      { level: 1, sharpness_add: 10 }, { level: 5, sharpness_add: 50 }
+    ]
+  }
+];
+
+// === テスト実行 ===
+
+suite('スキル集計', (assert) => {
+  const r = MHCalc.aggregateSkills([
+    { skills: [{ name: '攻撃', level: 2 }] },
+    { skills: [{ name: '攻撃', level: 1 }, { name: '見切り', level: 2 }] }
+  ]);
+  assert('攻撃合計', r['攻撃'], 3);
+  assert('見切り合計', r['見切り'], 2);
+});
+
+suite('スキルレベルクランプ', (assert) => {
+  const r = MHCalc.clampSkillLevels({ '攻撃': 10, '見切り': 3 }, skillDefs);
+  assert('攻撃は7でクランプ', r['攻撃'], 7);
+  assert('見切りはそのまま', r['見切り'], 3);
+});
+
+suite('攻撃力計算', (assert) => {
+  // 武器210 + 攻撃Lv4 (flat+7, mult*1.05) = (210+7)*1.05 = 227.85 → 227
+  assert('攻撃Lv4', MHCalc.calcFinalAttack(210, { '攻撃': 4 }, skillDefs), 227);
+  // 武器210 + 攻撃Lv7 (flat+10, mult*1.10) = (210+10)*1.10 = 242
+  assert('攻撃Lv7', MHCalc.calcFinalAttack(210, { '攻撃': 7 }, skillDefs), 242);
+  // スキルなし
+  assert('スキルなし', MHCalc.calcFinalAttack(200, {}, skillDefs), 200);
+});
+
+suite('会心率計算', (assert) => {
+  assert('見切りLv7 + 基礎15%', MHCalc.calcAffinity(15, { '見切り': 7 }, skillDefs), 55);
+  assert('攻撃Lv4の会心率+5%', MHCalc.calcAffinity(0, { '攻撃': 4 }, skillDefs), 5);
+  assert('弱点特効Lv3(条件OFF)', MHCalc.calcAffinity(0, { '弱点特効': 3 }, skillDefs, {}), 0);
+  assert('弱点特効Lv3(条件ON)', MHCalc.calcAffinity(0, { '弱点特効': 3 }, skillDefs, { '肉質45以上の部位攻撃時': true }), 50);
+  // 100%キャップ
+  assert('100%キャップ', MHCalc.calcAffinity(50, { '見切り': 7, '攻撃': 7 }, skillDefs), 95);
+});
+
+suite('会心期待値', (assert) => {
+  // 200攻撃, 50%会心, 1.25倍 → 200 * (1 + 0.5 * 0.25) = 200 * 1.125 = 225
+  assert('50%会心', MHCalc.calcExpectedValue(200, 50, 1.25), 225);
+  // 200攻撃, 100%会心, 1.40倍 → 200 * 1.40 = 280
+  assert('100%超会心3', MHCalc.calcExpectedValue(200, 100, 1.40), 280);
+  // マイナス会心 200攻撃, -30% → 200 * (1 + 0.3 * (0.75-1)) = 200 * 0.925 = 185
+  assert('マイナス会心-30%', MHCalc.calcExpectedValue(200, -30, 1.25), 185);
+  // 0%会心
+  assert('0%会心', MHCalc.calcExpectedValue(200, 0, 1.25), 200);
+});
+
+suite('攻撃レンジ', (assert) => {
+  const r = MHCalc.calcAttackRange(200, 50, 1.25);
+  assert('最小(非会心)', r.min, 200);
+  assert('期待値', r.expected, 225);
+  assert('最大(確定会心)', r.max, 250);
+
+  const r2 = MHCalc.calcAttackRange(200, -20, 1.25);
+  assert('マイナス会心 最小', r2.min, 150);
+});
+
+suite('斬れ味', (assert) => {
+  const r = MHCalc.calcSharpness([10, 20, 30, 40, 30, 20, 0]);
+  assert('白ゲージ', r.colorName, '白');
+  assert('白の物理補正', r.physical, 1.32);
+
+  const r2 = MHCalc.calcSharpness([10, 20, 30, 40, 30, 0, 0]);
+  assert('青ゲージ', r2.colorName, '青');
+
+  const r3 = MHCalc.calcSharpness([10, 20, 30, 40, 30, 0, 0], 10);
+  assert('匠で白に', r3.colorName, '白');
+});
+
+suite('属性値計算', (assert) => {
+  const r = MHCalc.calcElement(
+    { type: '火', value: 240 },
+    { '火属性攻撃強化': 5 },
+    skillDefs
+  );
+  // (240 + 10) * 1.20 = 300
+  assert('火Lv5', r.value, 300);
+  assert('火タイプ', r.type, '火');
+
+  const r2 = MHCalc.calcElement(null, {}, skillDefs);
+  assert('属性なし', r2, null);
+});
+
+suite('防御力計算', (assert) => {
+  const armors = [
+    { defense: { base: 72, max: 112 }, resistance: { fire: 3, water: -1, thunder: -1, ice: -1, dragon: -2 } },
+    { defense: { base: 72, max: 112 }, resistance: { fire: 2, water: 0, thunder: -2, ice: 0, dragon: -1 } }
+  ];
+  assert('基礎防御合計', MHCalc.calcTotalDefense(armors, {}, skillDefs), 144);
+  assert('最大防御合計', MHCalc.calcTotalDefense(armors, {}, skillDefs, true), 224);
+});
+
+suite('耐性計算', (assert) => {
+  const armors = [
+    { resistance: { fire: 3, water: -1, thunder: -1, ice: -1, dragon: -2 } },
+    { resistance: { fire: 2, water: 0, thunder: -2, ice: 0, dragon: -1 } }
+  ];
+  const r = MHCalc.calcResistance(armors);
+  assert('火耐性', r.fire, 5);
+  assert('水耐性', r.water, -1);
+  assert('龍耐性', r.dragon, -3);
+});
+
+suite('超会心の会心倍率取得', (assert) => {
+  assert('超会心Lv3', MHCalc.getCritMultiplier({ '超会心': 3 }, skillDefs), 1.40);
+  assert('超会心なし', MHCalc.getCritMultiplier({}, skillDefs), 1.25);
+});
+
+// === サマリー ===
+const total = pass + fail;
+summary.innerHTML = `<strong>${fail === 0 ? '✓ ALL PASSED' : '✗ FAILURES'}</strong> — ${pass}/${total} passed`;
+summary.style.background = fail === 0 ? '#065f46' : '#7f1d1d';
+summary.style.border = `2px solid ${fail === 0 ? '#4ade80' : '#f87171'}`;
+document.title = `${fail === 0 ? '✓' : '✗'} MHWilds Tests (${pass}/${total})`;
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-04-05",
+  "weaponTypes": [
+    "大剣", "太刀", "片手剣", "双剣", "ハンマー", "狩猟笛", "ランス",
+    "ガンランス", "スラッシュアックス", "チャージアックス", "操虫棍",
+    "ライトボウガン", "ヘビィボウガン", "弓"
+  ],
+  "weapons": [
+    {
+      "id": "gs_001", "name": "グレートソード改", "weaponType": "大剣", "rarity": 6,
+      "attack": 230, "affinity": 0, "element": null,
+      "sharpness": [10, 20, 40, 50, 30, 0, 0], "sharpnessMax": [10, 20, 40, 50, 30, 20, 0],
+      "slots": [2, 0, 0], "defense": 0
+    },
+    {
+      "id": "gs_002", "name": "蛮炎剣ロギンアント", "weaponType": "大剣", "rarity": 8,
+      "attack": 250, "affinity": -15, "element": { "type": "火", "value": 300 },
+      "sharpness": [10, 15, 30, 50, 40, 20, 0], "sharpnessMax": [10, 15, 30, 50, 40, 30, 10],
+      "slots": [3, 1, 0], "defense": 0
+    },
+    {
+      "id": "ls_001", "name": "鉄刀【神楽】改", "weaponType": "太刀", "rarity": 7,
+      "attack": 210, "affinity": 15, "element": null,
+      "sharpness": [10, 20, 30, 60, 40, 20, 0], "sharpnessMax": [10, 20, 30, 60, 40, 30, 10],
+      "slots": [2, 1, 0], "defense": 0
+    },
+    {
+      "id": "ls_002", "name": "飛竜刀【翠】", "weaponType": "太刀", "rarity": 8,
+      "attack": 220, "affinity": 20, "element": { "type": "龍", "value": 180 },
+      "sharpness": [10, 15, 30, 50, 40, 30, 0], "sharpnessMax": [10, 15, 30, 50, 40, 30, 15],
+      "slots": [1, 1, 0], "defense": 0
+    },
+    {
+      "id": "sns_001", "name": "ハイペリオンソード", "weaponType": "片手剣", "rarity": 7,
+      "attack": 190, "affinity": 10, "element": { "type": "雷", "value": 210 },
+      "sharpness": [10, 20, 30, 50, 40, 20, 0], "sharpnessMax": [10, 20, 30, 50, 40, 30, 10],
+      "slots": [2, 1, 1], "defense": 0
+    },
+    {
+      "id": "db_001", "name": "双影剣", "weaponType": "双剣", "rarity": 7,
+      "attack": 180, "affinity": 25, "element": { "type": "水", "value": 240 },
+      "sharpness": [10, 15, 30, 50, 50, 20, 0], "sharpnessMax": [10, 15, 30, 50, 50, 30, 10],
+      "slots": [1, 1, 0], "defense": 0
+    },
+    {
+      "id": "hm_001", "name": "ブラスブレイカー", "weaponType": "ハンマー", "rarity": 7,
+      "attack": 240, "affinity": 0, "element": null,
+      "sharpness": [10, 20, 40, 50, 30, 10, 0], "sharpnessMax": [10, 20, 40, 50, 30, 20, 10],
+      "slots": [3, 0, 0], "defense": 0
+    },
+    {
+      "id": "hm_002", "name": "氷砕槌", "weaponType": "ハンマー", "rarity": 8,
+      "attack": 230, "affinity": 5, "element": { "type": "氷", "value": 270 },
+      "sharpness": [10, 15, 30, 50, 40, 25, 0], "sharpnessMax": [10, 15, 30, 50, 40, 30, 15],
+      "slots": [2, 1, 0], "defense": 0
+    },
+    {
+      "id": "la_001", "name": "レッドテイル", "weaponType": "ランス", "rarity": 7,
+      "attack": 200, "affinity": 10, "element": { "type": "火", "value": 200 },
+      "sharpness": [10, 20, 30, 50, 40, 20, 0], "sharpnessMax": [10, 20, 30, 50, 40, 30, 10],
+      "slots": [2, 1, 0], "defense": 20
+    },
+    {
+      "id": "bow_001", "name": "ハンターボウ改", "weaponType": "弓", "rarity": 6,
+      "attack": 200, "affinity": 0, "element": null,
+      "sharpness": null, "sharpnessMax": null,
+      "slots": [2, 1, 0], "defense": 0
+    }
+  ]
+}

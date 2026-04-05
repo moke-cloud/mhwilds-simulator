@@ -1,0 +1,85 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-04-05",
+  "parts": ["head", "chest", "arms", "waist", "legs"],
+  "partNames": { "head": "頭", "chest": "胴", "arms": "腕", "waist": "腰", "legs": "脚" },
+  "armors": [
+    {
+      "id": "rathalos_head", "name": "レウスヘルム", "setName": "レウスシリーズ", "part": "head", "rarity": 8,
+      "defense": { "base": 72, "max": 112 },
+      "resistance": { "fire": 3, "water": -1, "thunder": -1, "ice": -1, "dragon": -2 },
+      "skills": [{ "name": "攻撃", "level": 2 }, { "name": "弱点特効", "level": 1 }],
+      "slots": [2, 1, 0]
+    },
+    {
+      "id": "rathalos_chest", "name": "レウスメイル", "setName": "レウスシリーズ", "part": "chest", "rarity": 8,
+      "defense": { "base": 72, "max": 112 },
+      "resistance": { "fire": 3, "water": -1, "thunder": -1, "ice": -1, "dragon": -2 },
+      "skills": [{ "name": "弱点特効", "level": 2 }],
+      "slots": [3, 0, 0]
+    },
+    {
+      "id": "rathalos_arms", "name": "レウスアーム", "setName": "レウスシリーズ", "part": "arms", "rarity": 8,
+      "defense": { "base": 72, "max": 112 },
+      "resistance": { "fire": 3, "water": -1, "thunder": -1, "ice": -1, "dragon": -2 },
+      "skills": [{ "name": "攻撃", "level": 2 }],
+      "slots": [1, 1, 0]
+    },
+    {
+      "id": "rathalos_waist", "name": "レウスコイル", "setName": "レウスシリーズ", "part": "waist", "rarity": 8,
+      "defense": { "base": 72, "max": 112 },
+      "resistance": { "fire": 3, "water": -1, "thunder": -1, "ice": -1, "dragon": -2 },
+      "skills": [{ "name": "攻撃", "level": 1 }, { "name": "火属性攻撃強化", "level": 1 }],
+      "slots": [2, 0, 0]
+    },
+    {
+      "id": "rathalos_legs", "name": "レウスグリーヴ", "setName": "レウスシリーズ", "part": "legs", "rarity": 8,
+      "defense": { "base": 72, "max": 112 },
+      "resistance": { "fire": 3, "water": -1, "thunder": -1, "ice": -1, "dragon": -2 },
+      "skills": [{ "name": "見切り", "level": 2 }],
+      "slots": [1, 0, 0]
+    },
+    {
+      "id": "kaiser_head", "name": "カイザークラウン", "setName": "カイザーシリーズ", "part": "head", "rarity": 8,
+      "defense": { "base": 76, "max": 116 },
+      "resistance": { "fire": 4, "water": -3, "thunder": 1, "ice": -3, "dragon": -1 },
+      "skills": [{ "name": "超会心", "level": 1 }, { "name": "見切り", "level": 2 }],
+      "slots": [3, 0, 0]
+    },
+    {
+      "id": "kaiser_chest", "name": "カイザーメイル", "setName": "カイザーシリーズ", "part": "chest", "rarity": 8,
+      "defense": { "base": 76, "max": 116 },
+      "resistance": { "fire": 4, "water": -3, "thunder": 1, "ice": -3, "dragon": -1 },
+      "skills": [{ "name": "超会心", "level": 1 }, { "name": "攻撃", "level": 1 }],
+      "slots": [1, 1, 0]
+    },
+    {
+      "id": "kaiser_arms", "name": "カイザーアーム", "setName": "カイザーシリーズ", "part": "arms", "rarity": 8,
+      "defense": { "base": 76, "max": 116 },
+      "resistance": { "fire": 4, "water": -3, "thunder": 1, "ice": -3, "dragon": -1 },
+      "skills": [{ "name": "超会心", "level": 1 }, { "name": "弱点特効", "level": 1 }],
+      "slots": [2, 0, 0]
+    },
+    {
+      "id": "alloy_head", "name": "アロイヘルム", "setName": "アロイシリーズ", "part": "head", "rarity": 5,
+      "defense": { "base": 40, "max": 76 },
+      "resistance": { "fire": -1, "water": -1, "thunder": -1, "ice": 1, "dragon": 0 },
+      "skills": [{ "name": "防御", "level": 2 }],
+      "slots": [1, 0, 0]
+    },
+    {
+      "id": "alloy_chest", "name": "アロイメイル", "setName": "アロイシリーズ", "part": "chest", "rarity": 5,
+      "defense": { "base": 40, "max": 76 },
+      "resistance": { "fire": -1, "water": -1, "thunder": -1, "ice": 1, "dragon": 0 },
+      "skills": [{ "name": "防御", "level": 1 }, { "name": "見切り", "level": 1 }],
+      "slots": [1, 1, 0]
+    },
+    {
+      "id": "leather_head", "name": "レザーヘッド", "setName": "レザーシリーズ", "part": "head", "rarity": 1,
+      "defense": { "base": 10, "max": 40 },
+      "resistance": { "fire": 0, "water": 0, "thunder": 0, "ice": 0, "dragon": 0 },
+      "skills": [],
+      "slots": [1, 0, 0]
+    }
+  ]
+}

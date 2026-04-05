@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>MHWilds 装備シミュレーター</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <h1>MHWilds 装備シミュレーター</h1>
+  <span class="header-status" id="loadStatus">読み込み中...</span>
+</header>
+
+<!-- Main Layout -->
+<main class="layout">
+
+  <!-- === 左: 武器選択 === -->
+  <section class="card" id="weaponSection">
+    <div class="card-header">
+      <span>武器</span>
+      <span id="selectedWeaponName" style="font-weight:400;color:var(--text-secondary);font-size:0.75rem"></span>
+    </div>
+    <div class="tabs" id="weaponTypeTabs"></div>
+    <input type="text" class="search-box" id="weaponSearch" placeholder="武器名で検索...">
+    <div class="item-list" id="weaponList"></div>
+  </section>
+
+  <!-- === 中央: 防具選択 === -->
+  <section class="card" id="armorSection">
+    <div class="card-header">
+      <span>防具</span>
+      <button id="clearArmorsBtn" style="background:none;border:1px solid var(--border);color:var(--text-secondary);padding:2px 8px;border-radius:4px;font-size:0.7rem;cursor:pointer">リセット</button>
+    </div>
+    <div class="tabs" id="armorPartTabs">
+      <button class="tab active" data-part="head">頭</button>
+      <button class="tab" data-part="chest">胴</button>
+      <button class="tab" data-part="arms">腕</button>
+      <button class="tab" data-part="waist">腰</button>
+      <button class="tab" data-part="legs">脚</button>
+    </div>
+    <input type="text" class="search-box" id="armorSearch" placeholder="防具名・スキル名で検索...">
+    <div class="item-list" id="armorList"></div>
+
+    <!-- 護石 -->
+    <div class="card-header" style="margin-top:4px">
+      <span>護石</span>
+    </div>
+    <div class="charm-editor" id="charmEditor">
+      <div class="charm-row">
+        <label>スキル1</label>
+        <select id="charmSkill1"><option value="">なし</option></select>
+        <select id="charmSkill1Lv"><option value="0">-</option></select>
+      </div>
+      <div class="charm-row">
+        <label>スキル2</label>
+        <select id="charmSkill2"><option value="">なし</option></select>
+        <select id="charmSkill2Lv"><option value="0">-</option></select>
+      </div>
+      <div class="charm-row">
+        <label>スロット</label>
+        <select id="charmSlot1"><option value="0">-</option><option>1</option><option>2</option><option>3</option><option>4</option></select>
+        <select id="charmSlot2"><option value="0">-</option><option>1</option><option>2</option><option>3</option><option>4</option></select>
+        <select id="charmSlot3"><option value="0">-</option><option>1</option><option>2</option><option>3</option><option>4</option></select>
+      </div>
+    </div>
+  </section>
+
+  <!-- === 右: ステータス表示 === -->
+  <section class="card" id="statusSection">
+    <div class="card-header"><span>ステータス</span></div>
+
+    <!-- 攻撃力・会心 -->
+    <div class="stat-grid">
+      <div class="stat-item">
+        <div class="stat-label">攻撃力</div>
+        <div class="stat-value" id="statAttack">-</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">会心率</div>
+        <div class="stat-value" id="statAffinity">-</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">防御力</div>
+        <div class="stat-value" id="statDefense">-</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">属性</div>
+        <div class="stat-value" id="statElement">-</div>
+      </div>
+    </div>
+
+    <!-- 斬れ味 -->
+    <div style="padding:8px 12px">
+      <div class="stat-label">斬れ味</div>
+      <div class="sharpness-gauge" id="sharpnessGauge"></div>
+    </div>
+
+    <!-- 攻撃期待値レンジ -->
+    <div style="padding:8px 12px">
+      <div class="stat-label">攻撃期待値（斬れ味込み）</div>
+      <div class="range-bar"><div class="fill" id="rangeFill"></div></div>
+      <div class="range-labels">
+        <span id="rangeMin">-</span>
+        <span class="expected" id="rangeExpected">-</span>
+        <span id="rangeMax">-</span>
+      </div>
+    </div>
+
+    <!-- 耐性 -->
+    <div class="stat-label" style="padding:8px 12px 0">耐性</div>
+    <div class="res-row" id="resRow">
+      <div class="res-item"><span class="label text-fire">火</span><span id="resFire">0</span></div>
+      <div class="res-item"><span class="label text-water">水</span><span id="resWater">0</span></div>
+      <div class="res-item"><span class="label text-thunder">雷</span><span id="resThunder">0</span></div>
+      <div class="res-item"><span class="label text-ice">氷</span><span id="resIce">0</span></div>
+      <div class="res-item"><span class="label text-dragon">龍</span><span id="resDragon">0</span></div>
+    </div>
+
+    <!-- 条件付きスキル -->
+    <div class="cond-toggles" id="condToggles"></div>
+
+    <!-- 発動スキル -->
+    <div class="card-header" style="border-top:1px solid var(--border)"><span>発動スキル</span></div>
+    <div class="skill-list" id="skillList"><p style="color:var(--text-muted);font-size:0.8rem;padding:8px">装備を選択してください</p></div>
+  </section>
+
+</main>
+
+<!-- モバイル固定ステータスバー -->
+<div class="equip-summary" id="mobileStatus">
+  <div class="mini-stat"><span class="val" id="mAtk">-</span><span class="lbl">攻撃力</span></div>
+  <div class="mini-stat"><span class="val" id="mAff">-</span><span class="lbl">会心率</span></div>
+  <div class="mini-stat"><span class="val" id="mExp">-</span><span class="lbl">期待値</span></div>
+  <div class="mini-stat"><span class="val" id="mDef">-</span><span class="lbl">防御力</span></div>
+</div>
+
+<!-- 装飾品選択モーダル -->
+<div class="modal-overlay" id="decoModal">
+  <div class="modal">
+    <div class="modal-header">
+      <span>装飾品を選択</span>
+      <button class="modal-close" id="decoModalClose">&times;</button>
+    </div>
+    <div class="item-list" id="decoList" style="max-height:60vh"></div>
+  </div>
+</div>
+
+<script src="js/calculator.js"></script>
+<script src="js/data-loader.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
