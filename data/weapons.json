@@ -22862,7 +22862,7 @@
     {
       "id": "w_985",
       "name": "ホープソードⅠ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 1,
       "attack": 126,
       "affinity": 0,
@@ -22883,7 +22883,7 @@
     {
       "id": "w_986",
       "name": "ホープソードⅡ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 1,
       "attack": 140,
       "affinity": 0,
@@ -22904,7 +22904,7 @@
     {
       "id": "w_987",
       "name": "ホープソードⅢ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 3,
       "attack": 182,
       "affinity": 0,
@@ -22925,7 +22925,7 @@
     {
       "id": "w_988",
       "name": "ホープソードⅣ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 5,
       "attack": 224,
       "affinity": 0,
@@ -22949,7 +22949,7 @@
     {
       "id": "w_989",
       "name": "ホープソードⅤ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 7,
       "attack": 266,
       "affinity": 0,
@@ -22973,7 +22973,7 @@
     {
       "id": "w_990",
       "name": "レ・グクルトスⅠ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 3,
       "attack": 196,
       "affinity": 0,
@@ -22997,7 +22997,7 @@
     {
       "id": "w_991",
       "name": "レ・グクルトスⅡ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 5,
       "attack": 238,
       "affinity": 0,
@@ -23024,7 +23024,7 @@
     {
       "id": "w_992",
       "name": "レ・グクルトスⅢ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 7,
       "attack": 280,
       "affinity": 0,
@@ -23051,7 +23051,7 @@
     {
       "id": "w_993",
       "name": "煌雷剣グクルトス",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 308,
       "affinity": 0,
@@ -23079,7 +23079,7 @@
     {
       "id": "w_994",
       "name": "アンクofチェッカーⅠ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 7,
       "attack": 252,
       "affinity": 20,
@@ -23106,7 +23106,7 @@
     {
       "id": "w_995",
       "name": "アンクofサーチャー",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 294,
       "affinity": 20,
@@ -23134,7 +23134,7 @@
     {
       "id": "w_996",
       "name": "ラバラ・ダーゲⅠ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 1,
       "attack": 140,
       "affinity": 10,
@@ -23155,7 +23155,7 @@
     {
       "id": "w_997",
       "name": "ラバラ・ダーゲⅡ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 3,
       "attack": 168,
       "affinity": 10,
@@ -23176,7 +23176,7 @@
     {
       "id": "w_998",
       "name": "ラバラ・ダーゲⅢ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 5,
       "attack": 210,
       "affinity": 15,
@@ -23200,7 +23200,7 @@
     {
       "id": "w_999",
       "name": "ラバラ・ダーゲⅣ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 7,
       "attack": 252,
       "affinity": 15,
@@ -23224,7 +23224,7 @@
     {
       "id": "w_1000",
       "name": "刺花剣アカトペルマ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 280,
       "affinity": 15,
@@ -23249,7 +23249,7 @@
     {
       "id": "w_1001",
       "name": "ケマスクチーロⅠ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 1,
       "attack": 140,
       "affinity": 5,
@@ -23273,7 +23273,7 @@
     {
       "id": "w_1002",
       "name": "ケマスクチーロⅡ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 3,
       "attack": 196,
       "affinity": 5,
@@ -23297,7 +23297,7 @@
     {
       "id": "w_1003",
       "name": "ケマスクチーロⅢ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 5,
       "attack": 238,
       "affinity": 5,
@@ -23324,7 +23324,7 @@
     {
       "id": "w_1004",
       "name": "ケマスクチーロⅣ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 7,
       "attack": 294,
       "affinity": 5,
@@ -23351,7 +23351,7 @@
     {
       "id": "w_1005",
       "name": "炎尾剣フォルナクス",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 336,
       "affinity": 5,
@@ -23379,7 +23379,7 @@
     {
       "id": "w_1006",
       "name": "グラビドサイフォスⅠ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 6,
       "attack": 294,
       "affinity": -15,
@@ -23403,7 +23403,7 @@
     {
       "id": "w_1007",
       "name": "重剣タイタン",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 336,
       "affinity": -15,
@@ -23428,7 +23428,7 @@
     {
       "id": "w_1008",
       "name": "鉄剣ジュネスⅠ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 2,
       "attack": 168,
       "affinity": 0,
@@ -23449,7 +23449,7 @@
     {
       "id": "w_1009",
       "name": "鉄剣ジュネスⅡ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 4,
       "attack": 224,
       "affinity": 0,
@@ -23472,7 +23472,7 @@
     {
       "id": "w_1010",
       "name": "鉄剣ジュネスⅢ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 6,
       "attack": 266,
       "affinity": 0,
@@ -23496,7 +23496,7 @@
     {
       "id": "w_1011",
       "name": "重鉄剣フロシオン",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 308,
       "affinity": 0,
@@ -23521,7 +23521,7 @@
     {
       "id": "w_1012",
       "name": "ダハ・ガダⅠ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 7,
       "attack": 266,
       "affinity": 0,
@@ -23548,7 +23548,7 @@
     {
       "id": "w_1013",
       "name": "断崖のマテプトロ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 294,
       "affinity": 0,
@@ -23576,7 +23576,7 @@
     {
       "id": "w_1014",
       "name": "アルラスエッジⅠ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 4,
       "attack": 224,
       "affinity": 15,
@@ -23602,7 +23602,7 @@
     {
       "id": "w_1015",
       "name": "アルラスエッジⅡ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 6,
       "attack": 252,
       "affinity": 15,
@@ -23629,7 +23629,7 @@
     {
       "id": "w_1016",
       "name": "メルト",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 294,
       "affinity": 15,
@@ -23657,7 +23657,7 @@
     {
       "id": "w_1017",
       "name": "ヒートエッジⅠ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 6,
       "attack": 252,
       "affinity": 10,
@@ -23684,7 +23684,7 @@
     {
       "id": "w_1018",
       "name": "コロナ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 280,
       "affinity": 10,
@@ -23712,7 +23712,7 @@
     {
       "id": "w_1019",
       "name": "プリンセスレイピアⅠ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 5,
       "attack": 224,
       "affinity": 15,
@@ -23736,7 +23736,7 @@
     {
       "id": "w_1020",
       "name": "プリンセスレイピアⅡ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 7,
       "attack": 266,
       "affinity": 15,
@@ -23760,7 +23760,7 @@
     {
       "id": "w_1021",
       "name": "クイーンレイピア",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 294,
       "affinity": 15,
@@ -23785,7 +23785,7 @@
     {
       "id": "w_1022",
       "name": "スケイルソードⅠ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 3,
       "attack": 168,
       "affinity": 10,
@@ -23806,7 +23806,7 @@
     {
       "id": "w_1023",
       "name": "スケイルソードⅡ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 5,
       "attack": 210,
       "affinity": 15,
@@ -23830,7 +23830,7 @@
     {
       "id": "w_1024",
       "name": "スケイルソードⅢ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 7,
       "attack": 252,
       "affinity": 15,
@@ -23854,7 +23854,7 @@
     {
       "id": "w_1025",
       "name": "ネルスパーダ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 280,
       "affinity": 15,
@@ -23879,7 +23879,7 @@
     {
       "id": "w_1026",
       "name": "バーラブレイドⅠ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 2,
       "attack": 154,
       "affinity": 10,
@@ -23903,7 +23903,7 @@
     {
       "id": "w_1027",
       "name": "バーラブレイドⅡ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 4,
       "attack": 210,
       "affinity": 10,
@@ -23929,7 +23929,7 @@
     {
       "id": "w_1028",
       "name": "バーラブレイドⅢ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 5,
       "attack": 224,
       "affinity": 10,
@@ -23956,7 +23956,7 @@
     {
       "id": "w_1029",
       "name": "バーラブレイドⅣ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 7,
       "attack": 266,
       "affinity": 10,
@@ -23983,7 +23983,7 @@
     {
       "id": "w_1030",
       "name": "沙海剣カトヌカドゥ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 294,
       "affinity": 10,
@@ -24011,7 +24011,7 @@
     {
       "id": "w_1031",
       "name": "ボーンククリⅠ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 1,
       "attack": 154,
       "affinity": 0,
@@ -24032,7 +24032,7 @@
     {
       "id": "w_1032",
       "name": "ボーンククリⅡ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 2,
       "attack": 182,
       "affinity": 0,
@@ -24053,7 +24053,7 @@
     {
       "id": "w_1033",
       "name": "ボーンククリⅢ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 4,
       "attack": 238,
       "affinity": 0,
@@ -24076,7 +24076,7 @@
     {
       "id": "w_1034",
       "name": "ボーンククリⅣ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 6,
       "attack": 280,
       "affinity": 0,
@@ -24100,7 +24100,7 @@
     {
       "id": "w_1035",
       "name": "チーフククリ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 322,
       "affinity": 0,
@@ -24125,7 +24125,7 @@
     {
       "id": "w_1036",
       "name": "シーカ＝アルジャナルⅠ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 6,
       "attack": 252,
       "affinity": 15,
@@ -24152,7 +24152,7 @@
     {
       "id": "w_1037",
       "name": "護雷剣シーカガルデ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 294,
       "affinity": 15,
@@ -24180,7 +24180,7 @@
     {
       "id": "w_1038",
       "name": "ヴェノムベインⅠ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 5,
       "attack": 252,
       "affinity": 0,
@@ -24204,7 +24204,7 @@
     {
       "id": "w_1039",
       "name": "ヴェノムベインⅡ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 6,
       "attack": 280,
       "affinity": 0,
@@ -24228,7 +24228,7 @@
     {
       "id": "w_1040",
       "name": "デスヴェノムサーベル",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 322,
       "affinity": 0,
@@ -24253,7 +24253,7 @@
     {
       "id": "w_1041",
       "name": "赫炎の護剣Ⅰ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 3,
       "attack": 182,
       "affinity": 10,
@@ -24274,7 +24274,7 @@
     {
       "id": "w_1042",
       "name": "赫炎の護剣Ⅱ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 6,
       "attack": 252,
       "affinity": 10,
@@ -24298,7 +24298,7 @@
     {
       "id": "w_1043",
       "name": "赫炎護剣スヴィンダ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 294,
       "affinity": 10,
@@ -24323,7 +24323,7 @@
     {
       "id": "w_1044",
       "name": "雪白のジャンビーヤⅠ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 6,
       "attack": 280,
       "affinity": -10,
@@ -24350,7 +24350,7 @@
     {
       "id": "w_1045",
       "name": "獅子のジャンビーヤ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 322,
       "affinity": -10,
@@ -24378,7 +24378,7 @@
     {
       "id": "w_1046",
       "name": "チャタクラブⅠ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 1,
       "attack": 154,
       "affinity": 0,
@@ -24399,7 +24399,7 @@
     {
       "id": "w_1047",
       "name": "チャタクラブⅡ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 3,
       "attack": 210,
       "affinity": 0,
@@ -24420,7 +24420,7 @@
     {
       "id": "w_1048",
       "name": "チャタクラブⅢ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 5,
       "attack": 252,
       "affinity": 0,
@@ -24444,7 +24444,7 @@
     {
       "id": "w_1049",
       "name": "チャタクラブⅣ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 7,
       "attack": 294,
       "affinity": 0,
@@ -24468,7 +24468,7 @@
     {
       "id": "w_1050",
       "name": "虚無の剣Ⅰ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 4,
       "attack": 224,
       "affinity": 0,
@@ -24494,7 +24494,7 @@
     {
       "id": "w_1051",
       "name": "虚無の剣Ⅱ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 6,
       "attack": 266,
       "affinity": 0,
@@ -24521,7 +24521,7 @@
     {
       "id": "w_1052",
       "name": "暗彎刀コルディアル",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 308,
       "affinity": 0,
@@ -24549,7 +24549,7 @@
     {
       "id": "w_1053",
       "name": "ガルシュムークロⅠ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 4,
       "attack": 238,
       "affinity": -10,
@@ -24576,7 +24576,7 @@
     {
       "id": "w_1054",
       "name": "ガルシュムークロⅡ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 6,
       "attack": 294,
       "affinity": -10,
@@ -24603,7 +24603,7 @@
     {
       "id": "w_1055",
       "name": "護鎖刃剣ガルトリウス",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 336,
       "affinity": -10,
@@ -24631,7 +24631,7 @@
     {
       "id": "w_1056",
       "name": "アルシュムークロⅠ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 7,
       "attack": 280,
       "affinity": 0,
@@ -24658,7 +24658,7 @@
     {
       "id": "w_1057",
       "name": "アーティアソードⅠ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 6,
       "attack": 238,
       "affinity": 5,
@@ -24683,7 +24683,7 @@
     {
       "id": "w_1058",
       "name": "アーティアソードⅡ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 7,
       "attack": 252,
       "affinity": 5,
@@ -24708,7 +24708,7 @@
     {
       "id": "w_1059",
       "name": "ヴェルドロート",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 266,
       "affinity": 5,
@@ -24733,7 +24733,7 @@
     {
       "id": "w_1060",
       "name": "ゾ・ミハーラⅠ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 7,
       "attack": 294,
       "affinity": 5,
@@ -24760,7 +24760,7 @@
     {
       "id": "w_1061",
       "name": "熾光たるミハーラ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 308,
       "affinity": 5,
@@ -24788,7 +24788,7 @@
     {
       "id": "w_1062",
       "name": "エスペラソード",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 294,
       "affinity": 0,
@@ -24813,7 +24813,7 @@
     {
       "id": "w_1063",
       "name": "纏剣カータトルァ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 322,
       "affinity": 0,
@@ -24838,7 +24838,7 @@
     {
       "id": "w_1064",
       "name": "鎖刃剣アルトリウス",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 308,
       "affinity": 0,
@@ -24866,7 +24866,7 @@
     {
       "id": "w_1065",
       "name": "狐扇ハナノナゴリヲⅠ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 6,
       "attack": 252,
       "affinity": 15,
@@ -24893,7 +24893,7 @@
     {
       "id": "w_1066",
       "name": "くれなゐの色扇の薄重",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 294,
       "affinity": 15,
@@ -26313,7 +26313,7 @@
     {
       "id": "w_1125",
       "name": "ナーブアルファルドⅠ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 7,
       "attack": 266,
       "affinity": 25,
@@ -26337,7 +26337,7 @@
     {
       "id": "w_1126",
       "name": "叛牙アルファルド",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 294,
       "affinity": 25,
@@ -26362,7 +26362,7 @@
     {
       "id": "w_1127",
       "name": "マイニングピッケル",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 7,
       "attack": 238,
       "affinity": 0,
@@ -26387,7 +26387,7 @@
     {
       "id": "w_1128",
       "name": "鶴嘴剣ディグモア",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 252,
       "affinity": 0,
@@ -26412,7 +26412,7 @@
     {
       "id": "w_1129",
       "name": "ラギアソードⅠ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 7,
       "attack": 280,
       "affinity": 0,
@@ -26439,7 +26439,7 @@
     {
       "id": "w_1130",
       "name": "ハイラギアソード",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 308,
       "affinity": 0,
@@ -26632,7 +26632,7 @@
     {
       "id": "w_1137",
       "name": "ブレードオブオメガ",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 7,
       "attack": 280,
       "affinity": 10,
@@ -26656,7 +26656,7 @@
     {
       "id": "w_1138",
       "name": "ブレードオブオメガ・真",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 308,
       "affinity": 10,
@@ -27584,7 +27584,7 @@
     {
       "id": "w_1178",
       "name": "ねこ？ぱんち",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 7,
       "attack": 308,
       "affinity": 10,
@@ -27608,7 +27608,7 @@
     {
       "id": "w_1179",
       "name": "にゃんにゃんぼう",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 336,
       "affinity": 10,
@@ -27633,7 +27633,7 @@
     {
       "id": "w_1180",
       "name": "破滅のキリエヴェルド",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 280,
       "affinity": -10,
@@ -27658,7 +27658,7 @@
     {
       "id": "w_1181",
       "name": "破滅のキリエヴェルド",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 252,
       "affinity": 15,
@@ -27683,7 +27683,7 @@
     {
       "id": "w_1182",
       "name": "破滅のキリエヴェルド",
-      "weaponType": "sword-shield",
+      "weaponType": "片手剣",
       "rarity": 8,
       "attack": 266,
       "affinity": 0,
