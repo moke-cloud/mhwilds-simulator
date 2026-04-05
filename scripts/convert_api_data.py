@@ -45,41 +45,55 @@ def convert_weapons():
     for w in raw:
         kind = WEAPON_KIND_MAP.get(w.get("kind", ""), w.get("kind", ""))
 
-        # element
+        # attack: API uses "damage" field with {raw, display}
+        damage = w.get("damage", {})
+        if isinstance(damage, dict):
+            attack = damage.get("display", damage.get("raw", 0))
+        else:
+            attack = damage or 0
+
+        # element: API uses "specials" array
         elem = None
-        if w.get("element"):
-            e = w["element"]
-            elem_type = ELEMENT_MAP.get(e.get("type", ""), e.get("type", ""))
-            if elem_type and e.get("damage"):
-                elem = {"type": elem_type, "value": e["damage"]}
+        specials = w.get("specials", [])
+        if specials and len(specials) > 0:
+            sp = specials[0]
+            elem_key = sp.get("element", "")
+            elem_type = ELEMENT_MAP.get(elem_key, elem_key)
+            sp_damage = sp.get("damage", {})
+            if isinstance(sp_damage, dict):
+                elem_value = sp_damage.get("display", sp_damage.get("raw", 0))
+            else:
+                elem_value = sp_damage or 0
+            if elem_type and elem_value:
+                elem = {"type": elem_type, "value": elem_value}
 
         # sharpness
         sharpness = None
         sharpness_max = None
         if w.get("sharpness"):
             s = w["sharpness"]
-            sharpness = [
-                s.get("red", 0), s.get("orange", 0), s.get("yellow", 0),
-                s.get("green", 0), s.get("blue", 0), s.get("white", 0), s.get("purple", 0)
-            ]
-        if w.get("sharpnessMax"):
-            s = w["sharpnessMax"]
-            sharpness_max = [
-                s.get("red", 0), s.get("orange", 0), s.get("yellow", 0),
-                s.get("green", 0), s.get("blue", 0), s.get("white", 0), s.get("purple", 0)
-            ]
+            if isinstance(s, dict):
+                sharpness = [
+                    s.get("red", 0), s.get("orange", 0), s.get("yellow", 0),
+                    s.get("green", 0), s.get("blue", 0), s.get("white", 0), s.get("purple", 0)
+                ]
 
-        # slots
+        # handicraft field contains sharpness bonuses per level
+        # For sharpnessMax, we add handicraft level 5 bonus to base sharpness
+        handicraft = w.get("handicraft", [])
+        if sharpness and handicraft and len(handicraft) >= 5:
+            bonus = handicraft[4]  # Level 5 bonus
+            sharpness_max = list(sharpness)
+            # Add bonus to the highest non-zero color or next color
+            for i in range(len(sharpness_max) - 1, -1, -1):
+                if sharpness_max[i] > 0:
+                    sharpness_max[i] += bonus
+                    break
+
+        # slots: API returns flat array of integers
         slots = w.get("slots", [])
         if isinstance(slots, list):
             slots = [s.get("rank", s) if isinstance(s, dict) else s for s in slots]
-
-        # attack
-        attack_info = w.get("attack", {})
-        if isinstance(attack_info, dict):
-            attack = attack_info.get("display", attack_info.get("raw", 0))
-        else:
-            attack = attack_info
 
         weapons.append({
             "id": f"w_{w['id']}",
@@ -92,7 +106,7 @@ def convert_weapons():
             "sharpness": sharpness,
             "sharpnessMax": sharpness_max,
             "slots": slots,
-            "defense": w.get("defense", 0)
+            "defense": w.get("defenseBonus", 0)
         })
 
     save("weapons", {
