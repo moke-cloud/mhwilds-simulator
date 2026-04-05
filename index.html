@@ -197,7 +197,13 @@
       <span>装飾品を選択</span>
       <button class="modal-close" id="decoModalClose">&times;</button>
     </div>
-    <div class="item-list" id="decoList" style="max-height:60vh"></div>
+    <input type="text" class="search-box" id="decoSearch" placeholder="装飾品名・スキル名で検索...">
+    <div style="display:flex;gap:2px;padding:4px 6px">
+      <button class="tab active" data-deco-sort="name">名前順</button>
+      <button class="tab" data-deco-sort="slot">スロット順</button>
+      <button class="tab" data-deco-sort="skill">スキル名順</button>
+    </div>
+    <div class="item-list" id="decoList" style="max-height:55vh"></div>
   </div>
 </div>
 

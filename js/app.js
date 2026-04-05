@@ -198,13 +198,41 @@ const App = (() => {
     return btn;
   }
 
+  let decoSortMode = 'name';
+
   function openDecoModal(owner, slotIndex, slotSize, kind) {
     state.decoModalTarget = { owner, slotIndex, slotSize, kind };
-    const decos = DataLoader.getDecorations().filter(d => d.slotSize <= slotSize && d.kind === kind);
+    $('decoSearch').value = '';
+    renderDecoModalList();
+    $('decoModal').classList.add('open');
+    $('decoSearch').focus();
+  }
+
+  function renderDecoModalList() {
+    const t = state.decoModalTarget;
+    if (!t) return;
+    const { owner, slotIndex, slotSize, kind } = t;
+    const query = ($('decoSearch').value || '').toLowerCase();
+
+    let decos = DataLoader.getDecorations().filter(d => d.slotSize <= slotSize && d.kind === kind);
+    if (query) {
+      decos = decos.filter(d =>
+        d.name.toLowerCase().includes(query) ||
+        d.skills.some(s => s.name.toLowerCase().includes(query))
+      );
+    }
+
+    if (decoSortMode === 'slot') {
+      decos.sort((a, b) => b.slotSize - a.slotSize || a.name.localeCompare(b.name, 'ja'));
+    } else if (decoSortMode === 'skill') {
+      decos.sort((a, b) => (a.skills[0]?.name || '').localeCompare(b.skills[0]?.name || '', 'ja'));
+    } else {
+      decos.sort((a, b) => a.name.localeCompare(b.name, 'ja'));
+    }
+
     const list = $('decoList');
     list.innerHTML = '';
 
-    // 「なし」オプション
     const none = document.createElement('div');
     none.className = 'item';
     none.innerHTML = '<div class="item-name" style="color:var(--text-muted)">装飾品を外す</div>';
@@ -224,7 +252,9 @@ const App = (() => {
       list.appendChild(div);
     }
 
-    $('decoModal').classList.add('open');
+    document.querySelectorAll('[data-deco-sort]').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.decoSort === decoSortMode);
+    });
   }
 
   // === Charm (護石) ===
@@ -424,28 +454,43 @@ const App = (() => {
     ).join('');
   }
 
+  // 条件付きスキルかどうかを判定するキーワード
+  const CONDITIONAL_KEYWORDS = [
+    '怒り', '体力が最大', '弱点', '肉質', '部位', '傷がついた',
+    '抜刀', '納刀', '属性やられ', '状態異常', '回避', 'ジャスト',
+    'モンスター', '一定時間', '戦闘中', '継続', '発見'
+  ];
+
+  function isConditionalSkill(def) {
+    if (def.conditional) return true;
+    const allDesc = (def.description || '') + ' ' + (def.effects?.map(e => e.description).join(' ') || '');
+    return CONDITIONAL_KEYWORDS.some(kw => allDesc.includes(kw));
+  }
+
   function renderConditionToggles(skillLevels) {
     const container = $('condToggles');
     container.innerHTML = '';
+    let hasToggles = false;
+
     for (const def of DataLoader.getSkillDefs()) {
-      if (!def.conditional && !def.effects?.some(e => e.name)) continue;
       if (!skillLevels[def.name]) continue;
+      if (!isConditionalSkill(def)) continue;
 
-      // Check if skill has conditional effects in its description
-      const desc = def.effects?.map(e => e.description).join(' ') || '';
-      const isConditional = /怒り|体力|弱点|肉質|部位/.test(desc) || def.conditional;
-      if (!isConditional) continue;
-
-      const condKey = def.condition || def.name;
+      hasToggles = true;
+      const condKey = def.name; // Use skill name as condition key
       const label = document.createElement('label');
       label.className = 'cond-toggle';
       const checked = state.conditions[condKey] ? 'checked' : '';
-      label.innerHTML = `<input type="checkbox" ${checked}><span>${condKey}（${def.name} Lv${skillLevels[def.name]}）</span>`;
+      label.innerHTML = `<input type="checkbox" ${checked}><span>${def.name} Lv${skillLevels[def.name]} 発動</span>`;
       label.querySelector('input').onchange = (e) => {
         state.conditions[condKey] = e.target.checked;
         recalculate();
       };
       container.appendChild(label);
+    }
+
+    if (!hasToggles) {
+      container.innerHTML = '<p style="color:var(--text-muted);font-size:0.75rem;padding:4px 0">条件付きスキルなし</p>';
     }
   }
 
@@ -465,12 +510,21 @@ const App = (() => {
       const pct = Math.min(100, (level / maxLv) * 100);
       const maxed = level >= maxLv;
 
+      // Get effect description for current level
+      let effectDesc = '';
+      if (def && def.effects) {
+        const eff = def.effects.find(e => e.level === level);
+        if (eff && eff.description) effectDesc = eff.description;
+      }
+
       const row = document.createElement('div');
       row.className = 'skill-row';
+      row.style.flexWrap = 'wrap';
       row.innerHTML = `
         <span class="skill-name">${name}</span>
         <span class="skill-level">Lv${level}/${maxLv}</span>
-        <div class="skill-bar"><div class="fill${maxed ? ' maxed' : ''}" style="width:${pct}%"></div></div>`;
+        <div class="skill-bar"><div class="fill${maxed ? ' maxed' : ''}" style="width:${pct}%"></div></div>
+        ${effectDesc ? `<div style="width:100%;font-size:0.7rem;color:var(--text-secondary);margin-top:2px;padding-left:4px">${effectDesc}</div>` : ''}`;
       list.appendChild(row);
     }
   }
@@ -534,6 +588,13 @@ const App = (() => {
     $('decoModalClose').addEventListener('click', () => $('decoModal').classList.remove('open'));
     $('decoModal').addEventListener('click', (e) => {
       if (e.target === $('decoModal')) $('decoModal').classList.remove('open');
+    });
+    $('decoSearch').addEventListener('input', debounce(renderDecoModalList, 200));
+    document.querySelectorAll('[data-deco-sort]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        decoSortMode = btn.dataset.decoSort;
+        renderDecoModalList();
+      });
     });
 
     // Save/Load
