@@ -11,8 +11,41 @@
 <!-- Header -->
 <header class="header">
   <h1>MHWilds 装備シミュレーター</h1>
-  <span class="header-status" id="loadStatus">読み込み中...</span>
+  <div style="display:flex;align-items:center;gap:8px">
+    <button id="btnSaveSet" class="header-btn" title="現在の装備を保存">保存</button>
+    <button id="btnLoadSet" class="header-btn" title="保存した装備を読み込み">読込</button>
+    <span class="header-status" id="loadStatus">読み込み中...</span>
+  </div>
 </header>
+
+<!-- 保存モーダル -->
+<div class="modal-overlay" id="saveModal">
+  <div class="modal">
+    <div class="modal-header">
+      <span>装備セットを保存</span>
+      <button class="modal-close" onclick="document.getElementById('saveModal').classList.remove('open')">&times;</button>
+    </div>
+    <div style="padding:12px">
+      <input type="text" class="search-box" id="saveSetName" placeholder="セット名を入力..." style="border-radius:var(--radius-sm);margin-bottom:8px">
+      <button id="btnDoSave" style="width:100%;padding:10px;background:var(--accent);color:#000;border:none;border-radius:var(--radius-sm);font-weight:600;cursor:pointer;font-size:0.9rem">保存する</button>
+    </div>
+  </div>
+</div>
+
+<!-- 読み込みモーダル -->
+<div class="modal-overlay" id="loadModal">
+  <div class="modal">
+    <div class="modal-header">
+      <span>装備セット一覧</span>
+      <div style="display:flex;gap:6px">
+        <button id="btnExport" class="header-btn" title="JSONエクスポート">出力</button>
+        <label class="header-btn" title="JSONインポート" style="cursor:pointer">入力<input type="file" id="btnImport" accept=".json" style="display:none"></label>
+        <button class="modal-close" onclick="document.getElementById('loadModal').classList.remove('open')">&times;</button>
+      </div>
+    </div>
+    <div class="item-list" id="savedSetList" style="max-height:60vh"></div>
+  </div>
+</div>
 
 <!-- Main Layout -->
 <main class="layout">

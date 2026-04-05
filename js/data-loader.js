@@ -13,7 +13,7 @@ const DataLoader = (() => {
   let partNames = {};
 
   async function loadAll() {
-    const v = 'v=5';
+    const v = 'v=6';
     const [wData, aData, dData, sData, cData] = await Promise.all([
       fetch('data/weapons.json?' + v).then(r => r.json()),
       fetch('data/armors.json?' + v).then(r => r.json()),

@@ -535,6 +535,225 @@ const App = (() => {
     $('decoModal').addEventListener('click', (e) => {
       if (e.target === $('decoModal')) $('decoModal').classList.remove('open');
     });
+
+    // Save/Load
+    $('btnSaveSet').addEventListener('click', () => {
+      $('saveSetName').value = '';
+      $('saveModal').classList.add('open');
+      $('saveSetName').focus();
+    });
+    $('saveModal').addEventListener('click', (e) => {
+      if (e.target === $('saveModal')) $('saveModal').classList.remove('open');
+    });
+    $('btnDoSave').addEventListener('click', saveCurrentSet);
+    $('saveSetName').addEventListener('keydown', (e) => { if (e.key === 'Enter') saveCurrentSet(); });
+
+    $('btnLoadSet').addEventListener('click', () => { renderSavedSets(); $('loadModal').classList.add('open'); });
+    $('loadModal').addEventListener('click', (e) => {
+      if (e.target === $('loadModal')) $('loadModal').classList.remove('open');
+    });
+
+    $('btnExport').addEventListener('click', exportSets);
+    $('btnImport').addEventListener('change', importSets);
+  }
+
+  // === Save/Load System ===
+  const STORAGE_KEY = 'mhwilds_saved_sets';
+
+  function getSavedSets() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+    } catch { return []; }
+  }
+
+  function writeSavedSets(sets) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(sets));
+  }
+
+  function serializeState() {
+    return {
+      weapon: state.selectedWeapon ? state.selectedWeapon.id : null,
+      armors: {
+        head: state.selectedArmors.head?.id || null,
+        chest: state.selectedArmors.chest?.id || null,
+        arms: state.selectedArmors.arms?.id || null,
+        waist: state.selectedArmors.waist?.id || null,
+        legs: state.selectedArmors.legs?.id || null,
+      },
+      decos: state.equippedDecos.map(d => ({
+        owner: d.owner, slotIndex: d.slotIndex, decoId: d.decoration.id
+      })),
+      charm: state.charm,
+      conditions: { ...state.conditions }
+    };
+  }
+
+  function deserializeState(data) {
+    // Weapon
+    if (data.weapon) {
+      state.selectedWeapon = DataLoader.getWeapons().find(w => w.id === data.weapon) || null;
+      if (state.selectedWeapon) {
+        state.activeWeaponType = state.selectedWeapon.weaponType;
+        $('selectedWeaponName').textContent = state.selectedWeapon.name;
+      }
+    } else {
+      state.selectedWeapon = null;
+    }
+
+    // Armors
+    for (const part of ['head', 'chest', 'arms', 'waist', 'legs']) {
+      const id = data.armors?.[part];
+      state.selectedArmors[part] = id ? DataLoader.getArmors().find(a => a.id === id) || null : null;
+    }
+
+    // Decos
+    state.equippedDecos = [];
+    if (data.decos) {
+      for (const d of data.decos) {
+        const deco = DataLoader.getDecorations().find(dec => dec.id === d.decoId);
+        if (deco) state.equippedDecos.push({ owner: d.owner, slotIndex: d.slotIndex, decoration: deco });
+      }
+    }
+
+    // Charm
+    state.charm = data.charm || null;
+    if (state.charm) {
+      // Restore charm UI
+      const skillSelects = ['charmSkill1', 'charmSkill2', 'charmSkill3'];
+      const lvSelects = ['charmSkill1Lv', 'charmSkill2Lv', 'charmSkill3Lv'];
+      for (let i = 0; i < 3; i++) {
+        if (state.charm.skills?.[i]) {
+          $(skillSelects[i]).value = state.charm.skills[i].name;
+          updateCharmLevelOptions(skillSelects[i], lvSelects[i]);
+          $(lvSelects[i]).value = state.charm.skills[i].level;
+        } else {
+          $(skillSelects[i]).value = '';
+          $(lvSelects[i]).innerHTML = '<option value="0">-</option>';
+        }
+      }
+      const slotSels = ['charmSlot1', 'charmSlot2', 'charmSlot3'];
+      for (let i = 0; i < 3; i++) {
+        $(slotSels[i]).value = state.charm.slots?.[i] || '0';
+      }
+    }
+
+    // Conditions
+    state.conditions = data.conditions || {};
+
+    // Re-render everything
+    renderWeaponTabs();
+    renderArmorList();
+    renderDecoSlots();
+    recalculate();
+  }
+
+  function saveCurrentSet() {
+    const name = ($('saveSetName').value || '').trim();
+    if (!name) { $('saveSetName').focus(); return; }
+
+    const sets = getSavedSets();
+
+    // Build summary for display
+    const wName = state.selectedWeapon?.name || '-';
+    const armorNames = ['head','chest','arms','waist','legs'].map(p => state.selectedArmors[p]?.name || '-');
+
+    sets.push({
+      name,
+      savedAt: new Date().toISOString(),
+      summary: { weapon: wName, armors: armorNames },
+      data: serializeState()
+    });
+
+    writeSavedSets(sets);
+    $('saveModal').classList.remove('open');
+
+    // Brief feedback
+    $('loadStatus').textContent = `「${name}」を保存しました`;
+    setTimeout(() => {
+      const w = DataLoader.getWeapons().length;
+      $('loadStatus').textContent = `${w}武器 / ${DataLoader.getArmors().length}防具`;
+    }, 2000);
+  }
+
+  function renderSavedSets() {
+    const sets = getSavedSets();
+    const list = $('savedSetList');
+    list.innerHTML = '';
+
+    if (sets.length === 0) {
+      list.innerHTML = '<div style="padding:20px;text-align:center;color:var(--text-muted)">保存されたセットはありません</div>';
+      return;
+    }
+
+    sets.forEach((set, idx) => {
+      const div = document.createElement('div');
+      div.className = 'item';
+      const date = new Date(set.savedAt).toLocaleString('ja-JP', { month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit' });
+      div.innerHTML = `
+        <div class="item-name" style="flex:1">
+          <strong>${set.name}</strong>
+          <span class="sub">${set.summary?.weapon || '-'} | ${date}</span>
+        </div>
+        <div style="display:flex;gap:4px">
+          <button class="deco-slot-btn" data-action="load" data-idx="${idx}">読込</button>
+          <button class="deco-remove" data-action="delete" data-idx="${idx}" title="削除">✕</button>
+        </div>`;
+      list.appendChild(div);
+    });
+
+    // Event delegation
+    list.onclick = (e) => {
+      const btn = e.target.closest('[data-action]');
+      if (!btn) return;
+      const idx = parseInt(btn.dataset.idx);
+      if (btn.dataset.action === 'load') {
+        deserializeState(sets[idx].data);
+        $('loadModal').classList.remove('open');
+        $('loadStatus').textContent = `「${sets[idx].name}」を読み込みました`;
+        setTimeout(() => {
+          $('loadStatus').textContent = `${DataLoader.getWeapons().length}武器 / ${DataLoader.getArmors().length}防具`;
+        }, 2000);
+      } else if (btn.dataset.action === 'delete') {
+        if (confirm(`「${sets[idx].name}」を削除しますか？`)) {
+          sets.splice(idx, 1);
+          writeSavedSets(sets);
+          renderSavedSets();
+        }
+      }
+    };
+  }
+
+  function exportSets() {
+    const sets = getSavedSets();
+    if (sets.length === 0) { alert('保存されたセットがありません'); return; }
+    const blob = new Blob([JSON.stringify(sets, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `mhwilds_sets_${new Date().toISOString().slice(0,10)}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  function importSets(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const imported = JSON.parse(reader.result);
+        if (!Array.isArray(imported)) throw new Error('invalid format');
+        const existing = getSavedSets();
+        const merged = [...existing, ...imported];
+        writeSavedSets(merged);
+        renderSavedSets();
+        alert(`${imported.length}件のセットをインポートしました`);
+      } catch (err) {
+        alert('ファイル形式が正しくありません');
+      }
+    };
+    reader.readAsText(file);
+    e.target.value = '';
   }
 
   function debounce(fn, ms) {
