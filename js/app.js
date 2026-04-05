@@ -214,7 +214,11 @@ const App = (() => {
     const { owner, slotIndex, slotSize, kind } = t;
     const query = ($('decoSearch').value || '').toLowerCase();
 
-    let decos = DataLoader.getDecorations().filter(d => d.slotSize <= slotSize && d.kind === kind);
+    let decos = DataLoader.getDecorations().filter(d => {
+      if (d.slotSize > slotSize) return false;
+      if (kind === 'both') return true; // 護石: 武器用・防具用両方OK
+      return d.kind === kind;
+    });
     if (query) {
       decos = decos.filter(d =>
         d.name.toLowerCase().includes(query) ||
@@ -264,8 +268,20 @@ const App = (() => {
     { search: 'charmSearch3', select: 'charmSkill3', lv: 'charmSkill3Lv' },
   ];
 
+  // 装飾品で発動可能なスキル名のセット
+  function getDecoSkillNames() {
+    const names = new Set();
+    for (const d of DataLoader.getDecorations()) {
+      for (const s of d.skills) names.add(s.name);
+    }
+    return names;
+  }
+
   function populateCharmSelects() {
-    const skills = DataLoader.getSkillDefs().sort((a, b) => a.name.localeCompare(b.name, 'ja'));
+    const decoSkills = getDecoSkillNames();
+    const skills = DataLoader.getSkillDefs()
+      .filter(s => decoSkills.has(s.name))
+      .sort((a, b) => a.name.localeCompare(b.name, 'ja'));
 
     for (const pair of charmSkillPairs) {
       const sel = $(pair.select);
@@ -313,7 +329,8 @@ const App = (() => {
   function filterCharmSkillOptions(pair, query) {
     const sel = $(pair.select);
     const q = (query || '').toLowerCase();
-    const skills = DataLoader.getSkillDefs();
+    const decoSkills = getDecoSkillNames();
+    const skills = DataLoader.getSkillDefs().filter(s => decoSkills.has(s.name));
 
     sel.innerHTML = '<option value="">なし</option>';
     for (const s of skills) {
@@ -407,7 +424,7 @@ const App = (() => {
     section.style.display = '';
     container.innerHTML = '';
     state.charm.slots.forEach((size, i) => {
-      if (size > 0) container.appendChild(createDecoSlotBtn('charm', i, size, 'armor'));
+      if (size > 0) container.appendChild(createDecoSlotBtn('charm', i, size, 'both'));
     });
   }
 
