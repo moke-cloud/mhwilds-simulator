@@ -6,11 +6,14 @@ const App = (() => {
   const state = {
     selectedWeapon: null,
     selectedArmors: { head: null, chest: null, arms: null, waist: null, legs: null },
+    // 装飾品: {owner: "weapon"|"head"|"chest"|..., slotIndex: 0-2, decoration: {...}}
     equippedDecos: [],
     charm: null,
     activeWeaponType: null,
     activeArmorPart: 'head',
-    conditions: {}
+    conditions: {},
+    // 装飾品モーダル用
+    decoModalTarget: null // {owner, slotIndex, slotSize, kind}
   };
 
   const $ = id => document.getElementById(id);
@@ -25,6 +28,7 @@ const App = (() => {
 
       renderWeaponTabs();
       renderArmorList();
+      renderDecoSlots();
       populateCharmSelects();
       populateCharmPresets();
       bindEvents();
@@ -70,7 +74,7 @@ const App = (() => {
           ${w.affinity ? `<span class="aff"> ${w.affinity > 0 ? '+' : ''}${w.affinity}%</span>` : ''}
           ${w.element ? `<br><span class="text-${elemClass(w.element.type)}">${w.element.type}${w.element.value}</span>` : ''}
         </div>`;
-      div.onclick = () => { state.selectedWeapon = w; $('selectedWeaponName').textContent = w.name; renderWeaponList(); recalculate(); };
+      div.onclick = () => { state.selectedWeapon = w; clearDecos('weapon'); $('selectedWeaponName').textContent = w.name; renderWeaponList(); renderDecoSlots(); recalculate(); };
       list.appendChild(div);
     }
     if (weapons.length === 0) {
@@ -112,9 +116,115 @@ const App = (() => {
           <span>防${a.defense.base}</span>
           <br><span style="font-size:0.65rem">${renderSlotsText(a.slots)}</span>
         </div>`;
-      div.onclick = () => { state.selectedArmors[part] = a; renderArmorList(); recalculate(); };
+      div.onclick = () => { state.selectedArmors[part] = a; clearDecos(part); renderArmorList(); renderDecoSlots(); recalculate(); };
       list.appendChild(div);
     }
+  }
+
+  // === Decoration Slots (装飾品スロット) ===
+  function clearDecos(owner) {
+    state.equippedDecos = state.equippedDecos.filter(d => d.owner !== owner);
+  }
+
+  function getEquippedDeco(owner, slotIndex) {
+    return state.equippedDecos.find(d => d.owner === owner && d.slotIndex === slotIndex);
+  }
+
+  function setDeco(owner, slotIndex, decoration) {
+    state.equippedDecos = state.equippedDecos.filter(d => !(d.owner === owner && d.slotIndex === slotIndex));
+    if (decoration) {
+      state.equippedDecos.push({ owner, slotIndex, decoration });
+    }
+    renderDecoSlots();
+    recalculate();
+  }
+
+  function renderDecoSlots() {
+    // Weapon slots
+    const wContainer = $('weaponSlotContainer');
+    const wSection = $('weaponDecoSlots');
+    if (state.selectedWeapon && state.selectedWeapon.slots && state.selectedWeapon.slots.length > 0) {
+      wSection.style.display = '';
+      wContainer.innerHTML = '';
+      state.selectedWeapon.slots.forEach((size, i) => {
+        if (size > 0) wContainer.appendChild(createDecoSlotBtn('weapon', i, size, 'weapon'));
+      });
+    } else {
+      wSection.style.display = 'none';
+    }
+
+    // Armor slots
+    const aContainer = $('armorSlotContainer');
+    const aSection = $('armorDecoSlots');
+    const parts = ['head', 'chest', 'arms', 'waist', 'legs'];
+    const partLabels = { head: '頭', chest: '胴', arms: '腕', waist: '腰', legs: '脚' };
+    let hasSlots = false;
+    aContainer.innerHTML = '';
+
+    for (const part of parts) {
+      const armor = state.selectedArmors[part];
+      if (!armor || !armor.slots || armor.slots.length === 0) continue;
+      const filledSlots = armor.slots.filter(s => s > 0);
+      if (filledSlots.length === 0) continue;
+
+      hasSlots = true;
+      const row = document.createElement('div');
+      row.className = 'deco-slot-row';
+      row.innerHTML = `<span class="equip-label">${partLabels[part]}: ${armor.name}</span>`;
+      armor.slots.forEach((size, i) => {
+        if (size > 0) row.appendChild(createDecoSlotBtn(part, i, size, 'armor'));
+      });
+      aContainer.appendChild(row);
+    }
+    aSection.style.display = hasSlots ? '' : 'none';
+  }
+
+  function createDecoSlotBtn(owner, slotIndex, slotSize, kind) {
+    const equipped = getEquippedDeco(owner, slotIndex);
+    const btn = document.createElement('button');
+    btn.className = 'deco-slot-btn' + (equipped ? ' filled' : '');
+    if (equipped) {
+      btn.innerHTML = `<span class="size-dot"></span>${equipped.decoration.name}`;
+      // Add remove button
+      const removeBtn = document.createElement('button');
+      removeBtn.className = 'deco-remove';
+      removeBtn.textContent = '✕';
+      removeBtn.onclick = (e) => { e.stopPropagation(); setDeco(owner, slotIndex, null); };
+      btn.appendChild(removeBtn);
+    } else {
+      btn.innerHTML = `<span class="size-dot"></span>[${slotSize}] 空き`;
+    }
+    btn.onclick = () => openDecoModal(owner, slotIndex, slotSize, kind);
+    return btn;
+  }
+
+  function openDecoModal(owner, slotIndex, slotSize, kind) {
+    state.decoModalTarget = { owner, slotIndex, slotSize, kind };
+    const decos = DataLoader.getDecorations().filter(d => d.slotSize <= slotSize && d.kind === kind);
+    const list = $('decoList');
+    list.innerHTML = '';
+
+    // 「なし」オプション
+    const none = document.createElement('div');
+    none.className = 'item';
+    none.innerHTML = '<div class="item-name" style="color:var(--text-muted)">装飾品を外す</div>';
+    none.onclick = () => { setDeco(owner, slotIndex, null); $('decoModal').classList.remove('open'); };
+    list.appendChild(none);
+
+    for (const d of decos) {
+      const div = document.createElement('div');
+      div.className = 'item';
+      div.innerHTML = `
+        <div class="item-name">
+          ${d.name}
+          <div class="skill-badges">${d.skills.map(s => `<span class="skill-badge">${s.name} Lv${s.level}</span>`).join('')}</div>
+        </div>
+        <div class="item-stats"><span>[${d.slotSize}]</span></div>`;
+      div.onclick = () => { setDeco(owner, slotIndex, d); $('decoModal').classList.remove('open'); };
+      list.appendChild(div);
+    }
+
+    $('decoModal').classList.add('open');
   }
 
   // === Charm (護石) ===
@@ -400,8 +510,9 @@ const App = (() => {
 
     $('clearArmorsBtn').addEventListener('click', () => {
       state.selectedArmors = { head: null, chest: null, arms: null, waist: null, legs: null };
-      state.equippedDecos = [];
+      state.equippedDecos = state.equippedDecos.filter(d => d.owner === 'weapon');
       renderArmorList();
+      renderDecoSlots();
       recalculate();
     });
 

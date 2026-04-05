@@ -157,6 +157,34 @@ body {
 .slot[data-size="4"] { width: 20px; height: 20px; border-color: var(--accent); }
 .slot.filled { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
 
+/* === Deco slot rows === */
+.deco-slot-row {
+  display: flex; align-items: center; gap: 8px;
+  padding: 4px 0; font-size: 0.8rem;
+}
+.deco-slot-row .equip-label {
+  font-size: 0.7rem; color: var(--text-secondary); min-width: 60px; flex-shrink: 0;
+}
+.deco-slot-btn {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 3px 10px; border-radius: var(--radius-sm);
+  background: var(--bg-input); border: 1px solid var(--border);
+  color: var(--text-secondary); font-size: 0.75rem; cursor: pointer;
+  transition: all 0.15s; white-space: nowrap;
+}
+.deco-slot-btn:hover { border-color: var(--border-active); color: var(--text-primary); }
+.deco-slot-btn.filled { border-color: var(--accent); color: var(--accent); }
+.deco-slot-btn .size-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  border: 1.5px solid currentColor; flex-shrink: 0;
+}
+.deco-slot-btn.filled .size-dot { background: var(--accent); }
+.deco-remove {
+  background: none; border: none; color: var(--red); cursor: pointer;
+  font-size: 0.7rem; padding: 0 4px; opacity: 0.6;
+}
+.deco-remove:hover { opacity: 1; }
+
 /* === Sharpness gauge === */
 .sharpness-gauge {
   display: flex; height: 8px; border-radius: 4px; overflow: hidden;

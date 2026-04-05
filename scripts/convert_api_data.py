@@ -267,6 +267,7 @@ def convert_decorations():
             "id": f"d_{d['id']}",
             "name": d.get("name", ""),
             "slotSize": slot,
+            "kind": d.get("kind", ""),
             "rarity": d.get("rarity", 1),
             "skills": skills
         })

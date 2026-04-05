@@ -23,6 +23,10 @@
       <span>武器</span>
       <span id="selectedWeaponName" style="font-weight:400;color:var(--text-secondary);font-size:0.75rem"></span>
     </div>
+    <div id="weaponDecoSlots" style="padding:8px 12px;display:none">
+      <div class="stat-label">武器スロット（武器用装飾品）</div>
+      <div class="slots" id="weaponSlotContainer"></div>
+    </div>
     <div class="tabs" id="weaponTypeTabs"></div>
     <input type="text" class="search-box" id="weaponSearch" placeholder="武器名で検索...">
     <div class="item-list" id="weaponList"></div>
@@ -40,6 +44,10 @@
       <button class="tab" data-part="arms">腕</button>
       <button class="tab" data-part="waist">腰</button>
       <button class="tab" data-part="legs">脚</button>
+    </div>
+    <div id="armorDecoSlots" style="padding:8px 12px;display:none">
+      <div class="stat-label">防具スロット（防具用装飾品）</div>
+      <div id="armorSlotContainer"></div>
     </div>
     <input type="text" class="search-box" id="armorSearch" placeholder="防具名・スキル名で検索...">
     <div class="item-list" id="armorList"></div>
