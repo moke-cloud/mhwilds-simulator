@@ -177,15 +177,31 @@
       <div class="sharpness-gauge" id="sharpnessGauge"></div>
     </div>
 
-    <!-- 攻撃期待値レンジ -->
-    <div style="padding:8px 12px">
-      <div class="stat-label">攻撃期待値（斬れ味込み）</div>
-      <div class="range-bar"><div class="fill" id="rangeFill"></div></div>
-      <div class="range-labels">
-        <span id="rangeMin">-</span>
-        <span class="expected" id="rangeExpected">-</span>
-        <span id="rangeMax">-</span>
+    <!-- 攻撃期待値 -->
+    <div class="card-header" style="border-top:1px solid var(--border)"><span>攻撃力（斬れ味込み）</span></div>
+    <div class="dps-panel" id="dpsPanel">
+      <div class="dps-expected">
+        <div class="dps-expected-label">期待値（平均DPS）</div>
+        <div class="dps-expected-value" id="dpsExpected">-</div>
+        <div class="dps-expected-note" id="dpsNote">ビルド比較に使用する値</div>
       </div>
+      <div class="dps-range">
+        <div class="dps-range-item">
+          <span class="dps-range-label" id="dpsLowLabel">通常ヒット</span>
+          <span class="dps-range-value" id="dpsLow">-</span>
+        </div>
+        <div class="dps-range-bar">
+          <div class="dps-bar-track">
+            <div class="dps-bar-low" id="dpsBarLow"></div>
+            <div class="dps-bar-expected" id="dpsBarExpected"></div>
+          </div>
+        </div>
+        <div class="dps-range-item">
+          <span class="dps-range-label" id="dpsHighLabel">会心ヒット</span>
+          <span class="dps-range-value dps-crit" id="dpsHigh">-</span>
+        </div>
+      </div>
+      <div class="dps-detail" id="dpsDetail"></div>
     </div>
 
     <!-- 耐性 -->

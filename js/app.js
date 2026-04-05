@@ -439,13 +439,42 @@ const App = (() => {
 
     renderSharpness(result.sharpness);
 
+    // DPS Panel
     const r = result.effectiveRange;
-    $('rangeMin').textContent = r.min || '-';
-    $('rangeExpected').textContent = r.expected || '-';
-    $('rangeMax').textContent = r.max || '-';
-    if (r.max > 0) {
-      $('rangeFill').style.width = Math.min(100, (r.expected / r.max) * 100) + '%';
+    const aff = result.finalAffinity;
+
+    $('dpsExpected').textContent = r.expected || '-';
+    $('dpsLow').textContent = r.min || '-';
+    $('dpsHigh').textContent = r.max || '-';
+
+    // Labels change based on positive/negative affinity
+    if (aff >= 0) {
+      $('dpsLowLabel').textContent = '通常ヒット';
+      $('dpsHighLabel').textContent = '会心ヒット';
+      $('dpsHigh').className = 'dps-range-value dps-crit';
+      $('dpsLow').className = 'dps-range-value';
+    } else {
+      $('dpsLowLabel').textContent = 'マイナス会心';
+      $('dpsHighLabel').textContent = '通常ヒット';
+      $('dpsLow').className = 'dps-range-value';
+      $('dpsLow').style.color = 'var(--red)';
+      $('dpsHigh').className = 'dps-range-value';
     }
+
+    // Bar visualization
+    if (r.max > 0) {
+      const lowPct = (r.min / r.max) * 100;
+      const expPct = (r.expected / r.max) * 100;
+      $('dpsBarLow').style.width = lowPct + '%';
+      $('dpsBarExpected').style.left = `calc(${expPct}% - 1.5px)`;
+    }
+
+    // Detail line
+    const affAbs = Math.abs(aff);
+    $('dpsDetail').textContent = aff >= 0
+      ? `会心率 ${aff}% → ${affAbs}%の確率で${r.max}、${100-affAbs}%で${r.min}`
+      : `会心率 ${aff}% → ${affAbs}%の確率で${r.min}（0.75倍）、${100-affAbs}%で${r.max}`;
+    $('dpsNote').textContent = `会心率${aff}% × 会心倍率${result.critMultiplier.toFixed(2)} × 斬れ味${result.sharpness.physical.toFixed(2)}`;
 
     setRes('resFire', result.resistance.fire);
     setRes('resWater', result.resistance.water);
