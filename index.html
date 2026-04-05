@@ -122,6 +122,28 @@
     <div class="card-header"><span>ステータス</span></div>
 
     <!-- 攻撃力・会心 -->
+    <!-- 基礎ステータス -->
+    <div class="stat-grid">
+      <div class="stat-item">
+        <div class="stat-label">武器攻撃力</div>
+        <div class="stat-value" style="font-size:0.9rem" id="statBaseAttack">-</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">武器会心率</div>
+        <div class="stat-value" style="font-size:0.9rem" id="statBaseAffinity">-</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">武器属性</div>
+        <div class="stat-value" style="font-size:0.9rem" id="statBaseElement">-</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">防具防御力</div>
+        <div class="stat-value" style="font-size:0.9rem" id="statBaseDefense">-</div>
+      </div>
+    </div>
+
+    <!-- スキル適用後 最終ステータス -->
+    <div class="card-header" style="border-top:1px solid var(--border)"><span>最終ステータス（スキル適用後）</span></div>
     <div class="stat-grid">
       <div class="stat-item">
         <div class="stat-label">攻撃力</div>
@@ -138,6 +160,14 @@
       <div class="stat-item">
         <div class="stat-label">属性</div>
         <div class="stat-value" id="statElement">-</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">会心倍率</div>
+        <div class="stat-value" id="statCritMult">-</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">斬れ味補正</div>
+        <div class="stat-value" id="statSharpMod">-</div>
       </div>
     </div>
 

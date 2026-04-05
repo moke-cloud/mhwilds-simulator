@@ -13,7 +13,7 @@ const DataLoader = (() => {
   let partNames = {};
 
   async function loadAll() {
-    const v = 'v=7';
+    const v = 'v=8';
     const [wData, aData, dData, sData, cData] = await Promise.all([
       fetch('data/weapons.json?' + v).then(r => r.json()),
       fetch('data/armors.json?' + v).then(r => r.json()),
@@ -21,6 +21,8 @@ const DataLoader = (() => {
       fetch('data/skills.json?' + v).then(r => r.json()),
       fetch('data/charms.json?' + v).then(r => r.json())
     ]);
+    // Load skill modifiers for calculator
+    await MHCalc.loadModifiers();
 
     weapons = wData.weapons || [];
     weaponTypes = wData.weaponTypes || [];

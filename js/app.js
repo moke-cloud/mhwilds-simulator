@@ -401,20 +401,43 @@ const App = (() => {
       useMaxDefense: false
     });
 
-    // Stats
+    // 基礎ステータス
+    $('statBaseAttack').textContent = result.weaponAttack || '-';
+    $('statBaseAffinity').textContent = result.baseAffinity ? `${result.baseAffinity > 0 ? '+' : ''}${result.baseAffinity}%` : '0%';
+    $('statBaseElement').textContent = state.selectedWeapon?.element
+      ? `${state.selectedWeapon.element.type} ${state.selectedWeapon.element.value}`
+      : '-';
+
+    // 防具基礎防御力(スキル抜き)
+    const baseDefTotal = armors.reduce((sum, a) => sum + (a?.defense?.base || 0), 0);
+    $('statBaseDefense').textContent = baseDefTotal || '-';
+
+    // 最終ステータス
     $('statAttack').textContent = result.finalAttack || '-';
-    const affText = result.finalAffinity !== undefined ? `${result.finalAffinity > 0 ? '+' : ''}${result.finalAffinity}%` : '0%';
+    const atkDiff = result.finalAttack - result.weaponAttack;
+    if (atkDiff > 0) $('statAttack').innerHTML = `${result.finalAttack} <span style="font-size:0.7rem;color:var(--green)">(+${atkDiff})</span>`;
+
+    const affText = `${result.finalAffinity > 0 ? '+' : ''}${result.finalAffinity}%`;
     $('statAffinity').textContent = affText;
     $('statAffinity').className = 'stat-value' + (result.finalAffinity > 0 ? ' positive' : result.finalAffinity < 0 ? ' negative' : '');
+
     $('statDefense').textContent = result.totalDefense || '-';
+    const defDiff = result.totalDefense - baseDefTotal;
+    if (defDiff > 0) $('statDefense').innerHTML = `${result.totalDefense} <span style="font-size:0.7rem;color:var(--green)">(+${defDiff})</span>`;
 
     if (result.element) {
-      $('statElement').innerHTML = `<span class="text-${elemClass(result.element.type)}">${result.element.type} ${result.element.value}</span>`;
+      const elemDiff = state.selectedWeapon?.element ? result.element.value - state.selectedWeapon.element.value : 0;
+      $('statElement').innerHTML = `<span class="text-${elemClass(result.element.type)}">${result.element.type} ${result.element.value}</span>${elemDiff > 0 ? `<span style="font-size:0.7rem;color:var(--green)"> (+${elemDiff})</span>` : ''}`;
     } else {
       $('statElement').textContent = '-';
     }
 
-    renderSharpness(state.selectedWeapon);
+    $('statCritMult').textContent = `x${result.critMultiplier.toFixed(2)}`;
+    $('statSharpMod').textContent = result.sharpness.colorIndex >= 0
+      ? `${result.sharpness.colorName} x${result.sharpness.physical.toFixed(2)}`
+      : '-';
+
+    renderSharpness(result.sharpness);
 
     const r = result.effectiveRange;
     $('rangeMin').textContent = r.min || '-';
@@ -441,30 +464,18 @@ const App = (() => {
     $('mDef').textContent = result.totalDefense || '-';
   }
 
-  function renderSharpness(weapon) {
+  function renderSharpness(sharpResult) {
     const gauge = $('sharpnessGauge');
-    if (!weapon || !weapon.sharpness) {
+    if (!sharpResult || !sharpResult.gauge) {
       gauge.innerHTML = '<div style="width:100%;background:var(--text-muted);height:100%;border-radius:4px;opacity:0.3"></div>';
       return;
     }
     const colors = ['var(--sharp-red)', 'var(--sharp-orange)', 'var(--sharp-yellow)', 'var(--sharp-green)', 'var(--sharp-blue)', 'var(--sharp-white)', 'var(--sharp-purple)'];
-    const total = weapon.sharpness.reduce((a, b) => a + b, 0) || 1;
-    gauge.innerHTML = weapon.sharpness.map((v, i) =>
+    const g = sharpResult.gauge;
+    const total = g.reduce((a, b) => a + b, 0) || 1;
+    gauge.innerHTML = g.map((v, i) =>
       v > 0 ? `<div class="seg" style="width:${(v/total)*100}%;background:${colors[i]}"></div>` : ''
     ).join('');
-  }
-
-  // 条件付きスキルかどうかを判定するキーワード
-  const CONDITIONAL_KEYWORDS = [
-    '怒り', '体力が最大', '弱点', '肉質', '部位', '傷がついた',
-    '抜刀', '納刀', '属性やられ', '状態異常', '回避', 'ジャスト',
-    'モンスター', '一定時間', '戦闘中', '継続', '発見'
-  ];
-
-  function isConditionalSkill(def) {
-    if (def.conditional) return true;
-    const allDesc = (def.description || '') + ' ' + (def.effects?.map(e => e.description).join(' ') || '');
-    return CONDITIONAL_KEYWORDS.some(kw => allDesc.includes(kw));
   }
 
   function renderConditionToggles(skillLevels) {
@@ -472,18 +483,18 @@ const App = (() => {
     container.innerHTML = '';
     let hasToggles = false;
 
-    for (const def of DataLoader.getSkillDefs()) {
-      if (!skillLevels[def.name]) continue;
-      if (!isConditionalSkill(def)) continue;
+    // Use skill_modifiers to determine conditional skills
+    for (const [name, level] of Object.entries(skillLevels)) {
+      if (!MHCalc.isConditional(name)) continue;
 
       hasToggles = true;
-      const condKey = def.name; // Use skill name as condition key
+      const condLabel = MHCalc.getConditionLabel(name);
       const label = document.createElement('label');
       label.className = 'cond-toggle';
-      const checked = state.conditions[condKey] ? 'checked' : '';
-      label.innerHTML = `<input type="checkbox" ${checked}><span>${def.name} Lv${skillLevels[def.name]} 発動</span>`;
+      const checked = state.conditions[name] ? 'checked' : '';
+      label.innerHTML = `<input type="checkbox" ${checked}><span>${name} Lv${level}（${condLabel}）</span>`;
       label.querySelector('input').onchange = (e) => {
-        state.conditions[condKey] = e.target.checked;
+        state.conditions[name] = e.target.checked;
         recalculate();
       };
       container.appendChild(label);

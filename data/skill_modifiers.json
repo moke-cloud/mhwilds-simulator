@@ -1,0 +1,169 @@
+{
+  "version": "1.0.0",
+  "description": "スキルの数値効果マッピング（計算エンジン用）",
+  "modifiers": {
+    "攻撃": {
+      "levels": [
+        { "level": 1, "attack_flat": 3 },
+        { "level": 2, "attack_flat": 5 },
+        { "level": 3, "attack_flat": 7 },
+        { "level": 4, "attack_flat": 8, "attack_mult": 1.02 },
+        { "level": 5, "attack_flat": 9, "attack_mult": 1.04 }
+      ]
+    },
+    "見切り": {
+      "levels": [
+        { "level": 1, "affinity": 4 },
+        { "level": 2, "affinity": 8 },
+        { "level": 3, "affinity": 12 },
+        { "level": 4, "affinity": 16 },
+        { "level": 5, "affinity": 20 }
+      ]
+    },
+    "超会心": {
+      "levels": [
+        { "level": 1, "crit_mult": 1.30 },
+        { "level": 2, "crit_mult": 1.35 },
+        { "level": 3, "crit_mult": 1.40 }
+      ]
+    },
+    "弱点特効": {
+      "conditional": true,
+      "condition_label": "弱点部位攻撃時",
+      "levels": [
+        { "level": 1, "affinity_cond": 5 },
+        { "level": 2, "affinity_cond": 10 },
+        { "level": 3, "affinity_cond": 15 }
+      ]
+    },
+    "挑戦者": {
+      "conditional": true,
+      "condition_label": "モンスター怒り時",
+      "levels": [
+        { "level": 1, "attack_flat_cond": 4, "affinity_cond": 3 },
+        { "level": 2, "attack_flat_cond": 8, "affinity_cond": 5 },
+        { "level": 3, "attack_flat_cond": 12, "affinity_cond": 7 },
+        { "level": 4, "attack_flat_cond": 16, "affinity_cond": 10 },
+        { "level": 5, "attack_flat_cond": 20, "affinity_cond": 15 }
+      ]
+    },
+    "フルチャージ": {
+      "conditional": true,
+      "condition_label": "体力最大時",
+      "levels": [
+        { "level": 1, "attack_flat_cond": 5 },
+        { "level": 2, "attack_flat_cond": 10 },
+        { "level": 3, "attack_flat_cond": 20 }
+      ]
+    },
+    "逆恨み": {
+      "conditional": true,
+      "condition_label": "赤ゲージ時",
+      "levels": [
+        { "level": 1, "attack_flat_cond": 5 },
+        { "level": 2, "attack_flat_cond": 10 },
+        { "level": 3, "attack_flat_cond": 15 },
+        { "level": 4, "attack_flat_cond": 20 },
+        { "level": 5, "attack_flat_cond": 25 }
+      ]
+    },
+    "抜刀術【技】": {
+      "conditional": true,
+      "condition_label": "抜刀攻撃時",
+      "levels": [
+        { "level": 1, "affinity_cond": 30 },
+        { "level": 2, "affinity_cond": 60 },
+        { "level": 3, "affinity_cond": 100 }
+      ]
+    },
+    "抜刀術【力】": {
+      "conditional": true,
+      "condition_label": "武器出し攻撃時",
+      "levels": [
+        { "level": 1, "attack_flat_cond": 3 },
+        { "level": 2, "attack_flat_cond": 6 }
+      ]
+    },
+    "連撃": {
+      "conditional": true,
+      "condition_label": "連続攻撃時",
+      "levels": [
+        { "level": 1, "attack_flat_cond": 5 },
+        { "level": 2, "attack_flat_cond": 8 },
+        { "level": 3, "attack_flat_cond": 10 },
+        { "level": 4, "attack_flat_cond": 12 },
+        { "level": 5, "attack_flat_cond": 15 }
+      ]
+    },
+    "匠": {
+      "levels": [
+        { "level": 1, "sharpness_add": 10 },
+        { "level": 2, "sharpness_add": 20 },
+        { "level": 3, "sharpness_add": 30 },
+        { "level": 4, "sharpness_add": 40 },
+        { "level": 5, "sharpness_add": 50 }
+      ]
+    },
+    "防御": {
+      "levels": [
+        { "level": 1, "defense_flat": 5 },
+        { "level": 2, "defense_flat": 10 },
+        { "level": 3, "defense_flat": 15, "defense_mult": 1.05, "all_res": 3 },
+        { "level": 4, "defense_flat": 20, "defense_mult": 1.05, "all_res": 3 },
+        { "level": 5, "defense_flat": 25, "defense_mult": 1.08, "all_res": 5 },
+        { "level": 6, "defense_flat": 30, "defense_mult": 1.08, "all_res": 5 },
+        { "level": 7, "defense_flat": 35, "defense_mult": 1.10, "all_res": 5 }
+      ]
+    },
+    "火属性攻撃強化": {
+      "element_type": "火",
+      "levels": [
+        { "level": 1, "element_flat": 2 },
+        { "level": 2, "element_flat": 4 },
+        { "level": 3, "element_flat": 6, "element_mult": 1.05 },
+        { "level": 4, "element_flat": 8, "element_mult": 1.10 },
+        { "level": 5, "element_flat": 10, "element_mult": 1.20 }
+      ]
+    },
+    "水属性攻撃強化": {
+      "element_type": "水",
+      "levels": [
+        { "level": 1, "element_flat": 2 },
+        { "level": 2, "element_flat": 4 },
+        { "level": 3, "element_flat": 6, "element_mult": 1.05 },
+        { "level": 4, "element_flat": 8, "element_mult": 1.10 },
+        { "level": 5, "element_flat": 10, "element_mult": 1.20 }
+      ]
+    },
+    "雷属性攻撃強化": {
+      "element_type": "雷",
+      "levels": [
+        { "level": 1, "element_flat": 2 },
+        { "level": 2, "element_flat": 4 },
+        { "level": 3, "element_flat": 6, "element_mult": 1.05 },
+        { "level": 4, "element_flat": 8, "element_mult": 1.10 },
+        { "level": 5, "element_flat": 10, "element_mult": 1.20 }
+      ]
+    },
+    "氷属性攻撃強化": {
+      "element_type": "氷",
+      "levels": [
+        { "level": 1, "element_flat": 2 },
+        { "level": 2, "element_flat": 4 },
+        { "level": 3, "element_flat": 6, "element_mult": 1.05 },
+        { "level": 4, "element_flat": 8, "element_mult": 1.10 },
+        { "level": 5, "element_flat": 10, "element_mult": 1.20 }
+      ]
+    },
+    "龍属性攻撃強化": {
+      "element_type": "龍",
+      "levels": [
+        { "level": 1, "element_flat": 2 },
+        { "level": 2, "element_flat": 4 },
+        { "level": 3, "element_flat": 6, "element_mult": 1.05 },
+        { "level": 4, "element_flat": 8, "element_mult": 1.10 },
+        { "level": 5, "element_flat": 10, "element_mult": 1.20 }
+      ]
+    }
+  }
+}
