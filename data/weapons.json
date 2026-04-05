@@ -10,8 +10,8 @@
     "狩猟笛",
     "ランス",
     "ガンランス",
-    "���ラッシュアックス",
-    "���ャージアックス",
+    "��スラッシュアックス",
+    "��チャージアックス",
     "操虫棍",
     "ライトボウガン",
     "ヘビィボウガン",
@@ -1248,7 +1248,7 @@
     {
       "id": "w_79",
       "name": "ホープアームズⅠ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 1,
       "attack": 0,
       "affinity": 0,
@@ -1269,7 +1269,7 @@
     {
       "id": "w_80",
       "name": "ホープアームズⅡ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 1,
       "attack": 0,
       "affinity": 0,
@@ -1290,7 +1290,7 @@
     {
       "id": "w_81",
       "name": "ホープアームズⅢ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 3,
       "attack": 0,
       "affinity": 0,
@@ -1311,7 +1311,7 @@
     {
       "id": "w_82",
       "name": "ホープアームズⅣ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 5,
       "attack": 0,
       "affinity": 0,
@@ -1335,7 +1335,7 @@
     {
       "id": "w_83",
       "name": "ホープアームズⅤ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": 0,
@@ -1359,7 +1359,7 @@
     {
       "id": "w_84",
       "name": "ボーンアームズⅠ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 1,
       "attack": 0,
       "affinity": 0,
@@ -1380,7 +1380,7 @@
     {
       "id": "w_85",
       "name": "ボーンアームズⅡ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 2,
       "attack": 0,
       "affinity": 0,
@@ -1401,7 +1401,7 @@
     {
       "id": "w_86",
       "name": "ボーンアームズⅢ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 4,
       "attack": 0,
       "affinity": 0,
@@ -1424,7 +1424,7 @@
     {
       "id": "w_87",
       "name": "ボーンアームズⅣ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 6,
       "attack": 0,
       "affinity": 0,
@@ -1448,7 +1448,7 @@
     {
       "id": "w_88",
       "name": "ハードボーンアームズ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 0,
@@ -1473,7 +1473,7 @@
     {
       "id": "w_89",
       "name": "ロートスピーダⅠ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 2,
       "attack": 0,
       "affinity": 0,
@@ -1494,7 +1494,7 @@
     {
       "id": "w_90",
       "name": "ロートスピーダⅡ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 4,
       "attack": 0,
       "affinity": 0,
@@ -1517,7 +1517,7 @@
     {
       "id": "w_91",
       "name": "ロートスピーダⅢ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 6,
       "attack": 0,
       "affinity": 0,
@@ -1541,7 +1541,7 @@
     {
       "id": "w_92",
       "name": "レーガスピーダ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 0,
@@ -1566,7 +1566,7 @@
     {
       "id": "w_93",
       "name": "チャタアームズⅠ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 1,
       "attack": 0,
       "affinity": 0,
@@ -1587,7 +1587,7 @@
     {
       "id": "w_94",
       "name": "チャタアームズⅡ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 3,
       "attack": 0,
       "affinity": 0,
@@ -1608,7 +1608,7 @@
     {
       "id": "w_95",
       "name": "チャタアームズⅢ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 5,
       "attack": 0,
       "affinity": 0,
@@ -1632,7 +1632,7 @@
     {
       "id": "w_96",
       "name": "チャタアームズⅣ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": 0,
@@ -1656,7 +1656,7 @@
     {
       "id": "w_97",
       "name": "ラバラ・ブキリエⅠ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 1,
       "attack": 0,
       "affinity": 10,
@@ -1677,7 +1677,7 @@
     {
       "id": "w_98",
       "name": "ラバラ・ブキリエⅡ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 3,
       "attack": 0,
       "affinity": 10,
@@ -1698,7 +1698,7 @@
     {
       "id": "w_99",
       "name": "ラバラ・ブキリエⅢ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 5,
       "attack": 0,
       "affinity": 15,
@@ -1722,7 +1722,7 @@
     {
       "id": "w_100",
       "name": "ラバラ・ブキリエⅣ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": 15,
@@ -1746,7 +1746,7 @@
     {
       "id": "w_101",
       "name": "刺花盾斧エウメノス",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 15,
@@ -1771,7 +1771,7 @@
     {
       "id": "w_102",
       "name": "ウズ・ヴァレロヤⅠ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 3,
       "attack": 0,
       "affinity": -15,
@@ -1792,7 +1792,7 @@
     {
       "id": "w_103",
       "name": "ウズ・ヴァレロヤⅡ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 5,
       "attack": 0,
       "affinity": -15,
@@ -1816,7 +1816,7 @@
     {
       "id": "w_104",
       "name": "ウズ・ヴァレロヤⅢ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": -15,
@@ -1840,7 +1840,7 @@
     {
       "id": "w_105",
       "name": "波濤盾斧ヴァレロヤ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": -15,
@@ -1865,7 +1865,7 @@
     {
       "id": "w_106",
       "name": "ププロガーダーⅠ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 3,
       "attack": 0,
       "affinity": 0,
@@ -1886,7 +1886,7 @@
     {
       "id": "w_107",
       "name": "ププロガーダーⅡ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 5,
       "attack": 0,
       "affinity": 0,
@@ -1910,7 +1910,7 @@
     {
       "id": "w_108",
       "name": "ププロガーダーⅢ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": 0,
@@ -1934,7 +1934,7 @@
     {
       "id": "w_109",
       "name": "ププロ盾斧デンドーラ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 0,
@@ -1959,7 +1959,7 @@
     {
       "id": "w_110",
       "name": "レ・アストラペⅠ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 3,
       "attack": 0,
       "affinity": 0,
@@ -1980,7 +1980,7 @@
     {
       "id": "w_111",
       "name": "レ・アストラペⅡ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 5,
       "attack": 0,
       "affinity": 0,
@@ -2004,7 +2004,7 @@
     {
       "id": "w_112",
       "name": "レ・アストラペⅢ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": 0,
@@ -2028,7 +2028,7 @@
     {
       "id": "w_113",
       "name": "煌雷盾斧アストラペ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 0,
@@ -2053,7 +2053,7 @@
     {
       "id": "w_114",
       "name": "アラクネスケイルⅠ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 3,
       "attack": 0,
       "affinity": 10,
@@ -2074,7 +2074,7 @@
     {
       "id": "w_115",
       "name": "アラクネスケイルⅡ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 5,
       "attack": 0,
       "affinity": 15,
@@ -2098,7 +2098,7 @@
     {
       "id": "w_116",
       "name": "アラクネスケイルⅢ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": 15,
@@ -2122,7 +2122,7 @@
     {
       "id": "w_117",
       "name": "アラクネサイズ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 15,
@@ -2147,7 +2147,7 @@
     {
       "id": "w_118",
       "name": "風爪盾斧Ⅰ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 3,
       "attack": 0,
       "affinity": 0,
@@ -2168,7 +2168,7 @@
     {
       "id": "w_119",
       "name": "風爪盾斧Ⅱ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 5,
       "attack": 0,
       "affinity": 0,
@@ -2192,7 +2192,7 @@
     {
       "id": "w_120",
       "name": "風爪盾斧Ⅲ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": 0,
@@ -2216,7 +2216,7 @@
     {
       "id": "w_121",
       "name": "風爪盾斧タメバミ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 0,
@@ -2241,7 +2241,7 @@
     {
       "id": "w_122",
       "name": "ヌ・プウェザⅠ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 4,
       "attack": 0,
       "affinity": -15,
@@ -2264,7 +2264,7 @@
     {
       "id": "w_123",
       "name": "ヌ・プウェザⅡ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": -15,
@@ -2288,7 +2288,7 @@
     {
       "id": "w_124",
       "name": "獄焔盾斧プウェザ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": -15,
@@ -2313,7 +2313,7 @@
     {
       "id": "w_125",
       "name": "白炎斧アルリオスⅠ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 4,
       "attack": 0,
       "affinity": 15,
@@ -2336,7 +2336,7 @@
     {
       "id": "w_126",
       "name": "白炎斧アルリオスⅡ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 6,
       "attack": 0,
       "affinity": 15,
@@ -2360,7 +2360,7 @@
     {
       "id": "w_127",
       "name": "灰滅斧ガルデリオス",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 15,
@@ -2385,7 +2385,7 @@
     {
       "id": "w_128",
       "name": "異界の炎Ⅰ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 4,
       "attack": 0,
       "affinity": 10,
@@ -2408,7 +2408,7 @@
     {
       "id": "w_129",
       "name": "異界の炎Ⅱ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 6,
       "attack": 0,
       "affinity": 10,
@@ -2432,7 +2432,7 @@
     {
       "id": "w_130",
       "name": "遺恨【エンミティ】",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 10,
@@ -2457,7 +2457,7 @@
     {
       "id": "w_131",
       "name": "ガルシュブラドラⅠ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 4,
       "attack": 0,
       "affinity": -10,
@@ -2481,7 +2481,7 @@
     {
       "id": "w_132",
       "name": "ガルシュブラドラⅡ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 6,
       "attack": 0,
       "affinity": -10,
@@ -2505,7 +2505,7 @@
     {
       "id": "w_133",
       "name": "護鎖刃盾斧ガルヴァン",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": -10,
@@ -2530,7 +2530,7 @@
     {
       "id": "w_134",
       "name": "ポイジングティアⅠ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 5,
       "attack": 0,
       "affinity": 0,
@@ -2554,7 +2554,7 @@
     {
       "id": "w_135",
       "name": "ポイジングティアⅡ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 6,
       "attack": 0,
       "affinity": 0,
@@ -2578,7 +2578,7 @@
     {
       "id": "w_136",
       "name": "ヴェノムシルベルテ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 0,
@@ -2603,7 +2603,7 @@
     {
       "id": "w_137",
       "name": "ディア＝ルテミスⅠ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 5,
       "attack": 0,
       "affinity": 15,
@@ -2627,7 +2627,7 @@
     {
       "id": "w_138",
       "name": "ディア＝ルテミスⅡ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": 15,
@@ -2651,7 +2651,7 @@
     {
       "id": "w_139",
       "name": "ディア＝ルテミア",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 15,
@@ -2676,7 +2676,7 @@
     {
       "id": "w_140",
       "name": "炎斧アクセリオンⅠ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 6,
       "attack": 0,
       "affinity": 10,
@@ -2700,7 +2700,7 @@
     {
       "id": "w_141",
       "name": "紅蓮斧ユニオリオン",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 10,
@@ -2725,7 +2725,7 @@
     {
       "id": "w_142",
       "name": "フォースofフォールⅠ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": 20,
@@ -2749,7 +2749,7 @@
     {
       "id": "w_143",
       "name": "フォースofルイン",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 20,
@@ -2774,7 +2774,7 @@
     {
       "id": "w_144",
       "name": "アルシュブラドラⅠ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": 0,
@@ -2798,7 +2798,7 @@
     {
       "id": "w_145",
       "name": "アーティアガードⅠ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 6,
       "attack": 0,
       "affinity": 5,
@@ -2823,7 +2823,7 @@
     {
       "id": "w_146",
       "name": "アーティアガードⅡ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": 5,
@@ -2848,7 +2848,7 @@
     {
       "id": "w_147",
       "name": "テンプス・ギア",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 5,
@@ -2873,7 +2873,7 @@
     {
       "id": "w_148",
       "name": "エスペラアームズ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 0,
@@ -2898,7 +2898,7 @@
     {
       "id": "w_149",
       "name": "纏盾斧ジャマカクタル",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 0,
@@ -2923,7 +2923,7 @@
     {
       "id": "w_150",
       "name": "鎖刃盾斧ゴーヴァン",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 0,
@@ -2948,7 +2948,7 @@
     {
       "id": "w_151",
       "name": "ゾ・エレームⅠ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": 5,
@@ -2972,7 +2972,7 @@
     {
       "id": "w_152",
       "name": "熾光たるエレーム",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 5,
@@ -2997,7 +2997,7 @@
     {
       "id": "w_153",
       "name": "狐衣斧ミズニヤドレルⅠ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 6,
       "attack": 0,
       "affinity": 15,
@@ -3021,7 +3021,7 @@
     {
       "id": "w_154",
       "name": "しろたへの衣斧の御帝",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 15,
@@ -19944,7 +19944,7 @@
     {
       "id": "w_914",
       "name": "ホープアックスⅠ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 1,
       "attack": 0,
       "affinity": 0,
@@ -19965,7 +19965,7 @@
     {
       "id": "w_915",
       "name": "ホープアックスⅡ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 1,
       "attack": 0,
       "affinity": 0,
@@ -19986,7 +19986,7 @@
     {
       "id": "w_916",
       "name": "ホープアックスⅢ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 3,
       "attack": 0,
       "affinity": 0,
@@ -20007,7 +20007,7 @@
     {
       "id": "w_917",
       "name": "ホープアックスⅣ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 5,
       "attack": 0,
       "affinity": 0,
@@ -20031,7 +20031,7 @@
     {
       "id": "w_918",
       "name": "ホープアックスⅤ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": 0,
@@ -20055,7 +20055,7 @@
     {
       "id": "w_919",
       "name": "ボーンアックスⅠ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 1,
       "attack": 0,
       "affinity": 0,
@@ -20076,7 +20076,7 @@
     {
       "id": "w_920",
       "name": "ボーンアックスⅡ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 2,
       "attack": 0,
       "affinity": 0,
@@ -20097,7 +20097,7 @@
     {
       "id": "w_921",
       "name": "ボーンアックスⅢ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 4,
       "attack": 0,
       "affinity": 0,
@@ -20120,7 +20120,7 @@
     {
       "id": "w_922",
       "name": "ボーンアックスⅣ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 6,
       "attack": 0,
       "affinity": 0,
@@ -20144,7 +20144,7 @@
     {
       "id": "w_923",
       "name": "ボーンスマッシャー",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 0,
@@ -20169,7 +20169,7 @@
     {
       "id": "w_924",
       "name": "アイアンアクセルⅠ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 2,
       "attack": 0,
       "affinity": 0,
@@ -20190,7 +20190,7 @@
     {
       "id": "w_925",
       "name": "アイアンアクセルⅡ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 4,
       "attack": 0,
       "affinity": 0,
@@ -20213,7 +20213,7 @@
     {
       "id": "w_926",
       "name": "アイアンアクセルⅢ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 6,
       "attack": 0,
       "affinity": 0,
@@ -20237,7 +20237,7 @@
     {
       "id": "w_927",
       "name": "クロムアクセル",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 0,
@@ -20262,7 +20262,7 @@
     {
       "id": "w_928",
       "name": "ラバラ・アッシェⅠ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 1,
       "attack": 0,
       "affinity": 10,
@@ -20283,7 +20283,7 @@
     {
       "id": "w_929",
       "name": "ラバラ・アッシェⅡ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 3,
       "attack": 0,
       "affinity": 10,
@@ -20304,7 +20304,7 @@
     {
       "id": "w_930",
       "name": "ラバラ・アッシェⅢ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 5,
       "attack": 0,
       "affinity": 15,
@@ -20328,7 +20328,7 @@
     {
       "id": "w_931",
       "name": "ラバラ・アッシェⅣ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": 15,
@@ -20352,7 +20352,7 @@
     {
       "id": "w_932",
       "name": "刺花剣斧セレノスミア",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 15,
@@ -20377,7 +20377,7 @@
     {
       "id": "w_933",
       "name": "ゴルババンダールⅠ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 2,
       "attack": 0,
       "affinity": 5,
@@ -20398,7 +20398,7 @@
     {
       "id": "w_934",
       "name": "ゴルババンダールⅡ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 5,
       "attack": 0,
       "affinity": 5,
@@ -20422,7 +20422,7 @@
     {
       "id": "w_935",
       "name": "グンダババンダール",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 5,
@@ -20447,7 +20447,7 @@
     {
       "id": "w_936",
       "name": "闢暴斧Ⅰ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 2,
       "attack": 0,
       "affinity": -5,
@@ -20468,7 +20468,7 @@
     {
       "id": "w_937",
       "name": "闢暴斧Ⅱ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 4,
       "attack": 0,
       "affinity": -5,
@@ -20491,7 +20491,7 @@
     {
       "id": "w_938",
       "name": "闢暴斧Ⅲ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 6,
       "attack": 0,
       "affinity": -5,
@@ -20515,7 +20515,7 @@
     {
       "id": "w_939",
       "name": "ウズ・オラアチャⅠ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 3,
       "attack": 0,
       "affinity": -15,
@@ -20536,7 +20536,7 @@
     {
       "id": "w_940",
       "name": "ウズ・オラアチャⅡ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 5,
       "attack": 0,
       "affinity": -15,
@@ -20560,7 +20560,7 @@
     {
       "id": "w_941",
       "name": "ウズ・オラアチャⅢ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": -15,
@@ -20584,7 +20584,7 @@
     {
       "id": "w_942",
       "name": "波濤剣斧オラアチャ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": -15,
@@ -20609,7 +20609,7 @@
     {
       "id": "w_943",
       "name": "風戟剣斧Ⅰ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 3,
       "attack": 0,
       "affinity": 0,
@@ -20630,7 +20630,7 @@
     {
       "id": "w_944",
       "name": "風戟剣斧Ⅱ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 5,
       "attack": 0,
       "affinity": 0,
@@ -20654,7 +20654,7 @@
     {
       "id": "w_945",
       "name": "風戟剣斧Ⅲ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": 0,
@@ -20678,7 +20678,7 @@
     {
       "id": "w_946",
       "name": "風戟剣斧サキバミ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 0,
@@ -20703,7 +20703,7 @@
     {
       "id": "w_947",
       "name": "ヌ・ザンユⅠ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 4,
       "attack": 0,
       "affinity": -15,
@@ -20726,7 +20726,7 @@
     {
       "id": "w_948",
       "name": "ヌ・ザンユⅡ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": -15,
@@ -20750,7 +20750,7 @@
     {
       "id": "w_949",
       "name": "獄焔剣斧ザンユ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": -15,
@@ -20775,7 +20775,7 @@
     {
       "id": "w_950",
       "name": "護闢暴斧Ⅰ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 4,
       "attack": 0,
       "affinity": -15,
@@ -20798,7 +20798,7 @@
     {
       "id": "w_951",
       "name": "護闢暴斧Ⅱ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 6,
       "attack": 0,
       "affinity": -15,
@@ -20822,7 +20822,7 @@
     {
       "id": "w_952",
       "name": "護闢暴斧ガルグマケン",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": -15,
@@ -20847,7 +20847,7 @@
     {
       "id": "w_953",
       "name": "アルラスグレイブⅠ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 4,
       "attack": 0,
       "affinity": 15,
@@ -20870,7 +20870,7 @@
     {
       "id": "w_954",
       "name": "アルラスグレイブⅡ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 6,
       "attack": 0,
       "affinity": 15,
@@ -20894,7 +20894,7 @@
     {
       "id": "w_955",
       "name": "リオヴァイスグレイブ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 15,
@@ -20919,7 +20919,7 @@
     {
       "id": "w_956",
       "name": "虚無の剣斧Ⅰ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 4,
       "attack": 0,
       "affinity": 0,
@@ -20942,7 +20942,7 @@
     {
       "id": "w_957",
       "name": "虚無の剣斧Ⅱ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 6,
       "attack": 0,
       "affinity": 0,
@@ -20966,7 +20966,7 @@
     {
       "id": "w_958",
       "name": "暗斧ブルトゥクス",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 0,
@@ -20991,7 +20991,7 @@
     {
       "id": "w_959",
       "name": "ガルシュセキュリスⅠ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 4,
       "attack": 0,
       "affinity": -10,
@@ -21015,7 +21015,7 @@
     {
       "id": "w_960",
       "name": "ガルシュセキュリスⅡ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 6,
       "attack": 0,
       "affinity": -10,
@@ -21039,7 +21039,7 @@
     {
       "id": "w_961",
       "name": "護鎖刃剣斧ガルヴァル",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": -10,
@@ -21064,7 +21064,7 @@
     {
       "id": "w_962",
       "name": "ビークアックスⅠ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 5,
       "attack": 0,
       "affinity": 0,
@@ -21088,7 +21088,7 @@
     {
       "id": "w_963",
       "name": "ビークアックスⅡ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": 0,
@@ -21112,7 +21112,7 @@
     {
       "id": "w_964",
       "name": "ビークックアックス",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 0,
@@ -21137,7 +21137,7 @@
     {
       "id": "w_965",
       "name": "竜姫の剣斧Ⅰ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 5,
       "attack": 0,
       "affinity": 15,
@@ -21161,7 +21161,7 @@
     {
       "id": "w_966",
       "name": "竜姫の剣斧Ⅱ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": 15,
@@ -21185,7 +21185,7 @@
     {
       "id": "w_967",
       "name": "ランドグリーズ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 15,
@@ -21210,7 +21210,7 @@
     {
       "id": "w_968",
       "name": "シスカ＝アルジャナルⅠ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 6,
       "attack": 0,
       "affinity": 15,
@@ -21234,7 +21234,7 @@
     {
       "id": "w_969",
       "name": "護雷剣斧シスカガルデ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 15,
@@ -21259,7 +21259,7 @@
     {
       "id": "w_970",
       "name": "リオフラムグレイブⅠ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 6,
       "attack": 0,
       "affinity": 10,
@@ -21283,7 +21283,7 @@
     {
       "id": "w_971",
       "name": "リオヴェルグレイブ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 10,
@@ -21308,7 +21308,7 @@
     {
       "id": "w_972",
       "name": "ウィルofシェイプⅠ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": 20,
@@ -21332,7 +21332,7 @@
     {
       "id": "w_973",
       "name": "ウィルofマインド",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 20,
@@ -21357,7 +21357,7 @@
     {
       "id": "w_974",
       "name": "アルシュセキュリスⅠ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": 0,
@@ -21381,7 +21381,7 @@
     {
       "id": "w_975",
       "name": "アーティアゼーガⅠ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 6,
       "attack": 0,
       "affinity": 5,
@@ -21406,7 +21406,7 @@
     {
       "id": "w_976",
       "name": "アーティアゼーガⅡ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": 5,
@@ -21431,7 +21431,7 @@
     {
       "id": "w_977",
       "name": "アルトエレガン",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 5,
@@ -21456,7 +21456,7 @@
     {
       "id": "w_978",
       "name": "エスペラアックス",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 0,
@@ -21481,7 +21481,7 @@
     {
       "id": "w_979",
       "name": "闢暴斧ヤオガルケン",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": -5,
@@ -21506,7 +21506,7 @@
     {
       "id": "w_980",
       "name": "鎖刃剣斧ペルスヴァル",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 0,
@@ -21531,7 +21531,7 @@
     {
       "id": "w_981",
       "name": "ゾ・マハーヤⅠ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": 5,
@@ -21555,7 +21555,7 @@
     {
       "id": "w_982",
       "name": "熾光たるマハーヤ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 5,
@@ -21580,7 +21580,7 @@
     {
       "id": "w_983",
       "name": "狐剣斧ワカレヲサソフⅠ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 6,
       "attack": 0,
       "affinity": 15,
@@ -21604,7 +21604,7 @@
     {
       "id": "w_984",
       "name": "にはたづみ流斧の彫字",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 15,
@@ -23637,7 +23637,7 @@
     {
       "id": "w_1071",
       "name": "アスラトアルマイサⅠ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": 25,
@@ -23661,7 +23661,7 @@
     {
       "id": "w_1072",
       "name": "叛盾斧アルマイサ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 25,
@@ -23686,7 +23686,7 @@
     {
       "id": "w_1073",
       "name": "ラギアストロムⅠ",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": 0,
@@ -23710,7 +23710,7 @@
     {
       "id": "w_1074",
       "name": "雷盾斧ヴァンクロム",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 0,
@@ -24799,7 +24799,7 @@
     {
       "id": "w_1121",
       "name": "アクサアルダバランⅠ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": 25,
@@ -24823,7 +24823,7 @@
     {
       "id": "w_1122",
       "name": "叛伐斧アルダバラン",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 25,
@@ -24848,7 +24848,7 @@
     {
       "id": "w_1123",
       "name": "ボルトアックスⅠ",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 7,
       "attack": 0,
       "affinity": 0,
@@ -24872,7 +24872,7 @@
     {
       "id": "w_1124",
       "name": "ハイボルトアックス",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 0,
@@ -25292,7 +25292,7 @@
     {
       "id": "w_1142",
       "name": "代償のネイディ・ギア",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": -10,
@@ -25317,7 +25317,7 @@
     {
       "id": "w_1143",
       "name": "代償のネイディ・ギア",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 15,
@@ -25342,7 +25342,7 @@
     {
       "id": "w_1144",
       "name": "代償のネイディ・ギア",
-      "weaponType": "���ャージアックス",
+      "weaponType": "��チャージアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 0,
@@ -26069,7 +26069,7 @@
     {
       "id": "w_1175",
       "name": "邪執のコンキエレガン",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": -10,
@@ -26094,7 +26094,7 @@
     {
       "id": "w_1176",
       "name": "邪執のコンキエレガン",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 15,
@@ -26119,7 +26119,7 @@
     {
       "id": "w_1177",
       "name": "邪執のコンキエレガン",
-      "weaponType": "���ラッシュアックス",
+      "weaponType": "��スラッシュアックス",
       "rarity": 8,
       "attack": 0,
       "affinity": 0,

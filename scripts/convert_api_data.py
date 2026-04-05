@@ -10,8 +10,8 @@ DST = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 
 WEAPON_KIND_MAP = {
     "great-sword": "大剣", "long-sword": "太刀", "sword-and-shield": "片手剣",
     "dual-blades": "双剣", "hammer": "ハンマー", "hunting-horn": "狩猟笛",
-    "lance": "ランス", "gunlance": "ガンランス", "switch-axe": "���ラッシュアックス",
-    "charge-blade": "���ャージアックス", "insect-glaive": "操虫棍",
+    "lance": "ランス", "gunlance": "ガンランス", "switch-axe": "スラッシュアックス",
+    "charge-blade": "チャージアックス", "insect-glaive": "操虫棍",
     "light-bowgun": "ライトボウガン", "heavy-bowgun": "ヘビィボウガン", "bow": "弓"
 }
 
