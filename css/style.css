@@ -274,6 +274,30 @@ body {
 .skill-bar .fill { height: 100%; background: var(--accent); border-radius: 2px; transition: width 0.2s; }
 .skill-bar .fill.maxed { background: var(--green); }
 
+/* === Charm skill search === */
+.charm-skill-wrap {
+  flex: 1; position: relative;
+}
+.charm-skill-search {
+  width: 100%; padding: 6px 8px;
+  background: var(--bg-input); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); color: var(--text-primary); font-size: 0.8rem;
+}
+.charm-skill-search:focus { border-color: var(--border-active); outline: none; }
+.charm-skill-search::placeholder { color: var(--text-muted); }
+.charm-skill-select {
+  position: absolute; left: 0; top: 100%; width: 100%; z-index: 10;
+  max-height: 200px; overflow-y: auto;
+  background: var(--bg-card); border: 1px solid var(--border-active);
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  display: none; /* shown via JS */
+}
+.charm-skill-select.open { display: block; }
+.charm-skill-select option {
+  padding: 6px 8px; cursor: pointer;
+}
+.charm-skill-select option:hover { background: var(--bg-card-hover); }
+
 /* === Equipment summary (mobile sticky) === */
 .equip-summary {
   display: none;

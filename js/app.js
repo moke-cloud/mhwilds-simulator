@@ -258,14 +258,67 @@ const App = (() => {
   }
 
   // === Charm (護石) ===
+  const charmSkillPairs = [
+    { search: 'charmSearch1', select: 'charmSkill1', lv: 'charmSkill1Lv' },
+    { search: 'charmSearch2', select: 'charmSkill2', lv: 'charmSkill2Lv' },
+    { search: 'charmSearch3', select: 'charmSkill3', lv: 'charmSkill3Lv' },
+  ];
+
   function populateCharmSelects() {
-    const skills = DataLoader.getSkillDefs();
-    for (const selId of ['charmSkill1', 'charmSkill2', 'charmSkill3']) {
-      const sel = $(selId);
+    const skills = DataLoader.getSkillDefs().sort((a, b) => a.name.localeCompare(b.name, 'ja'));
+
+    for (const pair of charmSkillPairs) {
+      const sel = $(pair.select);
       sel.innerHTML = '<option value="">なし</option>';
       for (const s of skills) {
         sel.innerHTML += `<option value="${s.name}">${s.name}</option>`;
       }
+      sel.size = 8;
+
+      // Search input events
+      const searchInput = $(pair.search);
+      searchInput.addEventListener('focus', () => {
+        filterCharmSkillOptions(pair, searchInput.value);
+        sel.classList.add('open');
+      });
+      searchInput.addEventListener('input', () => {
+        filterCharmSkillOptions(pair, searchInput.value);
+        sel.classList.add('open');
+      });
+      searchInput.addEventListener('blur', () => {
+        // Delay to allow click on option
+        setTimeout(() => sel.classList.remove('open'), 200);
+      });
+
+      sel.addEventListener('change', () => {
+        searchInput.value = sel.value;
+        sel.classList.remove('open');
+        updateCharmLevelOptions(pair.select, pair.lv);
+        readCharm();
+      });
+
+      // Clear on empty
+      searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          searchInput.value = '';
+          sel.value = '';
+          sel.classList.remove('open');
+          updateCharmLevelOptions(pair.select, pair.lv);
+          readCharm();
+        }
+      });
+    }
+  }
+
+  function filterCharmSkillOptions(pair, query) {
+    const sel = $(pair.select);
+    const q = (query || '').toLowerCase();
+    const skills = DataLoader.getSkillDefs();
+
+    sel.innerHTML = '<option value="">なし</option>';
+    for (const s of skills) {
+      if (q && !s.name.toLowerCase().includes(q)) continue;
+      sel.innerHTML += `<option value="${s.name}">${s.name}</option>`;
     }
   }
 
@@ -288,13 +341,16 @@ const App = (() => {
     const skillSelects = ['charmSkill1', 'charmSkill2', 'charmSkill3'];
     const lvSelects = ['charmSkill1Lv', 'charmSkill2Lv', 'charmSkill3Lv'];
 
+    const searchInputs = ['charmSearch1', 'charmSearch2', 'charmSearch3'];
     for (let i = 0; i < 3; i++) {
       if (charm.skills[i]) {
         $(skillSelects[i]).value = charm.skills[i].name;
+        $(searchInputs[i]).value = charm.skills[i].name;
         updateCharmLevelOptions(skillSelects[i], lvSelects[i]);
         $(lvSelects[i]).value = charm.skills[i].level;
       } else {
         $(skillSelects[i]).value = '';
+        $(searchInputs[i]).value = '';
         $(lvSelects[i]).innerHTML = '<option value="0">-</option>';
       }
     }
@@ -337,7 +393,22 @@ const App = (() => {
     state.charm = (skills.length > 0 || slots.some(s => s > 0))
       ? { skills, slots }
       : null;
+    renderCharmDecoSlots();
     recalculate();
+  }
+
+  function renderCharmDecoSlots() {
+    const container = $('charmSlotContainer');
+    const section = $('charmDecoSlots');
+    if (!state.charm || !state.charm.slots || state.charm.slots.every(s => s === 0)) {
+      section.style.display = 'none';
+      return;
+    }
+    section.style.display = '';
+    container.innerHTML = '';
+    state.charm.slots.forEach((size, i) => {
+      if (size > 0) container.appendChild(createDecoSlotBtn('charm', i, size, 'armor'));
+    });
   }
 
   // === Set Skills (シリーズスキル) ===
@@ -610,10 +681,9 @@ const App = (() => {
       recalculate();
     });
 
-    // Charm skill selects
-    for (const [sId, lId] of [['charmSkill1','charmSkill1Lv'], ['charmSkill2','charmSkill2Lv'], ['charmSkill3','charmSkill3Lv']]) {
-      $(sId).addEventListener('change', () => { updateCharmLevelOptions(sId, lId); readCharm(); });
-      $(lId).addEventListener('change', readCharm);
+    // Charm level selects (skill selects handled in populateCharmSelects)
+    for (const pair of charmSkillPairs) {
+      $(pair.lv).addEventListener('change', readCharm);
     }
     $('charmSlot1').addEventListener('change', readCharm);
     $('charmSlot2').addEventListener('change', readCharm);

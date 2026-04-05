@@ -95,24 +95,37 @@
     <div class="charm-editor" id="charmEditor">
       <div class="charm-row">
         <label>スキル1</label>
-        <select id="charmSkill1"><option value="">なし</option></select>
+        <div class="charm-skill-wrap">
+          <input type="text" class="charm-skill-search" id="charmSearch1" placeholder="スキル名を入力..." autocomplete="off">
+          <select id="charmSkill1" class="charm-skill-select"><option value="">なし</option></select>
+        </div>
         <select id="charmSkill1Lv"><option value="0">-</option></select>
       </div>
       <div class="charm-row">
         <label>スキル2</label>
-        <select id="charmSkill2"><option value="">なし</option></select>
+        <div class="charm-skill-wrap">
+          <input type="text" class="charm-skill-search" id="charmSearch2" placeholder="スキル名を入力..." autocomplete="off">
+          <select id="charmSkill2" class="charm-skill-select"><option value="">なし</option></select>
+        </div>
         <select id="charmSkill2Lv"><option value="0">-</option></select>
       </div>
       <div class="charm-row">
         <label>スキル3</label>
-        <select id="charmSkill3"><option value="">なし</option></select>
+        <div class="charm-skill-wrap">
+          <input type="text" class="charm-skill-search" id="charmSearch3" placeholder="スキル名を入力..." autocomplete="off">
+          <select id="charmSkill3" class="charm-skill-select"><option value="">なし</option></select>
+        </div>
         <select id="charmSkill3Lv"><option value="0">-</option></select>
       </div>
       <div class="charm-row">
         <label>スロット</label>
-        <select id="charmSlot1"><option value="0">-</option><option>1</option><option>2</option><option>3</option><option>4</option></select>
-        <select id="charmSlot2"><option value="0">-</option><option>1</option><option>2</option><option>3</option><option>4</option></select>
-        <select id="charmSlot3"><option value="0">-</option><option>1</option><option>2</option><option>3</option><option>4</option></select>
+        <select id="charmSlot1"><option value="0">-</option><option>1</option><option>2</option><option>3</option></select>
+        <select id="charmSlot2"><option value="0">-</option><option>1</option><option>2</option><option>3</option></select>
+        <select id="charmSlot3"><option value="0">-</option><option>1</option><option>2</option><option>3</option></select>
+      </div>
+      <div id="charmDecoSlots" style="display:none;padding-top:4px">
+        <div class="stat-label">護石スロット（防具用装飾品）</div>
+        <div class="slots" id="charmSlotContainer"></div>
       </div>
     </div>
   </section>
