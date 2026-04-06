@@ -384,6 +384,20 @@ body {
 }
 .cond-toggle input[type="checkbox"] { accent-color: var(--accent); }
 
+/* === Charm deco slots enhanced === */
+#charmDecoSlots {
+  background: rgba(240,160,48,0.05);
+  border-top: 1px solid rgba(240,160,48,0.2);
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  padding: 8px 12px !important;
+}
+#charmDecoSlots .deco-slot-btn.filled {
+  background: rgba(240,160,48,0.15);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}
+
 /* === Utils === */
 .hidden { display: none !important; }
 .text-fire { color: var(--elem-fire); }

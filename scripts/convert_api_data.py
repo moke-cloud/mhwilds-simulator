@@ -198,14 +198,35 @@ def convert_armors():
             "slots": slots
         })
 
-    # Armor sets with bonuses
+    # Build groupBonus map: setName -> groupBonus info
+    group_bonus_map = {}
+    for s in raw_sets:
+        gb = s.get("groupBonus")
+        if not gb:
+            continue
+        ranks = gb.get("ranks", [])
+        if not ranks:
+            continue
+        r = ranks[0]
+        skill_info = r.get("skill", {})
+        group_bonus_map[s.get("name", "")] = {
+            "skill": gb.get("skill", {}).get("name", ""),
+            "pieces": r.get("pieces", 3),
+            "effectName": skill_info.get("name", ""),
+            "description": skill_info.get("description", "")
+        }
+
+    # Armor sets with bonuses and groupBonus
     armor_sets = []
     for set_id, bonus in set_bonus_map.items():
-        armor_sets.append({
+        entry = {
             "id": set_id,
             "name": bonus["setName"],
             "bonuses": bonus["bonuses"]
-        })
+        }
+        if bonus["setName"] in group_bonus_map:
+            entry["groupBonus"] = group_bonus_map[bonus["setName"]]
+        armor_sets.append(entry)
 
     save("armors", {
         "version": "2.0.0",

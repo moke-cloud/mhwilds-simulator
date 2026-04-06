@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "スキルの数値効果マッピング（計算エンジン用）",
   "modifiers": {
     "攻撃": {
@@ -22,9 +22,11 @@
     },
     "超会心": {
       "levels": [
-        { "level": 1, "crit_mult": 1.30 },
-        { "level": 2, "crit_mult": 1.35 },
-        { "level": 3, "crit_mult": 1.40 }
+        { "level": 1, "crit_mult": 1.28 },
+        { "level": 2, "crit_mult": 1.31 },
+        { "level": 3, "crit_mult": 1.34 },
+        { "level": 4, "crit_mult": 1.37 },
+        { "level": 5, "crit_mult": 1.40 }
       ]
     },
     "弱点特効": {
@@ -33,7 +35,9 @@
       "levels": [
         { "level": 1, "affinity_cond": 5 },
         { "level": 2, "affinity_cond": 10 },
-        { "level": 3, "affinity_cond": 15 }
+        { "level": 3, "affinity_cond": 15 },
+        { "level": 4, "affinity_cond": 20 },
+        { "level": 5, "affinity_cond": 30 }
       ]
     },
     "挑戦者": {
@@ -93,6 +97,102 @@
         { "level": 3, "attack_flat_cond": 10 },
         { "level": 4, "attack_flat_cond": 12 },
         { "level": 5, "attack_flat_cond": 15 }
+      ]
+    },
+    "渾身": {
+      "conditional": true,
+      "condition_label": "スタミナ最大時",
+      "levels": [
+        { "level": 1, "affinity_cond": 10 },
+        { "level": 2, "affinity_cond": 20 },
+        { "level": 3, "affinity_cond": 30 }
+      ]
+    },
+    "攻めの守勢": {
+      "conditional": true,
+      "condition_label": "ジャストガード成功時",
+      "levels": [
+        { "level": 1, "attack_mult_cond": 1.05 },
+        { "level": 2, "attack_mult_cond": 1.10 },
+        { "level": 3, "attack_mult_cond": 1.15 }
+      ]
+    },
+    "高速変形": {
+      "conditional": true,
+      "condition_label": "変形攻撃時",
+      "levels": [
+        { "level": 1 },
+        { "level": 2, "attack_mult_cond": 1.10 },
+        { "level": 3, "attack_mult_cond": 1.20 }
+      ]
+    },
+    "逆襲": {
+      "conditional": true,
+      "condition_label": "被弾後一定時間",
+      "levels": [
+        { "level": 1, "attack_flat_cond": 10 },
+        { "level": 2, "attack_flat_cond": 15 },
+        { "level": 3, "attack_flat_cond": 25 }
+      ]
+    },
+    "力の解放": {
+      "conditional": true,
+      "condition_label": "一定ダメージ蓄積後",
+      "levels": [
+        { "level": 1, "affinity_cond": 10 },
+        { "level": 2, "affinity_cond": 20 },
+        { "level": 3, "affinity_cond": 30 },
+        { "level": 4, "affinity_cond": 40 },
+        { "level": 5, "affinity_cond": 50 }
+      ]
+    },
+    "災禍転福": {
+      "conditional": true,
+      "condition_label": "状態異常回復後",
+      "levels": [
+        { "level": 1, "element_flat_cond": 3 },
+        { "level": 2, "element_flat_cond": 5 },
+        { "level": 3, "element_flat_cond": 10 }
+      ]
+    },
+    "巧撃": {
+      "conditional": true,
+      "condition_label": "回避攻撃成功時",
+      "levels": [
+        { "level": 1, "attack_flat_cond": 10 },
+        { "level": 2, "attack_flat_cond": 15 },
+        { "level": 3, "attack_flat_cond": 20 },
+        { "level": 4, "attack_flat_cond": 25 },
+        { "level": 5, "attack_flat_cond": 30 }
+      ]
+    },
+    "急襲": {
+      "conditional": true,
+      "condition_label": "空中攻撃時",
+      "levels": [
+        { "level": 1, "attack_mult_cond": 1.05 },
+        { "level": 2, "attack_mult_cond": 1.10 },
+        { "level": 3, "attack_mult_cond": 1.15 }
+      ]
+    },
+    "攻勢": {
+      "conditional": true,
+      "condition_label": "毒・麻痺モンスター攻撃時",
+      "levels": [
+        { "level": 1, "attack_flat_cond": 6 },
+        { "level": 2, "attack_flat_cond": 8, "affinity_cond": 5 },
+        { "level": 3, "attack_flat_cond": 10, "affinity_cond": 10 },
+        { "level": 4, "attack_flat_cond": 12, "affinity_cond": 15 },
+        { "level": 5, "attack_flat_cond": 15, "affinity_cond": 20 }
+      ]
+    },
+    "無我の境地": {
+      "conditional": true,
+      "condition_label": "狂竜症克服時",
+      "levels": [
+        { "level": 1, "affinity_cond": 3 },
+        { "level": 2, "affinity_cond": 6 },
+        { "level": 3, "affinity_cond": 10 }
       ]
     },
     "匠": {

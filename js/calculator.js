@@ -1,6 +1,7 @@
 /**
- * MHWilds Damage Calculator v2
+ * MHWilds Damage Calculator v3
  * skill_modifiers.json ベースの計算エンジン
+ * 属性期待値・条件付き倍率対応
  */
 const MHCalc = (() => {
   const SHARPNESS_COLORS = ['赤', '橙', '黄', '緑', '青', '白', '紫'];
@@ -13,7 +14,7 @@ const MHCalc = (() => {
 
   /** skill_modifiers.json を読み込む */
   async function loadModifiers() {
-    const res = await fetch('data/skill_modifiers.json?v=7');
+    const res = await fetch('data/skill_modifiers.json?v=14');
     const data = await res.json();
     modifiers = data.modifiers || {};
   }
@@ -69,7 +70,10 @@ const MHCalc = (() => {
       if (mod.attack_flat) flat += mod.attack_flat;
       if (mod.attack_mult) mult *= mod.attack_mult;
       // 条件付き
-      if (mod.attack_flat_cond && conditions[name]) flat += mod.attack_flat_cond;
+      if (conditions[name]) {
+        if (mod.attack_flat_cond) flat += mod.attack_flat_cond;
+        if (mod.attack_mult_cond) mult *= mod.attack_mult_cond;
+      }
     }
 
     return Math.floor((weaponAttack + flat) * mult);
@@ -153,7 +157,7 @@ const MHCalc = (() => {
   }
 
   /** 属性値 */
-  function calcElement(element, skillLevels) {
+  function calcElement(element, skillLevels, conditions = {}) {
     if (!element || !element.type || !element.value) return null;
 
     let flat = 0;
@@ -161,11 +165,17 @@ const MHCalc = (() => {
     const elemSkillName = element.type + '属性攻撃強化';
 
     for (const [name, level] of Object.entries(skillLevels)) {
-      if (name !== elemSkillName) continue;
-      const mod = getSkillMod(name, level);
-      if (!mod) continue;
-      if (mod.element_flat) flat += mod.element_flat;
-      if (mod.element_mult) mult = mod.element_mult;
+      if (name === elemSkillName) {
+        const mod = getSkillMod(name, level);
+        if (!mod) continue;
+        if (mod.element_flat) flat += mod.element_flat;
+        if (mod.element_mult) mult = mod.element_mult;
+      }
+      // 災禍転福の条件付き属性加算
+      if (name === '災禍転福' && conditions[name]) {
+        const mod = getSkillMod(name, level);
+        if (mod && mod.element_flat_cond) flat += mod.element_flat_cond;
+      }
     }
 
     return { type: element.type, value: Math.floor((element.value + flat) * mult) };
@@ -234,7 +244,7 @@ const MHCalc = (() => {
       ? calcSharpness(weapon.sharpness, weapon.sharpnessMax, handicraftLv)
       : { colorIndex: -1, colorName: '-', physical: 1.0, elemental: 1.0 };
 
-    const element = weapon ? calcElement(weapon.element, skillLevels) : null;
+    const element = weapon ? calcElement(weapon.element, skillLevels, conditions) : null;
     const totalDefense = calcTotalDefense(armors, skillLevels, useMaxDefense);
     const resistance = calcResistance(armors, skillLevels);
 
@@ -244,10 +254,15 @@ const MHCalc = (() => {
       max: Math.floor(range.max * sharpness.physical)
     };
 
+    // 属性期待値（斬れ味属性補正込み）
+    const elementEffective = element
+      ? { type: element.type, value: Math.floor(element.value * sharpness.elemental) }
+      : null;
+
     return {
       weaponAttack, baseAffinity,
       finalAttack, finalAffinity, critMultiplier: critMult,
-      range, effectiveRange, sharpness, element,
+      range, effectiveRange, sharpness, element, elementEffective,
       totalDefense, resistance, skillLevels, rawSkills
     };
   }
