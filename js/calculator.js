@@ -10,22 +10,36 @@ const MHCalc = (() => {
   const DEFAULT_CRIT_MULT = 1.25;
   const NEGATIVE_CRIT_MULT = 0.75;
 
-  let modifiers = {}; // skill_modifiers.json の modifiers オブジェクト
+  let modifiers = {};
+  let followUpSkills = {};
 
   /** skill_modifiers.json を読み込む */
   async function loadModifiers() {
-    const res = await fetch('data/skill_modifiers.json?v=15');
+    const res = await fetch('data/skill_modifiers.json?v=16');
     const data = await res.json();
     modifiers = data.modifiers || {};
+    followUpSkills = data.followUpSkills || {};
   }
+
+  function getFollowUpSkills() { return followUpSkills; }
 
   function getModifiers() { return modifiers; }
 
-  /** スキル名+レベルからmodifierを取得 */
-  function getSkillMod(skillName, level) {
+  /** スキル名+レベルからmodifierを取得（武器種グループ対応） */
+  function getSkillMod(skillName, level, weaponType) {
     const def = modifiers[skillName];
-    if (!def || !def.levels) return null;
-    return def.levels.find(l => l.level === level) || def.levels[def.levels.length - 1] || null;
+    if (!def) return null;
+
+    // 武器種グループ別レベルテーブル
+    let levels = def.levels;
+    if (weaponType && def.weapon_type_groups) {
+      const group = def.weapon_type_groups[weaponType]?.group;
+      if (group && def['levels_' + group]) {
+        levels = def['levels_' + group];
+      }
+    }
+    if (!levels) return null;
+    return levels.find(l => l.level === level) || levels[levels.length - 1] || null;
   }
 
   /** スキルが条件付きかどうか */
@@ -60,16 +74,15 @@ const MHCalc = (() => {
   }
 
   /** 最終攻撃力 */
-  function calcFinalAttack(weaponAttack, skillLevels, conditions = {}) {
+  function calcFinalAttack(weaponAttack, skillLevels, conditions = {}, weaponType = '') {
     let flat = 0;
     let mult = 1.0;
 
     for (const [name, level] of Object.entries(skillLevels)) {
-      const mod = getSkillMod(name, level);
+      const mod = getSkillMod(name, level, weaponType);
       if (!mod) continue;
       if (mod.attack_flat) flat += mod.attack_flat;
       if (mod.attack_mult) mult *= mod.attack_mult;
-      // 条件付き
       if (conditions[name]) {
         if (mod.attack_flat_cond) flat += mod.attack_flat_cond;
         if (mod.attack_mult_cond) mult *= mod.attack_mult_cond;
@@ -80,10 +93,10 @@ const MHCalc = (() => {
   }
 
   /** 最終会心率 */
-  function calcAffinity(baseAffinity, skillLevels, conditions = {}) {
+  function calcAffinity(baseAffinity, skillLevels, conditions = {}, weaponType = '') {
     let total = baseAffinity;
     for (const [name, level] of Object.entries(skillLevels)) {
-      const mod = getSkillMod(name, level);
+      const mod = getSkillMod(name, level, weaponType);
       if (!mod) continue;
       if (mod.affinity) total += mod.affinity;
       if (mod.affinity_cond && conditions[name]) total += mod.affinity_cond;
@@ -157,7 +170,7 @@ const MHCalc = (() => {
   }
 
   /** 属性値 */
-  function calcElement(element, skillLevels, conditions = {}) {
+  function calcElement(element, skillLevels, conditions = {}, weaponType = '') {
     if (!element || !element.type || !element.value) return null;
 
     let flat = 0;
@@ -166,14 +179,14 @@ const MHCalc = (() => {
 
     for (const [name, level] of Object.entries(skillLevels)) {
       if (name === elemSkillName) {
-        const mod = getSkillMod(name, level);
+        const mod = getSkillMod(name, level, weaponType);
         if (!mod) continue;
         if (mod.element_flat) flat += mod.element_flat;
         if (mod.element_mult) mult = mod.element_mult;
       }
-      // 災禍転福の条件付き属性加算
-      if (name === '災禍転福' && conditions[name]) {
-        const mod = getSkillMod(name, level);
+      // 条件付き属性加算（災禍転福、連撃等）
+      if (conditions[name]) {
+        const mod = getSkillMod(name, level, weaponType);
         if (mod && mod.element_flat_cond) flat += mod.element_flat_cond;
       }
     }
@@ -233,9 +246,10 @@ const MHCalc = (() => {
 
     const weaponAttack = weapon?.attack || 0;
     const baseAffinity = weapon?.affinity || 0;
+    const weaponType = weapon?.weaponType || '';
 
-    const finalAttack = calcFinalAttack(weaponAttack, skillLevels, conditions);
-    const finalAffinity = calcAffinity(baseAffinity, skillLevels, conditions);
+    const finalAttack = calcFinalAttack(weaponAttack, skillLevels, conditions, weaponType);
+    const finalAffinity = calcAffinity(baseAffinity, skillLevels, conditions, weaponType);
     const critMult = getCritMultiplier(skillLevels);
     const range = calcAttackRange(finalAttack, finalAffinity, critMult);
 
@@ -244,7 +258,7 @@ const MHCalc = (() => {
       ? calcSharpness(weapon.sharpness, weapon.sharpnessMax, handicraftLv)
       : { colorIndex: -1, colorName: '-', physical: 1.0, elemental: 1.0 };
 
-    const element = weapon ? calcElement(weapon.element, skillLevels, conditions) : null;
+    const element = weapon ? calcElement(weapon.element, skillLevels, conditions, weaponType) : null;
     const totalDefense = calcTotalDefense(armors, skillLevels, useMaxDefense);
     const resistance = calcResistance(armors, skillLevels);
 
@@ -325,6 +339,46 @@ const MHCalc = (() => {
       elemExpected = elemNormal; // 属性には会心が基本乗らない
     }
 
+    // 追撃ダメージ計算
+    const followUps = [];
+    const activeSetSkills = params.activeSetSkills || [];
+    const activeWeaponSkills = params.activeWeaponSkills || [];
+
+    for (const [fuName, fuDef] of Object.entries(followUpSkills)) {
+      // セットスキルからの追撃
+      const match = activeSetSkills.find(s => s.skill && s.skill.includes(fuName) && s.active);
+      if (!match) continue;
+
+      // レベル判定（Ⅰ=1, Ⅱ=2 等）
+      const lvMatch = match.skill.match(/[ⅠⅡⅢ]/);
+      const lvIdx = lvMatch ? { 'Ⅰ': 0, 'Ⅱ': 1, 'Ⅲ': 2 }[lvMatch[0]] || 0 : 0;
+      const lvData = fuDef.levels[lvIdx] || fuDef.levels[0];
+      if (!lvData) continue;
+
+      if (fuDef.type === 'proc') {
+        // 確率発動型（灼熱化）: 固定ダメージ × 属性肉質
+        let dmg = lvData.damage;
+        if (fuDef.affectsHitzone && fuDef.element !== 'none') {
+          const hzvKey = fuDef.element;
+          dmg = Math.floor(dmg * (hitzone[hzvKey] || 0) / 100);
+        }
+        followUps.push({ name: lvData.label, damage: dmg, cooldown: fuDef.cooldown, type: 'proc' });
+      } else if (fuDef.type === 'mv') {
+        // MV型（恨撃）: MV × 肉質
+        const fuMv = lvData.mv / 100;
+        const dmgType = params.weaponDamageType || 'slash';
+        const hzv = hitzone[dmgType] || 0;
+        const dmg = Math.floor(100 * fuMv * (hzv / 100)); // 基礎値100想定
+        followUps.push({ name: lvData.label, damage: dmg, cooldown: fuDef.cooldown, type: 'mv', condition: fuDef.condition });
+      } else if (fuDef.type === 'fixed') {
+        // 固定型（白熾の奔流）
+        followUps.push({ name: lvData.label, damage: lvData.damage, cooldown: fuDef.cooldown, type: 'fixed' });
+      } else if (fuDef.type === 'accumulate') {
+        // 蓄積型（鎖刃刺激/属性変換）: 情報のみ
+        followUps.push({ name: lvData.label, damage: lvData.damage || 0, type: 'accumulate', note: fuDef.note });
+      }
+    }
+
     return {
       physical: {
         normal: Math.floor(physNormal),
@@ -336,12 +390,13 @@ const MHCalc = (() => {
         normal: Math.floor(physNormal) + Math.floor(elemNormal),
         expected: Math.round((physExpected + elemExpected) * 10) / 10,
         crit: Math.floor(physCrit || physNormal) + Math.floor(elemNormal)
-      }
+      },
+      followUps
     };
   }
 
   return {
-    loadModifiers, getModifiers, getSkillMod, isConditional, getConditionLabel,
+    loadModifiers, getModifiers, getFollowUpSkills, getSkillMod, isConditional, getConditionLabel,
     aggregateSkills, clampSkillLevels,
     calcFinalAttack, calcAffinity, getCritMultiplier,
     calcExpectedValue, calcAttackRange, calcSharpness,

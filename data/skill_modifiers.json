@@ -91,12 +91,48 @@
     "連撃": {
       "conditional": true,
       "condition_label": "連続攻撃時",
+      "weapon_type_groups": {
+        "大剣":       { "group": "heavy" },
+        "狩猟笛":     { "group": "heavy" },
+        "双剣":       { "group": "dual" },
+        "弓":         { "group": "bow" },
+        "ライトボウガン": { "group": "bowgun" },
+        "ヘビィボウガン": { "group": "bowgun" }
+      },
       "levels": [
-        { "level": 1, "attack_flat_cond": 5 },
-        { "level": 2, "attack_flat_cond": 8 },
-        { "level": 3, "attack_flat_cond": 10 },
-        { "level": 4, "attack_flat_cond": 12 },
-        { "level": 5, "attack_flat_cond": 15 }
+        { "level": 1, "attack_flat_cond": 8,  "element_flat_cond": 60 },
+        { "level": 2, "attack_flat_cond": 10, "element_flat_cond": 80 },
+        { "level": 3, "attack_flat_cond": 12, "element_flat_cond": 100 },
+        { "level": 4, "attack_flat_cond": 15, "element_flat_cond": 120 },
+        { "level": 5, "attack_flat_cond": 18, "element_flat_cond": 140 }
+      ],
+      "levels_heavy": [
+        { "level": 1, "attack_flat_cond": 10, "element_flat_cond": 80 },
+        { "level": 2, "attack_flat_cond": 12, "element_flat_cond": 100 },
+        { "level": 3, "attack_flat_cond": 14, "element_flat_cond": 120 },
+        { "level": 4, "attack_flat_cond": 16, "element_flat_cond": 160 },
+        { "level": 5, "attack_flat_cond": 18, "element_flat_cond": 200 }
+      ],
+      "levels_dual": [
+        { "level": 1, "attack_flat_cond": 8,  "element_flat_cond": 40 },
+        { "level": 2, "attack_flat_cond": 10, "element_flat_cond": 60 },
+        { "level": 3, "attack_flat_cond": 12, "element_flat_cond": 80 },
+        { "level": 4, "attack_flat_cond": 15, "element_flat_cond": 100 },
+        { "level": 5, "attack_flat_cond": 18, "element_flat_cond": 120 }
+      ],
+      "levels_bow": [
+        { "level": 1, "attack_flat_cond": 6, "element_flat_cond": 40 },
+        { "level": 2, "attack_flat_cond": 7, "element_flat_cond": 60 },
+        { "level": 3, "attack_flat_cond": 8, "element_flat_cond": 80 },
+        { "level": 4, "attack_flat_cond": 9, "element_flat_cond": 100 },
+        { "level": 5, "attack_flat_cond": 10, "element_flat_cond": 120 }
+      ],
+      "levels_bowgun": [
+        { "level": 1, "attack_flat_cond": 6 },
+        { "level": 2, "attack_flat_cond": 7 },
+        { "level": 3, "attack_flat_cond": 8 },
+        { "level": 4, "attack_flat_cond": 9 },
+        { "level": 5, "attack_flat_cond": 10 }
       ]
     },
     "渾身": {
@@ -263,6 +299,63 @@
         { "level": 3, "element_flat": 6, "element_mult": 1.05 },
         { "level": 4, "element_flat": 8, "element_mult": 1.10 },
         { "level": 5, "element_flat": 10, "element_mult": 1.20 }
+      ]
+    }
+  },
+  "followUpSkills": {
+    "灼熱化": {
+      "type": "proc",
+      "element": "fire",
+      "cooldown": 3,
+      "affectsHitzone": true,
+      "levels": [
+        { "level": 1, "label": "灼熱化Ⅰ", "pieces": 2, "damage": 38 },
+        { "level": 2, "label": "灼熱化Ⅱ", "pieces": 4, "damage": 76 }
+      ]
+    },
+    "恨撃": {
+      "type": "mv",
+      "element": "none",
+      "cooldown": 5,
+      "affectsHitzone": true,
+      "condition": "逆恨み発動中",
+      "levels": [
+        { "level": 1, "label": "恨撃Ⅰ", "pieces": 2, "mv": 25 },
+        { "level": 2, "label": "恨撃Ⅱ", "pieces": 4, "mv": 60 }
+      ]
+    },
+    "白熾の奔流": {
+      "type": "fixed",
+      "element": "none",
+      "cooldown": 3,
+      "affectsHitzone": false,
+      "note": "灼熱化併用で火属性に変化",
+      "levels": [
+        { "level": 1, "label": "白熾の奔流", "damage": 50 }
+      ]
+    },
+    "鎖刃刺激": {
+      "type": "accumulate",
+      "element": "none",
+      "note": "蓄積→爆発型。白エフェクト攻撃で蓄積、一定回数で爆発。2回目以降は必要蓄積増加",
+      "woundBonus": [1.0, 1.05, 1.10, 1.15, 1.20, 1.30],
+      "levels": [
+        { "level": 1, "label": "鎖刃刺激Lv1", "damage": 140 },
+        { "level": 2, "label": "鎖刃刺激Lv2", "damage": 160 },
+        { "level": 3, "label": "鎖刃刺激Lv3", "damage": 220 },
+        { "level": 4, "label": "鎖刃刺激Lv4", "damage": 300 },
+        { "level": 5, "label": "鎖刃刺激Lv5", "damage": 400 }
+      ]
+    },
+    "属性変換": {
+      "type": "accumulate",
+      "element": "dragon",
+      "affectsHitzone": false,
+      "note": "モンスター属性攻撃被弾で発動。龍属性値上昇+蓄積爆発（肉質無視）。効果120秒/CT90秒",
+      "levels": [
+        { "level": 1, "label": "属性変換Lv1", "dragonBoost": 80 },
+        { "level": 2, "label": "属性変換Lv2", "dragonBoost": 120 },
+        { "level": 3, "label": "属性変換Lv3", "dragonBoost": 180 }
       ]
     }
   }

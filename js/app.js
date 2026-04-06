@@ -1246,6 +1246,9 @@ const App = (() => {
     if (!attackData) { resultDiv.style.display = 'none'; return; }
 
     const r = lastCalcResult;
+    const armors = Object.values(state.selectedArmors).filter(Boolean);
+    const activeSetSkillsList = calcSetSkills(armors);
+
     const dmg = MHCalc.calcHitDamage({
       attack: r.finalAttack,
       affinity: r.finalAffinity,
@@ -1254,7 +1257,8 @@ const App = (() => {
       element: r.element,
       attack_data: attackData,
       hitzone: part,
-      weaponDamageType: DataLoader.getDamageTypeForWeaponType(weaponType)
+      weaponDamageType: DataLoader.getDamageTypeForWeaponType(weaponType),
+      activeSetSkills: activeSetSkillsList
     });
 
     resultDiv.style.display = '';
@@ -1263,9 +1267,32 @@ const App = (() => {
     $('dmgCrit').textContent = dmg.total.crit;
 
     const elemText = dmg.elemental > 0 ? ` + 属性${dmg.elemental}` : '';
-    $('dmgBreakdown').textContent =
+    let breakdownText =
       `物理: ${dmg.physical.normal}(通常) / ${dmg.physical.expected}(期待) / ${dmg.physical.crit}(会心)${elemText}` +
       ` | MV${attackData.mv} × 肉質${part[DataLoader.getDamageTypeForWeaponType(weaponType)]}%`;
+
+    // 追撃ダメージ表示
+    const fuDiv = $('dmgFollowUps');
+    if (dmg.followUps && dmg.followUps.length > 0) {
+      fuDiv.style.display = '';
+      let fuHtml = '';
+      for (const fu of dmg.followUps) {
+        const typeLabel = { proc: '確率発動', mv: 'MV型', fixed: '固定', accumulate: '蓄積爆発' }[fu.type] || '';
+        const cdText = fu.cooldown ? `CT${fu.cooldown}秒` : '';
+        const condText = fu.condition ? `（${fu.condition}）` : '';
+        const noteText = fu.note ? `<span style="font-size:0.6rem;color:var(--text-muted)"> ${fu.note}</span>` : '';
+        fuHtml += `<div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;border-bottom:1px solid var(--border)">
+          <span style="font-size:0.75rem">${fu.name}${condText}</span>
+          <span style="font-weight:700;color:var(--accent)">${fu.damage > 0 ? fu.damage : '-'}</span>
+        </div>
+        <div style="font-size:0.6rem;color:var(--text-muted)">${typeLabel} ${cdText}${noteText}</div>`;
+      }
+      fuDiv.innerHTML = fuHtml;
+    } else {
+      fuDiv.style.display = 'none';
+    }
+
+    $('dmgBreakdown').textContent = breakdownText;
   }
 
   function debounce(fn, ms) {
