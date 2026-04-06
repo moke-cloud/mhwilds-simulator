@@ -14,7 +14,7 @@ const MHCalc = (() => {
 
   /** skill_modifiers.json を読み込む */
   async function loadModifiers() {
-    const res = await fetch('data/skill_modifiers.json?v=14');
+    const res = await fetch('data/skill_modifiers.json?v=15');
     const data = await res.json();
     modifiers = data.modifiers || {};
   }
@@ -267,12 +267,86 @@ const MHCalc = (() => {
     };
   }
 
+  /**
+   * 1ヒット実ダメージ計算
+   * @param {Object} params
+   * @param {number} params.attack - 最終攻撃力
+   * @param {number} params.affinity - 最終会心率
+   * @param {number} params.critMult - 会心倍率
+   * @param {Object} params.sharpness - 斬れ味 {physical, elemental}
+   * @param {Object|null} params.element - 属性 {type, value}
+   * @param {Object} params.attack_data - モーション値 {mv, eleMul?, rawType?, rawMul?, ignoreSharpness?, ignoreHzv?}
+   * @param {Object} params.hitzone - 肉質 {slash, blunt, pierce, fire, water, thunder, ice, dragon}
+   * @param {string} params.weaponDamageType - 武器のダメージタイプ (slash/blunt/pierce)
+   */
+  function calcHitDamage(params) {
+    const { attack, affinity, critMult, sharpness, element, attack_data, hitzone, weaponDamageType } = params;
+    const mv = attack_data.mv / 100;
+    const rawMul = attack_data.rawMul || 1.0;
+
+    // 物理ダメージタイプ判定（攻撃ごとのrawTypeオーバーライド）
+    let dmgType = weaponDamageType || 'slash';
+    if (attack_data.rawType) {
+      const rt = attack_data.rawType.toLowerCase();
+      if (rt === 'blunt') dmgType = 'blunt';
+      else if (rt === 'shot') dmgType = 'pierce';
+    }
+
+    // 肉質値
+    const hzvPhys = attack_data.ignoreHzv ? 100 : (hitzone[dmgType] || 0);
+    const sharpPhys = attack_data.ignoreSharpness ? 1.0 : sharpness.physical;
+
+    // 物理ダメージ = 攻撃力 × MV × 斬れ味(物理) × 肉質(物理)/100 × rawMul
+    const physBase = attack * mv * sharpPhys * (hzvPhys / 100) * rawMul;
+
+    // 会心期待値
+    const rate = affinity / 100;
+    let physExpected, physCrit, physNormal;
+    if (rate >= 0) {
+      physNormal = physBase;
+      physCrit = physBase * critMult;
+      physExpected = physBase * (1 + rate * (critMult - 1));
+    } else {
+      physNormal = physBase;
+      physCrit = physBase * NEGATIVE_CRIT_MULT;
+      physExpected = physBase * (1 + Math.abs(rate) * (NEGATIVE_CRIT_MULT - 1));
+    }
+
+    // 属性ダメージ
+    let elemNormal = 0, elemExpected = 0;
+    if (element && element.value > 0) {
+      const elemType = element.type;
+      const elemKey = { '火': 'fire', '水': 'water', '雷': 'thunder', '氷': 'ice', '龍': 'dragon' }[elemType] || '';
+      const hzvElem = hitzone[elemKey] || 0;
+      const eleMul = attack_data.eleMul ?? 1.0;
+      const sharpElem = attack_data.ignoreSharpness ? 1.0 : sharpness.elemental;
+
+      elemNormal = element.value * sharpElem * (hzvElem / 100) * eleMul;
+      elemExpected = elemNormal; // 属性には会心が基本乗らない
+    }
+
+    return {
+      physical: {
+        normal: Math.floor(physNormal),
+        expected: Math.round(physExpected * 10) / 10,
+        crit: Math.floor(physCrit || physNormal)
+      },
+      elemental: Math.floor(elemNormal),
+      total: {
+        normal: Math.floor(physNormal) + Math.floor(elemNormal),
+        expected: Math.round((physExpected + elemExpected) * 10) / 10,
+        crit: Math.floor(physCrit || physNormal) + Math.floor(elemNormal)
+      }
+    };
+  }
+
   return {
     loadModifiers, getModifiers, getSkillMod, isConditional, getConditionLabel,
     aggregateSkills, clampSkillLevels,
     calcFinalAttack, calcAffinity, getCritMultiplier,
     calcExpectedValue, calcAttackRange, calcSharpness,
     calcElement, calcTotalDefense, calcResistance, calcAll,
+    calcHitDamage,
     SHARPNESS_COLORS, SHARPNESS_PHYS, SHARPNESS_ELEM,
     DEFAULT_CRIT_MULT, NEGATIVE_CRIT_MULT
   };

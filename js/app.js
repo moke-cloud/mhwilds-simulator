@@ -31,6 +31,7 @@ const App = (() => {
       renderDecoSlots();
       populateCharmSelects();
       populateCharmPresets();
+      initDamageCalc();
       bindEvents();
       recalculate();
     } catch (e) {
@@ -718,6 +719,11 @@ const App = (() => {
     renderSetSkills(setSkills);
     renderGroupSkills(groupSkills);
 
+    // Damage calculator
+    lastCalcResult = result;
+    updateDmgAttacks();
+    calcDamage();
+
     // Mobile
     $('mAtk').textContent = result.finalAttack || '-';
     $('mAff').textContent = affText;
@@ -1127,6 +1133,139 @@ const App = (() => {
     };
     reader.readAsText(file);
     e.target.value = '';
+  }
+
+  // === Damage Calculator ===
+  let lastCalcResult = null;
+
+  function initDamageCalc() {
+    // Populate monster select
+    const monsterSel = $('dmgMonster');
+    const monsters = DataLoader.getMonsters();
+    for (const m of monsters) {
+      monsterSel.innerHTML += `<option value="${m.id}">${m.name}</option>`;
+    }
+
+    monsterSel.addEventListener('change', () => {
+      updateDmgParts();
+      calcDamage();
+    });
+    $('dmgPart').addEventListener('change', () => calcDamage());
+    $('dmgAttack').addEventListener('change', () => calcDamage());
+  }
+
+  function updateDmgParts() {
+    const partSel = $('dmgPart');
+    partSel.innerHTML = '<option value="">部位...</option>';
+    const monsterId = parseInt($('dmgMonster').value);
+    if (!monsterId) return;
+    const monster = DataLoader.getMonsters().find(m => m.id === monsterId);
+    if (!monster) return;
+    for (const p of monster.parts) {
+      partSel.innerHTML += `<option value="${p.id}">${p.name}</option>`;
+    }
+    // Auto-select first part
+    if (monster.parts.length > 0) {
+      partSel.value = monster.parts[0].id;
+    }
+  }
+
+  function updateDmgAttacks() {
+    const attackSel = $('dmgAttack');
+    const prevVal = attackSel.value;
+    attackSel.innerHTML = '<option value="">攻撃を選択...</option>';
+    if (!state.selectedWeapon) return;
+    const weaponType = state.selectedWeapon.weaponType;
+    const attacks = DataLoader.getAttacksForWeaponType(weaponType);
+    for (let i = 0; i < attacks.length; i++) {
+      const a = attacks[i];
+      attackSel.innerHTML += `<option value="${i}">${a.name} (MV${a.mv})</option>`;
+    }
+    // Restore selection if same weapon type
+    if (prevVal && attackSel.querySelector(`option[value="${prevVal}"]`)) {
+      attackSel.value = prevVal;
+    }
+  }
+
+  function calcDamage() {
+    const resultDiv = $('dmgResult');
+    const hzvTable = $('dmgHzvTable');
+
+    if (!lastCalcResult || !state.selectedWeapon) {
+      resultDiv.style.display = 'none';
+      hzvTable.innerHTML = '';
+      return;
+    }
+
+    const monsterId = parseInt($('dmgMonster').value);
+    const partId = $('dmgPart').value;
+    const attackIdx = $('dmgAttack').value;
+    const monster = monsterId ? DataLoader.getMonsters().find(m => m.id === monsterId) : null;
+
+    // Render hitzone table if monster selected
+    if (monster) {
+      const weaponType = state.selectedWeapon.weaponType;
+      const dmgType = DataLoader.getDamageTypeForWeaponType(weaponType);
+      const dmgLabel = { slash: '斬', blunt: '打', pierce: '弾' }[dmgType] || '斬';
+
+      let html = '<table class="sharp-compare"><thead><tr><th>部位</th><th>' + dmgLabel + '</th><th>火</th><th>水</th><th>雷</th><th>氷</th><th>龍</th></tr></thead><tbody>';
+      for (const p of monster.parts) {
+        const isActive = p.id === partId;
+        html += `<tr class="${isActive ? 'active' : ''}" style="cursor:pointer" data-part-id="${p.id}">
+          <td style="text-align:left">${p.name}</td>
+          <td>${p[dmgType]}%</td>
+          <td>${p.fire}%</td><td>${p.water}%</td><td>${p.thunder}%</td><td>${p.ice}%</td><td>${p.dragon}%</td>
+        </tr>`;
+      }
+      html += '</tbody></table>';
+      hzvTable.innerHTML = html;
+
+      // Click on row to select part
+      hzvTable.querySelectorAll('tr[data-part-id]').forEach(row => {
+        row.onclick = () => {
+          $('dmgPart').value = row.dataset.partId;
+          calcDamage();
+        };
+      });
+    } else {
+      hzvTable.innerHTML = '';
+    }
+
+    // Calculate hit damage if all selected
+    if (!monster || !partId || attackIdx === '') {
+      resultDiv.style.display = 'none';
+      return;
+    }
+
+    const part = monster.parts.find(p => p.id === partId);
+    if (!part) { resultDiv.style.display = 'none'; return; }
+
+    const weaponType = state.selectedWeapon.weaponType;
+    const attacks = DataLoader.getAttacksForWeaponType(weaponType);
+    const attackData = attacks[parseInt(attackIdx)];
+    if (!attackData) { resultDiv.style.display = 'none'; return; }
+
+    const r = lastCalcResult;
+    const dmg = MHCalc.calcHitDamage({
+      attack: r.finalAttack,
+      affinity: r.finalAffinity,
+      critMult: r.critMultiplier,
+      sharpness: r.sharpness,
+      element: r.element,
+      attack_data: attackData,
+      hitzone: part,
+      weaponDamageType: DataLoader.getDamageTypeForWeaponType(weaponType)
+    });
+
+    resultDiv.style.display = '';
+    $('dmgNormal').textContent = dmg.total.normal;
+    $('dmgExpected').textContent = dmg.total.expected;
+    $('dmgCrit').textContent = dmg.total.crit;
+
+    const elemText = dmg.elemental > 0 ? ` + 属性${dmg.elemental}` : '';
+    $('dmgBreakdown').textContent =
+      `物理: ${dmg.physical.normal}(通常) / ${dmg.physical.expected}(期待) / ${dmg.physical.crit}(会心)${elemText}` +
+      ` | MV${attackData.mv} × 肉質${part[DataLoader.getDamageTypeForWeaponType(weaponType)]}%`;
   }
 
   function debounce(fn, ms) {

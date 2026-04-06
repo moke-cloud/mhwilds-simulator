@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>MHWilds 装備シミュレーター</title>
-  <link rel="stylesheet" href="css/style.css?v=14">
+  <link rel="stylesheet" href="css/style.css?v=15">
 </head>
 <body>
 
@@ -231,6 +231,42 @@
       <div style="font-size:0.65rem;color:var(--text-muted);margin-top:2px" id="elemDetail"></div>
     </div>
 
+    <!-- 実ダメージ計算 -->
+    <div class="card-header" style="border-top:1px solid var(--border)">
+      <span>実ダメージ計算</span>
+    </div>
+    <div style="padding:8px 12px" id="dmgCalcSection">
+      <div style="display:flex;gap:6px;margin-bottom:6px;flex-wrap:wrap">
+        <select id="dmgMonster" style="flex:1;min-width:120px;padding:6px 8px;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text-primary);font-size:0.8rem">
+          <option value="">モンスターを選択...</option>
+        </select>
+        <select id="dmgPart" style="flex:1;min-width:100px;padding:6px 8px;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text-primary);font-size:0.8rem">
+          <option value="">部位...</option>
+        </select>
+      </div>
+      <select id="dmgAttack" style="width:100%;padding:6px 8px;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text-primary);font-size:0.8rem;margin-bottom:8px">
+        <option value="">攻撃を選択...</option>
+      </select>
+      <div id="dmgResult" style="display:none">
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:6px">
+          <div class="stat-item" style="padding:6px;text-align:center">
+            <div class="stat-label">通常ヒット</div>
+            <div style="font-size:1rem;font-weight:700" id="dmgNormal">-</div>
+          </div>
+          <div class="stat-item" style="padding:6px;text-align:center;background:linear-gradient(135deg,rgba(240,160,48,0.1),rgba(240,160,48,0.05))">
+            <div class="stat-label">期待値</div>
+            <div style="font-size:1.1rem;font-weight:800;color:var(--accent)" id="dmgExpected">-</div>
+          </div>
+          <div class="stat-item" style="padding:6px;text-align:center">
+            <div class="stat-label">会心ヒット</div>
+            <div style="font-size:1rem;font-weight:700;color:var(--yellow)" id="dmgCrit">-</div>
+          </div>
+        </div>
+        <div style="font-size:0.65rem;color:var(--text-muted);background:var(--bg-input);padding:4px 8px;border-radius:var(--radius-sm)" id="dmgBreakdown"></div>
+      </div>
+      <div id="dmgHzvTable" style="margin-top:6px"></div>
+    </div>
+
     <!-- 耐性 -->
     <div class="stat-label" style="padding:8px 12px 0">耐性</div>
     <div class="res-row" id="resRow">
@@ -284,8 +320,8 @@
   </div>
 </div>
 
-<script src="js/calculator.js?v=14"></script>
-<script src="js/data-loader.js?v=14"></script>
-<script src="js/app.js?v=14"></script>
+<script src="js/calculator.js?v=15"></script>
+<script src="js/data-loader.js?v=15"></script>
+<script src="js/app.js?v=15"></script>
 </body>
 </html>

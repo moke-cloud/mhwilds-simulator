@@ -1,0 +1,3344 @@
+{
+  "大剣": {
+    "damageType": "slash",
+    "attacks": [
+      {
+        "name": "Overhead Slash",
+        "mv": 81
+      },
+      {
+        "name": "Charged Slash Lv1",
+        "mv": 106,
+        "eleMul": 1.1
+      },
+      {
+        "name": "Charged Slash Lv2",
+        "mv": 135,
+        "eleMul": 1.2
+      },
+      {
+        "name": "Charged Slash Lv3",
+        "mv": 168,
+        "eleMul": 1.3
+      },
+      {
+        "name": "Wide Slash",
+        "mv": 42
+      },
+      {
+        "name": "Rising Slash",
+        "mv": 38
+      },
+      {
+        "name": "Offset Rising Slash Lv1",
+        "mv": 96,
+        "eleMul": 1.1
+      },
+      {
+        "name": "Offset Rising Slash Lv2",
+        "mv": 123,
+        "eleMul": 1.2
+      },
+      {
+        "name": "Offset Rising Slash Lv3",
+        "mv": 154,
+        "eleMul": 1.3
+      },
+      {
+        "name": "Follow-up Cross Slash Lv1 1",
+        "mv": 44
+      },
+      {
+        "name": "Follow-up Cross Slash Lv1 2",
+        "mv": 180
+      },
+      {
+        "name": "Follow-up Cross Slash Lv2 1",
+        "mv": 49
+      },
+      {
+        "name": "Follow-up Cross Slash Lv2 2",
+        "mv": 200
+      },
+      {
+        "name": "Follow-up Cross Slash Lv3 1",
+        "mv": 58
+      },
+      {
+        "name": "Follow-up Cross Slash Lv3 2",
+        "mv": 230
+      },
+      {
+        "name": "Kick",
+        "mv": 5,
+        "eleMul": 0.0,
+        "ignoreSharpness": true,
+        "ignoreHzv": true
+      },
+      {
+        "name": "Side Blow",
+        "mv": 16,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Strong Charged Slash Lv1",
+        "mv": 111,
+        "eleMul": 1.3
+      },
+      {
+        "name": "Strong Charged Slash Lv2",
+        "mv": 144,
+        "eleMul": 1.4
+      },
+      {
+        "name": "Strong Charged Slash Lv3",
+        "mv": 181,
+        "eleMul": 1.5
+      },
+      {
+        "name": "Strong Wide Slash Lv1",
+        "mv": 90,
+        "eleMul": 1.7
+      },
+      {
+        "name": "Strong Wide Slash Lv2",
+        "mv": 106,
+        "eleMul": 2.0
+      },
+      {
+        "name": "Strong Wide Slash Lv3",
+        "mv": 124,
+        "eleMul": 2.2
+      },
+      {
+        "name": "Tackle",
+        "mv": 23,
+        "eleMul": 0.0,
+        "rawType": "blunt",
+        "rawMul": 1.05,
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Tackle Lv1",
+        "mv": 26,
+        "eleMul": 0.0,
+        "rawType": "blunt",
+        "rawMul": 1.05,
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Tackle Lv2",
+        "mv": 35,
+        "eleMul": 0.0,
+        "rawType": "blunt",
+        "rawMul": 1.05,
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Tackle Lv3",
+        "mv": 48,
+        "eleMul": 0.0,
+        "rawType": "blunt",
+        "rawMul": 1.05,
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Leaping Wide Slash",
+        "mv": 93
+      },
+      {
+        "name": "Leaping Wide Slash Lv1",
+        "mv": 111,
+        "eleMul": 2.0
+      },
+      {
+        "name": "Leaping Wide Slash Lv2",
+        "mv": 135,
+        "eleMul": 2.5
+      },
+      {
+        "name": "Leaping Wide Slash Lv3",
+        "mv": 167,
+        "eleMul": 3.1
+      },
+      {
+        "name": "True Charged Slash Lv1 1",
+        "mv": 12
+      },
+      {
+        "name": "True Charged Slash Lv1 2",
+        "mv": 105,
+        "eleMul": 1.5
+      },
+      {
+        "name": "True Charged Slash Lv1 2 (Power)",
+        "mv": 125,
+        "eleMul": 1.5
+      },
+      {
+        "name": "True Charged Slash Lv2 1",
+        "mv": 14
+      },
+      {
+        "name": "True Charged Slash Lv2 2",
+        "mv": 153,
+        "eleMul": 1.8
+      },
+      {
+        "name": "True Charged Slash Lv2 2 (Power)",
+        "mv": 186,
+        "eleMul": 1.8
+      },
+      {
+        "name": "True Charged Slash Lv3 1",
+        "mv": 16
+      },
+      {
+        "name": "True Charged Slash Lv3 2",
+        "mv": 195,
+        "eleMul": 2.0
+      },
+      {
+        "name": "True Charged Slash Lv3 2 (Power)",
+        "mv": 248,
+        "eleMul": 2.0
+      },
+      {
+        "name": "Focus Slash: Perforate",
+        "mv": 15,
+        "eleMul": 0.4
+      },
+      {
+        "name": "Jumping Charged Slash",
+        "mv": 50
+      },
+      {
+        "name": "Jumping Charged Slash Lv1",
+        "mv": 60,
+        "eleMul": 1.1
+      },
+      {
+        "name": "Jumping Charged Slash Lv2",
+        "mv": 71,
+        "eleMul": 1.2
+      },
+      {
+        "name": "Jumping Charged Slash Lv3",
+        "mv": 90,
+        "eleMul": 1.3
+      },
+      {
+        "name": "Plunging Thrust",
+        "mv": 36,
+        "eleMul": 0.4
+      }
+    ]
+  },
+  "太刀": {
+    "damageType": "slash",
+    "attacks": [
+      {
+        "name": "Overhead Slash I",
+        "mv": 24
+      },
+      {
+        "name": "Overhead Slash II",
+        "mv": 18
+      },
+      {
+        "name": "Crescent Slash",
+        "mv": 32
+      },
+      {
+        "name": "Crimson Slash I 1",
+        "mv": 33,
+        "eleMul": 0.5
+      },
+      {
+        "name": "Crimson Slash I 2",
+        "mv": 16,
+        "eleMul": 0.5
+      },
+      {
+        "name": "Crimson Slash II 1",
+        "mv": 11,
+        "eleMul": 1.05
+      },
+      {
+        "name": "Crimson Slash II 2",
+        "mv": 22,
+        "eleMul": 1.05
+      },
+      {
+        "name": "Crimson Slash III 1",
+        "mv": 30,
+        "eleMul": 1.1
+      },
+      {
+        "name": "Crimson Slash III 2",
+        "mv": 18,
+        "eleMul": 1.1
+      },
+      {
+        "name": "Crimson Slash III 3",
+        "mv": 55,
+        "eleMul": 1.1
+      },
+      {
+        "name": "Thrust",
+        "mv": 18
+      },
+      {
+        "name": "Rising Slash",
+        "mv": 18
+      },
+      {
+        "name": "Fade Slash",
+        "mv": 22
+      },
+      {
+        "name": "Spirit Blade I",
+        "mv": 31
+      },
+      {
+        "name": "Spirit Blade I (No Gauge)",
+        "mv": 14
+      },
+      {
+        "name": "Directional Spirit Blade I 1",
+        "mv": 31
+      },
+      {
+        "name": "Directional Spirit Blade I 1 (No Gauge)",
+        "mv": 14
+      },
+      {
+        "name": "Spirit Blade II",
+        "mv": 30
+      },
+      {
+        "name": "Spirit Blade II (No Gauge)",
+        "mv": 14
+      },
+      {
+        "name": "Directional Spirit Blade II 1",
+        "mv": 14
+      },
+      {
+        "name": "Directional Spirit Blade II 2",
+        "mv": 26
+      },
+      {
+        "name": "Directional Spirit Blade II 1 (No Gauge)",
+        "mv": 8
+      },
+      {
+        "name": "Directional Spirit Blade II 2 (No Gauge)",
+        "mv": 18
+      },
+      {
+        "name": "Spirit Blade III 1",
+        "mv": 14
+      },
+      {
+        "name": "Spirit Blade III 2",
+        "mv": 19
+      },
+      {
+        "name": "Spirit Blade III 3",
+        "mv": 34
+      },
+      {
+        "name": "Spirit Blade III 1 (No Gauge)",
+        "mv": 8
+      },
+      {
+        "name": "Spirit Blade III 2 (No Gauge)",
+        "mv": 11
+      },
+      {
+        "name": "Spirit Blade III 3 (No Gauge)",
+        "mv": 19
+      },
+      {
+        "name": "Spirit Roundslash",
+        "mv": 38
+      },
+      {
+        "name": "Spirit Roundslash (Red)",
+        "mv": 42
+      },
+      {
+        "name": "Spirit Roundslash (No Gauge)",
+        "mv": 19
+      },
+      {
+        "name": "Spinning Crimson Slash",
+        "mv": 60
+      },
+      {
+        "name": "Spirit Step Slash",
+        "mv": 28
+      },
+      {
+        "name": "Spirit Step Slash (No Gauge)",
+        "mv": 18
+      },
+      {
+        "name": "Jumping Slash",
+        "mv": 26
+      },
+      {
+        "name": "Jumping Spirit Blade I",
+        "mv": 30
+      },
+      {
+        "name": "Jumping Spirit Blade I (No Gauge)",
+        "mv": 16
+      },
+      {
+        "name": "Jumping Spirit Blade II 1",
+        "mv": 12
+      },
+      {
+        "name": "Jumping Spirit Blade II 2",
+        "mv": 26
+      },
+      {
+        "name": "Jumping Spirit Blade II 1 (No Gauge)",
+        "mv": 8
+      },
+      {
+        "name": "Jumping Spirit Blade II 2 (No Gauge)",
+        "mv": 15
+      },
+      {
+        "name": "Jumping Spirit Blade III 1",
+        "mv": 12
+      },
+      {
+        "name": "Jumping Spirit Blade III 2",
+        "mv": 22
+      },
+      {
+        "name": "Jumping Spirit Blade III 3 (Not Used?)",
+        "mv": 24
+      },
+      {
+        "name": "Jumping Spirit Blade III 3 (No Gauge)",
+        "mv": 13
+      },
+      {
+        "name": "Jumping Rising Slash",
+        "mv": 20
+      },
+      {
+        "name": "Aerial Draw Spirit Blade",
+        "mv": 48
+      },
+      {
+        "name": "Aerial Draw Spirit Blade (No Gauge)",
+        "mv": 26
+      },
+      {
+        "name": "Foresight Slash",
+        "mv": 18
+      },
+      {
+        "name": "Foresight Slash (No Gauge)",
+        "mv": 11
+      },
+      {
+        "name": "Foresight Slash (Success)",
+        "mv": 23
+      },
+      {
+        "name": "Foresight Whirl Slash 1",
+        "mv": 22
+      },
+      {
+        "name": "Foresight Whirl Slash 2",
+        "mv": 13
+      },
+      {
+        "name": "Foresight Whirl Slash 1 (Sucess)",
+        "mv": 28
+      },
+      {
+        "name": "Foresight Whirl Slash 2 (Success)",
+        "mv": 16
+      },
+      {
+        "name": "Iai Slash 1",
+        "mv": 18
+      },
+      {
+        "name": "Iai Slash 2",
+        "mv": 13
+      },
+      {
+        "name": "Iai Spirit Slash 1 (None)",
+        "mv": 17
+      },
+      {
+        "name": "Iai Spirit Slash 1 (White)",
+        "mv": 19
+      },
+      {
+        "name": "Iai Spirit Slash 2 (White) (Success)",
+        "mv": 55
+      },
+      {
+        "name": "Iai Spirit Slash 1 (Yellow)",
+        "mv": 31
+      },
+      {
+        "name": "Iai Spirit Slash 2 (Yellow) (Success)",
+        "mv": 72
+      },
+      {
+        "name": "Iai Spirit Slash 1 (Red)",
+        "mv": 39
+      },
+      {
+        "name": "Iai Spirit Slash 2 (Red) (Success)",
+        "mv": 86
+      },
+      {
+        "name": "Spirit Thrust",
+        "mv": 19
+      },
+      {
+        "name": "Spirit Helmbreaker (White)",
+        "mv": 15,
+        "eleMul": 0.2
+      },
+      {
+        "name": "Spirit Helmbreaker (Yellow)",
+        "mv": 20,
+        "eleMul": 0.2
+      },
+      {
+        "name": "Spirit Helmbreaker (Red)",
+        "mv": 23,
+        "eleMul": 0.2
+      },
+      {
+        "name": "Spirit Release Slash 1",
+        "mv": 5
+      },
+      {
+        "name": "Spirit Release Slash 2",
+        "mv": 10,
+        "eleMul": 0.1
+      },
+      {
+        "name": "Spirit Release Slash 3",
+        "mv": 15,
+        "eleMul": 0.1
+      },
+      {
+        "name": "Spirit Release Slash 4",
+        "mv": 22,
+        "eleMul": 0.1
+      },
+      {
+        "name": "Spirit Release Slash 5",
+        "mv": 35,
+        "eleMul": 0.1
+      }
+    ]
+  },
+  "片手剣": {
+    "damageType": "slash",
+    "attacks": [
+      {
+        "name": "Advancing Slash",
+        "mv": 22
+      },
+      {
+        "name": "Rising Slash",
+        "mv": 18
+      },
+      {
+        "name": "Chop",
+        "mv": 18,
+        "eleMul": 1.3
+      },
+      {
+        "name": "Side Slash",
+        "mv": 17,
+        "eleMul": 1.3
+      },
+      {
+        "name": "Diagonal Rising Slash",
+        "mv": 24,
+        "eleMul": 1.3
+      },
+      {
+        "name": "Diagonal Chop",
+        "mv": 27,
+        "eleMul": 1.3
+      },
+      {
+        "name": "Lateral Slash",
+        "mv": 27,
+        "eleMul": 1.2
+      },
+      {
+        "name": "Return Stroke",
+        "mv": 28,
+        "eleMul": 1.2
+      },
+      {
+        "name": "Spinning Rising Slash",
+        "mv": 39,
+        "eleMul": 1.2
+      },
+      {
+        "name": "Roundslash",
+        "mv": 41
+      },
+      {
+        "name": "Spinning Reaper",
+        "mv": 65
+      },
+      {
+        "name": "Shield Attack",
+        "mv": 16,
+        "eleMul": 0.0,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Shield Bash",
+        "mv": 27,
+        "eleMul": 0.0,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Hard Basher",
+        "mv": 40,
+        "eleMul": 0.0,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Guard Slash",
+        "mv": 14
+      },
+      {
+        "name": "Charged Slash",
+        "mv": 40
+      },
+      {
+        "name": "Scaling Slash",
+        "mv": 25
+      },
+      {
+        "name": "Jumping Rising Slash",
+        "mv": 18
+      },
+      {
+        "name": "Jumping Advancing Slash",
+        "mv": 18
+      },
+      {
+        "name": "Jumping Slash",
+        "mv": 20
+      },
+      {
+        "name": "Falling Bash 1",
+        "mv": 52,
+        "eleMul": 0.0,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Falling Bash 2",
+        "mv": 47,
+        "eleMul": 0.0,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Plunging Thrust",
+        "mv": 12,
+        "eleMul": 0.3
+      },
+      {
+        "name": "Sliding Sweep 1",
+        "mv": 10
+      },
+      {
+        "name": "Sliding Sweep 2",
+        "mv": 50
+      },
+      {
+        "name": "Sliding Slash 1",
+        "mv": 12
+      },
+      {
+        "name": "Sliding Slash 2",
+        "mv": 30
+      },
+      {
+        "name": "Leaping Slash",
+        "mv": 30
+      },
+      {
+        "name": "Perfect Rush I 1",
+        "mv": 10,
+        "eleMul": 0.0,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Perfect Rush I 2",
+        "mv": 15
+      },
+      {
+        "name": "Perfect Rush I 3",
+        "mv": 15
+      },
+      {
+        "name": "Perfect Rush II",
+        "mv": 20,
+        "eleMul": 0.0,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Perfect Rush III",
+        "mv": 30
+      },
+      {
+        "name": "Perfect Rush III Hits",
+        "mv": 18
+      },
+      {
+        "name": "Power Perfect Rush I 1",
+        "mv": 40,
+        "eleMul": 0.0
+      },
+      {
+        "name": "Power Perfect Rush I 2",
+        "mv": 40,
+        "eleMul": 1.5
+      },
+      {
+        "name": "Power Perfect Rush I 3",
+        "mv": 45,
+        "eleMul": 1.5
+      },
+      {
+        "name": "Power Perfect Rush II",
+        "mv": 60,
+        "eleMul": 0.0
+      },
+      {
+        "name": "Power Perfect Rush III",
+        "mv": 80,
+        "eleMul": 1.5
+      },
+      {
+        "name": "Power Perfect Rush III Hits",
+        "mv": 34
+      },
+      {
+        "name": "Charged Chop 1",
+        "mv": 18
+      },
+      {
+        "name": "Charged Chop 2",
+        "mv": 28,
+        "eleMul": 1.2
+      },
+      {
+        "name": "Charged Chop 3",
+        "mv": 14,
+        "eleMul": 0.3
+      },
+      {
+        "name": "Power Charged Chop 3",
+        "mv": 28,
+        "eleMul": 1.25
+      },
+      {
+        "name": "Counter Slash",
+        "mv": 55,
+        "eleMul": 1.5
+      },
+      {
+        "name": "Recovering Slash",
+        "mv": 18
+      },
+      {
+        "name": "Focus Strike: Vital Stab",
+        "mv": 15
+      },
+      {
+        "name": "Focus Strike: Vital Stab (Opening Wound)",
+        "mv": 19,
+        "eleMul": 0.3
+      },
+      {
+        "name": "Falling Slash",
+        "mv": 20
+      },
+      {
+        "name": "Falling Slash Hits",
+        "mv": 7,
+        "eleMul": 0.3
+      },
+      {
+        "name": "Upswing Bash",
+        "mv": 20,
+        "eleMul": 0.0,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Upswing Bash Hits",
+        "mv": 20,
+        "eleMul": 0.0,
+        "rawType": "blunt"
+      }
+    ]
+  },
+  "双剣": {
+    "damageType": "slash",
+    "attacks": [
+      {
+        "name": "Double Slash 1",
+        "mv": 8,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Double Slash 2",
+        "mv": 11,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Double Slash Return Stroke",
+        "mv": 11,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Circle Slash 1",
+        "mv": 6,
+        "eleMul": 0.7
+      },
+      {
+        "name": "Circle Slash 2",
+        "mv": 11,
+        "eleMul": 0.7
+      },
+      {
+        "name": "Circle Slash 3",
+        "mv": 12,
+        "eleMul": 0.7
+      },
+      {
+        "name": "Demon Fangs",
+        "mv": 14,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Twofold Demon Slash 1",
+        "mv": 15,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Twofold Demon Slash 2",
+        "mv": 7,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Sixfold Demon Slash 1",
+        "mv": 13,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Sixfold Demon Slash 2",
+        "mv": 9,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Sixfold Demon Slash 3",
+        "mv": 18,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Fade Slash",
+        "mv": 10,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Rising Slash",
+        "mv": 8,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Demon Rising Slash",
+        "mv": 10,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Lunging Strike 1-2",
+        "mv": 3,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Lunging Strike 3-4",
+        "mv": 6,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Side/Back Lunging Strike",
+        "mv": 6,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Demon Flurry Rush 1",
+        "mv": 5,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Demon Flurry Rush 2",
+        "mv": 4,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Demon Flurry Rush 3",
+        "mv": 11
+      },
+      {
+        "name": "Left Spinning Slash 1",
+        "mv": 14,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Left Spinning Slash 2",
+        "mv": 6,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Left Spinning Slash 3",
+        "mv": 5,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Right Spinning Slash 1",
+        "mv": 15
+      },
+      {
+        "name": "Right Spinning Slash 2",
+        "mv": 7,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Right Spinning Slash 3",
+        "mv": 5,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Left Double Roundslash 1",
+        "mv": 16
+      },
+      {
+        "name": "Left Double Roundslash 2",
+        "mv": 6,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Left Double Roundslash 3",
+        "mv": 5
+      },
+      {
+        "name": "Right Double Roundslash 1",
+        "mv": 16
+      },
+      {
+        "name": "Right Double Roundslash 2",
+        "mv": 8
+      },
+      {
+        "name": "Right Double Roundslash 3",
+        "mv": 5
+      },
+      {
+        "name": "Blade Dance I 1",
+        "mv": 18
+      },
+      {
+        "name": "Blade Dance I 2",
+        "mv": 6,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Blade Dance I 3",
+        "mv": 10,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Blade Dance I 4",
+        "mv": 4,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Blade Dance I 5",
+        "mv": 20,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Blade Dance I 6",
+        "mv": 11,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Blade Dance II 1",
+        "mv": 16,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Blade Dance II 2",
+        "mv": 6,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Blade Dance II 3",
+        "mv": 25,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Blade Dance III 1",
+        "mv": 22,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Blade Dance III 2",
+        "mv": 8,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Blade Dance III 3",
+        "mv": 5,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Blade Dance III 4",
+        "mv": 18,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Blade Dance III 5",
+        "mv": 5,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Blade Dance III 6",
+        "mv": 14,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Blade Dance III 7",
+        "mv": 18,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Blade Dance III 8",
+        "mv": 22,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Blade Dance III 9",
+        "mv": 8,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Blade Dance III 10",
+        "mv": 36,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Demon Flurry I",
+        "mv": 15
+      },
+      {
+        "name": "Demon Flurry II 1",
+        "mv": 8,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Demon Flurry II 2",
+        "mv": 6,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Demon Flurry II 3",
+        "mv": 18
+      },
+      {
+        "name": "Jumping Doubleslash 1",
+        "mv": 12,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Jumping Doubleslash 2",
+        "mv": 9,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Midair Spinning Blade Dance 1",
+        "mv": 12,
+        "eleMul": 0.5
+      },
+      {
+        "name": "Midair Spinning Blade Dance 2",
+        "mv": 8,
+        "eleMul": 0.5
+      },
+      {
+        "name": "Midair Spinning Blade Dance 3",
+        "mv": 12,
+        "eleMul": 0.7
+      },
+      {
+        "name": "Midair Spinning Blade Dance 4",
+        "mv": 8,
+        "eleMul": 0.7
+      },
+      {
+        "name": "Midair Spinning Blade Dance Finisher 1",
+        "mv": 15,
+        "eleMul": 0.7
+      },
+      {
+        "name": "Midair Spinning Blade Dance Finisher 2",
+        "mv": 20,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Midair Spinning Blade Dance Finisher 3",
+        "mv": 6,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Heavenly Blade Dance 1",
+        "mv": 15,
+        "eleMul": 0.4
+      },
+      {
+        "name": "Heavenly Blade Dance 2",
+        "mv": 10,
+        "eleMul": 0.4
+      },
+      {
+        "name": "Heavenly Blade Dance 3",
+        "mv": 12,
+        "eleMul": 0.4
+      },
+      {
+        "name": "Heavenly Blade Dance 4",
+        "mv": 8,
+        "eleMul": 0.4
+      },
+      {
+        "name": "Heavenly Blade Dance Finisher 1",
+        "mv": 20
+      },
+      {
+        "name": "Heavenly Blade Dance Finisher 2",
+        "mv": 24,
+        "eleMul": 0.7
+      },
+      {
+        "name": "Heavenly Blade Dance Finisher 3",
+        "mv": 8,
+        "eleMul": 0.7
+      },
+      {
+        "name": "Sliding Slash 1",
+        "mv": 10,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Sliding Slash 2",
+        "mv": 13,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Perfect Evade 1",
+        "mv": 6,
+        "eleMul": 0.3
+      },
+      {
+        "name": "Perfect Evade 2",
+        "mv": 10,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Screw Slicer 1",
+        "mv": 2,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Screw Slicer 2",
+        "mv": 3,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Screw Slicer 3",
+        "mv": 10
+      },
+      {
+        "name": "Screw Slicer 4",
+        "mv": 15
+      },
+      {
+        "name": "Focus Strike: Turning Tide",
+        "mv": 10
+      },
+      {
+        "name": "Focus Strike: Turning Tide Follow-Up",
+        "mv": 27
+      },
+      {
+        "name": "Turning Tidedrill 1",
+        "mv": 12,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Turning Tidedrill 2",
+        "mv": 9,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Turning Tidedrill 3",
+        "mv": 12,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Turning Tidedrill 4",
+        "mv": 9,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Turning Tidedrill 5",
+        "mv": 12,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Turning Tidedrill 6",
+        "mv": 9,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Turning Tidedrill 7",
+        "mv": 18,
+        "eleMul": 0.7
+      },
+      {
+        "name": "Turning Tidedrill 8",
+        "mv": 24,
+        "eleMul": 0.7
+      }
+    ]
+  },
+  "ハンマー": {
+    "damageType": "blunt",
+    "attacks": [
+      {
+        "name": "Swing",
+        "mv": 22
+      },
+      {
+        "name": "Follow-up",
+        "mv": 18
+      },
+      {
+        "name": "Overhead Smash I",
+        "mv": 41
+      },
+      {
+        "name": "Overhead Smash II",
+        "mv": 45
+      },
+      {
+        "name": "Upswing",
+        "mv": 95,
+        "eleMul": 1.95
+      },
+      {
+        "name": "Side Smash",
+        "mv": 23,
+        "eleMul": 1.65
+      },
+      {
+        "name": "Big Bang I",
+        "mv": 43,
+        "eleMul": 1.65
+      },
+      {
+        "name": "Big Bang II",
+        "mv": 48,
+        "eleMul": 1.65
+      },
+      {
+        "name": "Big Bang III",
+        "mv": 70,
+        "eleMul": 1.65
+      },
+      {
+        "name": "Big Bang IV",
+        "mv": 90,
+        "eleMul": 1.65
+      },
+      {
+        "name": "Big Bang Finisher 1",
+        "mv": 28,
+        "eleMul": 1.65
+      },
+      {
+        "name": "Big Bang Finisher 2",
+        "mv": 130,
+        "eleMul": 2.25
+      },
+      {
+        "name": "Charged Side Blow",
+        "mv": 25,
+        "eleMul": 16.5
+      },
+      {
+        "name": "Charged Follow-up",
+        "mv": 55
+      },
+      {
+        "name": "Charged Upswing",
+        "mv": 70,
+        "eleMul": 1.8
+      },
+      {
+        "name": "Charged Big Bang 1",
+        "mv": 20
+      },
+      {
+        "name": "Charged Big Bang 2",
+        "mv": 130,
+        "eleMul": 2.25
+      },
+      {
+        "name": "Spinning Bludgeon Start",
+        "mv": 23,
+        "eleMul": 3.75
+      },
+      {
+        "name": "Spinning Bludgeon Mid",
+        "mv": 18,
+        "eleMul": 3.75
+      },
+      {
+        "name": "Spinning Bludgeon Finish",
+        "mv": 25,
+        "eleMul": 2.25
+      },
+      {
+        "name": "Spinning Side Smash",
+        "mv": 30,
+        "eleMul": 2.25
+      },
+      {
+        "name": "Spinning Follow-up",
+        "mv": 55,
+        "eleMul": 2.25
+      },
+      {
+        "name": "Spinning Strong Upswing",
+        "mv": 100,
+        "eleMul": 2.25
+      },
+      {
+        "name": "Mighty Charge Upswing",
+        "mv": 130,
+        "eleMul": 1.8
+      },
+      {
+        "name": "Mighty Charge Slam 1",
+        "mv": 20
+      },
+      {
+        "name": "Mighty Charge Slam 2",
+        "mv": 20,
+        "eleMul": 1.8
+      },
+      {
+        "name": "Mighty Charge Slam 3",
+        "mv": 200,
+        "eleMul": 2.25
+      },
+      {
+        "name": "Follow-Up Spinslam Spin",
+        "mv": 20
+      },
+      {
+        "name": "Follow-Up Spinslam 1",
+        "mv": 20
+      },
+      {
+        "name": "Follow-Up Spinslam 2",
+        "mv": 210,
+        "eleMul": 2.25
+      },
+      {
+        "name": "Focus Blow: Earthquake",
+        "mv": 15
+      },
+      {
+        "name": "Focus Blow: Earthquake Spin",
+        "mv": 30
+      },
+      {
+        "name": "Focus Blow: Earthquake Finisher",
+        "mv": 45
+      },
+      {
+        "name": "Jumping Smash",
+        "mv": 37
+      },
+      {
+        "name": "Jumping Charged Attack I",
+        "mv": 72,
+        "eleMul": 1.65
+      },
+      {
+        "name": "Jumping Charged Attack II",
+        "mv": 77,
+        "eleMul": 1.8
+      },
+      {
+        "name": "Jumping Charged Attack III",
+        "mv": 88,
+        "eleMul": 2.25
+      }
+    ]
+  },
+  "狩猟笛": {
+    "damageType": "blunt",
+    "attacks": [
+      {
+        "name": "Forward Smash",
+        "mv": 32,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Left Swing",
+        "mv": 33,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Right Swing",
+        "mv": 33,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Flourish 1",
+        "mv": 15,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Flourish 2",
+        "mv": 25,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Backwards Strike",
+        "mv": 46,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Overhead Smash 1",
+        "mv": 14,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Overhead Smash 2",
+        "mv": 42,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Overhead Smash Follow-up Attack",
+        "mv": 65,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Hilt Stab",
+        "mv": 10
+      },
+      {
+        "name": "Neutral / Forward Perform",
+        "mv": 35,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Side Perform",
+        "mv": 45,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Back Perform",
+        "mv": 60,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Performance Beat I",
+        "mv": 29,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Performance Beat I (Power)",
+        "mv": 35,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Performance Beat II",
+        "mv": 31,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Performance Beat II (Power)",
+        "mv": 45,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Encore 1",
+        "mv": 20,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Encore 2",
+        "mv": 60,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Encore 2 (Power)",
+        "mv": 75,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Offset Melody",
+        "mv": 75,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Resounding Melody 1",
+        "mv": 20,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Resounding Melody 2",
+        "mv": 22,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Resounding Melody 3",
+        "mv": 20,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Resounding Melody Soundwaves",
+        "mv": 15,
+        "eleMul": 0.5,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Perform Soundwave",
+        "mv": 27,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Song Soundwave",
+        "mv": 10,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Bubble",
+        "mv": 45,
+        "eleMul": 0.3,
+        "rawType": "blunt",
+        "ignoreSharpness": true,
+        "ignoreHzv": true
+      },
+      {
+        "name": "Echo Bubble (Note)",
+        "mv": 5,
+        "eleMul": 0.3,
+        "rawType": "blunt",
+        "ignoreSharpness": true,
+        "ignoreHzv": true
+      },
+      {
+        "name": "Echo Bubble (Song)",
+        "mv": 12,
+        "eleMul": 0.3,
+        "rawType": "blunt",
+        "ignoreSharpness": true,
+        "ignoreHzv": true
+      },
+      {
+        "name": "Echo Wave (Blunt)",
+        "mv": 50,
+        "eleMul": 0.0,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Blunt) II",
+        "mv": 70,
+        "eleMul": 0.0,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Blunt) III",
+        "mv": 100,
+        "eleMul": 0.0,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Slash)",
+        "mv": 50,
+        "eleMul": 0.0,
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Slash) II",
+        "mv": 70,
+        "eleMul": 0.0,
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Slash) III",
+        "mv": 100,
+        "eleMul": 0.0,
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Fire)",
+        "mv": 45,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Fire) II",
+        "mv": 65,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Fire) III",
+        "mv": 85,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Water)",
+        "mv": 45,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Water) II",
+        "mv": 65,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Water) III",
+        "mv": 85,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Thunder)",
+        "mv": 45,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Thunder) II",
+        "mv": 65,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Thunder) III",
+        "mv": 85,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Ice)",
+        "mv": 45,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Ice) II",
+        "mv": 65,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Ice) III",
+        "mv": 85,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Dragon)",
+        "mv": 45,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Dragon) II",
+        "mv": 65,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Dragon) III",
+        "mv": 85,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Blast)",
+        "mv": 45,
+        "eleMul": 0.0,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Blast) II",
+        "mv": 65,
+        "eleMul": 0.0,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Blast) III",
+        "mv": 85,
+        "eleMul": 0.0,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Paralysis)",
+        "mv": 45,
+        "eleMul": 0.0,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Paralysis) II",
+        "mv": 65,
+        "eleMul": 0.0,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Paralysis) III",
+        "mv": 85,
+        "eleMul": 0.0,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Poison)",
+        "mv": 45,
+        "eleMul": 0.0,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Poison) II",
+        "mv": 65,
+        "eleMul": 0.0,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Poison) III",
+        "mv": 85,
+        "eleMul": 0.0,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Sleep)",
+        "mv": 45,
+        "eleMul": 0.0,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Sleep) II",
+        "mv": 65,
+        "eleMul": 0.0,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Echo Wave (Sleep) III",
+        "mv": 85,
+        "eleMul": 0.0,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      }
+    ]
+  },
+  "ランス": {
+    "damageType": "pierce",
+    "attacks": [
+      {
+        "name": "Mid Thrust I / II",
+        "mv": 24,
+        "eleMul": 1.2
+      },
+      {
+        "name": "Mid Thrust III",
+        "mv": 33,
+        "eleMul": 1.4
+      },
+      {
+        "name": "High Thrust I / II",
+        "mv": 31
+      },
+      {
+        "name": "High Thrust III",
+        "mv": 40
+      },
+      {
+        "name": "Triple Thrust 1 / 2",
+        "mv": 22,
+        "eleMul": 1.2
+      },
+      {
+        "name": "Triple Thrust 3",
+        "mv": 35,
+        "eleMul": 1.4
+      },
+      {
+        "name": "Charge Counter",
+        "mv": 43
+      },
+      {
+        "name": "Charge Counter Lv1",
+        "mv": 51
+      },
+      {
+        "name": "Charge Counter Lv2",
+        "mv": 60
+      },
+      {
+        "name": "Charge Counter Lv3",
+        "mv": 73
+      },
+      {
+        "name": "Double Counter-thrust 1",
+        "mv": 25
+      },
+      {
+        "name": "Double Counter-thrust 2",
+        "mv": 50
+      },
+      {
+        "name": "Double Counter-thrust Lv1 1",
+        "mv": 30
+      },
+      {
+        "name": "Double Counter-thrust Lv1 2",
+        "mv": 60
+      },
+      {
+        "name": "Double Counter-thrust Lv2 1",
+        "mv": 35
+      },
+      {
+        "name": "Double Counter-thrust Lv2 2",
+        "mv": 70
+      },
+      {
+        "name": "Double Counter-thrust Lv3 1",
+        "mv": 42
+      },
+      {
+        "name": "Double Counter-thrust Lv3 2",
+        "mv": 85
+      },
+      {
+        "name": "Leaping Thrust",
+        "mv": 29,
+        "eleMul": 1.2
+      },
+      {
+        "name": "Wide Sweep",
+        "mv": 80,
+        "eleMul": 1.4
+      },
+      {
+        "name": "Shield Attack",
+        "mv": 20,
+        "eleMul": 0.0,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Guard Thrust",
+        "mv": 20
+      },
+      {
+        "name": "Dash Attack",
+        "mv": 17,
+        "eleMul": 0.5
+      },
+      {
+        "name": "Finishing Thrust",
+        "mv": 55,
+        "eleMul": 1.4
+      },
+      {
+        "name": "Finishing Twin Thrust 1",
+        "mv": 35,
+        "eleMul": 1.6
+      },
+      {
+        "name": "Finishing Twin Thrust 2",
+        "mv": 60,
+        "eleMul": 1.6
+      },
+      {
+        "name": "Reverse Attack",
+        "mv": 53,
+        "eleMul": 1.4
+      },
+      {
+        "name": "Advancing Jump",
+        "mv": 25,
+        "eleMul": 0.5
+      },
+      {
+        "name": "Reverse Attack (High Speed)",
+        "mv": 80,
+        "eleMul": 1.4
+      },
+      {
+        "name": "Advancing Jump Thrust",
+        "mv": 30,
+        "eleMul": 0.5
+      },
+      {
+        "name": "Advancing Jump Thrust (High Speed)",
+        "mv": 33,
+        "eleMul": 0.5
+      },
+      {
+        "name": "Jumping Thrust",
+        "mv": 30
+      },
+      {
+        "name": "Guard Counter",
+        "mv": 20,
+        "eleMul": 0.0,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Perfect Guard Counter",
+        "mv": 25,
+        "eleMul": 0.0,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Return Thrust",
+        "mv": 24,
+        "eleMul": 1.2
+      },
+      {
+        "name": "Return Thrust (Power)",
+        "mv": 31,
+        "eleMul": 1.4
+      },
+      {
+        "name": "Payback Thrust 1",
+        "mv": 30
+      },
+      {
+        "name": "Payback Thrust 1 (Power)",
+        "mv": 42,
+        "eleMul": 1.4
+      },
+      {
+        "name": "Payback Thrust 2",
+        "mv": 25
+      },
+      {
+        "name": "Retribution Thrust 1",
+        "mv": 30,
+        "eleMul": 1.4
+      },
+      {
+        "name": "Retribution Thrust 1 (Power)",
+        "mv": 58,
+        "eleMul": 1.6
+      },
+      {
+        "name": "Retribution Thrust 2",
+        "mv": 15
+      },
+      {
+        "name": "Grand Retribution Thrust 1",
+        "mv": 50
+      },
+      {
+        "name": "Grand Retribution Thrust 2",
+        "mv": 20
+      },
+      {
+        "name": "Grand Retribution Thrust 3",
+        "mv": 12
+      },
+      {
+        "name": "Follow-up Dash Attack",
+        "mv": 17,
+        "eleMul": 0.5
+      },
+      {
+        "name": "Focus Strike: Victory Thrust 1",
+        "mv": 20,
+        "eleMul": 0.0
+      },
+      {
+        "name": "Focus Strike: Victory Thrust 2",
+        "mv": 15
+      },
+      {
+        "name": "Focus Strike: Victory Thrust 3",
+        "mv": 55
+      },
+      {
+        "name": "Power Clash Finisher 1",
+        "mv": 60,
+        "eleMul": 0.0
+      },
+      {
+        "name": "Power Clash Finisher 2",
+        "mv": 120
+      }
+    ]
+  },
+  "ガンランス": {
+    "damageType": "slash",
+    "attacks": [
+      {
+        "name": "Lateral Thrust I / II",
+        "mv": 24,
+        "eleMul": 2.0
+      },
+      {
+        "name": "Lunging Upthrust",
+        "mv": 38,
+        "eleMul": 1.2
+      },
+      {
+        "name": "Rising Slash",
+        "mv": 38,
+        "eleMul": 1.2
+      },
+      {
+        "name": "Guard Thrust",
+        "mv": 18,
+        "eleMul": 2.0
+      },
+      {
+        "name": "Overhead Smash",
+        "mv": 57,
+        "eleMul": 2.0
+      },
+      {
+        "name": "Wide Sweep / Moving Wide Sweep / Aerial Burst",
+        "mv": 40,
+        "eleMul": 1.5
+      },
+      {
+        "name": "(Multi) Wyrmstake Full Blast Sweep",
+        "mv": 30
+      },
+      {
+        "name": "Wyrmstake Thrust",
+        "mv": 40,
+        "eleMul": 2.0
+      },
+      {
+        "name": "Wyrmstake Full Blast Thrust",
+        "mv": 20
+      },
+      {
+        "name": "Wyrmstake Attach",
+        "mv": 20,
+        "eleMul": 2.0
+      },
+      {
+        "name": "Jumping Thrust",
+        "mv": 25
+      },
+      {
+        "name": "Jumping Smash",
+        "mv": 44
+      },
+      {
+        "name": "Jumping Rising Slash",
+        "mv": 35
+      },
+      {
+        "name": "Focus Strike: Drake Auger",
+        "mv": 18
+      }
+    ]
+  },
+  "スラッシュアックス": {
+    "damageType": "slash",
+    "attacks": [
+      {
+        "name": "Axe: Overhead Slash",
+        "mv": 45
+      },
+      {
+        "name": "Axe: Side Slash",
+        "mv": 23
+      },
+      {
+        "name": "Axe: Spiral Burst Slash 1",
+        "mv": 30
+      },
+      {
+        "name": "Axe: Spiral Burst Slash 2",
+        "mv": 41
+      },
+      {
+        "name": "Axe: Forward Slash",
+        "mv": 35
+      },
+      {
+        "name": "Axe: Forward Overhead Slash",
+        "mv": 45
+      },
+      {
+        "name": "Axe: Fade Slash",
+        "mv": 42
+      },
+      {
+        "name": "Axe: Offset Rising Slash",
+        "mv": 50
+      },
+      {
+        "name": "Axe: Follow-up Heavy Slam 1",
+        "mv": 32
+      },
+      {
+        "name": "Axe: Follow-up Heavy Slam 2",
+        "mv": 90
+      },
+      {
+        "name": "Axe: Follow-up Morph Slash",
+        "mv": 123
+      },
+      {
+        "name": "Axe: Follow-up Morph Slash Explosion (Power Phial)",
+        "mv": 120,
+        "eleMul": 0.35
+      },
+      {
+        "name": "Axe: Follow-up Morph Slash Explosion (Element Phial)",
+        "mv": 120,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Axe: Wild Slash Left",
+        "mv": 23
+      },
+      {
+        "name": "Axe: Wild Slash Right",
+        "mv": 21
+      },
+      {
+        "name": "Axe: Heavy Slam 1",
+        "mv": 15
+      },
+      {
+        "name": "Axe: Heavy Slam 2",
+        "mv": 72
+      },
+      {
+        "name": "Axe: Morph Sweep 1",
+        "mv": 20
+      },
+      {
+        "name": "Axe: Morph Sweep 2",
+        "mv": 70
+      },
+      {
+        "name": "Axe: Morph Sweep 3",
+        "mv": 35
+      },
+      {
+        "name": "Axe: Morph Slash",
+        "mv": 33
+      },
+      {
+        "name": "Axe: Morph Rising Double Slash 1",
+        "mv": 32
+      },
+      {
+        "name": "Axe: Morph Rising Double Slash 2",
+        "mv": 28
+      },
+      {
+        "name": "Sword: Overhead Slash",
+        "mv": 33
+      },
+      {
+        "name": "Sword: Left Rising Slash",
+        "mv": 42
+      },
+      {
+        "name": "Sword: Right Rising Slash",
+        "mv": 48
+      },
+      {
+        "name": "Sword: Triple Slash 1",
+        "mv": 15
+      },
+      {
+        "name": "Sword: Double Slash 1 / Triple Slash 2",
+        "mv": 22
+      },
+      {
+        "name": "Sword: Double Slash 2 / Triple Slash 3",
+        "mv": 26
+      },
+      {
+        "name": "Sword: Heavenward Flurry 1",
+        "mv": 24
+      },
+      {
+        "name": "Sword: Heavenward Flurry 2",
+        "mv": 36
+      },
+      {
+        "name": "Sword: Morph Slash",
+        "mv": 23
+      },
+      {
+        "name": "Sword: Morph Double Slash 1",
+        "mv": 30
+      },
+      {
+        "name": "Sword: Morph Double Slash 2",
+        "mv": 50
+      },
+      {
+        "name": "Sword: Amped State Phial (Power Phial)",
+        "mv": 12,
+        "eleMul": 0.35
+      },
+      {
+        "name": "Sword: Amped State Phial (Element Phial)",
+        "mv": 12
+      },
+      {
+        "name": "Unbridled Slash",
+        "mv": 70
+      },
+      {
+        "name": "Unbridled Slash Explosion (Power Phial)",
+        "mv": 17,
+        "eleMul": 0.35
+      },
+      {
+        "name": "Unbridled Slash Explosion (Element Phial)",
+        "mv": 17,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Full Release Slash 1",
+        "mv": 50
+      },
+      {
+        "name": "Full Release Slash 2",
+        "mv": 82
+      },
+      {
+        "name": "Full Release Slash Explosion 1 (Power Phial)",
+        "mv": 20,
+        "eleMul": 0.35
+      },
+      {
+        "name": "Full Release Slash Explosion 1 (Element Phial)",
+        "mv": 20,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Full Release Slash Explosion 2 (Power Phial)",
+        "mv": 35,
+        "eleMul": 0.35
+      },
+      {
+        "name": "Full Release Slash Explosion 2 (Element Phial)",
+        "mv": 35,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Elemental Discharge",
+        "mv": 20
+      },
+      {
+        "name": "Elemental Discharge Tick",
+        "mv": 12,
+        "eleMul": 0.7
+      },
+      {
+        "name": "Elemental Discharge Finisher",
+        "mv": 135
+      },
+      {
+        "name": "Finishing Discharge",
+        "mv": 65
+      },
+      {
+        "name": "Zero Sum Discharge Finisher",
+        "mv": 160
+      },
+      {
+        "name": "Zero Sum Finishing Discharge",
+        "mv": 75
+      }
+    ]
+  },
+  "チャージアックス": {
+    "damageType": "slash",
+    "attacks": [
+      {
+        "name": "Sword: Forward Slash",
+        "mv": 18
+      },
+      {
+        "name": "Sword: Weak Slash",
+        "mv": 15
+      },
+      {
+        "name": "Sword: Return Stroke",
+        "mv": 18
+      },
+      {
+        "name": "Sword: Roundslash",
+        "mv": 30
+      },
+      {
+        "name": "Sword: Fade Slash",
+        "mv": 24
+      },
+      {
+        "name": "Sword: Charged Rising Slash",
+        "mv": 15
+      },
+      {
+        "name": "Sword: Charged Double Slash 1",
+        "mv": 25
+      },
+      {
+        "name": "Sword: Charged Double Slash 2",
+        "mv": 16
+      },
+      {
+        "name": "Sword: Shield Thrust 1",
+        "mv": 15
+      },
+      {
+        "name": "Sword: Shield Thrust 2",
+        "mv": 6
+      },
+      {
+        "name": "Sword: Condensed Elemental Slash",
+        "mv": 48
+      },
+      {
+        "name": "Sword: Condensed Elemental Slash Impact Phial",
+        "mv": 25,
+        "eleMul": 0.0,
+        "ignoreSharpness": true,
+        "ignoreHzv": true
+      },
+      {
+        "name": "Sword: Condensed Elemental Slash Element Phial",
+        "mv": 0,
+        "eleMul": 4.0,
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Sword: Morph Slash",
+        "mv": 54
+      },
+      {
+        "name": "Axe: Rising Slash",
+        "mv": 38
+      },
+      {
+        "name": "Axe: Overhead Slash",
+        "mv": 54
+      },
+      {
+        "name": "Axe: Dash Slam",
+        "mv": 48
+      },
+      {
+        "name": "Axe: Lateral Fade Slash / Backstep Slash",
+        "mv": 42
+      },
+      {
+        "name": "Axe: Morph Slash / Elemental Roundslash",
+        "mv": 30
+      },
+      {
+        "name": "Axe: Elemental Discharge I",
+        "mv": 53
+      },
+      {
+        "name": "Axe: Elemental Discharge II 1",
+        "mv": 35
+      },
+      {
+        "name": "Axe: Elemental Discharge II 2",
+        "mv": 58
+      },
+      {
+        "name": "Axe: Amped Elemental Discharge",
+        "mv": 68
+      },
+      {
+        "name": "Axe: Amped Elemental Discharge Follow-up",
+        "mv": 78
+      },
+      {
+        "name": "Axe: Super Amped Elemental Discharge 1",
+        "mv": 16
+      },
+      {
+        "name": "Axe: Super Amped Elemental Discharge 2",
+        "mv": 78
+      },
+      {
+        "name": "Axe: Super Amped Elemental Discharge 3",
+        "mv": 45
+      },
+      {
+        "name": "Savage Axe Slash",
+        "mv": 48
+      },
+      {
+        "name": "Power Axe Tick",
+        "mv": 12,
+        "eleMul": 0.2
+      },
+      {
+        "name": "Impact Phial (Sword)",
+        "mv": 5,
+        "eleMul": 0.0,
+        "ignoreSharpness": true,
+        "ignoreHzv": true
+      },
+      {
+        "name": "Impact Phial (ED)",
+        "mv": 12,
+        "eleMul": 0.0,
+        "ignoreSharpness": true,
+        "ignoreHzv": true
+      },
+      {
+        "name": "Overcharged Impact Phial (ED)",
+        "mv": 14,
+        "eleMul": 0.0,
+        "ignoreSharpness": true,
+        "ignoreHzv": true
+      },
+      {
+        "name": "Impact Phial (AED)",
+        "mv": 16,
+        "eleMul": 0.0,
+        "ignoreSharpness": true,
+        "ignoreHzv": true
+      },
+      {
+        "name": "Overcharged Impact Phial (AED)",
+        "mv": 20,
+        "eleMul": 0.0,
+        "ignoreSharpness": true,
+        "ignoreHzv": true
+      },
+      {
+        "name": "Impact Phial (SAED)",
+        "mv": 28,
+        "eleMul": 0.0,
+        "ignoreSharpness": true,
+        "ignoreHzv": true
+      },
+      {
+        "name": "Overcharged Impact Phial (SAED)",
+        "mv": 30,
+        "eleMul": 0.0,
+        "ignoreSharpness": true,
+        "ignoreHzv": true
+      },
+      {
+        "name": "Element Phial (Sword)",
+        "mv": 0,
+        "eleMul": 1.5,
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Element Phial (ED)",
+        "mv": 0,
+        "eleMul": 2.0,
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Overcharged Element Phial (ED)",
+        "mv": 0,
+        "eleMul": 2.2,
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Element Phial (AED)",
+        "mv": 0,
+        "eleMul": 4.0,
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Overcharged Element Phial (AED)",
+        "mv": 0,
+        "eleMul": 5.0,
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Element Phial (SAED)",
+        "mv": 0,
+        "eleMul": 8.0,
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Overcharged Element Phial (SAED)",
+        "mv": 0,
+        "eleMul": 10.0,
+        "ignoreSharpness": true
+      },
+      {
+        "name": "Focus Slash: Double Rend",
+        "mv": 15
+      },
+      {
+        "name": "Focus Strike Savage Axe",
+        "mv": 50
+      },
+      {
+        "name": "Focus Strike Savage Axe Ticks",
+        "mv": 6,
+        "eleMul": 0.3
+      },
+      {
+        "name": "Sword Jumping Slash / Axe Jumping Morph Slash",
+        "mv": 22
+      },
+      {
+        "name": "Axe Jumping Slash / Sword Jumping Morph Slash",
+        "mv": 46
+      }
+    ]
+  },
+  "操虫棍": {
+    "damageType": "slash",
+    "attacks": [
+      {
+        "name": "Rising Slash Combo 1",
+        "mv": 20,
+        "eleMul": 0.7
+      },
+      {
+        "name": "Rising Slash Combo 2",
+        "mv": 14,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Reaping Slash",
+        "mv": 18,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Double Slash 1",
+        "mv": 18,
+        "eleMul": 0.7
+      },
+      {
+        "name": "Double Slash 2",
+        "mv": 24,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Sidestep Slash",
+        "mv": 24,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Sidestep Slash Combo 1",
+        "mv": 14,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Sidestep Slash Combo 2",
+        "mv": 28,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Sidestep Slash Combo 1 (Forward)",
+        "mv": 14,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Sidestep Slash Combo 2 (Forward)",
+        "mv": 28,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Wide Sweep",
+        "mv": 22,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Leaping Slash",
+        "mv": 28,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Overhead Smash",
+        "mv": 26,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Dodge Slash",
+        "mv": 20,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Strong Rising Slash Combo 1",
+        "mv": 24,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Strong Rising Slash Combo 2",
+        "mv": 12,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Strong Rising Slash Combo 3",
+        "mv": 24,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Strong Reaping Slash 1",
+        "mv": 18,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Strong Reaping Slash 2",
+        "mv": 28,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Strong Double Slash 1",
+        "mv": 26,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Strong Double Slash 2",
+        "mv": 18,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Strong Double Slash 3",
+        "mv": 40
+      },
+      {
+        "name": "Strong Wide Sweep 1",
+        "mv": 12,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Strong Wide Sweep 2",
+        "mv": 24,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Tornado Slash 1",
+        "mv": 22
+      },
+      {
+        "name": "Tornado Slash 2",
+        "mv": 48
+      },
+      {
+        "name": "Jumping Slash",
+        "mv": 18,
+        "eleMul": 1.0
+      },
+      {
+        "name": "Jumping Advancing Slash",
+        "mv": 26,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Strong Jumping Slash",
+        "mv": 14,
+        "eleMul": 0.6
+      },
+      {
+        "name": "Strong Jumping Advancing Slash 1",
+        "mv": 8,
+        "eleMul": 0.5
+      },
+      {
+        "name": "Strong Jumping Advancing Slash 2",
+        "mv": 28,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Strong Jumping Advancing Slash II 1",
+        "mv": 8,
+        "eleMul": 0.5
+      },
+      {
+        "name": "Strong Jumping Advancing Slash II 2",
+        "mv": 30,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Strong Jumping Advancing Slash III 1",
+        "mv": 10,
+        "eleMul": 0.5
+      },
+      {
+        "name": "Strong Jumping Advancing Slash III 2",
+        "mv": 36,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Scaling Double Slash 1",
+        "mv": 12,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Scaling Double Slash 2",
+        "mv": 20,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Descending Slash Lv1 1",
+        "mv": 15
+      },
+      {
+        "name": "Descending Slash Lv1 2",
+        "mv": 9
+      },
+      {
+        "name": "Descending Slash Lv1 3",
+        "mv": 12
+      },
+      {
+        "name": "Descending Slash Lv1 4",
+        "mv": 24
+      },
+      {
+        "name": "Descending Slash Lv2 1",
+        "mv": 20
+      },
+      {
+        "name": "Descending Slash Lv2 2",
+        "mv": 12
+      },
+      {
+        "name": "Descending Slash Lv2 3",
+        "mv": 16
+      },
+      {
+        "name": "Descending Slash Lv2 4",
+        "mv": 32
+      },
+      {
+        "name": "Strong Descending Slash Lv1 1",
+        "mv": 24
+      },
+      {
+        "name": "Strong Descending Slash Lv1 2",
+        "mv": 9
+      },
+      {
+        "name": "Strong Descending Slash Lv1 3-5",
+        "mv": 13
+      },
+      {
+        "name": "Strong Descending Slash Lv1 6",
+        "mv": 34
+      },
+      {
+        "name": "Strong Descending Slash Lv2 1",
+        "mv": 32
+      },
+      {
+        "name": "Strong Descending Slash Lv2 2",
+        "mv": 12
+      },
+      {
+        "name": "Strong Descending Slash Lv2 3-5",
+        "mv": 18
+      },
+      {
+        "name": "Strong Descending Slash Lv2 6",
+        "mv": 46
+      },
+      {
+        "name": "Descending Thrust Lv1 1",
+        "mv": 21
+      },
+      {
+        "name": "Descending Thrust Lv1 2",
+        "mv": 3,
+        "eleMul": 0.0,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Descending Thrust Lv1 3",
+        "mv": 18
+      },
+      {
+        "name": "Descending Thrust Lv2 1",
+        "mv": 28
+      },
+      {
+        "name": "Descending Thrust Lv2 2",
+        "mv": 5,
+        "eleMul": 0.0,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Descending Thrust Lv2 3",
+        "mv": 24
+      },
+      {
+        "name": "Strong Descending Thrust Lv1 1",
+        "mv": 21
+      },
+      {
+        "name": "Strong Descending Thrust Lv1 2",
+        "mv": 7
+      },
+      {
+        "name": "Strong Descending Thrust Lv1 3",
+        "mv": 3,
+        "eleMul": 0.0,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Strong Descending Thrust Lv1 4-5",
+        "mv": 13
+      },
+      {
+        "name": "Strong Descending Thrust Lv1 6",
+        "mv": 21
+      },
+      {
+        "name": "Strong Descending Thrust Lv2 1",
+        "mv": 28
+      },
+      {
+        "name": "Strong Descending Thrust Lv2 2",
+        "mv": 10
+      },
+      {
+        "name": "Strong Descending Thrust Lv2 3",
+        "mv": 5,
+        "eleMul": 0.0,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Strong Descending Thrust Lv2 4-5",
+        "mv": 18
+      },
+      {
+        "name": "Strong Descending Thrust Lv2 6",
+        "mv": 28
+      },
+      {
+        "name": "Rising Spiral Slash Lv1",
+        "mv": 48,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Rising Spiral Slash Lv2",
+        "mv": 64,
+        "eleMul": 0.8
+      },
+      {
+        "name": "Kinsect Mark (Melee)",
+        "mv": 5,
+        "eleMul": 0.0,
+        "rawType": "blunt"
+      },
+      {
+        "name": "Focus Thrust: Leaping Strike 1",
+        "mv": 16
+      },
+      {
+        "name": "Focus Thrust: Leaping Strike 2",
+        "mv": 18
+      },
+      {
+        "name": "Focus Thrust: Leaping Strike 3",
+        "mv": 8
+      }
+    ]
+  },
+  "弓": {
+    "damageType": "pierce",
+    "attacks": [
+      {
+        "name": "Charged Shot Lv1",
+        "mv": 9,
+        "eleMul": 0.2,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Charged Shot Lv2",
+        "mv": 10,
+        "eleMul": 0.35,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Charged Shot Lv3",
+        "mv": 11,
+        "eleMul": 0.5,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Quick Shot",
+        "mv": 9,
+        "eleMul": 0.3,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Power Shot Lv 1",
+        "mv": 9,
+        "eleMul": 0.3,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Power Shot Lv2",
+        "mv": 10,
+        "eleMul": 0.5,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Power Shot Lv3",
+        "mv": 11,
+        "eleMul": 0.6,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Flying Swallow Shot Lv1",
+        "mv": 9,
+        "eleMul": 0.3,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Flying Swallow Shot Lv2",
+        "mv": 10,
+        "eleMul": 0.5,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Flying Swallow Shot Lv3",
+        "mv": 11,
+        "eleMul": 0.6,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Power Volley Lv1",
+        "mv": 12,
+        "eleMul": 0.45,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Power Volley Lv2",
+        "mv": 13,
+        "eleMul": 0.65,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Power Volley Lv3",
+        "mv": 14,
+        "eleMul": 0.75,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Arc Shot Lv1",
+        "mv": 8,
+        "eleMul": 0.0,
+        "rawType": "shot"
+      },
+      {
+        "name": "Arc Shot Lv2",
+        "mv": 9,
+        "eleMul": 0.0,
+        "rawType": "shot"
+      },
+      {
+        "name": "Arc Shot Lv3",
+        "mv": 10,
+        "eleMul": 0.0,
+        "rawType": "shot"
+      },
+      {
+        "name": "Arc Shot Explosion",
+        "mv": 12,
+        "eleMul": 0.0,
+        "rawType": "shot"
+      },
+      {
+        "name": "Dragon Piercer",
+        "mv": 23,
+        "eleMul": 0.3,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Dragon Piercer (Fast)",
+        "mv": 16,
+        "eleMul": 0.3,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Thousand Dragons",
+        "mv": 23,
+        "eleMul": 0.3,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Pierce Charge Shot Lv1",
+        "mv": 3,
+        "eleMul": 0.1,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Pierce Charge Shot Lv2",
+        "mv": 4,
+        "eleMul": 0.15,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Pierce Charge Shot Lv3",
+        "mv": 5,
+        "eleMul": 0.2,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Pierce Quick Shot",
+        "mv": 3,
+        "eleMul": 0.1,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Pierce Power Shot Lv1",
+        "mv": 3,
+        "eleMul": 0.1,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Pierce Power Shot Lv2",
+        "mv": 4,
+        "eleMul": 0.15,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Pierce Power Shot Lv3",
+        "mv": 5,
+        "eleMul": 0.2,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Pierce Flying Swallow Shot Lv1",
+        "mv": 3,
+        "eleMul": 0.1,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Pierce Flying Swallow Shot Lv2",
+        "mv": 4,
+        "eleMul": 0.15,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Pierce Flying Swallow Shot Lv3",
+        "mv": 5,
+        "eleMul": 0.2,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Pierce Power Volley Lv1",
+        "mv": 4,
+        "eleMul": 0.15,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Pierce Power Volley Lv2",
+        "mv": 5,
+        "eleMul": 0.2,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Pierce Power Volley Lv3",
+        "mv": 6,
+        "eleMul": 0.25,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Pierce Thousand Dragons",
+        "mv": 11,
+        "eleMul": 0.3,
+        "rawType": "shot",
+        "rawMul": 1.1
+      },
+      {
+        "name": "Tracer Arrow",
+        "mv": 25,
+        "eleMul": 1.0,
+        "rawType": "shot"
+      },
+      {
+        "name": "Tracer Charged Shot",
+        "mv": 12,
+        "eleMul": 0.5,
+        "rawType": "shot"
+      },
+      {
+        "name": "Tracer Charged Shot (Miss)",
+        "mv": 6,
+        "eleMul": 0.5,
+        "rawType": "shot"
+      },
+      {
+        "name": "Tracer Quick Shot",
+        "mv": 12,
+        "eleMul": 0.6,
+        "rawType": "shot"
+      },
+      {
+        "name": "Tracer Power Shot",
+        "mv": 12,
+        "eleMul": 0.6,
+        "rawType": "shot"
+      },
+      {
+        "name": "Tracer Power Volley",
+        "mv": 15,
+        "eleMul": 0.65,
+        "rawType": "shot"
+      },
+      {
+        "name": "Tracer Dragon Piercer",
+        "mv": 27,
+        "eleMul": 0.3,
+        "rawType": "shot"
+      },
+      {
+        "name": "Tracer Dragon Piercer (Fast)",
+        "mv": 19,
+        "eleMul": 0.3,
+        "rawType": "shot"
+      },
+      {
+        "name": "Tracer Thousand Dragons",
+        "mv": 26,
+        "eleMul": 0.3,
+        "rawType": "shot"
+      },
+      {
+        "name": "Tracer Pierce Thousand Dragons",
+        "mv": 14,
+        "eleMul": 0.3,
+        "rawType": "shot"
+      },
+      {
+        "name": "Focus Fire: Hailstorm",
+        "mv": 12,
+        "eleMul": 0.3,
+        "rawType": "shot"
+      },
+      {
+        "name": "Focus Fire: Hailstorm Dragon Piercer",
+        "mv": 20,
+        "eleMul": 0.3,
+        "rawType": "shot"
+      }
+    ]
+  },
+  "ライトボウガン": {
+    "damageType": "pierce",
+    "attacks": [
+      {
+        "name": "Normal Lv1",
+        "mv": 17,
+        "rawType": "shot"
+      },
+      {
+        "name": "Normal Lv2",
+        "mv": 24,
+        "rawType": "shot"
+      },
+      {
+        "name": "Normal Lv3",
+        "mv": 32,
+        "rawType": "shot"
+      },
+      {
+        "name": "Pierce Lv1 (per hit)",
+        "mv": 11,
+        "rawType": "shot"
+      },
+      {
+        "name": "Pierce Lv2 (per hit)",
+        "mv": 12,
+        "rawType": "shot"
+      },
+      {
+        "name": "Pierce Lv3 (per hit)",
+        "mv": 12,
+        "rawType": "shot"
+      },
+      {
+        "name": "Spread Lv1 (per pellet)",
+        "mv": 13,
+        "rawType": "shot"
+      },
+      {
+        "name": "Spread Lv2 (per pellet)",
+        "mv": 16,
+        "rawType": "shot"
+      },
+      {
+        "name": "Spread Lv3 (per pellet)",
+        "mv": 18,
+        "rawType": "shot"
+      },
+      {
+        "name": "Slicing",
+        "mv": 33,
+        "rawType": "shot"
+      },
+      {
+        "name": "Sticky Lv1",
+        "mv": 30,
+        "ignoreHzv": true,
+        "rawType": "shot"
+      },
+      {
+        "name": "Sticky Lv2",
+        "mv": 50,
+        "ignoreHzv": true,
+        "rawType": "shot"
+      },
+      {
+        "name": "Sticky Lv3",
+        "mv": 70,
+        "ignoreHzv": true,
+        "rawType": "shot"
+      }
+    ]
+  },
+  "ヘビィボウガン": {
+    "damageType": "pierce",
+    "attacks": [
+      {
+        "name": "Wyvernheart Lv1 1",
+        "mv": 9,
+        "rawType": "shot"
+      },
+      {
+        "name": "Wyvernheart Lv1 2",
+        "mv": 9,
+        "rawType": "shot"
+      },
+      {
+        "name": "Wyvernheart Lv1 3",
+        "mv": 9,
+        "rawType": "shot"
+      },
+      {
+        "name": "Wyvernheart Lv1 Max",
+        "mv": 9,
+        "rawType": "shot"
+      },
+      {
+        "name": "Wyvernheart Lv2 1",
+        "mv": 10,
+        "rawType": "shot"
+      },
+      {
+        "name": "Wyvernheart Lv2 2",
+        "mv": 10,
+        "rawType": "shot"
+      },
+      {
+        "name": "Wyvernheart Lv2 3",
+        "mv": 10,
+        "rawType": "shot"
+      },
+      {
+        "name": "Wyvernheart Lv2 Max",
+        "mv": 10,
+        "rawType": "shot"
+      }
+    ]
+  }
+}
