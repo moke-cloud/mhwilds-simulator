@@ -27848,6 +27848,346 @@
         1
       ],
       "defense": 0
+    },
+    {
+      "id": "w_1189",
+      "name": "亡国のクピドバイン",
+      "weaponType": "弓",
+      "rarity": 8,
+      "attack": 228,
+      "affinity": 5,
+      "element": null,
+      "sharpness": null,
+      "sharpnessMax": null,
+      "slots": [
+        3,
+        3,
+        3
+      ],
+      "defense": 0,
+      "artian": "gogma"
+    },
+    {
+      "id": "w_1190",
+      "name": "代償のネイディ・ギア",
+      "weaponType": "チャージアックス",
+      "rarity": 8,
+      "attack": 684,
+      "affinity": 5,
+      "element": null,
+      "sharpness": [
+        140,
+        40,
+        40,
+        80,
+        30,
+        20,
+        0
+      ],
+      "sharpnessMax": null,
+      "slots": [
+        3,
+        3,
+        3
+      ],
+      "defense": 0,
+      "artian": "gogma"
+    },
+    {
+      "id": "w_1191",
+      "name": "永訣のクラウクライス",
+      "weaponType": "双剣",
+      "rarity": 8,
+      "attack": 266,
+      "affinity": 5,
+      "element": null,
+      "sharpness": [
+        140,
+        40,
+        40,
+        80,
+        30,
+        20,
+        0
+      ],
+      "sharpnessMax": null,
+      "slots": [
+        3,
+        3,
+        3
+      ],
+      "defense": 0,
+      "artian": "gogma"
+    },
+    {
+      "id": "w_1192",
+      "name": "忘却のオストランツァ",
+      "weaponType": "大剣",
+      "rarity": 8,
+      "attack": 912,
+      "affinity": 5,
+      "element": null,
+      "sharpness": [
+        140,
+        40,
+        40,
+        80,
+        30,
+        20,
+        0
+      ],
+      "sharpnessMax": null,
+      "slots": [
+        3,
+        3,
+        3
+      ],
+      "defense": 0,
+      "artian": "gogma"
+    },
+    {
+      "id": "w_1193",
+      "name": "前兆のプロフェネシス",
+      "weaponType": "ガンランス",
+      "rarity": 8,
+      "attack": 437,
+      "affinity": 5,
+      "element": null,
+      "sharpness": [
+        140,
+        40,
+        40,
+        80,
+        30,
+        20,
+        0
+      ],
+      "sharpnessMax": null,
+      "slots": [
+        3,
+        3,
+        3
+      ],
+      "defense": 0,
+      "artian": "gogma"
+    },
+    {
+      "id": "w_1194",
+      "name": "禁戒のデスヴァンケル",
+      "weaponType": "ハンマー",
+      "rarity": 8,
+      "attack": 988,
+      "affinity": 5,
+      "element": null,
+      "sharpness": [
+        140,
+        40,
+        40,
+        80,
+        30,
+        20,
+        0
+      ],
+      "sharpnessMax": null,
+      "slots": [
+        3,
+        3,
+        3
+      ],
+      "defense": 0,
+      "artian": "gogma"
+    },
+    {
+      "id": "w_1195",
+      "name": "戦慄のヘルシャフェン",
+      "weaponType": "ヘビィボウガン",
+      "rarity": 8,
+      "attack": 285,
+      "affinity": 5,
+      "element": null,
+      "sharpness": null,
+      "sharpnessMax": null,
+      "slots": [
+        3,
+        3,
+        3
+      ],
+      "defense": 0,
+      "artian": "gogma"
+    },
+    {
+      "id": "w_1196",
+      "name": "闇黒のテルプリティカ",
+      "weaponType": "狩猟笛",
+      "rarity": 8,
+      "attack": 798,
+      "affinity": 5,
+      "element": null,
+      "sharpness": [
+        140,
+        40,
+        40,
+        80,
+        30,
+        20,
+        0
+      ],
+      "sharpnessMax": null,
+      "slots": [
+        3,
+        3,
+        3
+      ],
+      "defense": 0,
+      "artian": "gogma"
+    },
+    {
+      "id": "w_1197",
+      "name": "堕在のラクリエリカ",
+      "weaponType": "操虫棍",
+      "rarity": 8,
+      "attack": 589,
+      "affinity": 5,
+      "element": null,
+      "sharpness": [
+        140,
+        40,
+        40,
+        80,
+        30,
+        20,
+        0
+      ],
+      "sharpnessMax": null,
+      "slots": [
+        3,
+        3,
+        3
+      ],
+      "defense": 0,
+      "artian": "gogma"
+    },
+    {
+      "id": "w_1198",
+      "name": "天涯のゲガルンロウ",
+      "weaponType": "ランス",
+      "rarity": 8,
+      "attack": 437,
+      "affinity": 5,
+      "element": null,
+      "sharpness": [
+        140,
+        40,
+        40,
+        80,
+        30,
+        20,
+        0
+      ],
+      "sharpnessMax": null,
+      "slots": [
+        3,
+        3,
+        3
+      ],
+      "defense": 0,
+      "artian": "gogma"
+    },
+    {
+      "id": "w_1199",
+      "name": "荊冠のデストレーター",
+      "weaponType": "ライトボウガン",
+      "rarity": 8,
+      "attack": 247,
+      "affinity": 5,
+      "element": null,
+      "sharpness": null,
+      "sharpnessMax": null,
+      "slots": [
+        3,
+        3,
+        3
+      ],
+      "defense": 0,
+      "artian": "gogma"
+    },
+    {
+      "id": "w_1200",
+      "name": "斬罪のエルガンシオ",
+      "weaponType": "太刀",
+      "rarity": 8,
+      "attack": 627,
+      "affinity": 5,
+      "element": null,
+      "sharpness": [
+        140,
+        40,
+        40,
+        80,
+        30,
+        20,
+        0
+      ],
+      "sharpnessMax": null,
+      "slots": [
+        3,
+        3,
+        3
+      ],
+      "defense": 0,
+      "artian": "gogma"
+    },
+    {
+      "id": "w_1201",
+      "name": "邪執のコンキエレガン",
+      "weaponType": "スラッシュアックス",
+      "rarity": 8,
+      "attack": 665,
+      "affinity": 5,
+      "element": null,
+      "sharpness": [
+        140,
+        40,
+        40,
+        80,
+        30,
+        20,
+        0
+      ],
+      "sharpnessMax": null,
+      "slots": [
+        3,
+        3,
+        3
+      ],
+      "defense": 0,
+      "artian": "gogma"
+    },
+    {
+      "id": "w_1202",
+      "name": "破滅のキリエヴェルド",
+      "weaponType": "片手剣",
+      "rarity": 8,
+      "attack": 266,
+      "affinity": 5,
+      "element": null,
+      "sharpness": [
+        140,
+        40,
+        40,
+        80,
+        30,
+        20,
+        0
+      ],
+      "sharpnessMax": null,
+      "slots": [
+        3,
+        3,
+        3
+      ],
+      "defense": 0,
+      "artian": "gogma"
     }
   ]
 }

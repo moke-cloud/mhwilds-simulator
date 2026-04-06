@@ -70,6 +70,17 @@
           <option value="火">火</option><option value="水">水</option><option value="雷">雷</option><option value="氷">氷</option><option value="龍">龍</option>
         </select>
       </div>
+      <div id="artianIntensifyRow" style="display:none;margin-bottom:6px">
+        <div style="display:flex;gap:6px;align-items:center">
+          <label style="font-size:0.7rem;color:var(--text-secondary);min-width:40px">激化</label>
+          <select id="artianIntensify" style="flex:1;padding:4px 6px;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text-primary);font-size:0.75rem">
+            <option value="">なし</option>
+            <option value="atk">攻撃激化（攻撃+10, 会心-15%）</option>
+            <option value="aff">会心激化（攻撃-10, 会心+10%）</option>
+            <option value="elem">属性激化（会心-5%, 属性UP）</option>
+          </select>
+        </div>
+      </div>
       <div style="font-size:0.7rem;color:var(--text-secondary);margin-bottom:3px">生産ボーナス（3枠）</div>
       <div style="display:flex;gap:4px;margin-bottom:6px">
         <select id="artianProd1" class="artian-sel"><option value="atk">攻撃x1.03</option><option value="aff">会心+5%</option></select>

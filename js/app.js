@@ -600,9 +600,12 @@ const App = (() => {
       if (artian.elemType && artian.elemAdd > 0) {
         weaponForCalc.element = { type: artian.elemType, value: artian.elemAdd };
       }
+      // 激化タイプの斬れ味オーバーライド
+      if (artian.sharpOverride && weaponForCalc.sharpness) {
+        weaponForCalc.sharpness = [...artian.sharpOverride];
+      }
       if (artian.sharpAdd > 0 && weaponForCalc.sharpness) {
         const s = [...weaponForCalc.sharpness];
-        // 白ゲージ(index 5)に加算
         s[5] = (s[5] || 0) + artian.sharpAdd;
         weaponForCalc.sharpness = s;
       }
@@ -1173,7 +1176,11 @@ const App = (() => {
   };
 
   function isArtianWeapon(weapon) {
-    return weapon && weapon.name.includes('アーティア');
+    return weapon && (weapon.name.includes('アーティア') || weapon.artian === 'gogma');
+  }
+
+  function isGogmaArtian(weapon) {
+    return weapon && weapon.artian === 'gogma';
   }
 
   function renderArtianPanel() {
@@ -1183,6 +1190,15 @@ const App = (() => {
       return;
     }
     panel.style.display = '';
+
+    // Show/hide intensification row for Gogma
+    const intensifyRow = $('artianIntensifyRow');
+    intensifyRow.style.display = isGogmaArtian(state.selectedWeapon) ? '' : 'none';
+    const intensifySel = $('artianIntensify');
+    if (!intensifySel._bound) {
+      intensifySel.addEventListener('change', recalculate);
+      intensifySel._bound = true;
+    }
 
     // Render 5 restore slots (refresh on weapon type change)
     const container = $('artianRestoreSlots');
@@ -1226,12 +1242,20 @@ const App = (() => {
     }
   }
 
+  // 激化タイプ属性補正値（武器種別）
+  const INTENSIFY_ELEM = {
+    atk:  { '大剣': 0, '太刀': 0, '片手剣': 0, '双剣': 0, 'ハンマー': 0, '狩猟笛': 0, 'ランス': 0, 'ガンランス': 0, 'スラッシュアックス': 0, 'チャージアックス': 0, '操虫棍': 0, '弓': 0 },
+    aff:  { '大剣': -10, '太刀': -20, '片手剣': -20, '双剣': -20, 'ハンマー': -10, '狩猟笛': 20, 'ランス': -20, 'ガンランス': 30, 'スラッシュアックス': -20, 'チャージアックス': -20, '操虫棍': -20, '弓': -20 },
+    elem: { '大剣': 50, '太刀': 50, '片手剣': 40, '双剣': 30, 'ハンマー': 40, '狩猟笛': 80, 'ランス': 50, 'ガンランス': 80, 'スラッシュアックス': 40, 'チャージアックス': 50, '操虫棍': 40, '弓': 30 }
+  };
+
   function getArtianBonuses() {
     if (!isArtianWeapon(state.selectedWeapon)) return null;
     const wt = state.selectedWeapon.weaponType;
     const elemVals = ARTIAN_ELEM_UPGRADE[wt] || [30, 50, 80];
 
     let atkMult = 1.0, affFlat = 0, atkFlat = 0, sharpAdd = 0, elemAdd = 0;
+    let sharpOverride = null;
 
     // Production bonuses
     for (const id of ['artianProd1', 'artianProd2', 'artianProd3']) {
@@ -1260,7 +1284,23 @@ const App = (() => {
 
     const elemType = $('artianElem')?.value || '';
 
-    return { atkMult, atkFlat, affFlat, sharpAdd, elemAdd, elemType };
+    // 激化タイプ（巨戟のみ）
+    const intensify = $('artianIntensify')?.value || '';
+    if (intensify === 'atk') {
+      atkFlat += 10;
+      affFlat -= 15;
+    } else if (intensify === 'aff') {
+      atkFlat -= 10;
+      affFlat += 10;
+      // 会心激化は斬れ味が異なる
+      sharpOverride = [140, 40, 40, 50, 70, 10, 0];
+      elemAdd += INTENSIFY_ELEM.aff[wt] || 0;
+    } else if (intensify === 'elem') {
+      affFlat -= 5;
+      elemAdd += INTENSIFY_ELEM.elem[wt] || 0;
+    }
+
+    return { atkMult, atkFlat, affFlat, sharpAdd, elemAdd, elemType, sharpOverride };
   }
 
   // === Damage Calculator ===
