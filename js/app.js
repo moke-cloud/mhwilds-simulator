@@ -75,7 +75,7 @@ const App = (() => {
           ${w.affinity ? `<span class="aff"> ${w.affinity > 0 ? '+' : ''}${w.affinity}%</span>` : ''}
           ${w.element ? `<br><span class="text-${elemClass(w.element.type)}">${w.element.type}${w.element.value}</span>` : ''}
         </div>`;
-      div.onclick = () => { state.selectedWeapon = w; clearDecos('weapon'); $('selectedWeaponName').textContent = w.name; renderWeaponList(); renderDecoSlots(); recalculate(); };
+      div.onclick = () => { state.selectedWeapon = w; clearDecos('weapon'); $('selectedWeaponName').textContent = w.name; renderWeaponList(); renderDecoSlots(); renderArtianPanel(); recalculate(); };
       list.appendChild(div);
     }
     if (weapons.length === 0) {
@@ -589,8 +589,27 @@ const App = (() => {
   // === Recalculate ===
   function recalculate() {
     const armors = Object.values(state.selectedArmors).filter(Boolean);
+
+    // アーティアボーナス適用
+    let weaponForCalc = state.selectedWeapon;
+    const artian = getArtianBonuses();
+    if (artian && weaponForCalc) {
+      weaponForCalc = { ...weaponForCalc };
+      weaponForCalc.attack = Math.floor((weaponForCalc.attack + artian.atkFlat) * artian.atkMult);
+      weaponForCalc.affinity = (weaponForCalc.affinity || 0) + artian.affFlat;
+      if (artian.elemType && artian.elemAdd > 0) {
+        weaponForCalc.element = { type: artian.elemType, value: artian.elemAdd };
+      }
+      if (artian.sharpAdd > 0 && weaponForCalc.sharpness) {
+        const s = [...weaponForCalc.sharpness];
+        // 白ゲージ(index 5)に加算
+        s[5] = (s[5] || 0) + artian.sharpAdd;
+        weaponForCalc.sharpness = s;
+      }
+    }
+
     const result = MHCalc.calcAll({
-      weapon: state.selectedWeapon,
+      weapon: weaponForCalc,
       armors,
       decorations: state.equippedDecos.map(d => d.decoration).filter(Boolean),
       charm: state.charm,
@@ -1133,6 +1152,115 @@ const App = (() => {
     };
     reader.readAsText(file);
     e.target.value = '';
+  }
+
+  // === Artian Weapon Bonuses ===
+  const ARTIAN_ELEM_UPGRADE = {
+    '大剣':           [80, 90, 110],
+    'ハンマー':       [50, 60, 90],
+    '狩猟笛':         [50, 60, 90],
+    'ランス':         [50, 60, 90],
+    'ガンランス':     [50, 60, 90],
+    'チャージアックス': [50, 60, 90],
+    '太刀':           [50, 60, 90],
+    '片手剣':         [30, 50, 80],
+    'スラッシュアックス': [30, 50, 80],
+    '操虫棍':         [30, 50, 80],
+    '弓':             [30, 40, 60],
+    '双剣':           [20, 30, 50],
+    'ライトボウガン':  [0, 0, 0],
+    'ヘビィボウガン':  [0, 0, 0]
+  };
+
+  function isArtianWeapon(weapon) {
+    return weapon && weapon.name.includes('アーティア');
+  }
+
+  function renderArtianPanel() {
+    const panel = $('artianPanel');
+    if (!isArtianWeapon(state.selectedWeapon)) {
+      panel.style.display = 'none';
+      return;
+    }
+    panel.style.display = '';
+
+    // Render 5 restore slots (refresh on weapon type change)
+    const container = $('artianRestoreSlots');
+    const wt = state.selectedWeapon.weaponType;
+    if (container.children.length === 0 || container.dataset.wt !== wt) {
+      container.dataset.wt = wt;
+      container.innerHTML = '';
+      const elemVals = ARTIAN_ELEM_UPGRADE[wt] || [30, 50, 80];
+      for (let i = 0; i < 5; i++) {
+        const sel = document.createElement('select');
+        sel.className = 'artian-sel';
+        sel.id = `artianRestore${i}`;
+        sel.innerHTML = `
+          <option value="">なし</option>
+          <option value="atk1">攻撃力+5</option>
+          <option value="atk2">攻撃力+6</option>
+          <option value="atk3">攻撃力+9</option>
+          <option value="atkEX">攻撃力+12</option>
+          <option value="aff1">会心率+5%</option>
+          <option value="aff2">会心率+6%</option>
+          <option value="aff3">会心率+8%</option>
+          <option value="affEX">会心率+10%</option>
+          <option value="sharp1">斬れ味+30</option>
+          <option value="sharpEX">斬れ味+50</option>
+          <option value="elem1">属性+${elemVals[0]}</option>
+          <option value="elem2">属性+${elemVals[1]}</option>
+          <option value="elemEX">属性+${elemVals[2]}</option>
+        `;
+        sel.addEventListener('change', recalculate);
+        container.appendChild(sel);
+      }
+    }
+
+    // Bind change events for prod selects and elem
+    for (const id of ['artianProd1', 'artianProd2', 'artianProd3', 'artianElem']) {
+      const el = $(id);
+      if (!el._bound) {
+        el.addEventListener('change', recalculate);
+        el._bound = true;
+      }
+    }
+  }
+
+  function getArtianBonuses() {
+    if (!isArtianWeapon(state.selectedWeapon)) return null;
+    const wt = state.selectedWeapon.weaponType;
+    const elemVals = ARTIAN_ELEM_UPGRADE[wt] || [30, 50, 80];
+
+    let atkMult = 1.0, affFlat = 0, atkFlat = 0, sharpAdd = 0, elemAdd = 0;
+
+    // Production bonuses
+    for (const id of ['artianProd1', 'artianProd2', 'artianProd3']) {
+      const v = $(id)?.value;
+      if (v === 'atk') atkMult *= 1.03;
+      else if (v === 'aff') affFlat += 5;
+    }
+
+    // Restoration bonuses
+    for (let i = 0; i < 5; i++) {
+      const v = $(`artianRestore${i}`)?.value || '';
+      if (v === 'atk1') atkFlat += 5;
+      else if (v === 'atk2') atkFlat += 6;
+      else if (v === 'atk3') atkFlat += 9;
+      else if (v === 'atkEX') atkFlat += 12;
+      else if (v === 'aff1') affFlat += 5;
+      else if (v === 'aff2') affFlat += 6;
+      else if (v === 'aff3') affFlat += 8;
+      else if (v === 'affEX') affFlat += 10;
+      else if (v === 'sharp1') sharpAdd += 30;
+      else if (v === 'sharpEX') sharpAdd += 50;
+      else if (v === 'elem1') elemAdd += elemVals[0];
+      else if (v === 'elem2') elemAdd += elemVals[1];
+      else if (v === 'elemEX') elemAdd += elemVals[2];
+    }
+
+    const elemType = $('artianElem')?.value || '';
+
+    return { atkMult, atkFlat, affFlat, sharpAdd, elemAdd, elemType };
   }
 
   // === Damage Calculator ===

@@ -384,6 +384,13 @@ body {
 }
 .cond-toggle input[type="checkbox"] { accent-color: var(--accent); }
 
+/* === Artian selects === */
+.artian-sel {
+  flex: 1; padding: 4px 6px; background: var(--bg-input);
+  border: 1px solid var(--border); border-radius: var(--radius-sm);
+  color: var(--text-primary); font-size: 0.7rem;
+}
+
 /* === Charm deco slots enhanced === */
 #charmDecoSlots {
   background: rgba(240,160,48,0.05);
