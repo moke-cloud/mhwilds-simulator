@@ -3,115 +3,115 @@
     "damageType": "slash",
     "attacks": [
       {
-        "name": "Overhead Slash",
+        "name": "縦斬り",
         "mv": 81
       },
       {
-        "name": "Charged Slash Lv1",
+        "name": "溜め斬りLv1",
         "mv": 106,
         "eleMul": 1.1
       },
       {
-        "name": "Charged Slash Lv2",
+        "name": "溜め斬りLv2",
         "mv": 135,
         "eleMul": 1.2
       },
       {
-        "name": "Charged Slash Lv3",
+        "name": "溜め斬りLv3",
         "mv": 168,
         "eleMul": 1.3
       },
       {
-        "name": "Wide Slash",
+        "name": "薙ぎ払い",
         "mv": 42
       },
       {
-        "name": "Rising Slash",
+        "name": "斬り上げ",
         "mv": 38
       },
       {
-        "name": "Offset Rising Slash Lv1",
+        "name": "ずらし斬り上げLv1",
         "mv": 96,
         "eleMul": 1.1
       },
       {
-        "name": "Offset Rising Slash Lv2",
+        "name": "ずらし斬り上げLv2",
         "mv": 123,
         "eleMul": 1.2
       },
       {
-        "name": "Offset Rising Slash Lv3",
+        "name": "ずらし斬り上げLv3",
         "mv": 154,
         "eleMul": 1.3
       },
       {
-        "name": "Follow-up Cross Slash Lv1 1",
+        "name": "派生十字斬りLv1[1]",
         "mv": 44
       },
       {
-        "name": "Follow-up Cross Slash Lv1 2",
+        "name": "派生十字斬りLv1[2]",
         "mv": 180
       },
       {
-        "name": "Follow-up Cross Slash Lv2 1",
+        "name": "派生十字斬りLv2[1]",
         "mv": 49
       },
       {
-        "name": "Follow-up Cross Slash Lv2 2",
+        "name": "派生十字斬りLv2[2]",
         "mv": 200
       },
       {
-        "name": "Follow-up Cross Slash Lv3 1",
+        "name": "派生十字斬りLv3[1]",
         "mv": 58
       },
       {
-        "name": "Follow-up Cross Slash Lv3 2",
+        "name": "派生十字斬りLv3[2]",
         "mv": 230
       },
       {
-        "name": "Kick",
+        "name": "キック",
         "mv": 5,
         "eleMul": 0.0,
         "ignoreSharpness": true,
         "ignoreHzv": true
       },
       {
-        "name": "Side Blow",
+        "name": "側面殴り",
         "mv": 16,
         "rawType": "blunt"
       },
       {
-        "name": "Strong Charged Slash Lv1",
+        "name": "強溜め斬りLv1",
         "mv": 111,
         "eleMul": 1.3
       },
       {
-        "name": "Strong Charged Slash Lv2",
+        "name": "強溜め斬りLv2",
         "mv": 144,
         "eleMul": 1.4
       },
       {
-        "name": "Strong Charged Slash Lv3",
+        "name": "強溜め斬りLv3",
         "mv": 181,
         "eleMul": 1.5
       },
       {
-        "name": "Strong Wide Slash Lv1",
+        "name": "強薙ぎ払いLv1",
         "mv": 90,
         "eleMul": 1.7
       },
       {
-        "name": "Strong Wide Slash Lv2",
+        "name": "強薙ぎ払いLv2",
         "mv": 106,
         "eleMul": 2.0
       },
       {
-        "name": "Strong Wide Slash Lv3",
+        "name": "強薙ぎ払いLv3",
         "mv": 124,
         "eleMul": 2.2
       },
       {
-        "name": "Tackle",
+        "name": "タックル",
         "mv": 23,
         "eleMul": 0.0,
         "rawType": "blunt",
@@ -119,7 +119,7 @@
         "ignoreSharpness": true
       },
       {
-        "name": "Tackle Lv1",
+        "name": "タックルLv1",
         "mv": 26,
         "eleMul": 0.0,
         "rawType": "blunt",
@@ -127,7 +127,7 @@
         "ignoreSharpness": true
       },
       {
-        "name": "Tackle Lv2",
+        "name": "タックルLv2",
         "mv": 35,
         "eleMul": 0.0,
         "rawType": "blunt",
@@ -135,7 +135,7 @@
         "ignoreSharpness": true
       },
       {
-        "name": "Tackle Lv3",
+        "name": "タックルLv3",
         "mv": 48,
         "eleMul": 0.0,
         "rawType": "blunt",
@@ -143,92 +143,92 @@
         "ignoreSharpness": true
       },
       {
-        "name": "Leaping Wide Slash",
+        "name": "飛び込み薙ぎ払い",
         "mv": 93
       },
       {
-        "name": "Leaping Wide Slash Lv1",
+        "name": "飛び込み薙ぎ払いLv1",
         "mv": 111,
         "eleMul": 2.0
       },
       {
-        "name": "Leaping Wide Slash Lv2",
+        "name": "飛び込み薙ぎ払いLv2",
         "mv": 135,
         "eleMul": 2.5
       },
       {
-        "name": "Leaping Wide Slash Lv3",
+        "name": "飛び込み薙ぎ払いLv3",
         "mv": 167,
         "eleMul": 3.1
       },
       {
-        "name": "True Charged Slash Lv1 1",
+        "name": "真・溜め斬りLv1[1]",
         "mv": 12
       },
       {
-        "name": "True Charged Slash Lv1 2",
+        "name": "真・溜め斬りLv1[2]",
         "mv": 105,
         "eleMul": 1.5
       },
       {
-        "name": "True Charged Slash Lv1 2 (Power)",
+        "name": "真・溜め斬りLv1[2](強撃)",
         "mv": 125,
         "eleMul": 1.5
       },
       {
-        "name": "True Charged Slash Lv2 1",
+        "name": "真・溜め斬りLv2[1]",
         "mv": 14
       },
       {
-        "name": "True Charged Slash Lv2 2",
+        "name": "真・溜め斬りLv2[2]",
         "mv": 153,
         "eleMul": 1.8
       },
       {
-        "name": "True Charged Slash Lv2 2 (Power)",
+        "name": "真・溜め斬りLv2[2](強撃)",
         "mv": 186,
         "eleMul": 1.8
       },
       {
-        "name": "True Charged Slash Lv3 1",
+        "name": "真・溜め斬りLv3[1]",
         "mv": 16
       },
       {
-        "name": "True Charged Slash Lv3 2",
+        "name": "真・溜め斬りLv3[2]",
         "mv": 195,
         "eleMul": 2.0
       },
       {
-        "name": "True Charged Slash Lv3 2 (Power)",
+        "name": "真・溜め斬りLv3[2](強撃)",
         "mv": 248,
         "eleMul": 2.0
       },
       {
-        "name": "Focus Slash: Perforate",
+        "name": "集中斬り：貫通",
         "mv": 15,
         "eleMul": 0.4
       },
       {
-        "name": "Jumping Charged Slash",
+        "name": "ジャンプ溜め斬り",
         "mv": 50
       },
       {
-        "name": "Jumping Charged Slash Lv1",
+        "name": "ジャンプ溜め斬りLv1",
         "mv": 60,
         "eleMul": 1.1
       },
       {
-        "name": "Jumping Charged Slash Lv2",
+        "name": "ジャンプ溜め斬りLv2",
         "mv": 71,
         "eleMul": 1.2
       },
       {
-        "name": "Jumping Charged Slash Lv3",
+        "name": "ジャンプ溜め斬りLv3",
         "mv": 90,
         "eleMul": 1.3
       },
       {
-        "name": "Plunging Thrust",
+        "name": "突き刺し",
         "mv": 36,
         "eleMul": 0.4
       }
@@ -238,312 +238,312 @@
     "damageType": "slash",
     "attacks": [
       {
-        "name": "Overhead Slash I",
+        "name": "縦斬りI",
         "mv": 24
       },
       {
-        "name": "Overhead Slash II",
+        "name": "縦斬りII",
         "mv": 18
       },
       {
-        "name": "Crescent Slash",
+        "name": "三日月斬り",
         "mv": 32
       },
       {
-        "name": "Crimson Slash I 1",
+        "name": "緋刃斬りI[1]",
         "mv": 33,
         "eleMul": 0.5
       },
       {
-        "name": "Crimson Slash I 2",
+        "name": "緋刃斬りI[2]",
         "mv": 16,
         "eleMul": 0.5
       },
       {
-        "name": "Crimson Slash II 1",
+        "name": "緋刃斬りII[1]",
         "mv": 11,
         "eleMul": 1.05
       },
       {
-        "name": "Crimson Slash II 2",
+        "name": "緋刃斬りII[2]",
         "mv": 22,
         "eleMul": 1.05
       },
       {
-        "name": "Crimson Slash III 1",
+        "name": "緋刃斬りIII[1]",
         "mv": 30,
         "eleMul": 1.1
       },
       {
-        "name": "Crimson Slash III 2",
+        "name": "緋刃斬りIII[2]",
         "mv": 18,
         "eleMul": 1.1
       },
       {
-        "name": "Crimson Slash III 3",
+        "name": "緋刃斬りIII[3]",
         "mv": 55,
         "eleMul": 1.1
       },
       {
-        "name": "Thrust",
+        "name": "突き",
         "mv": 18
       },
       {
-        "name": "Rising Slash",
+        "name": "斬り上げ",
         "mv": 18
       },
       {
-        "name": "Fade Slash",
+        "name": "移動斬り",
         "mv": 22
       },
       {
-        "name": "Spirit Blade I",
+        "name": "気刃斬りI",
         "mv": 31
       },
       {
-        "name": "Spirit Blade I (No Gauge)",
+        "name": "気刃斬りI(練気ゲージ無)",
         "mv": 14
       },
       {
-        "name": "Directional Spirit Blade I 1",
+        "name": "方向気刃斬りI[1]",
         "mv": 31
       },
       {
-        "name": "Directional Spirit Blade I 1 (No Gauge)",
+        "name": "方向気刃斬りI[1](練気ゲージ無)",
         "mv": 14
       },
       {
-        "name": "Spirit Blade II",
+        "name": "気刃斬りII",
         "mv": 30
       },
       {
-        "name": "Spirit Blade II (No Gauge)",
+        "name": "気刃斬りII(練気ゲージ無)",
         "mv": 14
       },
       {
-        "name": "Directional Spirit Blade II 1",
+        "name": "方向気刃斬りII[1]",
         "mv": 14
       },
       {
-        "name": "Directional Spirit Blade II 2",
+        "name": "方向気刃斬りII[2]",
         "mv": 26
       },
       {
-        "name": "Directional Spirit Blade II 1 (No Gauge)",
+        "name": "方向気刃斬りII[1](練気ゲージ無)",
         "mv": 8
       },
       {
-        "name": "Directional Spirit Blade II 2 (No Gauge)",
+        "name": "方向気刃斬りII[2](練気ゲージ無)",
         "mv": 18
       },
       {
-        "name": "Spirit Blade III 1",
+        "name": "気刃斬りIII[1]",
         "mv": 14
       },
       {
-        "name": "Spirit Blade III 2",
+        "name": "気刃斬りIII[2]",
         "mv": 19
       },
       {
-        "name": "Spirit Blade III 3",
+        "name": "気刃斬りIII[3]",
         "mv": 34
       },
       {
-        "name": "Spirit Blade III 1 (No Gauge)",
+        "name": "気刃斬りIII[1](練気ゲージ無)",
         "mv": 8
       },
       {
-        "name": "Spirit Blade III 2 (No Gauge)",
+        "name": "気刃斬りIII[2](練気ゲージ無)",
         "mv": 11
       },
       {
-        "name": "Spirit Blade III 3 (No Gauge)",
+        "name": "気刃斬りIII[3](練気ゲージ無)",
         "mv": 19
       },
       {
-        "name": "Spirit Roundslash",
+        "name": "気刃大回転斬り",
         "mv": 38
       },
       {
-        "name": "Spirit Roundslash (Red)",
+        "name": "気刃大回転斬り(赤)",
         "mv": 42
       },
       {
-        "name": "Spirit Roundslash (No Gauge)",
+        "name": "気刃大回転斬り(練気ゲージ無)",
         "mv": 19
       },
       {
-        "name": "Spinning Crimson Slash",
+        "name": "回転緋刃斬り",
         "mv": 60
       },
       {
-        "name": "Spirit Step Slash",
+        "name": "気刃踏み込み斬り",
         "mv": 28
       },
       {
-        "name": "Spirit Step Slash (No Gauge)",
+        "name": "気刃踏み込み斬り(練気ゲージ無)",
         "mv": 18
       },
       {
-        "name": "Jumping Slash",
+        "name": "ジャンプ斬り",
         "mv": 26
       },
       {
-        "name": "Jumping Spirit Blade I",
+        "name": "ジャンプ気刃斬りI",
         "mv": 30
       },
       {
-        "name": "Jumping Spirit Blade I (No Gauge)",
+        "name": "ジャンプ気刃斬りI(練気ゲージ無)",
         "mv": 16
       },
       {
-        "name": "Jumping Spirit Blade II 1",
+        "name": "ジャンプ気刃斬りII[1]",
         "mv": 12
       },
       {
-        "name": "Jumping Spirit Blade II 2",
+        "name": "ジャンプ気刃斬りII[2]",
         "mv": 26
       },
       {
-        "name": "Jumping Spirit Blade II 1 (No Gauge)",
+        "name": "ジャンプ気刃斬りII[1](練気ゲージ無)",
         "mv": 8
       },
       {
-        "name": "Jumping Spirit Blade II 2 (No Gauge)",
+        "name": "ジャンプ気刃斬りII[2](練気ゲージ無)",
         "mv": 15
       },
       {
-        "name": "Jumping Spirit Blade III 1",
+        "name": "ジャンプ気刃斬りIII[1]",
         "mv": 12
       },
       {
-        "name": "Jumping Spirit Blade III 2",
+        "name": "ジャンプ気刃斬りIII[2]",
         "mv": 22
       },
       {
-        "name": "Jumping Spirit Blade III 3 (Not Used?)",
+        "name": "ジャンプ気刃斬りIII[3](未使用?)",
         "mv": 24
       },
       {
-        "name": "Jumping Spirit Blade III 3 (No Gauge)",
+        "name": "ジャンプ気刃斬りIII[3](練気ゲージ無)",
         "mv": 13
       },
       {
-        "name": "Jumping Rising Slash",
+        "name": "ジャンプ斬り上げ",
         "mv": 20
       },
       {
-        "name": "Aerial Draw Spirit Blade",
+        "name": "空中抜刀気刃斬り",
         "mv": 48
       },
       {
-        "name": "Aerial Draw Spirit Blade (No Gauge)",
+        "name": "空中抜刀気刃斬り(練気ゲージ無)",
         "mv": 26
       },
       {
-        "name": "Foresight Slash",
+        "name": "見切り斬り",
         "mv": 18
       },
       {
-        "name": "Foresight Slash (No Gauge)",
+        "name": "見切り斬り(練気ゲージ無)",
         "mv": 11
       },
       {
-        "name": "Foresight Slash (Success)",
+        "name": "見切り斬り(成功)",
         "mv": 23
       },
       {
-        "name": "Foresight Whirl Slash 1",
+        "name": "見切り旋回斬り[1]",
         "mv": 22
       },
       {
-        "name": "Foresight Whirl Slash 2",
+        "name": "見切り旋回斬り[2]",
         "mv": 13
       },
       {
-        "name": "Foresight Whirl Slash 1 (Sucess)",
+        "name": "見切り旋回斬り[1](成功)",
         "mv": 28
       },
       {
-        "name": "Foresight Whirl Slash 2 (Success)",
+        "name": "見切り旋回斬り[2](成功)",
         "mv": 16
       },
       {
-        "name": "Iai Slash 1",
+        "name": "居合斬り[1]",
         "mv": 18
       },
       {
-        "name": "Iai Slash 2",
+        "name": "居合斬り[2]",
         "mv": 13
       },
       {
-        "name": "Iai Spirit Slash 1 (None)",
+        "name": "居合気刃斬り[1](無色)",
         "mv": 17
       },
       {
-        "name": "Iai Spirit Slash 1 (White)",
+        "name": "居合気刃斬り[1](白)",
         "mv": 19
       },
       {
-        "name": "Iai Spirit Slash 2 (White) (Success)",
+        "name": "居合気刃斬り[2](白・成功)",
         "mv": 55
       },
       {
-        "name": "Iai Spirit Slash 1 (Yellow)",
+        "name": "居合気刃斬り[1](黄)",
         "mv": 31
       },
       {
-        "name": "Iai Spirit Slash 2 (Yellow) (Success)",
+        "name": "居合気刃斬り[2](黄・成功)",
         "mv": 72
       },
       {
-        "name": "Iai Spirit Slash 1 (Red)",
+        "name": "居合気刃斬り[1](赤)",
         "mv": 39
       },
       {
-        "name": "Iai Spirit Slash 2 (Red) (Success)",
+        "name": "居合気刃斬り[2](赤・成功)",
         "mv": 86
       },
       {
-        "name": "Spirit Thrust",
+        "name": "気刃突き",
         "mv": 19
       },
       {
-        "name": "Spirit Helmbreaker (White)",
+        "name": "兜割(白)",
         "mv": 15,
         "eleMul": 0.2
       },
       {
-        "name": "Spirit Helmbreaker (Yellow)",
+        "name": "兜割(黄)",
         "mv": 20,
         "eleMul": 0.2
       },
       {
-        "name": "Spirit Helmbreaker (Red)",
+        "name": "兜割(赤)",
         "mv": 23,
         "eleMul": 0.2
       },
       {
-        "name": "Spirit Release Slash 1",
+        "name": "気刃解放斬り[1]",
         "mv": 5
       },
       {
-        "name": "Spirit Release Slash 2",
+        "name": "気刃解放斬り[2]",
         "mv": 10,
         "eleMul": 0.1
       },
       {
-        "name": "Spirit Release Slash 3",
+        "name": "気刃解放斬り[3]",
         "mv": 15,
         "eleMul": 0.1
       },
       {
-        "name": "Spirit Release Slash 4",
+        "name": "気刃解放斬り[4]",
         "mv": 22,
         "eleMul": 0.1
       },
       {
-        "name": "Spirit Release Slash 5",
+        "name": "気刃解放斬り[5]",
         "mv": 35,
         "eleMul": 0.1
       }
@@ -553,246 +553,246 @@
     "damageType": "slash",
     "attacks": [
       {
-        "name": "Advancing Slash",
+        "name": "突進斬り",
         "mv": 22
       },
       {
-        "name": "Rising Slash",
+        "name": "斬り上げ",
         "mv": 18
       },
       {
-        "name": "Chop",
+        "name": "斬り下ろし",
         "mv": 18,
         "eleMul": 1.3
       },
       {
-        "name": "Side Slash",
+        "name": "横斬り",
         "mv": 17,
         "eleMul": 1.3
       },
       {
-        "name": "Diagonal Rising Slash",
+        "name": "斜め斬り上げ",
         "mv": 24,
         "eleMul": 1.3
       },
       {
-        "name": "Diagonal Chop",
+        "name": "斜め斬り下ろし",
         "mv": 27,
         "eleMul": 1.3
       },
       {
-        "name": "Lateral Slash",
+        "name": "水平斬り",
         "mv": 27,
         "eleMul": 1.2
       },
       {
-        "name": "Return Stroke",
+        "name": "返し斬り",
         "mv": 28,
         "eleMul": 1.2
       },
       {
-        "name": "Spinning Rising Slash",
+        "name": "回転斬り上げ",
         "mv": 39,
         "eleMul": 1.2
       },
       {
-        "name": "Roundslash",
+        "name": "回転斬り",
         "mv": 41
       },
       {
-        "name": "Spinning Reaper",
+        "name": "回転斬り(強)",
         "mv": 65
       },
       {
-        "name": "Shield Attack",
+        "name": "盾攻撃",
         "mv": 16,
         "eleMul": 0.0,
         "rawType": "blunt"
       },
       {
-        "name": "Shield Bash",
+        "name": "盾殴り",
         "mv": 27,
         "eleMul": 0.0,
         "rawType": "blunt"
       },
       {
-        "name": "Hard Basher",
+        "name": "ハードバッシュ",
         "mv": 40,
         "eleMul": 0.0,
         "rawType": "blunt"
       },
       {
-        "name": "Guard Slash",
+        "name": "ガード斬り",
         "mv": 14
       },
       {
-        "name": "Charged Slash",
+        "name": "溜め斬り",
         "mv": 40
       },
       {
-        "name": "Scaling Slash",
+        "name": "駆け上がり斬り",
         "mv": 25
       },
       {
-        "name": "Jumping Rising Slash",
+        "name": "ジャンプ斬り上げ",
         "mv": 18
       },
       {
-        "name": "Jumping Advancing Slash",
+        "name": "ジャンプ突進斬り",
         "mv": 18
       },
       {
-        "name": "Jumping Slash",
+        "name": "ジャンプ斬り",
         "mv": 20
       },
       {
-        "name": "Falling Bash 1",
+        "name": "フォーリングバッシュ[1]",
         "mv": 52,
         "eleMul": 0.0,
         "rawType": "blunt"
       },
       {
-        "name": "Falling Bash 2",
+        "name": "フォーリングバッシュ[2]",
         "mv": 47,
         "eleMul": 0.0,
         "rawType": "blunt"
       },
       {
-        "name": "Plunging Thrust",
+        "name": "突き刺し",
         "mv": 12,
         "eleMul": 0.3
       },
       {
-        "name": "Sliding Sweep 1",
+        "name": "スライディング薙ぎ[1]",
         "mv": 10
       },
       {
-        "name": "Sliding Sweep 2",
+        "name": "スライディング薙ぎ[2]",
         "mv": 50
       },
       {
-        "name": "Sliding Slash 1",
+        "name": "スライディング斬り[1]",
         "mv": 12
       },
       {
-        "name": "Sliding Slash 2",
+        "name": "スライディング斬り[2]",
         "mv": 30
       },
       {
-        "name": "Leaping Slash",
+        "name": "飛び込み斬り",
         "mv": 30
       },
       {
-        "name": "Perfect Rush I 1",
+        "name": "ジャストラッシュI[1]",
         "mv": 10,
         "eleMul": 0.0,
         "rawType": "blunt"
       },
       {
-        "name": "Perfect Rush I 2",
+        "name": "ジャストラッシュI[2]",
         "mv": 15
       },
       {
-        "name": "Perfect Rush I 3",
+        "name": "ジャストラッシュI[3]",
         "mv": 15
       },
       {
-        "name": "Perfect Rush II",
+        "name": "ジャストラッシュII",
         "mv": 20,
         "eleMul": 0.0,
         "rawType": "blunt"
       },
       {
-        "name": "Perfect Rush III",
+        "name": "ジャストラッシュIII",
         "mv": 30
       },
       {
-        "name": "Perfect Rush III Hits",
+        "name": "ジャストラッシュIII(多段)",
         "mv": 18
       },
       {
-        "name": "Power Perfect Rush I 1",
+        "name": "強化ジャストラッシュI[1]",
         "mv": 40,
         "eleMul": 0.0
       },
       {
-        "name": "Power Perfect Rush I 2",
+        "name": "強化ジャストラッシュI[2]",
         "mv": 40,
         "eleMul": 1.5
       },
       {
-        "name": "Power Perfect Rush I 3",
+        "name": "強化ジャストラッシュI[3]",
         "mv": 45,
         "eleMul": 1.5
       },
       {
-        "name": "Power Perfect Rush II",
+        "name": "強化ジャストラッシュII",
         "mv": 60,
         "eleMul": 0.0
       },
       {
-        "name": "Power Perfect Rush III",
+        "name": "強化ジャストラッシュIII",
         "mv": 80,
         "eleMul": 1.5
       },
       {
-        "name": "Power Perfect Rush III Hits",
+        "name": "強化ジャストラッシュIII(多段)",
         "mv": 34
       },
       {
-        "name": "Charged Chop 1",
+        "name": "溜め斬り下ろし[1]",
         "mv": 18
       },
       {
-        "name": "Charged Chop 2",
+        "name": "溜め斬り下ろし[2]",
         "mv": 28,
         "eleMul": 1.2
       },
       {
-        "name": "Charged Chop 3",
+        "name": "溜め斬り下ろし[3]",
         "mv": 14,
         "eleMul": 0.3
       },
       {
-        "name": "Power Charged Chop 3",
+        "name": "強溜め斬り下ろし[3]",
         "mv": 28,
         "eleMul": 1.25
       },
       {
-        "name": "Counter Slash",
+        "name": "カウンター斬り",
         "mv": 55,
         "eleMul": 1.5
       },
       {
-        "name": "Recovering Slash",
+        "name": "回復斬り",
         "mv": 18
       },
       {
-        "name": "Focus Strike: Vital Stab",
+        "name": "集中攻撃：急所突き",
         "mv": 15
       },
       {
-        "name": "Focus Strike: Vital Stab (Opening Wound)",
+        "name": "集中攻撃：急所突き(裂傷)",
         "mv": 19,
         "eleMul": 0.3
       },
       {
-        "name": "Falling Slash",
+        "name": "落下斬り",
         "mv": 20
       },
       {
-        "name": "Falling Slash Hits",
+        "name": "落下斬り(多段)",
         "mv": 7,
         "eleMul": 0.3
       },
       {
-        "name": "Upswing Bash",
+        "name": "振り上げ殴り",
         "mv": 20,
         "eleMul": 0.0,
         "rawType": "blunt"
       },
       {
-        "name": "Upswing Bash Hits",
+        "name": "振り上げ殴り(多段)",
         "mv": 20,
         "eleMul": 0.0,
         "rawType": "blunt"
@@ -803,437 +803,437 @@
     "damageType": "slash",
     "attacks": [
       {
-        "name": "Double Slash 1",
+        "name": "二連斬り[1]",
         "mv": 8,
         "eleMul": 0.6
       },
       {
-        "name": "Double Slash 2",
+        "name": "二連斬り[2]",
         "mv": 11,
         "eleMul": 0.6
       },
       {
-        "name": "Double Slash Return Stroke",
+        "name": "二連斬り返し",
         "mv": 11,
         "eleMul": 0.6
       },
       {
-        "name": "Circle Slash 1",
+        "name": "車輪斬り[1]",
         "mv": 6,
         "eleMul": 0.7
       },
       {
-        "name": "Circle Slash 2",
+        "name": "車輪斬り[2]",
         "mv": 11,
         "eleMul": 0.7
       },
       {
-        "name": "Circle Slash 3",
+        "name": "車輪斬り[3]",
         "mv": 12,
         "eleMul": 0.7
       },
       {
-        "name": "Demon Fangs",
+        "name": "鬼人牙",
         "mv": 14,
         "eleMul": 0.6
       },
       {
-        "name": "Twofold Demon Slash 1",
+        "name": "二段鬼人斬り[1]",
         "mv": 15,
         "eleMul": 0.6
       },
       {
-        "name": "Twofold Demon Slash 2",
+        "name": "二段鬼人斬り[2]",
         "mv": 7,
         "eleMul": 0.6
       },
       {
-        "name": "Sixfold Demon Slash 1",
+        "name": "六段鬼人斬り[1]",
         "mv": 13,
         "eleMul": 0.6
       },
       {
-        "name": "Sixfold Demon Slash 2",
+        "name": "六段鬼人斬り[2]",
         "mv": 9,
         "eleMul": 0.6
       },
       {
-        "name": "Sixfold Demon Slash 3",
+        "name": "六段鬼人斬り[3]",
         "mv": 18,
         "eleMul": 0.6
       },
       {
-        "name": "Fade Slash",
+        "name": "回避斬り",
         "mv": 10,
         "eleMul": 0.6
       },
       {
-        "name": "Rising Slash",
+        "name": "斬り上げ",
         "mv": 8,
         "eleMul": 0.6
       },
       {
-        "name": "Demon Rising Slash",
+        "name": "鬼人斬り上げ",
         "mv": 10,
         "eleMul": 0.8
       },
       {
-        "name": "Lunging Strike 1-2",
+        "name": "突進連斬[1-2]",
         "mv": 3,
         "eleMul": 0.6
       },
       {
-        "name": "Lunging Strike 3-4",
+        "name": "突進連斬[3-4]",
         "mv": 6,
         "eleMul": 0.6
       },
       {
-        "name": "Side/Back Lunging Strike",
+        "name": "側面/後方突進連斬",
         "mv": 6,
         "eleMul": 0.6
       },
       {
-        "name": "Demon Flurry Rush 1",
+        "name": "鬼人突進連斬[1]",
         "mv": 5,
         "eleMul": 0.6
       },
       {
-        "name": "Demon Flurry Rush 2",
+        "name": "鬼人突進連斬[2]",
         "mv": 4,
         "eleMul": 0.6
       },
       {
-        "name": "Demon Flurry Rush 3",
+        "name": "鬼人突進連斬[3]",
         "mv": 11
       },
       {
-        "name": "Left Spinning Slash 1",
+        "name": "左回転斬り[1]",
         "mv": 14,
         "eleMul": 0.6
       },
       {
-        "name": "Left Spinning Slash 2",
+        "name": "左回転斬り[2]",
         "mv": 6,
         "eleMul": 0.6
       },
       {
-        "name": "Left Spinning Slash 3",
+        "name": "左回転斬り[3]",
         "mv": 5,
         "eleMul": 0.6
       },
       {
-        "name": "Right Spinning Slash 1",
+        "name": "右回転斬り[1]",
         "mv": 15
       },
       {
-        "name": "Right Spinning Slash 2",
+        "name": "右回転斬り[2]",
         "mv": 7,
         "eleMul": 0.6
       },
       {
-        "name": "Right Spinning Slash 3",
+        "name": "右回転斬り[3]",
         "mv": 5,
         "eleMul": 0.6
       },
       {
-        "name": "Left Double Roundslash 1",
+        "name": "左二連回転斬り[1]",
         "mv": 16
       },
       {
-        "name": "Left Double Roundslash 2",
+        "name": "左二連回転斬り[2]",
         "mv": 6,
         "eleMul": 0.6
       },
       {
-        "name": "Left Double Roundslash 3",
+        "name": "左二連回転斬り[3]",
         "mv": 5
       },
       {
-        "name": "Right Double Roundslash 1",
+        "name": "右二連回転斬り[1]",
         "mv": 16
       },
       {
-        "name": "Right Double Roundslash 2",
+        "name": "右二連回転斬り[2]",
         "mv": 8
       },
       {
-        "name": "Right Double Roundslash 3",
+        "name": "右二連回転斬り[3]",
         "mv": 5
       },
       {
-        "name": "Blade Dance I 1",
+        "name": "乱舞I[1]",
         "mv": 18
       },
       {
-        "name": "Blade Dance I 2",
+        "name": "乱舞I[2]",
         "mv": 6,
         "eleMul": 0.6
       },
       {
-        "name": "Blade Dance I 3",
+        "name": "乱舞I[3]",
         "mv": 10,
         "eleMul": 0.6
       },
       {
-        "name": "Blade Dance I 4",
+        "name": "乱舞I[4]",
         "mv": 4,
         "eleMul": 0.8
       },
       {
-        "name": "Blade Dance I 5",
+        "name": "乱舞I[5]",
         "mv": 20,
         "eleMul": 0.8
       },
       {
-        "name": "Blade Dance I 6",
+        "name": "乱舞I[6]",
         "mv": 11,
         "eleMul": 0.8
       },
       {
-        "name": "Blade Dance II 1",
+        "name": "乱舞II[1]",
         "mv": 16,
         "eleMul": 0.6
       },
       {
-        "name": "Blade Dance II 2",
+        "name": "乱舞II[2]",
         "mv": 6,
         "eleMul": 0.8
       },
       {
-        "name": "Blade Dance II 3",
+        "name": "乱舞II[3]",
         "mv": 25,
         "eleMul": 0.8
       },
       {
-        "name": "Blade Dance III 1",
+        "name": "乱舞III[1]",
         "mv": 22,
         "eleMul": 0.6
       },
       {
-        "name": "Blade Dance III 2",
+        "name": "乱舞III[2]",
         "mv": 8,
         "eleMul": 0.6
       },
       {
-        "name": "Blade Dance III 3",
+        "name": "乱舞III[3]",
         "mv": 5,
         "eleMul": 0.6
       },
       {
-        "name": "Blade Dance III 4",
+        "name": "乱舞III[4]",
         "mv": 18,
         "eleMul": 0.8
       },
       {
-        "name": "Blade Dance III 5",
+        "name": "乱舞III[5]",
         "mv": 5,
         "eleMul": 0.8
       },
       {
-        "name": "Blade Dance III 6",
+        "name": "乱舞III[6]",
         "mv": 14,
         "eleMul": 0.8
       },
       {
-        "name": "Blade Dance III 7",
+        "name": "乱舞III[7]",
         "mv": 18,
         "eleMul": 0.8
       },
       {
-        "name": "Blade Dance III 8",
+        "name": "乱舞III[8]",
         "mv": 22,
         "eleMul": 0.6
       },
       {
-        "name": "Blade Dance III 9",
+        "name": "乱舞III[9]",
         "mv": 8,
         "eleMul": 0.8
       },
       {
-        "name": "Blade Dance III 10",
+        "name": "乱舞III[10]",
         "mv": 36,
         "eleMul": 0.8
       },
       {
-        "name": "Demon Flurry I",
+        "name": "鬼人連斬I",
         "mv": 15
       },
       {
-        "name": "Demon Flurry II 1",
+        "name": "鬼人連斬II[1]",
         "mv": 8,
         "eleMul": 0.6
       },
       {
-        "name": "Demon Flurry II 2",
+        "name": "鬼人連斬II[2]",
         "mv": 6,
         "eleMul": 0.6
       },
       {
-        "name": "Demon Flurry II 3",
+        "name": "鬼人連斬II[3]",
         "mv": 18
       },
       {
-        "name": "Jumping Doubleslash 1",
+        "name": "ジャンプ二連斬り[1]",
         "mv": 12,
         "eleMul": 0.6
       },
       {
-        "name": "Jumping Doubleslash 2",
+        "name": "ジャンプ二連斬り[2]",
         "mv": 9,
         "eleMul": 0.6
       },
       {
-        "name": "Midair Spinning Blade Dance 1",
+        "name": "空中回転乱舞[1]",
         "mv": 12,
         "eleMul": 0.5
       },
       {
-        "name": "Midair Spinning Blade Dance 2",
+        "name": "空中回転乱舞[2]",
         "mv": 8,
         "eleMul": 0.5
       },
       {
-        "name": "Midair Spinning Blade Dance 3",
+        "name": "空中回転乱舞[3]",
         "mv": 12,
         "eleMul": 0.7
       },
       {
-        "name": "Midair Spinning Blade Dance 4",
+        "name": "空中回転乱舞[4]",
         "mv": 8,
         "eleMul": 0.7
       },
       {
-        "name": "Midair Spinning Blade Dance Finisher 1",
+        "name": "空中回転乱舞フィニッシュ[1]",
         "mv": 15,
         "eleMul": 0.7
       },
       {
-        "name": "Midair Spinning Blade Dance Finisher 2",
+        "name": "空中回転乱舞フィニッシュ[2]",
         "mv": 20,
         "eleMul": 0.8
       },
       {
-        "name": "Midair Spinning Blade Dance Finisher 3",
+        "name": "空中回転乱舞フィニッシュ[3]",
         "mv": 6,
         "eleMul": 0.8
       },
       {
-        "name": "Heavenly Blade Dance 1",
+        "name": "天舞[1]",
         "mv": 15,
         "eleMul": 0.4
       },
       {
-        "name": "Heavenly Blade Dance 2",
+        "name": "天舞[2]",
         "mv": 10,
         "eleMul": 0.4
       },
       {
-        "name": "Heavenly Blade Dance 3",
+        "name": "天舞[3]",
         "mv": 12,
         "eleMul": 0.4
       },
       {
-        "name": "Heavenly Blade Dance 4",
+        "name": "天舞[4]",
         "mv": 8,
         "eleMul": 0.4
       },
       {
-        "name": "Heavenly Blade Dance Finisher 1",
+        "name": "天舞フィニッシュ[1]",
         "mv": 20
       },
       {
-        "name": "Heavenly Blade Dance Finisher 2",
+        "name": "天舞フィニッシュ[2]",
         "mv": 24,
         "eleMul": 0.7
       },
       {
-        "name": "Heavenly Blade Dance Finisher 3",
+        "name": "天舞フィニッシュ[3]",
         "mv": 8,
         "eleMul": 0.7
       },
       {
-        "name": "Sliding Slash 1",
+        "name": "スライディング斬り[1]",
         "mv": 10,
         "eleMul": 0.6
       },
       {
-        "name": "Sliding Slash 2",
+        "name": "スライディング斬り[2]",
         "mv": 13,
         "eleMul": 0.6
       },
       {
-        "name": "Perfect Evade 1",
+        "name": "ジャスト回避[1]",
         "mv": 6,
         "eleMul": 0.3
       },
       {
-        "name": "Perfect Evade 2",
+        "name": "ジャスト回避[2]",
         "mv": 10,
         "eleMul": 0.6
       },
       {
-        "name": "Screw Slicer 1",
+        "name": "螺旋斬り[1]",
         "mv": 2,
         "eleMul": 0.8
       },
       {
-        "name": "Screw Slicer 2",
+        "name": "螺旋斬り[2]",
         "mv": 3,
         "eleMul": 0.8
       },
       {
-        "name": "Screw Slicer 3",
+        "name": "螺旋斬り[3]",
         "mv": 10
       },
       {
-        "name": "Screw Slicer 4",
+        "name": "螺旋斬り[4]",
         "mv": 15
       },
       {
-        "name": "Focus Strike: Turning Tide",
+        "name": "集中攻撃：逆転斬り",
         "mv": 10
       },
       {
-        "name": "Focus Strike: Turning Tide Follow-Up",
+        "name": "集中攻撃：逆転斬り追撃",
         "mv": 27
       },
       {
-        "name": "Turning Tidedrill 1",
+        "name": "逆転螺旋[1]",
         "mv": 12,
         "eleMul": 0.6
       },
       {
-        "name": "Turning Tidedrill 2",
+        "name": "逆転螺旋[2]",
         "mv": 9,
         "eleMul": 0.6
       },
       {
-        "name": "Turning Tidedrill 3",
+        "name": "逆転螺旋[3]",
         "mv": 12,
         "eleMul": 0.6
       },
       {
-        "name": "Turning Tidedrill 4",
+        "name": "逆転螺旋[4]",
         "mv": 9,
         "eleMul": 0.6
       },
       {
-        "name": "Turning Tidedrill 5",
+        "name": "逆転螺旋[5]",
         "mv": 12,
         "eleMul": 0.6
       },
       {
-        "name": "Turning Tidedrill 6",
+        "name": "逆転螺旋[6]",
         "mv": 9,
         "eleMul": 0.6
       },
       {
-        "name": "Turning Tidedrill 7",
+        "name": "逆転螺旋[7]",
         "mv": 18,
         "eleMul": 0.7
       },
       {
-        "name": "Turning Tidedrill 8",
+        "name": "逆転螺旋[8]",
         "mv": 24,
         "eleMul": 0.7
       }
@@ -1243,174 +1243,174 @@
     "damageType": "blunt",
     "attacks": [
       {
-        "name": "Swing",
+        "name": "振り",
         "mv": 22
       },
       {
-        "name": "Follow-up",
+        "name": "追撃",
         "mv": 18
       },
       {
-        "name": "Overhead Smash I",
+        "name": "叩きつけI",
         "mv": 41
       },
       {
-        "name": "Overhead Smash II",
+        "name": "叩きつけII",
         "mv": 45
       },
       {
-        "name": "Upswing",
+        "name": "振り上げ",
         "mv": 95,
         "eleMul": 1.95
       },
       {
-        "name": "Side Smash",
+        "name": "横殴り",
         "mv": 23,
         "eleMul": 1.65
       },
       {
-        "name": "Big Bang I",
+        "name": "ビッグバンI",
         "mv": 43,
         "eleMul": 1.65
       },
       {
-        "name": "Big Bang II",
+        "name": "ビッグバンII",
         "mv": 48,
         "eleMul": 1.65
       },
       {
-        "name": "Big Bang III",
+        "name": "ビッグバンIII",
         "mv": 70,
         "eleMul": 1.65
       },
       {
-        "name": "Big Bang IV",
+        "name": "ビッグバンIV",
         "mv": 90,
         "eleMul": 1.65
       },
       {
-        "name": "Big Bang Finisher 1",
+        "name": "ビッグバンフィニッシュ[1]",
         "mv": 28,
         "eleMul": 1.65
       },
       {
-        "name": "Big Bang Finisher 2",
+        "name": "ビッグバンフィニッシュ[2]",
         "mv": 130,
         "eleMul": 2.25
       },
       {
-        "name": "Charged Side Blow",
+        "name": "溜め横殴り",
         "mv": 25,
         "eleMul": 16.5
       },
       {
-        "name": "Charged Follow-up",
+        "name": "溜め追撃",
         "mv": 55
       },
       {
-        "name": "Charged Upswing",
+        "name": "溜め振り上げ",
         "mv": 70,
         "eleMul": 1.8
       },
       {
-        "name": "Charged Big Bang 1",
+        "name": "溜めビッグバン[1]",
         "mv": 20
       },
       {
-        "name": "Charged Big Bang 2",
+        "name": "溜めビッグバン[2]",
         "mv": 130,
         "eleMul": 2.25
       },
       {
-        "name": "Spinning Bludgeon Start",
+        "name": "回転攻撃(開始)",
         "mv": 23,
         "eleMul": 3.75
       },
       {
-        "name": "Spinning Bludgeon Mid",
+        "name": "回転攻撃(継続)",
         "mv": 18,
         "eleMul": 3.75
       },
       {
-        "name": "Spinning Bludgeon Finish",
+        "name": "回転攻撃(終了)",
         "mv": 25,
         "eleMul": 2.25
       },
       {
-        "name": "Spinning Side Smash",
+        "name": "回転横殴り",
         "mv": 30,
         "eleMul": 2.25
       },
       {
-        "name": "Spinning Follow-up",
+        "name": "回転追撃",
         "mv": 55,
         "eleMul": 2.25
       },
       {
-        "name": "Spinning Strong Upswing",
+        "name": "回転強振り上げ",
         "mv": 100,
         "eleMul": 2.25
       },
       {
-        "name": "Mighty Charge Upswing",
+        "name": "力溜め振り上げ",
         "mv": 130,
         "eleMul": 1.8
       },
       {
-        "name": "Mighty Charge Slam 1",
+        "name": "力溜め叩きつけ[1]",
         "mv": 20
       },
       {
-        "name": "Mighty Charge Slam 2",
+        "name": "力溜め叩きつけ[2]",
         "mv": 20,
         "eleMul": 1.8
       },
       {
-        "name": "Mighty Charge Slam 3",
+        "name": "力溜め叩きつけ[3]",
         "mv": 200,
         "eleMul": 2.25
       },
       {
-        "name": "Follow-Up Spinslam Spin",
+        "name": "追撃回転叩きつけ(回転)",
         "mv": 20
       },
       {
-        "name": "Follow-Up Spinslam 1",
+        "name": "追撃回転叩きつけ[1]",
         "mv": 20
       },
       {
-        "name": "Follow-Up Spinslam 2",
+        "name": "追撃回転叩きつけ[2]",
         "mv": 210,
         "eleMul": 2.25
       },
       {
-        "name": "Focus Blow: Earthquake",
+        "name": "集中攻撃：震打",
         "mv": 15
       },
       {
-        "name": "Focus Blow: Earthquake Spin",
+        "name": "集中攻撃：震打(回転)",
         "mv": 30
       },
       {
-        "name": "Focus Blow: Earthquake Finisher",
+        "name": "集中攻撃：震打(フィニッシュ)",
         "mv": 45
       },
       {
-        "name": "Jumping Smash",
+        "name": "ジャンプ叩きつけ",
         "mv": 37
       },
       {
-        "name": "Jumping Charged Attack I",
+        "name": "ジャンプ溜め攻撃I",
         "mv": 72,
         "eleMul": 1.65
       },
       {
-        "name": "Jumping Charged Attack II",
+        "name": "ジャンプ溜め攻撃II",
         "mv": 77,
         "eleMul": 1.8
       },
       {
-        "name": "Jumping Charged Attack III",
+        "name": "ジャンプ溜め攻撃III",
         "mv": 88,
         "eleMul": 2.25
       }
@@ -1420,145 +1420,145 @@
     "damageType": "blunt",
     "attacks": [
       {
-        "name": "Forward Smash",
+        "name": "前方攻撃",
         "mv": 32,
         "rawType": "blunt"
       },
       {
-        "name": "Left Swing",
+        "name": "左ぶん回し",
         "mv": 33,
         "rawType": "blunt"
       },
       {
-        "name": "Right Swing",
+        "name": "右ぶん回し",
         "mv": 33,
         "rawType": "blunt"
       },
       {
-        "name": "Flourish 1",
+        "name": "連音攻撃[1]",
         "mv": 15,
         "rawType": "blunt"
       },
       {
-        "name": "Flourish 2",
+        "name": "連音攻撃[2]",
         "mv": 25,
         "rawType": "blunt"
       },
       {
-        "name": "Backwards Strike",
+        "name": "後方攻撃",
         "mv": 46,
         "rawType": "blunt"
       },
       {
-        "name": "Overhead Smash 1",
+        "name": "叩きつけ[1]",
         "mv": 14,
         "rawType": "blunt"
       },
       {
-        "name": "Overhead Smash 2",
+        "name": "叩きつけ[2]",
         "mv": 42,
         "rawType": "blunt"
       },
       {
-        "name": "Overhead Smash Follow-up Attack",
+        "name": "叩きつけ追撃",
         "mv": 65,
         "rawType": "blunt"
       },
       {
-        "name": "Hilt Stab",
+        "name": "柄突き",
         "mv": 10
       },
       {
-        "name": "Neutral / Forward Perform",
+        "name": "前方演奏攻撃",
         "mv": 35,
         "rawType": "blunt"
       },
       {
-        "name": "Side Perform",
+        "name": "側方演奏攻撃",
         "mv": 45,
         "rawType": "blunt"
       },
       {
-        "name": "Back Perform",
+        "name": "後方演奏攻撃",
         "mv": 60,
         "rawType": "blunt"
       },
       {
-        "name": "Performance Beat I",
+        "name": "演奏I",
         "mv": 29,
         "rawType": "blunt"
       },
       {
-        "name": "Performance Beat I (Power)",
+        "name": "演奏I(強化)",
         "mv": 35,
         "rawType": "blunt"
       },
       {
-        "name": "Performance Beat II",
+        "name": "演奏II",
         "mv": 31,
         "rawType": "blunt"
       },
       {
-        "name": "Performance Beat II (Power)",
+        "name": "演奏II(強化)",
         "mv": 45,
         "rawType": "blunt"
       },
       {
-        "name": "Encore 1",
+        "name": "アンコール[1]",
         "mv": 20,
         "rawType": "blunt"
       },
       {
-        "name": "Encore 2",
+        "name": "アンコール[2]",
         "mv": 60,
         "rawType": "blunt"
       },
       {
-        "name": "Encore 2 (Power)",
+        "name": "アンコール[2](強化)",
         "mv": 75,
         "rawType": "blunt"
       },
       {
-        "name": "Offset Melody",
+        "name": "ずらし旋律",
         "mv": 75,
         "rawType": "blunt"
       },
       {
-        "name": "Resounding Melody 1",
+        "name": "響旋律[1]",
         "mv": 20,
         "rawType": "blunt"
       },
       {
-        "name": "Resounding Melody 2",
+        "name": "響旋律[2]",
         "mv": 22,
         "rawType": "blunt"
       },
       {
-        "name": "Resounding Melody 3",
+        "name": "響旋律[3]",
         "mv": 20,
         "rawType": "blunt"
       },
       {
-        "name": "Resounding Melody Soundwaves",
+        "name": "響旋律(衝撃波)",
         "mv": 15,
         "eleMul": 0.5,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Perform Soundwave",
+        "name": "演奏衝撃波",
         "mv": 27,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Song Soundwave",
+        "name": "旋律衝撃波",
         "mv": 10,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Bubble",
+        "name": "響泡",
         "mv": 45,
         "eleMul": 0.3,
         "rawType": "blunt",
@@ -1566,7 +1566,7 @@
         "ignoreHzv": true
       },
       {
-        "name": "Echo Bubble (Note)",
+        "name": "響泡(音符)",
         "mv": 5,
         "eleMul": 0.3,
         "rawType": "blunt",
@@ -1574,7 +1574,7 @@
         "ignoreHzv": true
       },
       {
-        "name": "Echo Bubble (Song)",
+        "name": "響泡(旋律)",
         "mv": 12,
         "eleMul": 0.3,
         "rawType": "blunt",
@@ -1582,213 +1582,213 @@
         "ignoreHzv": true
       },
       {
-        "name": "Echo Wave (Blunt)",
+        "name": "震打波(打撃)",
         "mv": 50,
         "eleMul": 0.0,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Blunt) II",
+        "name": "震打波(打撃)II",
         "mv": 70,
         "eleMul": 0.0,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Blunt) III",
+        "name": "震打波(打撃)III",
         "mv": 100,
         "eleMul": 0.0,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Slash)",
+        "name": "震打波(斬撃)",
         "mv": 50,
         "eleMul": 0.0,
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Slash) II",
+        "name": "震打波(斬撃)II",
         "mv": 70,
         "eleMul": 0.0,
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Slash) III",
+        "name": "震打波(斬撃)III",
         "mv": 100,
         "eleMul": 0.0,
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Fire)",
+        "name": "震打波(火)",
         "mv": 45,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Fire) II",
+        "name": "震打波(火)II",
         "mv": 65,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Fire) III",
+        "name": "震打波(火)III",
         "mv": 85,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Water)",
+        "name": "震打波(水)",
         "mv": 45,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Water) II",
+        "name": "震打波(水)II",
         "mv": 65,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Water) III",
+        "name": "震打波(水)III",
         "mv": 85,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Thunder)",
+        "name": "震打波(雷)",
         "mv": 45,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Thunder) II",
+        "name": "震打波(雷)II",
         "mv": 65,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Thunder) III",
+        "name": "震打波(雷)III",
         "mv": 85,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Ice)",
+        "name": "震打波(氷)",
         "mv": 45,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Ice) II",
+        "name": "震打波(氷)II",
         "mv": 65,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Ice) III",
+        "name": "震打波(氷)III",
         "mv": 85,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Dragon)",
+        "name": "震打波(龍)",
         "mv": 45,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Dragon) II",
+        "name": "震打波(龍)II",
         "mv": 65,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Dragon) III",
+        "name": "震打波(龍)III",
         "mv": 85,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Blast)",
+        "name": "震打波(爆破)",
         "mv": 45,
         "eleMul": 0.0,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Blast) II",
+        "name": "震打波(爆破)II",
         "mv": 65,
         "eleMul": 0.0,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Blast) III",
-        "mv": 85,
-        "eleMul": 0.0,
-        "rawType": "blunt",
-        "ignoreSharpness": true
-      },
-      {
-        "name": "Echo Wave (Paralysis)",
-        "mv": 45,
-        "eleMul": 0.0,
-        "rawType": "blunt",
-        "ignoreSharpness": true
-      },
-      {
-        "name": "Echo Wave (Paralysis) II",
-        "mv": 65,
-        "eleMul": 0.0,
-        "rawType": "blunt",
-        "ignoreSharpness": true
-      },
-      {
-        "name": "Echo Wave (Paralysis) III",
+        "name": "震打波(爆破)III",
         "mv": 85,
         "eleMul": 0.0,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Poison)",
+        "name": "震打波(麻痺)",
         "mv": 45,
         "eleMul": 0.0,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Poison) II",
+        "name": "震打波(麻痺)II",
         "mv": 65,
         "eleMul": 0.0,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Poison) III",
+        "name": "震打波(麻痺)III",
         "mv": 85,
         "eleMul": 0.0,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Sleep)",
+        "name": "震打波(毒)",
         "mv": 45,
         "eleMul": 0.0,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Sleep) II",
+        "name": "震打波(毒)II",
         "mv": 65,
         "eleMul": 0.0,
         "rawType": "blunt",
         "ignoreSharpness": true
       },
       {
-        "name": "Echo Wave (Sleep) III",
+        "name": "震打波(毒)III",
+        "mv": 85,
+        "eleMul": 0.0,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "震打波(睡眠)",
+        "mv": 45,
+        "eleMul": 0.0,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "震打波(睡眠)II",
+        "mv": 65,
+        "eleMul": 0.0,
+        "rawType": "blunt",
+        "ignoreSharpness": true
+      },
+      {
+        "name": "震打波(睡眠)III",
         "mv": 85,
         "eleMul": 0.0,
         "rawType": "blunt",
@@ -1800,236 +1800,236 @@
     "damageType": "pierce",
     "attacks": [
       {
-        "name": "Mid Thrust I / II",
+        "name": "中段突きI/II",
         "mv": 24,
         "eleMul": 1.2
       },
       {
-        "name": "Mid Thrust III",
+        "name": "中段突きIII",
         "mv": 33,
         "eleMul": 1.4
       },
       {
-        "name": "High Thrust I / II",
+        "name": "上段突きI/II",
         "mv": 31
       },
       {
-        "name": "High Thrust III",
+        "name": "上段突きIII",
         "mv": 40
       },
       {
-        "name": "Triple Thrust 1 / 2",
+        "name": "三連突き[1/2]",
         "mv": 22,
         "eleMul": 1.2
       },
       {
-        "name": "Triple Thrust 3",
+        "name": "三連突き[3]",
         "mv": 35,
         "eleMul": 1.4
       },
       {
-        "name": "Charge Counter",
+        "name": "突進カウンター",
         "mv": 43
       },
       {
-        "name": "Charge Counter Lv1",
+        "name": "突進カウンターLv1",
         "mv": 51
       },
       {
-        "name": "Charge Counter Lv2",
+        "name": "突進カウンターLv2",
         "mv": 60
       },
       {
-        "name": "Charge Counter Lv3",
+        "name": "突進カウンターLv3",
         "mv": 73
       },
       {
-        "name": "Double Counter-thrust 1",
+        "name": "二連カウンター突き[1]",
         "mv": 25
       },
       {
-        "name": "Double Counter-thrust 2",
+        "name": "二連カウンター突き[2]",
         "mv": 50
       },
       {
-        "name": "Double Counter-thrust Lv1 1",
+        "name": "二連カウンター突きLv1[1]",
         "mv": 30
       },
       {
-        "name": "Double Counter-thrust Lv1 2",
+        "name": "二連カウンター突きLv1[2]",
         "mv": 60
       },
       {
-        "name": "Double Counter-thrust Lv2 1",
+        "name": "二連カウンター突きLv2[1]",
         "mv": 35
       },
       {
-        "name": "Double Counter-thrust Lv2 2",
+        "name": "二連カウンター突きLv2[2]",
         "mv": 70
       },
       {
-        "name": "Double Counter-thrust Lv3 1",
+        "name": "二連カウンター突きLv3[1]",
         "mv": 42
       },
       {
-        "name": "Double Counter-thrust Lv3 2",
+        "name": "二連カウンター突きLv3[2]",
         "mv": 85
       },
       {
-        "name": "Leaping Thrust",
+        "name": "飛び込み突き",
         "mv": 29,
         "eleMul": 1.2
       },
       {
-        "name": "Wide Sweep",
+        "name": "薙ぎ払い",
         "mv": 80,
         "eleMul": 1.4
       },
       {
-        "name": "Shield Attack",
+        "name": "盾攻撃",
         "mv": 20,
         "eleMul": 0.0,
         "rawType": "blunt"
       },
       {
-        "name": "Guard Thrust",
+        "name": "ガード突き",
         "mv": 20
       },
       {
-        "name": "Dash Attack",
+        "name": "突進突き",
         "mv": 17,
         "eleMul": 0.5
       },
       {
-        "name": "Finishing Thrust",
+        "name": "フィニッシュ突き",
         "mv": 55,
         "eleMul": 1.4
       },
       {
-        "name": "Finishing Twin Thrust 1",
+        "name": "フィニッシュ二連突き[1]",
         "mv": 35,
         "eleMul": 1.6
       },
       {
-        "name": "Finishing Twin Thrust 2",
+        "name": "フィニッシュ二連突き[2]",
         "mv": 60,
         "eleMul": 1.6
       },
       {
-        "name": "Reverse Attack",
+        "name": "反転攻撃",
         "mv": 53,
         "eleMul": 1.4
       },
       {
-        "name": "Advancing Jump",
+        "name": "突進ジャンプ",
         "mv": 25,
         "eleMul": 0.5
       },
       {
-        "name": "Reverse Attack (High Speed)",
+        "name": "反転攻撃(高速)",
         "mv": 80,
         "eleMul": 1.4
       },
       {
-        "name": "Advancing Jump Thrust",
+        "name": "突進ジャンプ突き",
         "mv": 30,
         "eleMul": 0.5
       },
       {
-        "name": "Advancing Jump Thrust (High Speed)",
+        "name": "突進ジャンプ突き(高速)",
         "mv": 33,
         "eleMul": 0.5
       },
       {
-        "name": "Jumping Thrust",
+        "name": "ジャンプ突き",
         "mv": 30
       },
       {
-        "name": "Guard Counter",
+        "name": "ガードカウンター",
         "mv": 20,
         "eleMul": 0.0,
         "rawType": "blunt"
       },
       {
-        "name": "Perfect Guard Counter",
+        "name": "ジャストガードカウンター",
         "mv": 25,
         "eleMul": 0.0,
         "rawType": "blunt"
       },
       {
-        "name": "Return Thrust",
+        "name": "返し突き",
         "mv": 24,
         "eleMul": 1.2
       },
       {
-        "name": "Return Thrust (Power)",
+        "name": "返し突き(強化)",
         "mv": 31,
         "eleMul": 1.4
       },
       {
-        "name": "Payback Thrust 1",
+        "name": "報復突き[1]",
         "mv": 30
       },
       {
-        "name": "Payback Thrust 1 (Power)",
+        "name": "報復突き[1](強化)",
         "mv": 42,
         "eleMul": 1.4
       },
       {
-        "name": "Payback Thrust 2",
+        "name": "報復突き[2]",
         "mv": 25
       },
       {
-        "name": "Retribution Thrust 1",
+        "name": "応報突き[1]",
         "mv": 30,
         "eleMul": 1.4
       },
       {
-        "name": "Retribution Thrust 1 (Power)",
+        "name": "応報突き[1](強化)",
         "mv": 58,
         "eleMul": 1.6
       },
       {
-        "name": "Retribution Thrust 2",
+        "name": "応報突き[2]",
         "mv": 15
       },
       {
-        "name": "Grand Retribution Thrust 1",
+        "name": "大応報突き[1]",
         "mv": 50
       },
       {
-        "name": "Grand Retribution Thrust 2",
+        "name": "大応報突き[2]",
         "mv": 20
       },
       {
-        "name": "Grand Retribution Thrust 3",
+        "name": "大応報突き[3]",
         "mv": 12
       },
       {
-        "name": "Follow-up Dash Attack",
+        "name": "追撃突進突き",
         "mv": 17,
         "eleMul": 0.5
       },
       {
-        "name": "Focus Strike: Victory Thrust 1",
+        "name": "集中攻撃：勝利の突き[1]",
         "mv": 20,
         "eleMul": 0.0
       },
       {
-        "name": "Focus Strike: Victory Thrust 2",
+        "name": "集中攻撃：勝利の突き[2]",
         "mv": 15
       },
       {
-        "name": "Focus Strike: Victory Thrust 3",
+        "name": "集中攻撃：勝利の突き[3]",
         "mv": 55
       },
       {
-        "name": "Power Clash Finisher 1",
+        "name": "パワークラッシュ[1]",
         "mv": 60,
         "eleMul": 0.0
       },
       {
-        "name": "Power Clash Finisher 2",
+        "name": "パワークラッシュ[2]",
         "mv": 120
       }
     ]
@@ -2038,67 +2038,67 @@
     "damageType": "slash",
     "attacks": [
       {
-        "name": "Lateral Thrust I / II",
+        "name": "水平突きI/II",
         "mv": 24,
         "eleMul": 2.0
       },
       {
-        "name": "Lunging Upthrust",
+        "name": "踏み込み突き上げ",
         "mv": 38,
         "eleMul": 1.2
       },
       {
-        "name": "Rising Slash",
+        "name": "斬り上げ",
         "mv": 38,
         "eleMul": 1.2
       },
       {
-        "name": "Guard Thrust",
+        "name": "ガード突き",
         "mv": 18,
         "eleMul": 2.0
       },
       {
-        "name": "Overhead Smash",
+        "name": "叩きつけ",
         "mv": 57,
         "eleMul": 2.0
       },
       {
-        "name": "Wide Sweep / Moving Wide Sweep / Aerial Burst",
+        "name": "薙ぎ払い",
         "mv": 40,
         "eleMul": 1.5
       },
       {
-        "name": "(Multi) Wyrmstake Full Blast Sweep",
+        "name": "竜杭フルバースト薙ぎ払い",
         "mv": 30
       },
       {
-        "name": "Wyrmstake Thrust",
+        "name": "竜杭突き",
         "mv": 40,
         "eleMul": 2.0
       },
       {
-        "name": "Wyrmstake Full Blast Thrust",
+        "name": "竜杭フルバースト突き",
         "mv": 20
       },
       {
-        "name": "Wyrmstake Attach",
+        "name": "竜杭装着",
         "mv": 20,
         "eleMul": 2.0
       },
       {
-        "name": "Jumping Thrust",
+        "name": "ジャンプ突き",
         "mv": 25
       },
       {
-        "name": "Jumping Smash",
+        "name": "ジャンプ叩きつけ",
         "mv": 44
       },
       {
-        "name": "Jumping Rising Slash",
+        "name": "ジャンプ斬り上げ",
         "mv": 35
       },
       {
-        "name": "Focus Strike: Drake Auger",
+        "name": "集中攻撃：竜穿",
         "mv": 18
       }
     ]
@@ -2107,217 +2107,217 @@
     "damageType": "slash",
     "attacks": [
       {
-        "name": "Axe: Overhead Slash",
+        "name": "斧：縦斬り",
         "mv": 45
       },
       {
-        "name": "Axe: Side Slash",
+        "name": "斧：横斬り",
         "mv": 23
       },
       {
-        "name": "Axe: Spiral Burst Slash 1",
+        "name": "斧：螺旋斬り[1]",
         "mv": 30
       },
       {
-        "name": "Axe: Spiral Burst Slash 2",
+        "name": "斧：螺旋斬り[2]",
         "mv": 41
       },
       {
-        "name": "Axe: Forward Slash",
+        "name": "斧：前方斬り",
         "mv": 35
       },
       {
-        "name": "Axe: Forward Overhead Slash",
+        "name": "斧：前方縦斬り",
         "mv": 45
       },
       {
-        "name": "Axe: Fade Slash",
+        "name": "斧：回避斬り",
         "mv": 42
       },
       {
-        "name": "Axe: Offset Rising Slash",
+        "name": "斧：ずらし斬り上げ",
         "mv": 50
       },
       {
-        "name": "Axe: Follow-up Heavy Slam 1",
+        "name": "斧：追撃叩きつけ[1]",
         "mv": 32
       },
       {
-        "name": "Axe: Follow-up Heavy Slam 2",
+        "name": "斧：追撃叩きつけ[2]",
         "mv": 90
       },
       {
-        "name": "Axe: Follow-up Morph Slash",
+        "name": "斧：追撃変形斬り",
         "mv": 123
       },
       {
-        "name": "Axe: Follow-up Morph Slash Explosion (Power Phial)",
+        "name": "斧：追撃変形斬り爆発(強撃ビン)",
         "mv": 120,
         "eleMul": 0.35
       },
       {
-        "name": "Axe: Follow-up Morph Slash Explosion (Element Phial)",
+        "name": "斧：追撃変形斬り爆発(属性ビン)",
         "mv": 120,
         "eleMul": 0.8
       },
       {
-        "name": "Axe: Wild Slash Left",
+        "name": "斧：振り回し(左)",
         "mv": 23
       },
       {
-        "name": "Axe: Wild Slash Right",
+        "name": "斧：振り回し(右)",
         "mv": 21
       },
       {
-        "name": "Axe: Heavy Slam 1",
+        "name": "斧：叩きつけ[1]",
         "mv": 15
       },
       {
-        "name": "Axe: Heavy Slam 2",
+        "name": "斧：叩きつけ[2]",
         "mv": 72
       },
       {
-        "name": "Axe: Morph Sweep 1",
+        "name": "斧：変形薙ぎ払い[1]",
         "mv": 20
       },
       {
-        "name": "Axe: Morph Sweep 2",
+        "name": "斧：変形薙ぎ払い[2]",
         "mv": 70
       },
       {
-        "name": "Axe: Morph Sweep 3",
+        "name": "斧：変形薙ぎ払い[3]",
         "mv": 35
       },
       {
-        "name": "Axe: Morph Slash",
+        "name": "斧：変形斬り",
         "mv": 33
       },
       {
-        "name": "Axe: Morph Rising Double Slash 1",
+        "name": "斧：変形斬り上げ二連[1]",
         "mv": 32
       },
       {
-        "name": "Axe: Morph Rising Double Slash 2",
+        "name": "斧：変形斬り上げ二連[2]",
         "mv": 28
       },
       {
-        "name": "Sword: Overhead Slash",
+        "name": "剣：縦斬り",
         "mv": 33
       },
       {
-        "name": "Sword: Left Rising Slash",
+        "name": "剣：左斬り上げ",
         "mv": 42
       },
       {
-        "name": "Sword: Right Rising Slash",
+        "name": "剣：右斬り上げ",
         "mv": 48
       },
       {
-        "name": "Sword: Triple Slash 1",
+        "name": "剣：三連斬り[1]",
         "mv": 15
       },
       {
-        "name": "Sword: Double Slash 1 / Triple Slash 2",
+        "name": "剣：二連斬り/三連斬り[2]",
         "mv": 22
       },
       {
-        "name": "Sword: Double Slash 2 / Triple Slash 3",
+        "name": "剣：二連斬り/三連斬り[3]",
         "mv": 26
       },
       {
-        "name": "Sword: Heavenward Flurry 1",
+        "name": "剣：天連斬り[1]",
         "mv": 24
       },
       {
-        "name": "Sword: Heavenward Flurry 2",
+        "name": "剣：天連斬り[2]",
         "mv": 36
       },
       {
-        "name": "Sword: Morph Slash",
+        "name": "剣：変形斬り",
         "mv": 23
       },
       {
-        "name": "Sword: Morph Double Slash 1",
+        "name": "剣：変形二連斬り[1]",
         "mv": 30
       },
       {
-        "name": "Sword: Morph Double Slash 2",
+        "name": "剣：変形二連斬り[2]",
         "mv": 50
       },
       {
-        "name": "Sword: Amped State Phial (Power Phial)",
+        "name": "剣：高出力ビン(強撃ビン)",
         "mv": 12,
         "eleMul": 0.35
       },
       {
-        "name": "Sword: Amped State Phial (Element Phial)",
+        "name": "剣：高出力ビン(属性ビン)",
         "mv": 12
       },
       {
-        "name": "Unbridled Slash",
+        "name": "解放斬り",
         "mv": 70
       },
       {
-        "name": "Unbridled Slash Explosion (Power Phial)",
+        "name": "解放斬り爆発(強撃ビン)",
         "mv": 17,
         "eleMul": 0.35
       },
       {
-        "name": "Unbridled Slash Explosion (Element Phial)",
+        "name": "解放斬り爆発(属性ビン)",
         "mv": 17,
         "eleMul": 0.8
       },
       {
-        "name": "Full Release Slash 1",
+        "name": "全解放斬り[1]",
         "mv": 50
       },
       {
-        "name": "Full Release Slash 2",
+        "name": "全解放斬り[2]",
         "mv": 82
       },
       {
-        "name": "Full Release Slash Explosion 1 (Power Phial)",
+        "name": "全解放斬り爆発[1](強撃ビン)",
         "mv": 20,
         "eleMul": 0.35
       },
       {
-        "name": "Full Release Slash Explosion 1 (Element Phial)",
+        "name": "全解放斬り爆発[1](属性ビン)",
         "mv": 20,
         "eleMul": 0.8
       },
       {
-        "name": "Full Release Slash Explosion 2 (Power Phial)",
+        "name": "全解放斬り爆発[2](強撃ビン)",
         "mv": 35,
         "eleMul": 0.35
       },
       {
-        "name": "Full Release Slash Explosion 2 (Element Phial)",
+        "name": "全解放斬り爆発[2](属性ビン)",
         "mv": 35,
         "eleMul": 0.8
       },
       {
-        "name": "Elemental Discharge",
+        "name": "属性解放突き",
         "mv": 20
       },
       {
-        "name": "Elemental Discharge Tick",
+        "name": "属性解放突き(多段)",
         "mv": 12,
         "eleMul": 0.7
       },
       {
-        "name": "Elemental Discharge Finisher",
+        "name": "属性解放突きフィニッシュ",
         "mv": 135
       },
       {
-        "name": "Finishing Discharge",
+        "name": "零距離属性解放突き",
         "mv": 65
       },
       {
-        "name": "Zero Sum Discharge Finisher",
+        "name": "零距離属性解放突きフィニッシュ",
         "mv": 160
       },
       {
-        "name": "Zero Sum Finishing Discharge",
+        "name": "零距離解放フィニッシュ",
         "mv": 75
       }
     ]
@@ -2326,237 +2326,237 @@
     "damageType": "slash",
     "attacks": [
       {
-        "name": "Sword: Forward Slash",
+        "name": "剣：前方斬り",
         "mv": 18
       },
       {
-        "name": "Sword: Weak Slash",
+        "name": "剣：弱斬り",
         "mv": 15
       },
       {
-        "name": "Sword: Return Stroke",
+        "name": "剣：返し斬り",
         "mv": 18
       },
       {
-        "name": "Sword: Roundslash",
+        "name": "剣：回転斬り",
         "mv": 30
       },
       {
-        "name": "Sword: Fade Slash",
+        "name": "剣：回避斬り",
         "mv": 24
       },
       {
-        "name": "Sword: Charged Rising Slash",
+        "name": "剣：溜め斬り上げ",
         "mv": 15
       },
       {
-        "name": "Sword: Charged Double Slash 1",
+        "name": "剣：溜め二連斬り[1]",
         "mv": 25
       },
       {
-        "name": "Sword: Charged Double Slash 2",
+        "name": "剣：溜め二連斬り[2]",
         "mv": 16
       },
       {
-        "name": "Sword: Shield Thrust 1",
+        "name": "剣：盾突き[1]",
         "mv": 15
       },
       {
-        "name": "Sword: Shield Thrust 2",
+        "name": "剣：盾突き[2]",
         "mv": 6
       },
       {
-        "name": "Sword: Condensed Elemental Slash",
+        "name": "剣：属性強化斬り",
         "mv": 48
       },
       {
-        "name": "Sword: Condensed Elemental Slash Impact Phial",
+        "name": "剣：属性強化斬り(榴弾ビン)",
         "mv": 25,
         "eleMul": 0.0,
         "ignoreSharpness": true,
         "ignoreHzv": true
       },
       {
-        "name": "Sword: Condensed Elemental Slash Element Phial",
+        "name": "剣：属性強化斬り(強属性ビン)",
         "mv": 0,
         "eleMul": 4.0,
         "ignoreSharpness": true
       },
       {
-        "name": "Sword: Morph Slash",
+        "name": "剣：変形斬り",
         "mv": 54
       },
       {
-        "name": "Axe: Rising Slash",
+        "name": "斧：斬り上げ",
         "mv": 38
       },
       {
-        "name": "Axe: Overhead Slash",
+        "name": "斧：縦斬り",
         "mv": 54
       },
       {
-        "name": "Axe: Dash Slam",
+        "name": "斧：突進叩きつけ",
         "mv": 48
       },
       {
-        "name": "Axe: Lateral Fade Slash / Backstep Slash",
+        "name": "斧：横回避斬り/バックステップ斬り",
         "mv": 42
       },
       {
-        "name": "Axe: Morph Slash / Elemental Roundslash",
+        "name": "斧：変形斬り/属性回転斬り",
         "mv": 30
       },
       {
-        "name": "Axe: Elemental Discharge I",
+        "name": "斧：属性解放斬りI",
         "mv": 53
       },
       {
-        "name": "Axe: Elemental Discharge II 1",
+        "name": "斧：属性解放斬りII[1]",
         "mv": 35
       },
       {
-        "name": "Axe: Elemental Discharge II 2",
+        "name": "斧：属性解放斬りII[2]",
         "mv": 58
       },
       {
-        "name": "Axe: Amped Elemental Discharge",
+        "name": "斧：高出力属性解放斬り",
         "mv": 68
       },
       {
-        "name": "Axe: Amped Elemental Discharge Follow-up",
+        "name": "斧：高出力属性解放斬り追撃",
         "mv": 78
       },
       {
-        "name": "Axe: Super Amped Elemental Discharge 1",
+        "name": "斧：超高出力属性解放斬り[1]",
         "mv": 16
       },
       {
-        "name": "Axe: Super Amped Elemental Discharge 2",
+        "name": "斧：超高出力属性解放斬り[2]",
         "mv": 78
       },
       {
-        "name": "Axe: Super Amped Elemental Discharge 3",
+        "name": "斧：超高出力属性解放斬り[3]",
         "mv": 45
       },
       {
-        "name": "Savage Axe Slash",
+        "name": "斧強化斬り",
         "mv": 48
       },
       {
-        "name": "Power Axe Tick",
+        "name": "斧強化(多段)",
         "mv": 12,
         "eleMul": 0.2
       },
       {
-        "name": "Impact Phial (Sword)",
+        "name": "榴弾ビン(剣)",
         "mv": 5,
         "eleMul": 0.0,
         "ignoreSharpness": true,
         "ignoreHzv": true
       },
       {
-        "name": "Impact Phial (ED)",
+        "name": "榴弾ビン(解放斬り)",
         "mv": 12,
         "eleMul": 0.0,
         "ignoreSharpness": true,
         "ignoreHzv": true
       },
       {
-        "name": "Overcharged Impact Phial (ED)",
+        "name": "過充填榴弾ビン(解放斬り)",
         "mv": 14,
         "eleMul": 0.0,
         "ignoreSharpness": true,
         "ignoreHzv": true
       },
       {
-        "name": "Impact Phial (AED)",
+        "name": "榴弾ビン(高出力)",
         "mv": 16,
         "eleMul": 0.0,
         "ignoreSharpness": true,
         "ignoreHzv": true
       },
       {
-        "name": "Overcharged Impact Phial (AED)",
+        "name": "過充填榴弾ビン(高出力)",
         "mv": 20,
         "eleMul": 0.0,
         "ignoreSharpness": true,
         "ignoreHzv": true
       },
       {
-        "name": "Impact Phial (SAED)",
+        "name": "榴弾ビン(超高出力)",
         "mv": 28,
         "eleMul": 0.0,
         "ignoreSharpness": true,
         "ignoreHzv": true
       },
       {
-        "name": "Overcharged Impact Phial (SAED)",
+        "name": "過充填榴弾ビン(超高出力)",
         "mv": 30,
         "eleMul": 0.0,
         "ignoreSharpness": true,
         "ignoreHzv": true
       },
       {
-        "name": "Element Phial (Sword)",
+        "name": "強属性ビン(剣)",
         "mv": 0,
         "eleMul": 1.5,
         "ignoreSharpness": true
       },
       {
-        "name": "Element Phial (ED)",
+        "name": "強属性ビン(解放斬り)",
         "mv": 0,
         "eleMul": 2.0,
         "ignoreSharpness": true
       },
       {
-        "name": "Overcharged Element Phial (ED)",
+        "name": "過充填強属性ビン(解放斬り)",
         "mv": 0,
         "eleMul": 2.2,
         "ignoreSharpness": true
       },
       {
-        "name": "Element Phial (AED)",
+        "name": "強属性ビン(高出力)",
         "mv": 0,
         "eleMul": 4.0,
         "ignoreSharpness": true
       },
       {
-        "name": "Overcharged Element Phial (AED)",
+        "name": "過充填強属性ビン(高出力)",
         "mv": 0,
         "eleMul": 5.0,
         "ignoreSharpness": true
       },
       {
-        "name": "Element Phial (SAED)",
+        "name": "強属性ビン(超高出力)",
         "mv": 0,
         "eleMul": 8.0,
         "ignoreSharpness": true
       },
       {
-        "name": "Overcharged Element Phial (SAED)",
+        "name": "過充填強属性ビン(超高出力)",
         "mv": 0,
         "eleMul": 10.0,
         "ignoreSharpness": true
       },
       {
-        "name": "Focus Slash: Double Rend",
+        "name": "集中斬り：二連裂き",
         "mv": 15
       },
       {
-        "name": "Focus Strike Savage Axe",
+        "name": "集中攻撃：斧強化",
         "mv": 50
       },
       {
-        "name": "Focus Strike Savage Axe Ticks",
+        "name": "集中攻撃：斧強化(多段)",
         "mv": 6,
         "eleMul": 0.3
       },
       {
-        "name": "Sword Jumping Slash / Axe Jumping Morph Slash",
+        "name": "剣ジャンプ斬り/斧ジャンプ変形斬り",
         "mv": 22
       },
       {
-        "name": "Axe Jumping Slash / Sword Jumping Morph Slash",
+        "name": "斧ジャンプ斬り/剣ジャンプ変形斬り",
         "mv": 46
       }
     ]
@@ -2565,349 +2565,349 @@
     "damageType": "slash",
     "attacks": [
       {
-        "name": "Rising Slash Combo 1",
+        "name": "斬り上げ連携[1]",
         "mv": 20,
         "eleMul": 0.7
       },
       {
-        "name": "Rising Slash Combo 2",
+        "name": "斬り上げ連携[2]",
         "mv": 14,
         "eleMul": 0.8
       },
       {
-        "name": "Reaping Slash",
+        "name": "薙ぎ払い",
         "mv": 18,
         "eleMul": 0.8
       },
       {
-        "name": "Double Slash 1",
+        "name": "二連斬り[1]",
         "mv": 18,
         "eleMul": 0.7
       },
       {
-        "name": "Double Slash 2",
+        "name": "二連斬り[2]",
         "mv": 24,
         "eleMul": 0.8
       },
       {
-        "name": "Sidestep Slash",
+        "name": "回避斬り",
         "mv": 24,
         "eleMul": 0.8
       },
       {
-        "name": "Sidestep Slash Combo 1",
+        "name": "回避斬り連携[1]",
         "mv": 14,
         "eleMul": 0.8
       },
       {
-        "name": "Sidestep Slash Combo 2",
+        "name": "回避斬り連携[2]",
         "mv": 28,
         "eleMul": 0.8
       },
       {
-        "name": "Sidestep Slash Combo 1 (Forward)",
+        "name": "回避斬り連携[1](前方)",
         "mv": 14,
         "eleMul": 0.8
       },
       {
-        "name": "Sidestep Slash Combo 2 (Forward)",
+        "name": "回避斬り連携[2](前方)",
         "mv": 28,
         "eleMul": 0.8
       },
       {
-        "name": "Wide Sweep",
+        "name": "広域薙ぎ払い",
         "mv": 22,
         "eleMul": 0.8
       },
       {
-        "name": "Leaping Slash",
+        "name": "飛び込み斬り",
         "mv": 28,
         "eleMul": 0.8
       },
       {
-        "name": "Overhead Smash",
+        "name": "叩きつけ",
         "mv": 26,
         "eleMul": 0.8
       },
       {
-        "name": "Dodge Slash",
+        "name": "回避斬り",
         "mv": 20,
         "eleMul": 0.8
       },
       {
-        "name": "Strong Rising Slash Combo 1",
+        "name": "強斬り上げ連携[1]",
         "mv": 24,
         "eleMul": 0.8
       },
       {
-        "name": "Strong Rising Slash Combo 2",
+        "name": "強斬り上げ連携[2]",
         "mv": 12,
         "eleMul": 0.8
       },
       {
-        "name": "Strong Rising Slash Combo 3",
+        "name": "強斬り上げ連携[3]",
         "mv": 24,
         "eleMul": 0.8
       },
       {
-        "name": "Strong Reaping Slash 1",
+        "name": "強薙ぎ払い[1]",
         "mv": 18,
         "eleMul": 0.8
       },
       {
-        "name": "Strong Reaping Slash 2",
+        "name": "強薙ぎ払い[2]",
         "mv": 28,
         "eleMul": 0.8
       },
       {
-        "name": "Strong Double Slash 1",
+        "name": "強二連斬り[1]",
         "mv": 26,
         "eleMul": 0.8
       },
       {
-        "name": "Strong Double Slash 2",
+        "name": "強二連斬り[2]",
         "mv": 18,
         "eleMul": 0.8
       },
       {
-        "name": "Strong Double Slash 3",
+        "name": "強二連斬り[3]",
         "mv": 40
       },
       {
-        "name": "Strong Wide Sweep 1",
+        "name": "強広域薙ぎ払い[1]",
         "mv": 12,
         "eleMul": 0.8
       },
       {
-        "name": "Strong Wide Sweep 2",
+        "name": "強広域薙ぎ払い[2]",
         "mv": 24,
         "eleMul": 0.8
       },
       {
-        "name": "Tornado Slash 1",
+        "name": "竜巻斬り[1]",
         "mv": 22
       },
       {
-        "name": "Tornado Slash 2",
+        "name": "竜巻斬り[2]",
         "mv": 48
       },
       {
-        "name": "Jumping Slash",
+        "name": "ジャンプ斬り",
         "mv": 18,
         "eleMul": 1.0
       },
       {
-        "name": "Jumping Advancing Slash",
+        "name": "ジャンプ突進斬り",
         "mv": 26,
         "eleMul": 0.8
       },
       {
-        "name": "Strong Jumping Slash",
+        "name": "強ジャンプ斬り",
         "mv": 14,
         "eleMul": 0.6
       },
       {
-        "name": "Strong Jumping Advancing Slash 1",
+        "name": "強ジャンプ突進斬り[1]",
         "mv": 8,
         "eleMul": 0.5
       },
       {
-        "name": "Strong Jumping Advancing Slash 2",
+        "name": "強ジャンプ突進斬り[2]",
         "mv": 28,
         "eleMul": 0.8
       },
       {
-        "name": "Strong Jumping Advancing Slash II 1",
+        "name": "強ジャンプ突進斬りII[1]",
         "mv": 8,
         "eleMul": 0.5
       },
       {
-        "name": "Strong Jumping Advancing Slash II 2",
+        "name": "強ジャンプ突進斬りII[2]",
         "mv": 30,
         "eleMul": 0.8
       },
       {
-        "name": "Strong Jumping Advancing Slash III 1",
+        "name": "強ジャンプ突進斬りIII[1]",
         "mv": 10,
         "eleMul": 0.5
       },
       {
-        "name": "Strong Jumping Advancing Slash III 2",
+        "name": "強ジャンプ突進斬りIII[2]",
         "mv": 36,
         "eleMul": 0.8
       },
       {
-        "name": "Scaling Double Slash 1",
+        "name": "駆け上がり二連斬り[1]",
         "mv": 12,
         "eleMul": 0.8
       },
       {
-        "name": "Scaling Double Slash 2",
+        "name": "駆け上がり二連斬り[2]",
         "mv": 20,
         "eleMul": 0.8
       },
       {
-        "name": "Descending Slash Lv1 1",
+        "name": "降下斬りLv1[1]",
         "mv": 15
       },
       {
-        "name": "Descending Slash Lv1 2",
+        "name": "降下斬りLv1[2]",
         "mv": 9
       },
       {
-        "name": "Descending Slash Lv1 3",
+        "name": "降下斬りLv1[3]",
         "mv": 12
       },
       {
-        "name": "Descending Slash Lv1 4",
+        "name": "降下斬りLv1[4]",
         "mv": 24
       },
       {
-        "name": "Descending Slash Lv2 1",
+        "name": "降下斬りLv2[1]",
         "mv": 20
       },
       {
-        "name": "Descending Slash Lv2 2",
+        "name": "降下斬りLv2[2]",
         "mv": 12
       },
       {
-        "name": "Descending Slash Lv2 3",
+        "name": "降下斬りLv2[3]",
         "mv": 16
       },
       {
-        "name": "Descending Slash Lv2 4",
+        "name": "降下斬りLv2[4]",
         "mv": 32
       },
       {
-        "name": "Strong Descending Slash Lv1 1",
+        "name": "強降下斬りLv1[1]",
         "mv": 24
       },
       {
-        "name": "Strong Descending Slash Lv1 2",
+        "name": "強降下斬りLv1[2]",
         "mv": 9
       },
       {
-        "name": "Strong Descending Slash Lv1 3-5",
+        "name": "強降下斬りLv1[3-5]",
         "mv": 13
       },
       {
-        "name": "Strong Descending Slash Lv1 6",
+        "name": "強降下斬りLv1[6]",
         "mv": 34
       },
       {
-        "name": "Strong Descending Slash Lv2 1",
+        "name": "強降下斬りLv2[1]",
         "mv": 32
       },
       {
-        "name": "Strong Descending Slash Lv2 2",
+        "name": "強降下斬りLv2[2]",
         "mv": 12
       },
       {
-        "name": "Strong Descending Slash Lv2 3-5",
+        "name": "強降下斬りLv2[3-5]",
         "mv": 18
       },
       {
-        "name": "Strong Descending Slash Lv2 6",
+        "name": "強降下斬りLv2[6]",
         "mv": 46
       },
       {
-        "name": "Descending Thrust Lv1 1",
+        "name": "降下突きLv1[1]",
         "mv": 21
       },
       {
-        "name": "Descending Thrust Lv1 2",
+        "name": "降下突きLv1[2]",
         "mv": 3,
         "eleMul": 0.0,
         "rawType": "blunt"
       },
       {
-        "name": "Descending Thrust Lv1 3",
+        "name": "降下突きLv1[3]",
         "mv": 18
       },
       {
-        "name": "Descending Thrust Lv2 1",
+        "name": "降下突きLv2[1]",
         "mv": 28
       },
       {
-        "name": "Descending Thrust Lv2 2",
+        "name": "降下突きLv2[2]",
         "mv": 5,
         "eleMul": 0.0,
         "rawType": "blunt"
       },
       {
-        "name": "Descending Thrust Lv2 3",
+        "name": "降下突きLv2[3]",
         "mv": 24
       },
       {
-        "name": "Strong Descending Thrust Lv1 1",
+        "name": "強降下突きLv1[1]",
         "mv": 21
       },
       {
-        "name": "Strong Descending Thrust Lv1 2",
+        "name": "強降下突きLv1[2]",
         "mv": 7
       },
       {
-        "name": "Strong Descending Thrust Lv1 3",
+        "name": "強降下突きLv1[3]",
         "mv": 3,
         "eleMul": 0.0,
         "rawType": "blunt"
       },
       {
-        "name": "Strong Descending Thrust Lv1 4-5",
+        "name": "強降下突きLv1[4-5]",
         "mv": 13
       },
       {
-        "name": "Strong Descending Thrust Lv1 6",
+        "name": "強降下突きLv1[6]",
         "mv": 21
       },
       {
-        "name": "Strong Descending Thrust Lv2 1",
+        "name": "強降下突きLv2[1]",
         "mv": 28
       },
       {
-        "name": "Strong Descending Thrust Lv2 2",
+        "name": "強降下突きLv2[2]",
         "mv": 10
       },
       {
-        "name": "Strong Descending Thrust Lv2 3",
+        "name": "強降下突きLv2[3]",
         "mv": 5,
         "eleMul": 0.0,
         "rawType": "blunt"
       },
       {
-        "name": "Strong Descending Thrust Lv2 4-5",
+        "name": "強降下突きLv2[4-5]",
         "mv": 18
       },
       {
-        "name": "Strong Descending Thrust Lv2 6",
+        "name": "強降下突きLv2[6]",
         "mv": 28
       },
       {
-        "name": "Rising Spiral Slash Lv1",
+        "name": "上昇螺旋斬りLv1",
         "mv": 48,
         "eleMul": 0.8
       },
       {
-        "name": "Rising Spiral Slash Lv2",
+        "name": "上昇螺旋斬りLv2",
         "mv": 64,
         "eleMul": 0.8
       },
       {
-        "name": "Kinsect Mark (Melee)",
+        "name": "猟虫マーキング(近接)",
         "mv": 5,
         "eleMul": 0.0,
         "rawType": "blunt"
       },
       {
-        "name": "Focus Thrust: Leaping Strike 1",
+        "name": "集中攻撃：跳躍突き[1]",
         "mv": 16
       },
       {
-        "name": "Focus Thrust: Leaping Strike 2",
+        "name": "集中攻撃：跳躍突き[2]",
         "mv": 18
       },
       {
-        "name": "Focus Thrust: Leaping Strike 3",
+        "name": "集中攻撃：跳躍突き[3]",
         "mv": 8
       }
     ]
@@ -2916,307 +2916,307 @@
     "damageType": "pierce",
     "attacks": [
       {
-        "name": "Charged Shot Lv1",
+        "name": "溜め射ちLv1",
         "mv": 9,
         "eleMul": 0.2,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Charged Shot Lv2",
+        "name": "溜め射ちLv2",
         "mv": 10,
         "eleMul": 0.35,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Charged Shot Lv3",
+        "name": "溜め射ちLv3",
         "mv": 11,
         "eleMul": 0.5,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Quick Shot",
+        "name": "クイックショット",
         "mv": 9,
         "eleMul": 0.3,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Power Shot Lv 1",
+        "name": "剛射Lv1",
         "mv": 9,
         "eleMul": 0.3,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Power Shot Lv2",
+        "name": "剛射Lv2",
         "mv": 10,
         "eleMul": 0.5,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Power Shot Lv3",
+        "name": "剛射Lv3",
         "mv": 11,
         "eleMul": 0.6,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Flying Swallow Shot Lv1",
+        "name": "飛燕射ちLv1",
         "mv": 9,
         "eleMul": 0.3,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Flying Swallow Shot Lv2",
+        "name": "飛燕射ちLv2",
         "mv": 10,
         "eleMul": 0.5,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Flying Swallow Shot Lv3",
+        "name": "飛燕射ちLv3",
         "mv": 11,
         "eleMul": 0.6,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Power Volley Lv1",
+        "name": "剛連射Lv1",
         "mv": 12,
         "eleMul": 0.45,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Power Volley Lv2",
+        "name": "剛連射Lv2",
         "mv": 13,
         "eleMul": 0.65,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Power Volley Lv3",
+        "name": "剛連射Lv3",
         "mv": 14,
         "eleMul": 0.75,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Arc Shot Lv1",
+        "name": "曲射Lv1",
         "mv": 8,
         "eleMul": 0.0,
         "rawType": "shot"
       },
       {
-        "name": "Arc Shot Lv2",
+        "name": "曲射Lv2",
         "mv": 9,
         "eleMul": 0.0,
         "rawType": "shot"
       },
       {
-        "name": "Arc Shot Lv3",
+        "name": "曲射Lv3",
         "mv": 10,
         "eleMul": 0.0,
         "rawType": "shot"
       },
       {
-        "name": "Arc Shot Explosion",
+        "name": "曲射(爆発)",
         "mv": 12,
         "eleMul": 0.0,
         "rawType": "shot"
       },
       {
-        "name": "Dragon Piercer",
+        "name": "竜の一矢",
         "mv": 23,
         "eleMul": 0.3,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Dragon Piercer (Fast)",
+        "name": "竜の一矢(短縮)",
         "mv": 16,
         "eleMul": 0.3,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Thousand Dragons",
+        "name": "竜の千矢",
         "mv": 23,
         "eleMul": 0.3,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Pierce Charge Shot Lv1",
+        "name": "貫通溜め射ちLv1",
         "mv": 3,
         "eleMul": 0.1,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Pierce Charge Shot Lv2",
+        "name": "貫通溜め射ちLv2",
         "mv": 4,
         "eleMul": 0.15,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Pierce Charge Shot Lv3",
+        "name": "貫通溜め射ちLv3",
         "mv": 5,
         "eleMul": 0.2,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Pierce Quick Shot",
+        "name": "貫通クイックショット",
         "mv": 3,
         "eleMul": 0.1,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Pierce Power Shot Lv1",
+        "name": "貫通剛射Lv1",
         "mv": 3,
         "eleMul": 0.1,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Pierce Power Shot Lv2",
+        "name": "貫通剛射Lv2",
         "mv": 4,
         "eleMul": 0.15,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Pierce Power Shot Lv3",
+        "name": "貫通剛射Lv3",
         "mv": 5,
         "eleMul": 0.2,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Pierce Flying Swallow Shot Lv1",
+        "name": "貫通飛燕射ちLv1",
         "mv": 3,
         "eleMul": 0.1,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Pierce Flying Swallow Shot Lv2",
+        "name": "貫通飛燕射ちLv2",
         "mv": 4,
         "eleMul": 0.15,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Pierce Flying Swallow Shot Lv3",
+        "name": "貫通飛燕射ちLv3",
         "mv": 5,
         "eleMul": 0.2,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Pierce Power Volley Lv1",
+        "name": "貫通剛連射Lv1",
         "mv": 4,
         "eleMul": 0.15,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Pierce Power Volley Lv2",
+        "name": "貫通剛連射Lv2",
         "mv": 5,
         "eleMul": 0.2,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Pierce Power Volley Lv3",
+        "name": "貫通剛連射Lv3",
         "mv": 6,
         "eleMul": 0.25,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Pierce Thousand Dragons",
+        "name": "貫通竜の千矢",
         "mv": 11,
         "eleMul": 0.3,
         "rawType": "shot",
         "rawMul": 1.1
       },
       {
-        "name": "Tracer Arrow",
+        "name": "追跡矢",
         "mv": 25,
         "eleMul": 1.0,
         "rawType": "shot"
       },
       {
-        "name": "Tracer Charged Shot",
+        "name": "追跡溜め射ち",
         "mv": 12,
         "eleMul": 0.5,
         "rawType": "shot"
       },
       {
-        "name": "Tracer Charged Shot (Miss)",
+        "name": "追跡溜め射ち(ミス)",
         "mv": 6,
         "eleMul": 0.5,
         "rawType": "shot"
       },
       {
-        "name": "Tracer Quick Shot",
+        "name": "追跡クイックショット",
         "mv": 12,
         "eleMul": 0.6,
         "rawType": "shot"
       },
       {
-        "name": "Tracer Power Shot",
+        "name": "追跡剛射",
         "mv": 12,
         "eleMul": 0.6,
         "rawType": "shot"
       },
       {
-        "name": "Tracer Power Volley",
+        "name": "追跡剛連射",
         "mv": 15,
         "eleMul": 0.65,
         "rawType": "shot"
       },
       {
-        "name": "Tracer Dragon Piercer",
+        "name": "追跡竜の一矢",
         "mv": 27,
         "eleMul": 0.3,
         "rawType": "shot"
       },
       {
-        "name": "Tracer Dragon Piercer (Fast)",
+        "name": "追跡竜の一矢(短縮)",
         "mv": 19,
         "eleMul": 0.3,
         "rawType": "shot"
       },
       {
-        "name": "Tracer Thousand Dragons",
+        "name": "追跡竜の千矢",
         "mv": 26,
         "eleMul": 0.3,
         "rawType": "shot"
       },
       {
-        "name": "Tracer Pierce Thousand Dragons",
+        "name": "追跡貫通竜の千矢",
         "mv": 14,
         "eleMul": 0.3,
         "rawType": "shot"
       },
       {
-        "name": "Focus Fire: Hailstorm",
+        "name": "集中射撃：矢嵐",
         "mv": 12,
         "eleMul": 0.3,
         "rawType": "shot"
       },
       {
-        "name": "Focus Fire: Hailstorm Dragon Piercer",
+        "name": "集中射撃：矢嵐竜の一矢",
         "mv": 20,
         "eleMul": 0.3,
         "rawType": "shot"
@@ -3227,69 +3227,69 @@
     "damageType": "pierce",
     "attacks": [
       {
-        "name": "Normal Lv1",
+        "name": "通常弾Lv1",
         "mv": 17,
         "rawType": "shot"
       },
       {
-        "name": "Normal Lv2",
+        "name": "通常弾Lv2",
         "mv": 24,
         "rawType": "shot"
       },
       {
-        "name": "Normal Lv3",
+        "name": "通常弾Lv3",
         "mv": 32,
         "rawType": "shot"
       },
       {
-        "name": "Pierce Lv1 (per hit)",
+        "name": "貫通弾Lv1(1HIT)",
         "mv": 11,
         "rawType": "shot"
       },
       {
-        "name": "Pierce Lv2 (per hit)",
+        "name": "貫通弾Lv2(1HIT)",
         "mv": 12,
         "rawType": "shot"
       },
       {
-        "name": "Pierce Lv3 (per hit)",
+        "name": "貫通弾Lv3(1HIT)",
         "mv": 12,
         "rawType": "shot"
       },
       {
-        "name": "Spread Lv1 (per pellet)",
+        "name": "散弾Lv1(1粒)",
         "mv": 13,
         "rawType": "shot"
       },
       {
-        "name": "Spread Lv2 (per pellet)",
+        "name": "散弾Lv2(1粒)",
         "mv": 16,
         "rawType": "shot"
       },
       {
-        "name": "Spread Lv3 (per pellet)",
+        "name": "散弾Lv3(1粒)",
         "mv": 18,
         "rawType": "shot"
       },
       {
-        "name": "Slicing",
+        "name": "斬裂弾",
         "mv": 33,
         "rawType": "shot"
       },
       {
-        "name": "Sticky Lv1",
+        "name": "徹甲榴弾Lv1",
         "mv": 30,
         "ignoreHzv": true,
         "rawType": "shot"
       },
       {
-        "name": "Sticky Lv2",
+        "name": "徹甲榴弾Lv2",
         "mv": 50,
         "ignoreHzv": true,
         "rawType": "shot"
       },
       {
-        "name": "Sticky Lv3",
+        "name": "徹甲榴弾Lv3",
         "mv": 70,
         "ignoreHzv": true,
         "rawType": "shot"
@@ -3300,42 +3300,42 @@
     "damageType": "pierce",
     "attacks": [
       {
-        "name": "Wyvernheart Lv1 1",
+        "name": "機関竜弾Lv1[1]",
         "mv": 9,
         "rawType": "shot"
       },
       {
-        "name": "Wyvernheart Lv1 2",
+        "name": "機関竜弾Lv1[2]",
         "mv": 9,
         "rawType": "shot"
       },
       {
-        "name": "Wyvernheart Lv1 3",
+        "name": "機関竜弾Lv1[3]",
         "mv": 9,
         "rawType": "shot"
       },
       {
-        "name": "Wyvernheart Lv1 Max",
+        "name": "機関竜弾Lv1[Max]",
         "mv": 9,
         "rawType": "shot"
       },
       {
-        "name": "Wyvernheart Lv2 1",
+        "name": "機関竜弾Lv2[1]",
         "mv": 10,
         "rawType": "shot"
       },
       {
-        "name": "Wyvernheart Lv2 2",
+        "name": "機関竜弾Lv2[2]",
         "mv": 10,
         "rawType": "shot"
       },
       {
-        "name": "Wyvernheart Lv2 3",
+        "name": "機関竜弾Lv2[3]",
         "mv": 10,
         "rawType": "shot"
       },
       {
-        "name": "Wyvernheart Lv2 Max",
+        "name": "機関竜弾Lv2[Max]",
         "mv": 10,
         "rawType": "shot"
       }
