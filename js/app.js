@@ -661,6 +661,51 @@ const App = (() => {
     }
   }
 
+  // === Buffs ===
+  function getBuffTotals() {
+    let attackFlat = 0, attackMult = 1.0, affinityFlat = 0, defenseFlat = 0, elementMult = 1.0;
+
+    // アイテムチェックボックス
+    document.querySelectorAll('[data-buff-atk]:checked').forEach(cb => {
+      attackFlat += parseInt(cb.dataset.buffAtk) || 0;
+    });
+    document.querySelectorAll('[data-buff-def]:checked').forEach(cb => {
+      defenseFlat += parseInt(cb.dataset.buffDef) || 0;
+    });
+
+    // 鬼神薬 / 硬化薬
+    attackFlat += parseInt($('buffDemondrug')?.value) || 0;
+    defenseFlat += parseInt($('buffArmorskin')?.value) || 0;
+
+    // 食事
+    const meal = $('buffMeal')?.value || '';
+    if (meal === 'atkS') attackFlat += 5;
+    else if (meal === 'atkM') attackFlat += 10;
+    else if (meal === 'atkL') attackFlat += 15;
+
+    // 旋律
+    const horn = $('buffHorn')?.value || '';
+    if (horn === 'atk10') attackMult *= 1.10;
+    else if (horn === 'atk15') attackMult *= 1.15;
+    else if (horn === 'atk20') attackMult *= 1.20;
+    else if (horn === 'aff15') affinityFlat += 15;
+    else if (horn === 'aff20') affinityFlat += 20;
+    else if (horn === 'elem08') elementMult *= 1.08;
+    else if (horn === 'elem10') elementMult *= 1.10;
+
+    // 装衣
+    const mantle = $('buffMantle')?.value || '';
+    if (mantle === 'evasion') attackMult *= 1.30;
+    else if (mantle === 'erosion') { attackMult *= 1.15; elementMult *= 1.10; }
+
+    // 耐性変換
+    const resConvert = $('resConvertToggle')?.checked || false;
+    const resConvertElement = $('resConvertElem')?.value || '雷';
+    const resConvertRate = parseFloat($('resConvertRate')?.value) || 1.0;
+
+    return { attackFlat, attackMult, affinityFlat, defenseFlat, elementMult, resConvert, resConvertElement, resConvertRate };
+  }
+
   // === Recalculate ===
   function recalculate() {
     const armors = Object.values(state.selectedArmors).filter(Boolean);
@@ -686,6 +731,7 @@ const App = (() => {
       }
     }
 
+    const buffs = getBuffTotals();
     const result = MHCalc.calcAll({
       weapon: weaponForCalc,
       armors,
@@ -693,8 +739,19 @@ const App = (() => {
       charm: state.charm,
       skillDefs: DataLoader.getSkillDefs(),
       conditions: state.conditions,
-      useMaxDefense: state.limitBreak
+      useMaxDefense: state.limitBreak,
+      buffs
     });
+
+    // バフサマリー表示
+    const bs = [];
+    if (buffs.attackFlat > 0) bs.push(`攻+${buffs.attackFlat}`);
+    if (buffs.attackMult > 1.001) bs.push(`攻x${buffs.attackMult.toFixed(2)}`);
+    if (buffs.affinityFlat > 0) bs.push(`会+${buffs.affinityFlat}%`);
+    if (buffs.defenseFlat > 0) bs.push(`防+${buffs.defenseFlat}`);
+    if (buffs.elementMult > 1.001) bs.push(`属x${buffs.elementMult.toFixed(2)}`);
+    if (buffs.resConvert) bs.push('耐性変換');
+    $('buffSummary').textContent = bs.length > 0 ? bs.join(' ') : '';
 
     // 斬れ味オーバーライド
     if (state.sharpnessOverride !== null && result.sharpness.colorIndex >= 0) {
@@ -1046,6 +1103,21 @@ const App = (() => {
       renderArmorList();
       recalculate();
     });
+
+    // バフパネル開閉
+    $('buffToggle').addEventListener('click', () => {
+      const panel = $('buffPanel');
+      panel.style.display = panel.style.display === 'none' ? '' : 'none';
+    });
+
+    // バフ入力 → 再計算
+    document.querySelectorAll('[data-buff-atk],[data-buff-def]').forEach(cb => {
+      cb.addEventListener('change', recalculate);
+    });
+    for (const id of ['buffDemondrug', 'buffArmorskin', 'buffMeal', 'buffHorn', 'buffMantle', 'resConvertToggle', 'resConvertElem', 'resConvertRate']) {
+      $(id)?.addEventListener('change', recalculate);
+      $(id)?.addEventListener('input', debounce(recalculate, 300));
+    }
   }
 
   // === Save/Load System ===

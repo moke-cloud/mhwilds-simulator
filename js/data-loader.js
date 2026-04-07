@@ -15,7 +15,7 @@ const DataLoader = (() => {
   let motionValues = {};
 
   async function loadAll() {
-    const v = 'v=17';
+    const v = 'v=18';
     const [wData, aData, dData, sData, cData, mData, mvData] = await Promise.all([
       fetch('data/weapons.json?' + v).then(r => r.json()),
       fetch('data/armors.json?' + v).then(r => r.json()),

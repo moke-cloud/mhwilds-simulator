@@ -15,7 +15,7 @@ const MHCalc = (() => {
 
   /** skill_modifiers.json を読み込む */
   async function loadModifiers() {
-    const res = await fetch('data/skill_modifiers.json?v=17');
+    const res = await fetch('data/skill_modifiers.json?v=18');
     const data = await res.json();
     modifiers = data.modifiers || {};
     followUpSkills = data.followUpSkills || {};
@@ -238,7 +238,8 @@ const MHCalc = (() => {
   function calcAll(params) {
     const {
       weapon, armors = [], decorations = [], charm = null,
-      skillDefs = [], conditions = {}, useMaxDefense = false
+      skillDefs = [], conditions = {}, useMaxDefense = false,
+      buffs = null
     } = params;
 
     const sources = [...armors];
@@ -250,8 +251,17 @@ const MHCalc = (() => {
     const baseAffinity = weapon?.affinity || 0;
     const weaponType = weapon?.weaponType || '';
 
-    const finalAttack = calcFinalAttack(weaponAttack, skillLevels, conditions, weaponType);
-    const finalAffinity = calcAffinity(baseAffinity, skillLevels, conditions, weaponType);
+    // バフ: アイテム等のフラット加算 → スキル計算 → 旋律等の乗算
+    const effectiveWeaponAttack = weaponAttack + (buffs?.attackFlat || 0);
+    const rawFinalAttack = calcFinalAttack(effectiveWeaponAttack, skillLevels, conditions, weaponType);
+    const finalAttack = buffs?.attackMult && buffs.attackMult !== 1.0
+      ? Math.floor(rawFinalAttack * buffs.attackMult) : rawFinalAttack;
+
+    let finalAffinity = calcAffinity(baseAffinity, skillLevels, conditions, weaponType);
+    if (buffs?.affinityFlat) {
+      finalAffinity = Math.max(-100, Math.min(100, finalAffinity + buffs.affinityFlat));
+    }
+
     const critMult = getCritMultiplier(skillLevels);
     const range = calcAttackRange(finalAttack, finalAffinity, critMult);
 
@@ -260,9 +270,30 @@ const MHCalc = (() => {
       ? calcSharpness(weapon.sharpness, weapon.sharpnessMax, handicraftLv)
       : { colorIndex: -1, colorName: '-', physical: 1.0, elemental: 1.0 };
 
-    const element = weapon ? calcElement(weapon.element, skillLevels, conditions, weaponType) : null;
-    const totalDefense = calcTotalDefense(armors, skillLevels, useMaxDefense);
+    // 属性計算 + バフ乗算 + 耐性変換
+    let element = weapon ? calcElement(weapon.element, skillLevels, conditions, weaponType) : null;
     const resistance = calcResistance(armors, skillLevels);
+
+    if (element && buffs?.elementMult && buffs.elementMult !== 1.0) {
+      element = { ...element, value: Math.floor(element.value * buffs.elementMult) };
+    }
+
+    // 耐性変換（ラギアクルス等: 耐性値→属性値加算）
+    if (buffs?.resConvert && buffs?.resConvertElement) {
+      const ELEM_KEY = { '火': 'fire', '水': 'water', '雷': 'thunder', '氷': 'ice', '龍': 'dragon' };
+      const resKey = ELEM_KEY[buffs.resConvertElement] || '';
+      const resVal = resKey ? (resistance[resKey] || 0) : 0;
+      if (resVal > 0) {
+        const bonus = Math.floor(resVal * (buffs.resConvertRate || 1.0));
+        if (element) {
+          element = { ...element, value: element.value + bonus };
+        } else {
+          element = { type: buffs.resConvertElement, value: bonus };
+        }
+      }
+    }
+
+    const totalDefense = calcTotalDefense(armors, skillLevels, useMaxDefense) + (buffs?.defenseFlat || 0);
 
     const effectiveRange = {
       min: Math.floor(range.min * sharpness.physical),
