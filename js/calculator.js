@@ -15,7 +15,7 @@ const MHCalc = (() => {
 
   /** skill_modifiers.json を読み込む */
   async function loadModifiers() {
-    const res = await fetch('data/skill_modifiers.json?v=19');
+    const res = await fetch('data/skill_modifiers.json?v=20');
     const data = await res.json();
     modifiers = data.modifiers || {};
     followUpSkills = data.followUpSkills || {};
@@ -102,6 +102,7 @@ const MHCalc = (() => {
       if (!mod) continue;
       if (mod.affinity) total += mod.affinity;
       if (mod.affinity_cond && conditions[name]) total += mod.affinity_cond;
+      if (mod.affinity_wound && conditions[name + '_傷口']) total += mod.affinity_wound;
     }
     return Math.max(-100, Math.min(100, total));
   }
@@ -190,6 +191,7 @@ const MHCalc = (() => {
       if (conditions[name]) {
         const mod = getSkillMod(name, level, weaponType);
         if (mod && mod.element_flat_cond) flat += mod.element_flat_cond;
+        if (mod && mod.element_mult_cond) mult *= mod.element_mult_cond;
       }
     }
 

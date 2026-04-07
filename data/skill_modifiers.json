@@ -32,12 +32,14 @@
     "弱点特効": {
       "conditional": true,
       "condition_label": "弱点部位攻撃時",
+      "has_wound_bonus": true,
+      "wound_label": "傷口攻撃時",
       "levels": [
-        { "level": 1, "affinity_cond": 5 },
-        { "level": 2, "affinity_cond": 10 },
-        { "level": 3, "affinity_cond": 15 },
-        { "level": 4, "affinity_cond": 20 },
-        { "level": 5, "affinity_cond": 30 }
+        { "level": 1, "affinity_cond": 5, "affinity_wound": 3 },
+        { "level": 2, "affinity_cond": 10, "affinity_wound": 5 },
+        { "level": 3, "affinity_cond": 15, "affinity_wound": 10 },
+        { "level": 4, "affinity_cond": 20, "affinity_wound": 15 },
+        { "level": 5, "affinity_cond": 30, "affinity_wound": 20 }
       ]
     },
     "挑戦者": {
@@ -55,9 +57,11 @@
       "conditional": true,
       "condition_label": "体力最大時",
       "levels": [
-        { "level": 1, "attack_flat_cond": 5 },
-        { "level": 2, "attack_flat_cond": 10 },
-        { "level": 3, "attack_flat_cond": 20 }
+        { "level": 1, "attack_flat_cond": 3 },
+        { "level": 2, "attack_flat_cond": 6 },
+        { "level": 3, "attack_flat_cond": 10 },
+        { "level": 4, "attack_flat_cond": 15 },
+        { "level": 5, "attack_flat_cond": 20 }
       ]
     },
     "逆恨み": {
@@ -75,8 +79,8 @@
       "conditional": true,
       "condition_label": "抜刀攻撃時",
       "levels": [
-        { "level": 1, "affinity_cond": 30 },
-        { "level": 2, "affinity_cond": 60 },
+        { "level": 1, "affinity_cond": 50 },
+        { "level": 2, "affinity_cond": 75 },
         { "level": 3, "affinity_cond": 100 }
       ]
     },
@@ -188,9 +192,9 @@
       "conditional": true,
       "condition_label": "状態異常回復後",
       "levels": [
-        { "level": 1, "element_flat_cond": 3 },
-        { "level": 2, "element_flat_cond": 5 },
-        { "level": 3, "element_flat_cond": 10 }
+        { "level": 1, "element_mult_cond": 1.05 },
+        { "level": 2, "element_mult_cond": 1.10 },
+        { "level": 3, "element_mult_cond": 1.15 }
       ]
     },
     "巧撃": {
@@ -246,61 +250,51 @@
       "levels": [
         { "level": 1, "defense_flat": 5 },
         { "level": 2, "defense_flat": 10 },
-        { "level": 3, "defense_flat": 15, "defense_mult": 1.05, "all_res": 3 },
+        { "level": 3, "defense_flat": 10, "defense_mult": 1.05 },
         { "level": 4, "defense_flat": 20, "defense_mult": 1.05, "all_res": 3 },
-        { "level": 5, "defense_flat": 25, "defense_mult": 1.08, "all_res": 5 },
-        { "level": 6, "defense_flat": 30, "defense_mult": 1.08, "all_res": 5 },
+        { "level": 5, "defense_flat": 20, "defense_mult": 1.08, "all_res": 3 },
+        { "level": 6, "defense_flat": 35, "defense_mult": 1.08, "all_res": 5 },
         { "level": 7, "defense_flat": 35, "defense_mult": 1.10, "all_res": 5 }
       ]
     },
     "火属性攻撃強化": {
       "element_type": "火",
       "levels": [
-        { "level": 1, "element_flat": 2 },
-        { "level": 2, "element_flat": 4 },
-        { "level": 3, "element_flat": 6, "element_mult": 1.05 },
-        { "level": 4, "element_flat": 8, "element_mult": 1.10 },
-        { "level": 5, "element_flat": 10, "element_mult": 1.20 }
+        { "level": 1, "element_flat": 40 },
+        { "level": 2, "element_flat": 50, "element_mult": 1.10 },
+        { "level": 3, "element_flat": 60, "element_mult": 1.20 }
       ]
     },
     "水属性攻撃強化": {
       "element_type": "水",
       "levels": [
-        { "level": 1, "element_flat": 2 },
-        { "level": 2, "element_flat": 4 },
-        { "level": 3, "element_flat": 6, "element_mult": 1.05 },
-        { "level": 4, "element_flat": 8, "element_mult": 1.10 },
-        { "level": 5, "element_flat": 10, "element_mult": 1.20 }
+        { "level": 1, "element_flat": 40 },
+        { "level": 2, "element_flat": 50, "element_mult": 1.10 },
+        { "level": 3, "element_flat": 60, "element_mult": 1.20 }
       ]
     },
     "雷属性攻撃強化": {
       "element_type": "雷",
       "levels": [
-        { "level": 1, "element_flat": 2 },
-        { "level": 2, "element_flat": 4 },
-        { "level": 3, "element_flat": 6, "element_mult": 1.05 },
-        { "level": 4, "element_flat": 8, "element_mult": 1.10 },
-        { "level": 5, "element_flat": 10, "element_mult": 1.20 }
+        { "level": 1, "element_flat": 40 },
+        { "level": 2, "element_flat": 50, "element_mult": 1.10 },
+        { "level": 3, "element_flat": 60, "element_mult": 1.20 }
       ]
     },
     "氷属性攻撃強化": {
       "element_type": "氷",
       "levels": [
-        { "level": 1, "element_flat": 2 },
-        { "level": 2, "element_flat": 4 },
-        { "level": 3, "element_flat": 6, "element_mult": 1.05 },
-        { "level": 4, "element_flat": 8, "element_mult": 1.10 },
-        { "level": 5, "element_flat": 10, "element_mult": 1.20 }
+        { "level": 1, "element_flat": 40 },
+        { "level": 2, "element_flat": 50, "element_mult": 1.10 },
+        { "level": 3, "element_flat": 60, "element_mult": 1.20 }
       ]
     },
     "龍属性攻撃強化": {
       "element_type": "龍",
       "levels": [
-        { "level": 1, "element_flat": 2 },
-        { "level": 2, "element_flat": 4 },
-        { "level": 3, "element_flat": 6, "element_mult": 1.05 },
-        { "level": 4, "element_flat": 8, "element_mult": 1.10 },
-        { "level": 5, "element_flat": 10, "element_mult": 1.20 }
+        { "level": 1, "element_flat": 40 },
+        { "level": 2, "element_flat": 50, "element_mult": 1.10 },
+        { "level": 3, "element_flat": 60, "element_mult": 1.20 }
       ]
     }
   },

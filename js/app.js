@@ -975,6 +975,21 @@ const App = (() => {
         recalculate();
       };
       container.appendChild(label);
+
+      // 弱点特効の傷口ボーナス
+      const mods = MHCalc.getModifiers();
+      if (mods[name]?.has_wound_bonus) {
+        const woundLabel = document.createElement('label');
+        woundLabel.className = 'cond-toggle';
+        const woundKey = name + '_傷口';
+        const wChecked = state.conditions[woundKey] ? 'checked' : '';
+        woundLabel.innerHTML = `<input type="checkbox" ${wChecked}><span>　└ ${mods[name].wound_label || '傷口攻撃時'}</span>`;
+        woundLabel.querySelector('input').onchange = (e) => {
+          state.conditions[woundKey] = e.target.checked;
+          recalculate();
+        };
+        container.appendChild(woundLabel);
+      }
     }
 
     if (!hasToggles) {
