@@ -300,12 +300,26 @@ const App = (() => {
       const searchInput = $(pair.search);
 
       if (isMobile) {
-        // モバイル: ネイティブselectピッカーを使用
+        // モバイル: 検索入力 + ネイティブselectピッカー
         sel.size = 1;
         sel.classList.add('mobile-native');
-        searchInput.style.display = 'none';
+        searchInput.style.display = '';
+
+        searchInput.addEventListener('input', () => {
+          filterCharmSkillOptions(pair, searchInput.value);
+        });
+        searchInput.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            searchInput.value = '';
+            filterCharmSkillOptions(pair, '');
+            sel.value = '';
+            updateCharmLevelOptions(pair.select, pair.lv);
+            readCharm();
+          }
+        });
 
         sel.addEventListener('change', () => {
+          searchInput.value = sel.value;
           updateCharmLevelOptions(pair.select, pair.lv);
           readCharm();
         });
@@ -347,6 +361,7 @@ const App = (() => {
 
   function filterCharmSkillOptions(pair, query) {
     const sel = $(pair.select);
+    const prev = sel.value;
     const q = (query || '').toLowerCase();
     const decoSkills = getDecoSkillNames();
     const skills = DataLoader.getSkillDefs().filter(s => decoSkills.has(s.name));
@@ -355,6 +370,10 @@ const App = (() => {
     for (const s of skills) {
       if (q && !s.name.toLowerCase().includes(q)) continue;
       sel.innerHTML += `<option value="${s.name}">${s.name}</option>`;
+    }
+    // 以前選択中の値がフィルタ結果に含まれていれば復元
+    if (prev && sel.querySelector(`option[value="${CSS.escape(prev)}"]`)) {
+      sel.value = prev;
     }
   }
 

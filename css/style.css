@@ -96,6 +96,7 @@ body {
   border: 1px solid var(--border); border-radius: var(--radius-sm);
   color: var(--text-primary); font-size: 0.8rem; padding: 6px 8px;
   -webkit-appearance: menulist; appearance: menulist;
+  margin-top: 4px;
 }
 .card-header {
   display: flex; align-items: center; justify-content: space-between;
