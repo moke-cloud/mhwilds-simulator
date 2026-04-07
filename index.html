@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>MHWilds 装備シミュレーター</title>
-  <link rel="stylesheet" href="css/style.css?v=15">
+  <link rel="stylesheet" href="css/style.css?v=17">
 </head>
 <body>
 
@@ -89,6 +89,13 @@
       </div>
       <div style="font-size:0.7rem;color:var(--text-secondary);margin-bottom:3px">復元強化（5枠）</div>
       <div id="artianRestoreSlots" style="display:flex;flex-direction:column;gap:3px"></div>
+      <div id="artianWeaponSkillRow" style="display:none;margin-top:8px">
+        <div style="font-size:0.7rem;color:var(--text-secondary);margin-bottom:3px">武器スキル（巨戟）</div>
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <select id="artianSeriesSkill" class="artian-sel"><option value="">シリーズスキルなし</option></select>
+          <select id="artianGroupSkill" class="artian-sel"><option value="">グループスキルなし</option></select>
+        </div>
+      </div>
     </div>
     <div class="tabs" id="weaponTypeTabs"></div>
     <input type="text" class="search-box" id="weaponSearch" placeholder="武器名で検索...">
@@ -181,7 +188,11 @@
         <div class="stat-value" style="font-size:0.9rem" id="statBaseElement">-</div>
       </div>
       <div class="stat-item">
-        <div class="stat-label">防具防御力</div>
+        <div class="stat-label" style="display:flex;align-items:center;gap:4px">防具防御力
+          <label style="font-size:0.6rem;color:var(--text-muted);cursor:pointer;display:flex;align-items:center;gap:2px">
+            <input type="checkbox" id="limitBreakToggle" style="accent-color:var(--accent)">限界突破
+          </label>
+        </div>
         <div class="stat-value" style="font-size:0.9rem" id="statBaseDefense">-</div>
       </div>
     </div>
@@ -352,8 +363,8 @@
   </div>
 </div>
 
-<script src="js/calculator.js?v=15"></script>
-<script src="js/data-loader.js?v=15"></script>
-<script src="js/app.js?v=15"></script>
+<script src="js/calculator.js?v=17"></script>
+<script src="js/data-loader.js?v=17"></script>
+<script src="js/app.js?v=17"></script>
 </body>
 </html>

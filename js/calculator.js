@@ -15,7 +15,7 @@ const MHCalc = (() => {
 
   /** skill_modifiers.json を読み込む */
   async function loadModifiers() {
-    const res = await fetch('data/skill_modifiers.json?v=16');
+    const res = await fetch('data/skill_modifiers.json?v=17');
     const data = await res.json();
     modifiers = data.modifiers || {};
     followUpSkills = data.followUpSkills || {};
@@ -81,6 +81,8 @@ const MHCalc = (() => {
     for (const [name, level] of Object.entries(skillLevels)) {
       const mod = getSkillMod(name, level, weaponType);
       if (!mod) continue;
+      // per_attack_only スキルは calcHitDamage で攻撃単位に適用
+      if (modifiers[name]?.per_attack_only) continue;
       if (mod.attack_flat) flat += mod.attack_flat;
       if (mod.attack_mult) mult *= mod.attack_mult;
       if (conditions[name]) {
@@ -310,8 +312,25 @@ const MHCalc = (() => {
     const hzvPhys = attack_data.ignoreHzv ? 100 : (hitzone[dmgType] || 0);
     const sharpPhys = attack_data.ignoreSharpness ? 1.0 : sharpness.physical;
 
-    // 物理ダメージ = 攻撃力 × MV × 斬れ味(物理) × 肉質(物理)/100 × rawMul
-    const physBase = attack * mv * sharpPhys * (hzvPhys / 100) * rawMul;
+    // 攻撃単位のスキル補正（高速変形等: 特定の攻撃名にのみ適用）
+    let perAttackMult = 1.0;
+    const skillLevels = params.skillLevels;
+    const conditions = params.conditions;
+    const weaponType = params.weaponType;
+    if (skillLevels && conditions) {
+      for (const [name, level] of Object.entries(skillLevels)) {
+        const def = modifiers[name];
+        if (!def || !def.per_attack_only) continue;
+        if (!conditions[name]) continue;
+        const filter = def.attack_name_filter || '';
+        if (filter && !attack_data.name?.includes(filter)) continue;
+        const mod = getSkillMod(name, level, weaponType);
+        if (mod?.attack_mult_cond) perAttackMult *= mod.attack_mult_cond;
+      }
+    }
+
+    // 物理ダメージ = 攻撃力 × MV × 斬れ味(物理) × 肉質(物理)/100 × rawMul × 攻撃単位補正
+    const physBase = attack * mv * sharpPhys * (hzvPhys / 100) * rawMul * perAttackMult;
 
     // 会心期待値
     const rate = affinity / 100;

@@ -12,6 +12,10 @@ const App = (() => {
     activeArmorPart: 'head',
     conditions: {},
     setSkillConditions: {}, // シリーズスキルON/OFF
+    groupSkillConditions: {}, // グループスキルON/OFF
+    limitBreak: false, // 限界突破
+    gogmaSeriesSkill: '', // 巨戟アーティア武器シリーズスキル
+    gogmaGroupSkill: '', // 巨戟アーティア武器グループスキル
     sharpnessOverride: null,
     decoModalTarget: null
   };
@@ -113,7 +117,7 @@ const App = (() => {
           </div>
         </div>
         <div class="item-stats">
-          <span>防${a.defense.base}</span>
+          <span>防${a.defense[state.limitBreak ? 'max' : 'base']}</span>
           <br><span style="font-size:0.65rem">${renderSlotsText(a.slots)}</span>
         </div>`;
       div.onclick = () => { state.selectedArmors[part] = a; clearDecos(part); renderArmorList(); renderDecoSlots(); recalculate(); };
@@ -487,6 +491,31 @@ const App = (() => {
         }
       }
     }
+    // 巨戟アーティア武器スキル（シリーズ）
+    if (state.gogmaSeriesSkill && isGogmaArtian(state.selectedWeapon)) {
+      const skill = state.gogmaSeriesSkill;
+      // 既存のセットスキルと重複しない場合のみ追加
+      if (!activeSetSkills.find(s => s.skill === skill)) {
+        const allSets = DataLoader.getArmorSets();
+        for (const setDef of allSets) {
+          if (!setDef.bonuses) continue;
+          const bonus = setDef.bonuses.find(b => b.skill === skill);
+          if (bonus) {
+            activeSetSkills.push({
+              setName: '巨戟武器',
+              skill: bonus.skill,
+              description: bonus.description,
+              required: 0,
+              current: 1,
+              active: true,
+              fromWeapon: true
+            });
+            break;
+          }
+        }
+      }
+    }
+
     return activeSetSkills;
   }
 
@@ -523,6 +552,31 @@ const App = (() => {
         });
       }
     }
+    // 巨戟アーティア武器スキル（グループ）
+    if (state.gogmaGroupSkill && isGogmaArtian(state.selectedWeapon)) {
+      const skill = state.gogmaGroupSkill;
+      if (!activeGroupSkills.find(s => s.skill === skill)) {
+        const allSets = DataLoader.getArmorSets();
+        for (const setDef of allSets) {
+          if (!setDef.groupBonus) continue;
+          const gb = setDef.groupBonus;
+          if (gb.skill === skill) {
+            activeGroupSkills.push({
+              setName: '巨戟武器',
+              skill: gb.skill,
+              effectName: gb.effectName,
+              description: gb.description,
+              required: 0,
+              current: 1,
+              active: true,
+              fromWeapon: true
+            });
+            break;
+          }
+        }
+      }
+    }
+
     return activeGroupSkills;
   }
 
@@ -543,12 +597,16 @@ const App = (() => {
       const toggleId = `setToggle_${ss.setName}_${ss.skill}`;
       const isOn = state.setSkillConditions[toggleId] !== false; // default ON
 
+      const setLabel = ss.fromWeapon ? `${ss.setName} <span style="font-size:0.6rem;color:var(--accent)">⚔</span>` : ss.setName;
+      const countLabel = ss.fromWeapon ? '武器' : `${ss.current}/${ss.required}`;
+      row.style.opacity = ss.active && isOn ? '1' : '0.4';
+
       row.innerHTML = `
         <label style="display:flex;align-items:center;gap:4px;cursor:pointer;flex:1;min-width:0">
           ${ss.active ? `<input type="checkbox" ${isOn ? 'checked' : ''} data-set-toggle="${toggleId}" style="accent-color:var(--accent)">` : ''}
-          <span class="skill-name" style="flex:1">${ss.setName}</span>
+          <span class="skill-name" style="flex:1">${setLabel}</span>
         </label>
-        <span class="skill-level" style="color:${ss.active ? 'var(--green)' : 'var(--text-muted)'}">${ss.current}/${ss.required}</span>
+        <span class="skill-level" style="color:${ss.active ? 'var(--green)' : 'var(--text-muted)'}">${countLabel}</span>
         <span style="font-size:0.7rem;color:var(--text-secondary);flex-basis:100%;padding-left:20px">${ss.skill || ''}</span>
         ${ss.description ? `<span style="font-size:0.65rem;color:var(--text-muted);flex-basis:100%;padding-left:20px">${ss.description}</span>` : ''}`;
 
@@ -557,6 +615,7 @@ const App = (() => {
       if (checkbox) {
         checkbox.addEventListener('change', (e) => {
           state.setSkillConditions[toggleId] = e.target.checked;
+          recalculate();
         });
       }
 
@@ -575,13 +634,29 @@ const App = (() => {
     for (const gs of groupSkills) {
       const row = document.createElement('div');
       row.className = 'skill-row';
-      row.style.opacity = gs.active ? '1' : '0.4';
       row.style.flexWrap = 'wrap';
+
+      const toggleId = `groupToggle_${gs.setName}_${gs.skill}`;
+      const isOn = state.groupSkillConditions[toggleId] !== false; // default ON
+      row.style.opacity = gs.active && isOn ? '1' : '0.4';
+
       row.innerHTML = `
-        <span class="skill-name" style="flex:1">${gs.skill}</span>
+        <label style="display:flex;align-items:center;gap:4px;cursor:pointer;flex:1;min-width:0">
+          ${gs.active ? `<input type="checkbox" ${isOn ? 'checked' : ''} data-group-toggle="${toggleId}" style="accent-color:var(--accent)">` : ''}
+          <span class="skill-name" style="flex:1">${gs.skill}</span>
+        </label>
         <span class="skill-level" style="color:${gs.active ? 'var(--green)' : 'var(--text-muted)'}">${gs.current}/${gs.required}</span>
-        <span style="font-size:0.7rem;color:var(--text-secondary);flex-basis:100%;padding-left:4px">${gs.effectName || ''}</span>
-        ${gs.description ? `<span style="font-size:0.65rem;color:var(--text-muted);flex-basis:100%;padding-left:4px">${gs.description}</span>` : ''}`;
+        <span style="font-size:0.7rem;color:var(--text-secondary);flex-basis:100%;padding-left:20px">${gs.effectName || ''}</span>
+        ${gs.description ? `<span style="font-size:0.65rem;color:var(--text-muted);flex-basis:100%;padding-left:20px">${gs.description}</span>` : ''}`;
+
+      const checkbox = row.querySelector(`[data-group-toggle="${toggleId}"]`);
+      if (checkbox) {
+        checkbox.addEventListener('change', (e) => {
+          state.groupSkillConditions[toggleId] = e.target.checked;
+          recalculate();
+        });
+      }
+
       list.appendChild(row);
     }
   }
@@ -618,7 +693,7 @@ const App = (() => {
       charm: state.charm,
       skillDefs: DataLoader.getSkillDefs(),
       conditions: state.conditions,
-      useMaxDefense: false
+      useMaxDefense: state.limitBreak
     });
 
     // 斬れ味オーバーライド
@@ -649,7 +724,8 @@ const App = (() => {
       ? `${state.selectedWeapon.element.type} ${state.selectedWeapon.element.value}`
       : '-';
 
-    const baseDefTotal = armors.reduce((sum, a) => sum + (a?.defense?.base || 0), 0);
+    const defKey = state.limitBreak ? 'max' : 'base';
+    const baseDefTotal = armors.reduce((sum, a) => sum + (a?.defense?.[defKey] || 0), 0);
     $('statBaseDefense').textContent = baseDefTotal || '-';
 
     // 最終ステータス
@@ -964,6 +1040,12 @@ const App = (() => {
 
     $('btnExport').addEventListener('click', exportSets);
     $('btnImport').addEventListener('change', importSets);
+
+    $('limitBreakToggle').addEventListener('change', (e) => {
+      state.limitBreak = e.target.checked;
+      renderArmorList();
+      recalculate();
+    });
   }
 
   // === Save/Load System ===
@@ -1240,6 +1322,62 @@ const App = (() => {
         el._bound = true;
       }
     }
+
+    // 巨戟アーティア武器スキル選択
+    const weaponSkillRow = $('artianWeaponSkillRow');
+    if (isGogmaArtian(state.selectedWeapon)) {
+      weaponSkillRow.style.display = '';
+      const seriesSel = $('artianSeriesSkill');
+      const groupSel = $('artianGroupSkill');
+
+      if (!seriesSel._populated) {
+        const allSets = DataLoader.getArmorSets();
+        // シリーズスキル一覧（ユニーク）
+        const seriesSkills = new Map();
+        const groupSkills = new Map();
+        for (const setDef of allSets) {
+          if (setDef.bonuses) {
+            for (const b of setDef.bonuses) {
+              if (!seriesSkills.has(b.skill)) seriesSkills.set(b.skill, b.description || '');
+            }
+          }
+          if (setDef.groupBonus) {
+            const gb = setDef.groupBonus;
+            if (!groupSkills.has(gb.skill)) groupSkills.set(gb.skill, gb.effectName || '');
+          }
+        }
+
+        seriesSel.innerHTML = '<option value="">シリーズスキルなし</option>';
+        for (const [skill, desc] of [...seriesSkills.entries()].sort((a, b) => a[0].localeCompare(b[0], 'ja'))) {
+          seriesSel.innerHTML += `<option value="${skill}">${skill}</option>`;
+        }
+
+        groupSel.innerHTML = '<option value="">グループスキルなし</option>';
+        for (const [skill, effect] of [...groupSkills.entries()].sort((a, b) => a[0].localeCompare(b[0], 'ja'))) {
+          groupSel.innerHTML += `<option value="${skill}">${skill}（${effect}）</option>`;
+        }
+
+        seriesSel._populated = true;
+      }
+
+      // 保存された値を復元
+      seriesSel.value = state.gogmaSeriesSkill;
+      groupSel.value = state.gogmaGroupSkill;
+
+      if (!seriesSel._bound) {
+        seriesSel.addEventListener('change', () => {
+          state.gogmaSeriesSkill = seriesSel.value;
+          recalculate();
+        });
+        groupSel.addEventListener('change', () => {
+          state.gogmaGroupSkill = groupSel.value;
+          recalculate();
+        });
+        seriesSel._bound = true;
+      }
+    } else {
+      weaponSkillRow.style.display = 'none';
+    }
   }
 
   // 激化タイプ属性補正値（武器種別）
@@ -1417,6 +1555,13 @@ const App = (() => {
     const armors = Object.values(state.selectedArmors).filter(Boolean);
     const activeSetSkillsList = calcSetSkills(armors);
 
+    // トグルで無効化されたセットスキルを除外
+    const filteredSetSkills = activeSetSkillsList.filter(s => {
+      if (!s.active) return false;
+      const toggleId = `setToggle_${s.setName}_${s.skill}`;
+      return state.setSkillConditions[toggleId] !== false;
+    });
+
     const dmg = MHCalc.calcHitDamage({
       attack: r.finalAttack,
       affinity: r.finalAffinity,
@@ -1426,7 +1571,10 @@ const App = (() => {
       attack_data: attackData,
       hitzone: part,
       weaponDamageType: DataLoader.getDamageTypeForWeaponType(weaponType),
-      activeSetSkills: activeSetSkillsList
+      activeSetSkills: filteredSetSkills,
+      skillLevels: r.skillLevels,
+      conditions: state.conditions,
+      weaponType: weaponType
     });
 
     resultDiv.style.display = '';

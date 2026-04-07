@@ -156,6 +156,8 @@
     "高速変形": {
       "conditional": true,
       "condition_label": "変形攻撃時",
+      "per_attack_only": true,
+      "attack_name_filter": "変形",
       "levels": [
         { "level": 1 },
         { "level": 2, "attack_mult_cond": 1.10 },
