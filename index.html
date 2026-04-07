@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>MHWilds 装備シミュレーター</title>
-  <link rel="stylesheet" href="css/style.css?v=18">
+  <link rel="stylesheet" href="css/style.css?v=19">
 </head>
 <body>
 
@@ -328,7 +328,6 @@
     <div id="buffPanel" style="display:none;padding:8px 12px;font-size:0.75rem">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px 12px;margin-bottom:6px">
         <label class="cond-toggle"><input type="checkbox" data-buff-atk="6">力の護符 +6</label>
-        <label class="cond-toggle"><input type="checkbox" data-buff-atk="9">力の爪 +9</label>
         <label class="cond-toggle"><input type="checkbox" data-buff-atk="10" data-buff-id="seed">怪力の種 +10</label>
         <label class="cond-toggle"><input type="checkbox" data-buff-atk="10" data-buff-id="powder">鬼人の粉塵 +10</label>
       </div>
@@ -338,22 +337,23 @@
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px 12px;margin-bottom:6px">
         <label class="cond-toggle"><input type="checkbox" data-buff-def="12">守りの護符 +12</label>
-        <label class="cond-toggle"><input type="checkbox" data-buff-def="18">守りの爪 +18</label>
+        <label class="cond-toggle"><input type="checkbox" data-buff-def="20">硬化の粉塵 +20</label>
         <label class="cond-toggle"><input type="checkbox" data-buff-def="20" data-buff-id="aseed">忍耐の種 +20</label>
       </div>
       <div style="display:flex;gap:4px;margin-bottom:4px">
-        <select id="buffMeal" class="artian-sel" style="flex:1"><option value="">食事: なし</option><option value="atkS">攻撃UP【小】+5</option><option value="atkM">攻撃UP【中】+10</option><option value="atkL">攻撃UP【大】+15</option></select>
-        <select id="buffHorn" class="artian-sel" style="flex:1"><option value="">旋律: なし</option><option value="atk10">攻撃UP x1.10</option><option value="atk15">攻撃UP x1.15</option><option value="atk20">攻撃UP x1.20</option><option value="aff15">会心率UP +15%</option><option value="aff20">会心率UP +20%</option><option value="elem08">属性UP x1.08</option><option value="elem10">属性UP x1.10</option></select>
+        <select id="buffMeal" class="artian-sel" style="flex:1"><option value="">食事: なし</option><option value="bonfire">焚き火(肉) 攻撃+2</option><option value="ticket">お食事券 攻撃+5 防御+10 耐性+10</option></select>
+        <select id="buffHorn" class="artian-sel" style="flex:1"><option value="">旋律: なし</option><option value="atkS1">攻撃UP【小】x1.03</option><option value="atkS2">攻撃UP【小】重ね x1.05</option><option value="atkL1">攻撃UP【大】x1.05</option><option value="atkL2">攻撃UP【大】重ね x1.10</option><option value="aff15">会心率UP +15%</option><option value="elem08">属性UP x1.08</option><option value="elem10">属性UP重ね x1.10</option><option value="resonance">響玉 攻撃x1.10 会心+25%</option></select>
       </div>
       <div style="margin-bottom:4px">
-        <select id="buffMantle" class="artian-sel" style="width:100%"><option value="">装衣: なし</option><option value="evasion">回避の装衣（攻撃x1.30）</option><option value="erosion">蝕攻の装衣（攻撃x1.15 属性x1.10）</option></select>
+        <select id="buffMantle" class="artian-sel" style="width:100%"><option value="">装衣: なし</option><option value="evasion">回避の装衣（攻撃x1.20）</option><option value="erosion_base">蝕攻の装衣 装備時（会心+5%）</option><option value="erosion_overcome">蝕攻の装衣 克服（攻撃x1.05 会心+10%）</option></select>
       </div>
       <div style="border-top:1px solid var(--border);padding-top:6px;margin-top:2px">
         <div style="display:flex;gap:6px;align-items:center;font-size:0.7rem;flex-wrap:wrap">
           <label style="cursor:pointer;display:flex;align-items:center;gap:2px"><input type="checkbox" id="resConvertToggle" style="accent-color:var(--accent)">耐性変換</label>
-          <select id="resConvertElem" class="artian-sel" style="width:50px"><option value="火">火</option><option value="水">水</option><option value="雷" selected>雷</option><option value="氷">氷</option><option value="龍">龍</option></select>
-          <span style="font-size:0.6rem;color:var(--text-muted)">耐性→属性 ×</span>
-          <input type="number" id="resConvertRate" value="1.0" min="0" max="10" step="0.1" style="width:45px;padding:2px 4px;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text-primary);font-size:0.7rem">
+          <select id="resConvertElem" class="artian-sel" style="width:50px"><option value="雷" selected>雷</option><option value="水">水</option></select>
+          <span style="font-size:0.6rem;color:var(--text-muted)">×</span>
+          <input type="number" id="resConvertRate" value="4" min="0" max="10" step="1" style="width:40px;padding:2px 4px;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text-primary);font-size:0.7rem">
+          <span style="font-size:0.55rem;color:var(--text-muted)">(大剣/ハンマー/笛:5 ボウガン:2)</span>
         </div>
       </div>
     </div>
@@ -401,8 +401,8 @@
   </div>
 </div>
 
-<script src="js/calculator.js?v=18"></script>
-<script src="js/data-loader.js?v=18"></script>
-<script src="js/app.js?v=18"></script>
+<script src="js/calculator.js?v=19"></script>
+<script src="js/data-loader.js?v=19"></script>
+<script src="js/app.js?v=19"></script>
 </body>
 </html>

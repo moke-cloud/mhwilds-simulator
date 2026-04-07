@@ -679,31 +679,33 @@ const App = (() => {
 
     // 食事
     const meal = $('buffMeal')?.value || '';
-    if (meal === 'atkS') attackFlat += 5;
-    else if (meal === 'atkM') attackFlat += 10;
-    else if (meal === 'atkL') attackFlat += 15;
+    let allResFlat = 0;
+    if (meal === 'bonfire') attackFlat += 2;
+    else if (meal === 'ticket') { attackFlat += 5; defenseFlat += 10; allResFlat += 10; }
 
     // 旋律
     const horn = $('buffHorn')?.value || '';
-    if (horn === 'atk10') attackMult *= 1.10;
-    else if (horn === 'atk15') attackMult *= 1.15;
-    else if (horn === 'atk20') attackMult *= 1.20;
+    if (horn === 'atkS1') attackMult *= 1.03;
+    else if (horn === 'atkS2') attackMult *= 1.05;
+    else if (horn === 'atkL1') attackMult *= 1.05;
+    else if (horn === 'atkL2') attackMult *= 1.10;
     else if (horn === 'aff15') affinityFlat += 15;
-    else if (horn === 'aff20') affinityFlat += 20;
     else if (horn === 'elem08') elementMult *= 1.08;
     else if (horn === 'elem10') elementMult *= 1.10;
+    else if (horn === 'resonance') { attackMult *= 1.10; affinityFlat += 25; }
 
     // 装衣
     const mantle = $('buffMantle')?.value || '';
-    if (mantle === 'evasion') attackMult *= 1.30;
-    else if (mantle === 'erosion') { attackMult *= 1.15; elementMult *= 1.10; }
+    if (mantle === 'evasion') attackMult *= 1.20;
+    else if (mantle === 'erosion_base') affinityFlat += 5;
+    else if (mantle === 'erosion_overcome') { attackMult *= 1.05; affinityFlat += 10; }
 
     // 耐性変換
     const resConvert = $('resConvertToggle')?.checked || false;
     const resConvertElement = $('resConvertElem')?.value || '雷';
-    const resConvertRate = parseFloat($('resConvertRate')?.value) || 1.0;
+    const resConvertRate = parseFloat($('resConvertRate')?.value) || 4;
 
-    return { attackFlat, attackMult, affinityFlat, defenseFlat, elementMult, resConvert, resConvertElement, resConvertRate };
+    return { attackFlat, attackMult, affinityFlat, defenseFlat, elementMult, allResFlat, resConvert, resConvertElement, resConvertRate };
   }
 
   // === Recalculate ===

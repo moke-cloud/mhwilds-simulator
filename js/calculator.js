@@ -15,7 +15,7 @@ const MHCalc = (() => {
 
   /** skill_modifiers.json を読み込む */
   async function loadModifiers() {
-    const res = await fetch('data/skill_modifiers.json?v=18');
+    const res = await fetch('data/skill_modifiers.json?v=19');
     const data = await res.json();
     modifiers = data.modifiers || {};
     followUpSkills = data.followUpSkills || {};
@@ -272,7 +272,13 @@ const MHCalc = (() => {
 
     // 属性計算 + バフ乗算 + 耐性変換
     let element = weapon ? calcElement(weapon.element, skillLevels, conditions, weaponType) : null;
-    const resistance = calcResistance(armors, skillLevels);
+    let resistance = calcResistance(armors, skillLevels);
+
+    // 食事等の全耐性バフ
+    if (buffs?.allResFlat) {
+      resistance = { ...resistance };
+      for (const k of Object.keys(resistance)) resistance[k] += buffs.allResFlat;
+    }
 
     if (element && buffs?.elementMult && buffs.elementMult !== 1.0) {
       element = { ...element, value: Math.floor(element.value * buffs.elementMult) };
