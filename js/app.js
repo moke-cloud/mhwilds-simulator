@@ -288,43 +288,60 @@ const App = (() => {
       .filter(s => decoSkills.has(s.name))
       .sort((a, b) => a.name.localeCompare(b.name, 'ja'));
 
+    const isMobile = window.matchMedia('(max-width: 767px)').matches;
+
     for (const pair of charmSkillPairs) {
       const sel = $(pair.select);
       sel.innerHTML = '<option value="">なし</option>';
       for (const s of skills) {
         sel.innerHTML += `<option value="${s.name}">${s.name}</option>`;
       }
-      sel.size = 8;
 
       const searchInput = $(pair.search);
-      searchInput.addEventListener('focus', () => {
-        filterCharmSkillOptions(pair, searchInput.value);
-        sel.classList.add('open');
-      });
-      searchInput.addEventListener('input', () => {
-        filterCharmSkillOptions(pair, searchInput.value);
-        sel.classList.add('open');
-      });
-      searchInput.addEventListener('blur', () => {
-        setTimeout(() => sel.classList.remove('open'), 200);
-      });
 
-      sel.addEventListener('change', () => {
-        searchInput.value = sel.value;
-        sel.classList.remove('open');
-        updateCharmLevelOptions(pair.select, pair.lv);
-        readCharm();
-      });
+      if (isMobile) {
+        // モバイル: ネイティブselectピッカーを使用
+        sel.size = 1;
+        sel.classList.add('mobile-native');
+        searchInput.style.display = 'none';
 
-      searchInput.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-          searchInput.value = '';
-          sel.value = '';
+        sel.addEventListener('change', () => {
+          updateCharmLevelOptions(pair.select, pair.lv);
+          readCharm();
+        });
+      } else {
+        // デスクトップ: 検索+カスタムドロップダウン
+        sel.size = 8;
+
+        searchInput.addEventListener('focus', () => {
+          filterCharmSkillOptions(pair, searchInput.value);
+          sel.classList.add('open');
+        });
+        searchInput.addEventListener('input', () => {
+          filterCharmSkillOptions(pair, searchInput.value);
+          sel.classList.add('open');
+        });
+        searchInput.addEventListener('blur', () => {
+          setTimeout(() => sel.classList.remove('open'), 300);
+        });
+
+        sel.addEventListener('change', () => {
+          searchInput.value = sel.value;
           sel.classList.remove('open');
           updateCharmLevelOptions(pair.select, pair.lv);
           readCharm();
-        }
-      });
+        });
+
+        searchInput.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            searchInput.value = '';
+            sel.value = '';
+            sel.classList.remove('open');
+            updateCharmLevelOptions(pair.select, pair.lv);
+            readCharm();
+          }
+        });
+      }
     }
   }
 

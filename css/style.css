@@ -88,7 +88,14 @@ body {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  overflow: visible;
+  overflow: hidden;
+}
+.charm-skill-select.mobile-native {
+  position: static; display: block; max-height: none;
+  width: 100%; background: var(--bg-input);
+  border: 1px solid var(--border); border-radius: var(--radius-sm);
+  color: var(--text-primary); font-size: 0.8rem; padding: 6px 8px;
+  -webkit-appearance: menulist; appearance: menulist;
 }
 .card-header {
   display: flex; align-items: center; justify-content: space-between;
