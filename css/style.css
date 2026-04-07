@@ -88,7 +88,7 @@ body {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  overflow: hidden;
+  overflow: visible;
 }
 .card-header {
   display: flex; align-items: center; justify-content: space-between;
@@ -304,8 +304,8 @@ body {
 .charm-skill-search:focus { border-color: var(--border-active); outline: none; }
 .charm-skill-search::placeholder { color: var(--text-muted); }
 .charm-skill-select {
-  position: absolute; left: 0; top: 100%; width: 100%; z-index: 10;
-  max-height: 200px; overflow-y: auto;
+  position: absolute; left: 0; top: 100%; width: 100%; z-index: 50;
+  max-height: 180px; overflow-y: auto;
   background: var(--bg-card); border: 1px solid var(--border-active);
   border-radius: 0 0 var(--radius-sm) var(--radius-sm);
   display: none; /* shown via JS */
@@ -368,12 +368,20 @@ body {
 
 /* === Charm editor === */
 .charm-editor { padding: 12px; }
-.charm-row { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
-.charm-row label { font-size: 0.8rem; color: var(--text-secondary); min-width: 60px; }
+.charm-row { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; flex-wrap: wrap; }
+.charm-row label { font-size: 0.8rem; color: var(--text-secondary); min-width: 50px; }
 .charm-row select, .charm-row input {
   flex: 1; padding: 6px 8px; background: var(--bg-input);
   border: 1px solid var(--border); border-radius: var(--radius-sm);
   color: var(--text-primary); font-size: 0.8rem;
+  min-width: 0;
+}
+.charm-skill-wrap { min-width: 0; overflow: visible; }
+@media (max-width: 480px) {
+  .charm-row label { min-width: 44px; font-size: 0.7rem; }
+  .charm-skill-wrap { flex-basis: calc(100% - 52px - 60px); }
+  .charm-row select { font-size: 0.75rem; padding: 5px 4px; }
+  .charm-skill-search { font-size: 0.75rem !important; }
 }
 
 /* === Conditional toggles === */
